@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Xc.HiKVisionSdk.Isc.Wpf.Pages.Vehicle.CarParkView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Xc.HiKVisionSdk.Isc.Wpf.Pages.Vehicle"
+             mc:Ignorable="d" 
+             xmlns:s="https://github.com/canton7/Stylet"
+             d:DataContext="{d:DesignInstance local:CarParkViewModel}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Orientation="Horizontal" >
+        <Button Command="{s:Action ParkRemainSpaceNum}" Margin="10,5">查询停车库剩余车位数</Button>
+        <Button Command="{s:Action AlarmCar}" Margin="10,5">查询布控车辆</Button>
+    </StackPanel>
+</UserControl>

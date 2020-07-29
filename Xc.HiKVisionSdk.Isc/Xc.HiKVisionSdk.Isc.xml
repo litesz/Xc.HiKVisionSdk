@@ -1,0 +1,4454 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xc.HiKVisionSdk.Isc</name>
+    </assembly>
+    <members>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtAccessChannel">
+            <summary>
+            人员通道号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventAlarmInID">
+            <summary>
+            报警输入/防区通道
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventAlarmOutID">
+            <summary>
+            报警输出通道
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventCardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventCaseID">
+            <summary>
+            事件输入通道
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventCode">
+            <summary>
+             	事件类型代码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventCustomerNumInfo">
+            <summary>
+            通道事件信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventDoorID">
+            <summary>
+            门编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventIDCardPictureURL">
+            <summary>
+            身份证图片地址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventIdentityCardInfo">
+            <summary>
+            人员身份证信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventInOut">
+            <summary>
+            进出方向
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventLocalControllerID">
+            <summary>
+            就地控制器id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventMainDevID">
+            <summary>
+            主设备拨码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventPersonNo">
+            <summary>
+            人员编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventPictureURL">
+            <summary>
+            图片的url
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventReaderID">
+            <summary>
+            读卡器id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventReaderKind">
+            <summary>
+            读卡器类别
+            0-无效
+            1-IC读卡器
+            2-身份证读卡器
+            3-二维码读卡器
+            4-指纹头
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventReportChannel">
+            <summary>
+            报告上传通道
+            1-布防上传
+            2-中心组1上传
+            3-中心组2上传
+            为0无效
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventRoleID">
+            <summary>
+            群组编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventSubDevID">
+            <summary>
+            分控制器硬件ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventSwipNum">
+            <summary>
+            刷卡次数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventType">
+            <summary>
+            事件类型
+            事件类型，如普通门禁事件为0,身份证信息事件为1，客流量统计为2
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventVerifyID">
+            <summary>
+            多重认证序号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtEventWhiteListNo">
+            <summary>
+            白名单单号,1-8，为0无效
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.ExtReceiveTime">
+            <summary>
+            接收时间戳
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.Seq">
+            <summary>
+            序列
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.UserType">
+            <summary>
+            用户类
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.AcsEventCallbackData.SvrIndexCode">
+            <summary>
+             	String 图片服务器唯一编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventCustomerNumInfo.AccessChannel">
+            <summary>
+            通道号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventCustomerNumInfo.EntryTimes">
+            <summary>
+            进人数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventCustomerNumInfo.ExitTimes">
+            <summary>
+            出人数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventCustomerNumInfo.TotalTimes">
+            <summary>
+            总通行人数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.Address">
+            <summary>
+            住址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.Birth">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.EndDate">
+            <summary>
+            有效日期结束时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.IdNum">
+            <summary>
+            身份证id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.IssuingAuthority">
+            <summary>
+            签发机关
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.Nation">
+            <summary>
+            民族
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.StartDate">
+            <summary>
+            有效日期开始时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventIdentityCardInfo.TermOfValidity">
+            <summary>
+            是否长期有效
+            0-否（有效截止日期有效）
+            1-是（有效截止日期无效）
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventReaderKind.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventReaderKind.Ic">
+            <summary>
+            ic卡
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventReaderKind.Id">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventReaderKind.QrCode">
+            <summary>
+            二维码
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.ExtEventReaderKind.Fingerprint">
+            <summary>
+            指纹
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.TermOfValidity.No">
+            <summary>
+            0-否（有效截止日期有效）
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.TermOfValidity.Yes">
+            <summary>
+            1-是（有效截止日期无效）
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.UserType.None">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.UserType.General">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.UserType.Guest">
+            <summary>
+            来宾
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.UserType.Black">
+            <summary>
+            黑名单
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Acs.UserType.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallback`1.Method">
+            <summary>
+            方法名，用于标识报文用途
+            事件固定OnEventNotify
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallback`1.Params">
+            <summary>
+            事件参数信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParam`1.SendTime">
+            <summary>
+            事件从接收者（如设备接入框架）发出的时间，格式 YYYY-mm-dd hh:MM:ss
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParam`1.Ability">
+            <summary>
+            事件类别，如视频事件、门禁事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParam`1.Events">
+             <summary>
+            事件信息
+             </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.EventId">
+            <summary>
+            事件Id，
+            唯一标识事件的一次发生，
+            同一事件发送多次需要ID相同
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.EventType">
+            <summary>
+            事件源编号，物理设备是资源编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.HappenTime">
+            <summary>
+            事件发生时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.SrcIndex">
+            <summary>
+            事件源编号，
+            物理设备是资源编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.SrcName">
+            <summary>
+            事件源名称，utf8
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.SrcParentIndex">
+            <summary>
+            事件发生的事件源父设备，无-空字符串
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.SrcType">
+            <summary>
+            事件源类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.Status">
+            <summary>
+            事件状态, 0-瞬时 1-开始 2-停止 3-事件脉冲 4-事件联动结果更新 5-异步图片上传
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.EventLvl">
+            <summary>
+            事件等级：0-未配置 1-低 2-中 3-高，注意，此处事件等级是指在事件联动中配置的等级
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.Timeout">
+            <summary>
+            脉冲超时时间，一个持续性的事件，上报的间隔
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.EventCallbackParamEvent`1.Data">
+            <summary>
+            事件其它扩展信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.CaptureResult">
+            <summary>
+            抓拍结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.CaptureResult.Faces">
+            <summary>
+            人脸信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.CaptureResult.TargetAttrs">
+            <summary>
+            目标属性
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceInfo">
+            <summary>
+            人脸信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceInfo.URL">
+            <summary>
+            抓拍到的人脸图片的URL，可能位于设备或ASW服务上。
+            调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceInfo.Age">
+            <summary>
+            年龄信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceInfo.FaceRect">
+            <summary>
+            人脸坐标
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceInfo.FaceScore">
+            <summary>
+            人脸评分参数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceInfo.Gender">
+            <summary>
+            性别，见数据字典设备性别类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceInfo.Glass">
+            <summary>
+            眼镜
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScore">
+            <summary>
+            人脸评分参数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScore.Enable">
+            <summary>
+            是否开启功能
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScore.TotalScore">
+            <summary>
+            人脸评分
+            人脸总评分：
+            综合所有评分项得到人脸总评分
+            数值越大
+            人脸质量越高
+            float类型[0, 1]
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScore.Type">
+            <summary>
+            过滤类型
+            0-全部类型 
+            1-人脸抓拍图片过滤 
+            2-黑名单库 
+            3-白名单库
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScoreType">
+            <summary>
+            过滤类型
+            0-全部类型 
+            1-人脸抓拍图片过滤 
+            2-黑名单库 
+            3-白名单库
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScoreType.All">
+            <summary>
+            全部类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScoreType.Capture">
+            <summary>
+            人脸抓拍图片过滤
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScoreType.Black">
+            <summary>
+            黑名单库
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.FaceScoreType.White">
+            <summary>
+            白名单库
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.TargetAttrs">
+            <summary>
+            目标属性
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.TargetAttrs.BkgUrl">
+            <summary>
+            抓拍图片的完整原图
+            调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.TargetAttrs.CameraIndexCode">
+            <summary>
+            抓拍这张图片的监控点的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.TargetAttrs.DeviceIndexCode">
+            <summary>
+            抓拍这张图片的监控点所属的设备的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.TargetAttrs.FaceTime">
+            <summary>
+            抓拍这张图片时的时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.TargetAttrs.PicServerIndexCode">
+            <summary>
+            图片服务唯一标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture.TargetAttrs.Rect">
+            <summary>
+            人脸坐标
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Age.AgeGroup">
+            <summary>
+             	年龄段，见附录附录A.34 设备年龄段类型
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRect">
+            <summary>
+            人脸坐标
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRect.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRect.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRect.X">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRect.Y">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Gender">
+            <summary>
+            性别，见数据字典设备性别类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Gender.Value">
+            <summary>
+            性别，见数据字典设备性别类型
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Glass">
+            <summary>
+            是否戴眼镜，见数据字典设备戴眼镜类别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Glass.Value">
+            <summary>
+            是否戴眼镜，见数据字典设备戴眼镜类别
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.AlarmResultItem">
+            <summary>
+            比对结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.AlarmResultItem.Faces">
+            <summary>
+            人脸信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.AlarmResultItem.TargetAttrs">
+            <summary>
+            目标属性
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.CandidateItem">
+            <summary>
+            比对到的目标人脸
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.CandidateItem.BlacklistId">
+            <summary>
+            比对到的人脸所属人脸分组的唯一标识
+            注意和平台的人脸分组的标识不一定相同
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.CandidateItem.HumanData">
+            <summary>
+            人员数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.CandidateItem.HumanId">
+            <summary>
+            比对到的人脸所属人脸的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.CandidateItem.ReserveField">
+            <summary>
+            预留字段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.CandidateItem.Similarity">
+            <summary>
+            比对到的人脸和抓拍到的人脸之间的相似度
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.FacesItem.URL">
+            <summary>
+            抓拍到的人脸图片的URL
+            可能位于设备或ASW服务上，调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.FacesItem.Age">
+            <summary>
+            年龄信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.FacesItem.FaceRect">
+            <summary>
+            人脸坐标
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.FacesItem.Gender">
+            <summary>
+            性别信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.FacesItem.Glass">
+            <summary>
+            是否戴眼镜
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.FacesItem.Identify">
+            <summary>
+            识别信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.HumanDataItem">
+            <summary>
+            人员数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.HumanDataItem.PicUrl">
+            <summary>
+            比对到的人脸的图片URL
+            可能位于设备或ASW服务上，调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.IdentifyItem">
+            <summary>
+            识别信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.IdentifyItem.Candidate">
+            <summary>
+            比对到的目标人脸
+            有几个对象代表比对到了几张人脸
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.IdentifyItem.Maxsimilarity">
+            <summary>
+            比对到的所有人脸和抓拍到的人脸相似度最高的那个值
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.ReserveField">
+            <summary>
+            预留字段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.ReserveField.BornTime">
+            <summary>
+            出生日期，格式形如20000101
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.ReserveField.CertificateNumber">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.ReserveField.CertificateType">
+            <summary>
+            证件类型
+            见数据字典附录A.47 设备证件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.ReserveField.Gender">
+            <summary>
+            性别类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.ReserveField.Name">
+            <summary>
+            人脸姓名
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.TargetAttrs">
+            <summary>
+            目标属性
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.TargetAttrs.BkgUrl">
+            <summary>
+            抓拍图片的完整原图
+            调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.TargetAttrs.CameraIndexCode">
+            <summary>
+            抓拍这张图片的监控点的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.TargetAttrs.DeviceIndexCode">
+            <summary>
+            抓拍这张图片的监控点所属的设备的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.TargetAttrs.FaceTime">
+            <summary>
+            抓拍这张图片时的时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.TargetAttrs.PicServerIndexCode">
+            <summary>
+            图片服务唯一标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare.TargetAttrs.Rect">
+            <summary>
+            人脸坐标
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem">
+            <summary>
+            识别到的目标信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.FaceGroupCode">
+            <summary>
+            目标所属的人脸分组的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.FaceGroupName">
+            <summary>
+            目标所属的人脸分组的名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.FaceInfoCode">
+            <summary>
+            目标对应的人脸的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.FaceInfoName">
+            <summary>
+            目标对应的人脸的名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.FaceInfoSex">
+            <summary>
+            目标对应的人脸的性别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.Certificate">
+            <summary>
+            目标对应的人脸的证件号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.CertificateType">
+            <summary>
+            目标对应的人脸的证件类型
+            111：身份证
+            officerID：军官证
+            其余为其它证件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.Similarity">
+            <summary>
+            目标人脸和抓拍人脸的相似度
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceMatchItem.FacePicUrl">
+            <summary>
+            目标人脸的图片
+            存储于超脑上则为完整的URL，存储于asw上则为不带IP、PORT的URI，调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceRecognitionResult">
+            <summary>
+            识别结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceRecognitionResult.Snap">
+            <summary>
+            抓拍信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Black.FaceRecognitionResult.FaceMatch">
+            <summary>
+            识别到的目标信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceCapture">
+            <summary>
+            识别结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceCapture.Faces">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceCapture.RecordDataIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceCapture.TargetAttrs">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.URL" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.Age">
+            <summary>
+            年龄信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.FaceRect">
+            <summary>
+            人脸坐标
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.FaceScore">
+            <summary>
+            人脸评分参数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.Gender">
+            <summary>
+            性别，见数据字典设备性别类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.Glass">
+            <summary>
+            眼镜
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.FaceId">
+            <summary>
+            人脸ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.Mask">
+            <summary>
+            是否带口罩
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.Occurrences">
+            <summary>
+            目标出现次数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.FaceInfo.Smile">
+            <summary>
+            是否微笑
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.Mask">
+            <summary>
+            是否带口罩
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.Mask.Value">
+            <summary>
+            是否带口罩
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.Smile">
+            <summary>
+            是否微笑
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.Smile.Value">
+            <summary>
+            是否微笑
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs">
+            <summary>
+            目标属性
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.BkgUrl">
+            <summary>
+            抓拍图片的完整原图
+            调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.CameraIndexCode">
+            <summary>
+            抓拍这张图片的监控点的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.DeviceIndexCode">
+            <summary>
+            抓拍这张图片的监控点所属的设备的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.DeviceChannel">
+            <summary>
+            设备通道号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.DeviceName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.FaceTime">
+            <summary>
+            抓拍这张图片时的时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.PicServerIndexCode">
+            <summary>
+            图片服务唯一标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency.TargetAttrs.ImageServerCode">
+            <summary>
+            图片服务编号
+            若云存储配置服务编码则有该字段
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.ResInfoItem">
+            <summary>
+            触发重点人员识别事件的报警的抓拍点的信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.ResInfoItem.ResourceType">
+            <summary>
+            资源类型
+            重点人员识别事件均为抓拍点报警，例如：camera
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.ResInfoItem.IndexCode">
+            <summary>
+            资源的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.ResInfoItem.Cn">
+            <summary>
+            资源的名称
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Snap">
+            <summary>
+            抓拍信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Snap.AgeGroup">
+            <summary>
+            年龄段，见附录附录A.34 设备年龄段类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Snap.BkgUrl">
+            <summary>
+            背景图片URL
+            位于超脑上则为完整的URL，位于asw上则为不带IP、PORT的URI，调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Snap.FaceTime">
+            <summary>
+            抓拍图片的时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Snap.FaceUrl">
+            <summary>
+            人脸图片URI
+            位于超脑上则为完整的URL，位于asw上则为不带IP、PORT的URI，调用人脸服务图片下载 获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Snap.Gender">
+            <summary>
+            性别，见数据字典设备性别类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.Snap.Glass">
+            <summary>
+            是否戴眼镜，见数据字典设备戴眼镜类别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.White.FaceRecognitionResult.Snap">
+            <summary>
+            抓拍信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsBlackFaceRecognitionEventCallbackData">
+            <summary>
+            重点人员识别数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsBlackFaceRecognitionEventCallbackData.FaceRecognitionResult">
+            <summary>
+            识别结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsBlackFaceRecognitionEventCallbackData.SrcEventId">
+            <summary>
+            源事件的唯一标识，即转自的人脸比对事件的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsBlackFaceRecognitionEventCallbackData.ResInfo">
+            <summary>
+            触发重点人员识别事件的报警的抓拍点的信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCaptureEventCallbackData">
+            <summary>
+            人脸抓拍事件数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCaptureEventCallbackData.CaptureLibResult">
+            <summary>
+            抓拍结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCaptureEventCallbackData.ChannelID">
+            <summary>
+            抓拍这张图片的监控点的通道号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCaptureEventCallbackData.DataType">
+            <summary>
+            事件类别，人脸比对的事件类别为faceMatch
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCaptureEventCallbackData.IpAddress">
+            <summary>
+            事件来源的地址，人脸抓拍的事件来源为抓拍机的地址。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCaptureEventCallbackData.PortNo">
+            <summary>
+            事件来源的端口
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCompareEventCallbackData">
+            <summary>
+            人脸对比事件数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCompareEventCallbackData.AlarmResult">
+            <summary>
+            比对结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCompareEventCallbackData.ChannelID">
+            <summary>
+            抓拍这张图片的监控点的通道号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCompareEventCallbackData.DataType">
+            <summary>
+            事件类别，人脸比对的事件类别为faceMatch
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCompareEventCallbackData.IpAddress">
+            <summary>
+            事件来源的地址
+            人脸比对的事件来源为识别资源的地址。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsCompareEventCallbackData.PortNo">
+            <summary>
+            事件来源的端口
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData">
+            <summary>
+            高频人员识别数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.URLCertificationType">
+            <summary>
+            图片url认证方式
+            digest-摘要认证（这个针对设备本地存储返回URL的方式，设备例如NVR/DVR）
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.ActivePostCount">
+            <summary>
+            事件触发次数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.ChannelID">
+            <summary>
+            设备通道号
+            设备通道号，默认1开始
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.DataType">
+            <summary>
+            数据模型标识
+            由IAC添加
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.DateTime">
+            <summary>
+            数据触发时间
+            由设备产生
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.EventDescription">
+            <summary>
+            事件描述
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.EventState">
+            <summary>
+            事件状态
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.EventType">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.FaceCapture">
+            <summary>
+            识别结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.IpAddress">
+            <summary>
+            设备的IP地址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.MacAddress">
+            <summary>
+            Mac地址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.PortNo">
+            <summary>
+            设备端口号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.Protocol">
+            <summary>
+            协议类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.RecvTime">
+            <summary>
+            数据接收时间
+            由IAC添加
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsHighFrequencyFaceRecognitionEventCallbackData.SendTime">
+            <summary>
+            数据发送时间
+            由IAC添加
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsWhiteFaceRecognitionEventCallbackData">
+            <summary>
+            陌生人事件数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsWhiteFaceRecognitionEventCallbackData.FaceRecognitionResult">
+            <summary>
+            识别结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsWhiteFaceRecognitionEventCallbackData.ResInfo">
+            <summary>
+            触发重点人员识别事件的报警的抓拍点的信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Frs.FrsWhiteFaceRecognitionEventCallbackData.SrcEventId">
+            <summary>
+            源事件的唯一标识，即转自的人脸比对事件的唯一标识
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Dictionaries.EventCollection">
+            <summary>
+            事件集合
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Dictionaries.EventCollection.IsLoadState">
+            <summary>
+            已同步
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Dictionaries.EventCollection.Items">
+            <summary>
+            项
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Dictionaries.EventCollection.GetEventTypes">
+            <summary>
+            获得事件类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Dictionaries.EventCollection.GetEventSubclasses(System.String)">
+            <summary>
+            子类型
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Dictionaries.EventCollection.Item(System.Int32)">
+            <summary>
+            索引器
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Dictionaries.EventCollection.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Models.HiKVisionResponse">
+            <summary>
+            基础返回值,仅包含code和msg
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Models.HiKVisionDataResponse`1">
+            <summary>
+            泛型data返回值
+            T Data
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Models.HiKVisionDataArrayResponse`1">
+            <summary>
+            泛型data数组返回值
+            T[] Data
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Models.HiKVisionPagedDataResponse`1">
+            <summary>
+            包含分页的泛型返回值
+            HiKVisionPagedDataResponseData Data
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Models.HiKVisionPagedDataResponseData`1">
+            <summary>
+            分页信息,切勿直接继承
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.HikAcsApiManager">
+            <summary>
+            门禁api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Acs.HikAcsApiManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Acs.HikAcsApiManager.DoorEventsAsync(Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Acs.HikAcsApiManager.DoorEventsV2Async(Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Acs.HikAcsApiManager.DoorSearchV2Async(Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.IHikAcsApiManager">
+            <summary>
+            门禁api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Acs.IHikAcsApiManager.DoorEventsAsync(Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest)">
+            <summary>
+            查询门禁点事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>功能描述：该接口可以查询发生在门禁点上的人员出入事件，支持多个维度来查询，支持按时间、人员、门禁点、事件类型四个维度来查询；其中按事件类型来查询的方式，如果查询不到事件，存在两种情况，一种是该类型的事件没有发生过，所以查询不到，还有一种情况，该类型的事件发生过，但是由于门禁管理组件对该事件类型订阅配置处于关闭状态，所以不会存储该类型的事件，导致查询不到，对于这种情况，需要到门禁管理组件中，将该事件类型的订阅配置打开。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Acs.IHikAcsApiManager.DoorEventsV2Async(Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request)">
+            <summary>
+            查询门禁点事件v2
+            </summary>
+            <remarks>功能描述：该接口可以查询发生在门禁点上的人员出入事件，支持多个维度来查询，支持按时间、人员、门禁点、事件类型四个维度来查询；其中按事件类型来查询的方式，如果查询不到事件，存在两种情况，一种是该类型的事件没有发生过，所以查询不到，还有一种情况，该类型的事件发生过，但是由于门禁管理组件对该事件类型订阅配置处于关闭状态，所以不会存储该类型的事件，导致查询不到，对于这种情况，需要到门禁管理组件中，将该事件类型的订阅配置打开。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Acs.IHikAcsApiManager.DoorSearchV2Async(Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request)">
+            <summary>
+            查询门禁点列表v2
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>根据条件查询目录下有权限的门禁点列表。当返回字段对应的值为空时，该字段不返回。</remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest">
+            <summary>
+            查询门禁事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.StartTime">
+            <summary>
+            开始时间（事件开始时间，采用ISO8601时间格式，与endTime配对使用，不能单独使用，时间范围最大不能超过3个月），参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.EndTime">
+            <summary>
+            结束时间（事件结束时间，采用ISO8601时间格式，最大长度32个字符，与startTime配对使用，不能单独使用，时间范围最大不能超过3个月），参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.EventType">
+            <summary>
+            事件类型，参考附录D2.1 门禁事件
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.PersonName" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.PersonIds">
+            <summary>
+            人员数组，获取人员列表v2接口可以获取到
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.DoorName">
+            <summary>
+            门禁点名称，查询门禁点列表接口可以获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.DoorIndexCodes">
+            <summary>
+            门禁点唯一标识，查询门禁点列表接口可以获取，最大支持10个门禁点
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.DoorRegionIndexCode">
+            <summary>
+            门禁点所在区域，分页获取区域列表接口可以获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.Sort">
+            <summary>
+            支持personName、doorName、eventTime填写排序的字段名称，例如：”personName”
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsRequest.Order">
+            <summary>
+            指定排序字段是使用升序（asc）还是降序（desc），例如：”asc”
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponse">
+            <summary>
+            查询门禁事件结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData">
+            <summary>
+            查询门禁点事件结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.DoorIndexCode">
+            <summary>
+            门禁点编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.DoorName">
+            <summary>
+            门禁点名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.DoorRegionIndexCode">
+            <summary>
+            门禁点所在区域编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.EventId">
+            <summary>
+            事件ID，唯一标识这个事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.EventTime">
+            <summary>
+            事件产生时间(事件产生的时间，采用ISO8601时间格式)
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.EventType">
+            <summary>
+            事件类型，参考附录D2.1 门禁事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.IdentityCardUri">
+            <summary>
+            身份证图片uri，它是一个相对地址，可以通过获取门禁事件的图片接口，获取到图片的数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.InAndOutType">
+            <summary>
+            进出类型
+            1：进
+            0：出
+            -1:未知
+            要求：进门读卡器拨码设置为1，出门读卡器拨码设置为2
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.OrgIndexCode">
+            <summary>
+            组织编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.OrgName">
+            <summary>
+            组织名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.PersonDetail">
+            <summary>
+            人员信息详情
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.PersonId">
+            <summary>
+            人员唯一编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.PersonName">
+            <summary>
+            人员名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.PicUri">
+            <summary>
+            抓拍图片地址， 需要调用获取门禁事件的图片接口，来获取图片的数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsResponseData.SvrIndexCode">
+            <summary>
+            图片存储服务的唯一标识， 获取门禁事件的图片接口的必要参数
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request">
+            <summary>
+            查询门禁事件V2请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.DoorIndexCodes">
+            <summary>
+            门禁点唯一标识数组，最大支持10个门禁点，查询门禁点列表v2接口获取返回报文中的doorIndexCode字段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.DoorName">
+            <summary>
+            门禁点名称，支持模糊查询，从查询门禁点列表v2接口获取返回报文中的name字段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.ReaderDevIndexCodes">
+            <summary>
+            读卡器唯一标识数组，最大支持50个读卡器，查询门禁读卡器列表接口获取返回报文中的indexCode字段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.StartTime">
+            <summary>
+            开始时间（事件开始时间，采用ISO8601时间格式，与endTime配对使用，不能单独使用，时间范围最大不能超过3个月），参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.EndTime">
+            <summary>
+            结束时间（事件结束时间，采用ISO8601时间格式，最大长度32个字符，与startTime配对使用，不能单独使用，时间范围最大不能超过3个月），参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.ReceiveStartTime">
+            <summary>
+            入库开始时间，采用ISO8601时间格式，与receiveEndTime配对使用，不能单独使用，时间范围最大不能超过3个月，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.ReceiveEndTime">
+            <summary>
+            入库结束时间，采用ISO8601时间格式，最大长度32个字符，与receiveStartTime配对使用，不能单独使用，时间范围最大不能超过3个月，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.DoorRegionIndexCode">
+            <summary>
+            门禁点所在区域，查询区域列表v2接口获取返回参数indexCode
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.EventTypes">
+            <summary>
+            事件类型，参考附录D2.1 门禁事件
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.PersonName" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.Sort">
+            <summary>
+            排序字段（支持personName、doorName、eventTime填写排序的字段名称）
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request.Order">
+            <summary>
+            升/降序（指定排序字段是使用升序（asc）还是降序（desc）
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Response">
+            <summary>
+            查询门禁事件V2结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData">
+            <summary>
+            查询门禁点事件V2结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.EventId">
+            <summary>
+            事件ID，唯一标识这个事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.EventTime">
+            <summary>
+            事件产生时间，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.PersonId">
+            <summary>
+            人员唯一编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.PersonName">
+            <summary>
+            人员名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.OrgIndexCode">
+            <summary>
+            人员所属组织编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.OrgName">
+            <summary>
+            人员所属组织名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.DoorName">
+            <summary>
+            门禁点名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.DoorIndexCode">
+            <summary>
+            门禁点编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.DoorRegionIndexCode">
+            <summary>
+            门禁点所在区域编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.PicUri">
+            <summary>
+            抓拍图片地址，通过接口获取门禁事件的图片接口获取门禁事件的图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.SvrIndexCode">
+            <summary>
+            图片存储服务的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.EventType">
+            <summary>
+            事件类型，参考附录D2.1 门禁事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.InAndOutType">
+            <summary>
+            进出类型(1：进
+            0：出
+            -1:未知
+            要求：进门读卡器拨码设置为1，出门读卡器拨码设置为2)
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.ReaderDevIndexCode">
+            <summary>
+            读卡器IndexCode
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.ReaderDevName">
+            <summary>
+            读卡器名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.DevIndexCode">
+            <summary>
+            控制器设备IndexCode
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.DevName">
+            <summary>
+            控制器名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.IdentityCardUri">
+            <summary>
+            身份证图片uri，它是一个相对地址，可以通过获取门禁事件的图片接口，获取到图片的数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.ReceiveTime">
+            <summary>
+            事件入库时间，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.StudentId">
+            <summary>
+            学号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2ResponseData.CertNo">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request">
+            <summary>
+            查询门禁请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request.Name">
+            <summary>
+            名称，模糊搜索，最大长度32，若包含中文，最大长度指不超过按照指定编码的字节长度，即getBytes(“utf-8”).length
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request.RegionIndexCodes" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request.IsSubRegion">
+            <summary>
+            true时，搜索regionIndexCodes及其子孙区域的资源；
+            false时，只搜索 regionIndexCodes的资源
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request.AuthCodes">
+            <summary>
+            权限码集合，详见附录A.3 资源权限码中门禁点对应的资源权限码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request.Expressions">
+            <summary>
+            查询表达式
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request.OrderBy">
+            <summary>
+            排序字段,注意：排序字段必须是查询条件，否则返回参数错误
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Request.OrderType">
+            <summary>
+            降序升序,降序：desc 升序：asc
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2Response">
+            <summary>
+            查询门禁点结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData">
+            <summary>
+            查询门禁点V2结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.IndexCode">
+            <summary>
+            资源唯一编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ResourceType">
+            <summary>
+            资源类型，详见附录A.2 资源类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.Name">
+            <summary>
+            资源名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.DoorNo">
+            <summary>
+            门禁点编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ChannelNo">
+            <summary>
+            通道号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ParentIndexCode">
+            <summary>
+            父级资源编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ControlOneId">
+            <summary>
+            一级控制器id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ControlTwoId">
+            <summary>
+            二级控制器id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ReaderInId">
+            <summary>
+            读卡器1
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ReaderOutId">
+            <summary>
+            读卡器2
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.TreatyType">
+            <summary>
+            接入协议，详见附录A.6 编码设备接入协议
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.DoorSerial">
+            <summary>
+            门序号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.RegionIndexCode">
+            <summary>
+            所属区域
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.RegionPath">
+            <summary>
+            所属区域路径,以@符号分割，包含本节点
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.ChannelType">
+            <summary>
+            通道类型，door：门禁点
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.RegionName">
+            <summary>
+            区域名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.RegionPathName">
+            <summary>
+            所属区域路径名，符号"/"进行分隔
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorSearchV2ResponseData.InstallLocation">
+            <summary>
+            安装位置，详见附录附录A.81 安装位置
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType">
+            <summary>
+            进出状态
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType.Out">
+            <summary>
+            出
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType.In">
+            <summary>
+            进
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail">
+            <summary>
+            人员信息详情
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Academy">
+            <summary>
+            学院
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Birthplace">
+            <summary>
+            籍贯
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.CensusRegister">
+            <summary>
+            户籍
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.CertNo">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Company">
+            <summary>
+            工作单位
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Dormitory">
+            <summary>
+            楼栋
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.EducationBackground">
+            <summary>
+            学历，参考附录A.12 学历类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.EmployeePost">
+            <summary>
+            行政职务
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.HouseHolderRel">
+            <summary>
+            与户主关系
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.IdentityType">
+            <summary>
+            用户自定义输入字符串
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Lodge">
+            <summary>
+            是否住校
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Marriaged">
+            <summary>
+            婚姻状况,参考附录A.58 婚姻状况
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Mobile">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Nation">
+            <summary>
+            民族,参考附录A.13 民族类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.OrgId">
+            <summary>
+            人员所属组织ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.PersonId">
+            <summary>
+            人员唯一编码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.PersonName">
+            <summary>
+            人员名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.PoliticalStatus">
+            <summary>
+            政治面貌
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.PostType">
+            <summary>
+            岗位类别， 用户自定义输入
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Profession">
+            <summary>
+            专业
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Religion">
+            <summary>
+            宗教信仰
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.Sex">
+            <summary>
+            性别
+            0: 未知
+            1: 男
+            2: 女
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.StaffProperty">
+            <summary>
+            职工性质
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.StuClass">
+            <summary>
+            班级
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.StuGrade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.StudentId">
+            <summary>
+            学号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail.CertType">
+            <summary>
+            证件类型:
+            111: 身份证
+            414：护照
+            335: 驾驶证
+            131: 工作证
+            133: 学生证
+            113: 户口簿
+            990: 其他
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.RequestExpression">
+            <summary>
+            查询表达式
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.RequestExpression.Key">
+            <summary>
+            资源属性名，key传updateTime，operator传between可以查询特定时间段更新的数据，考虑到校时和夏令时，建议值查询过去一天的数据变更
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.RequestExpression.Operator" -->
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.RequestExpression.Values" -->
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventsSearch(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest)">
+            <summary>
+            获取联动事件列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventsSearchAsync(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest)">
+            <summary>
+            获取联动事件列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionByEventTypes(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionView">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionViewAsync">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventUnSubscriptionByEventTypes(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.IHikEventServiceApiManager.EventUnSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.HandleStatus.UnProcessed">
+            <summary>
+            未处理
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.HandleStatus.Processed">
+            <summary>
+            已处理
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventLevel.Low">
+            <summary>
+            低
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventLevel.Middle">
+            <summary>
+            中
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventLevel.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType.Raw">
+            <summary>
+            原始事件
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType.Linkage">
+            <summary>
+            联动事件
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType.RawAndLinkage">
+            <summary>
+            原始事件和联动事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.EventRuleId">
+            <summary>
+             事件规则id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.Ability">
+            <summary>
+             事件分类，详见附录A.62
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.RegionIndexCode">
+            <summary>
+            区域编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.LocationIndexCodes">
+            <summary>
+            所属位置，详见附录A.81 安装位置
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.ResName">
+            <summary>
+             事件源名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.ResIndexCodes">
+            <summary>
+            事件源编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.ResTypes">
+            <summary>
+             事件源类型，详见附录A.63
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.EventType">
+            <summary>
+            事件类型，详见附录D
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.EventLevels">
+            <summary>
+            事件等级，1-低，2-中，3-高
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.Remark">
+            <summary>
+            处理意见
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.HandleStatus">
+            <summary>
+             处理状态，0-未处理，1-已处理
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.StartTime">
+            <summary>
+             开始时间,ISO8601时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.EndTime">
+            <summary>
+            结束时间,ISO8601时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest.PageNo">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.Id">
+            <summary>
+            事件id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.EventRuleId">
+            <summary>
+            事件规则id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.RuleName">
+            <summary>
+            事件规则名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.StartTime">
+            <summary>
+            事件开始时间，ISO8601格式：yyyy-MM-ddTHH:mm:ss.zzz+当前时区，例如北京时间：2018-07-26T15:00:00.000+08:00
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.EndTime">
+            <summary>
+            事件结束时间，ISO8601格式：yyyy-MM-ddTHH:mm:ss.zzz+当前时区，例如北京时间：2018-07-26T15:00:00.000+08:00
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.EventLevel">
+            <summary>
+            事件等级,1-低，2-中，3-高
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.EventLevelValue">
+            <summary>
+            事件等级value，低、中、高
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.EventLevelColor">
+            <summary>
+            事件等级颜色，RGB格式，例如#AE8D06
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.EventTypeName">
+            <summary>
+            事件类型名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.Remark">
+            <summary>
+            处理意见
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.HandleStatus">
+            <summary>
+            事件处理状态，0-未处理，1-已处理
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseData.EventLogSrcList">
+            <summary>
+            事件记录列表
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc">
+            <summary>
+            事件记录
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Id">
+            <summary>
+            事件源id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventLogId">
+            <summary>
+            事件id
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Ability">
+            <summary>
+             事件分类，详见附录A.62
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventType">
+            <summary>
+            事件类型，详见附录D.1
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventTypeName">
+            <summary>
+            事件类型名称
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResIndexCode">
+            <summary>
+            事件源编号
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResType">
+            <summary>
+            事件源类型，详见附录A.63
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResName">
+            <summary>
+            事件源名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.RegionIndexCode">
+            <summary>
+            所属区域编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.RegionName">
+            <summary>
+            所属区域名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.LocationIndexCode">
+            <summary>
+            所属位置，详见附录A.81 安装位置
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.LocationName">
+            <summary>
+            所属位置名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Extend1">
+            <summary>
+            扩展字段1，暂不使用
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Extend2">
+            <summary>
+            扩展字段2，暂不使用
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.StartTime">
+            <summary>
+             开始时间,ISO8601时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Data">
+            <summary>
+            事件扩展信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.EventTypes">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.EventDest">
+            <summary>
+            指定事件接收的地址，采用restful回调模式，支持http和https，
+            样式如下：http://ip:port/eventRcv或者      
+            https://ip:port/eventRcv
+            不超过1024个字符，事件接收地址由应用方负责按指定的规范提供，事件接收接口不需要认证
+            三方客户收到消息，请注意立即返回HTTP/1.1 200 OK， 否则因为接收太慢，导致事件积压
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.SubType">
+            <summary>
+            订阅类型，0-订阅原始事件，1-联动事件，2-原始事件和联动事件，不填使用默认值0
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.EventLvl">
+            <summary>
+             	事件等级，0-未配置，1-低，2-中，3-高
+             	此处事件等级是指在事件联动中配置的等级
+             	订阅类型为0时，此参数无效，使用默认值0
+             	在订阅类型为1时，不填使用默认值[1, 2, 3]
+             	在订阅类型为2时，不填使用默认值[0, 1, 2, 3]
+             	数组大小不超过32，事件等级大小不超过31
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewResponseDataDetail.EventTypes">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewResponseDataDetail.EventDest">
+            <summary>
+            事件接收地址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest.EventTypes">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager">
+            <summary>
+            人脸应用服务
+            </summary>
+            <summary>
+            人脸应用服务
+            </summary>
+            <summary>
+            人脸应用服务
+            </summary>
+            <summary>
+            人脸应用服务
+            </summary>
+            <summary>
+            人脸应用服务
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.PlanRecognitionBlackAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest)">
+             <summary>
+             单个添加重点人员识别计划
+             </summary>
+             <remarks>
+             a)该接口可以新增一条重点人员识别计划，以实现将若干抓拍点抓拍到的人脸，通过若干识别资源同若干分组内的人脸比较，并将命中结果以事件形式上报。
+             b)配置一条识别计划需要人脸分组集合（通过”按条件查询人脸分组”接口获取），抓拍点集合（通过LDAP服务获取监控点，并通过型号确定抓拍点），识别资源集合（通过”按条件查询识别资源”接口获取）。
+            c)一条重点人员识别计划只能配置一种识别资源类别：深眸或脸谱或超脑。
+            d)一条重点人员识别计划，可以配置多个超脑作为识别资源或一个脸谱作为识别资源。
+            e)一条重点人员识别计划如果配置深眸作为识别资源，则recognitionResourceIndexCodes可以传空。因为深眸的抓拍点就是识别资源本身，人脸监控应用服务会根据抓拍点自动匹配正确的识别资源。
+            f)人脸监控应用服务会校验抓拍点的有效性。校验规则如下：超脑作为识别资源时，抓拍点必须是超脑的通道；脸谱作为识别资源时，脸谱作为识别资源时，抓拍点一般为深眸或其他人脸抓拍机通道；深眸作为识别资源时，抓拍点必须是深眸的通道；一个通道是否是深眸/超脑/抓拍机的通道，取决于通道所属设备的型号，详见附录I 人脸监控应用服务支持设备型号列表。
+            g)重点人员识别计划配置有以下限制，这些限制会在添加时作为特殊错误返回：超脑的一个通道只能配置一次重点人员识别计划；同一个抓拍点不能同时配置在多个脸谱上；抓拍点或识别资源没有同步到IAC前，无法配置识别计划。
+            h)识别计划的配置为异步过程，调用接口成功后，人脸监控应用服务会在后台自动下发人脸分组并执行布控操作，可以通过接口”单个查询重点人员识别计划详情”查询该识别计划的下发结果。
+            i) 识别计划支持配置时间计划模板，当时间计划参数不传时，默认全天候。当传入此参数时，时间计划规则如下：按周计划进行配置，每一天的时间段上限为8，每一个时间段的开始时间必须小于结束时间。
+            j)同一个深眸支持配置多个识别计划。
+            k)若设备上人脸分组达到上限，则有可能导致下发失败。
+             </remarks>
+             <param name="model"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.PlanRecognitionBlackDeletionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionRequest)">
+            <summary>
+            删除重点人员识别计划
+            </summary>
+            <remarks>
+            a)根据重点人员识别计划的唯一标识,删除若干重点人员识别计划，返回的data为布尔类型，true代表操作成功，false代表操作失败。
+            b)删除识别计划后，会异步删除识别计划中下发到设备上的人脸分组、人脸、布控信息。因此调用接口成功的时候，可以观察到识别资源上的分组还是存在的，需要等一段时间后才会删除。
+            c)请勿在识别计划正在下发时，调用删除识别计划的接口。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.PlanRecognitionBlackUpdateAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest)">
+            <summary>
+            单个修改重点人员识别计划
+            </summary>
+            <remarks>
+            a)修改指定的重点人员识别计划信息，返回的data为布尔类型，true代表操作成功，false代表操作失败。
+            b)修改识别计划时，传入的信息和添加一致，不需要修改的字段也要传过来，但是部分不支持修改的字段不需要传，详情请以入参说明为准。
+            c)修改识别计划的接口校验同添加一致，请见单个添加重点人员识别计划中的接口说明。
+            d)识别计划修改后，会自动重新下发。
+            e)脸谱作为识别资源的识别计划，不支持更换识别资源。深眸、超脑作为识别资源时不支持修改识别资源的类型。
+            f) 识别计划支持配置时间计划模板，当时间计划参数不传时，默认全天候。当传入此参数时，时间计划规则如下：按周计划进行配置，每一天的时间段上限为8，每一个时间段的开始时间必须小于结束时间。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.PlanRecognitionBlackDetailAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailRequest)">
+            <summary>
+            单个查询重点人员识别计划详情
+            </summary>
+            <remarks>a)根据重点人员识别计划的唯一标识，查询单个重点人员识别计划的下发状态和结果详情。
+            b)返回的结果中包含了识别计划的所有信息和下发状态。还包含了人脸分组、人脸、通道布控的结果，其中人脸下发结果以分页方式返回。
+            c)通道布控的结果，在超脑作为识别资源的识别计划中才会返回；脸谱和深眸作为识别资源时，该字段为空集合。
+            d)调用方可以通过定时调用该接口，获取识别计划的下发情况和具体每张人脸的下发结果。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.PlanRecognitionBlackAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRequest)">
+            <summary>
+            查询重点人员识别计划
+            </summary>
+            <remarks>a)根据查询条件，查询符合条件的重点人员识别计划的集合。
+            b)查询条件之间的关系为与，即所有条件同时生效，不传任何条件代表查询所有。
+            c)这里的人脸分组集合作为查询条件，如果传多个分组，则识别计划只要包含其中任意一个分组，就会被查询出来。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.PlanRecognitionBlackRestartAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRestartRequest)">
+            <summary>
+            重新下发重点人员识别计划
+            </summary>
+            <remarks>a)重新下发指定的重点人员识别计划，返回的data为布尔类型，true代表操作成功，false代表操作失败。
+            b)重新下发只能针对状态为下发失败的识别计划操作，且重新下发只会下发失败的部分，对于已经成功的部分不会重复下发。
+            c)重新下发的结果可以通过单个查询重点人员识别计划详情查看。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceSingleAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest)">
+            <summary>
+            单个添加人脸
+            </summary>
+            <remarks>
+            a)一次性添加一张人脸，返回结果为添加成功的人脸。
+            b)添加的人脸图片，目前支持URL方式和二进制数据方式。URL方式时，人脸监控应用服务会通过HTTP协议的GET方式下载图片，校验图片，最后重新上传图片；二进制数据是指图片的字节流经过Base64编码后得到的字符串。
+            c)该URL能通过HTTP协议的GET方式能下载获取到即可，若包含认证，由调用方在URL中加上认证信息，保证URL能成功访问。
+            d)人脸监控应用服务会根据图片存储位置配置，将图片上传到图片存储服务器中，返回的URL为图片存储服务器上的相对地址。
+            e)图片大小和格式均有要求，上传大小在10KB到200KB见的图片，上传JPG格式的图片。
+            f)若添加的人脸对应的人脸分组已经配置有识别计划，则新添加的人脸会被一并下发到设备上。
+            g)该接口依赖于图片存储位置已配置完，请确保平台已经配置有人脸图片存储位置，否则添加必定失败。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceBatchAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequest)">
+            <summary>
+            批量添加人脸
+            </summary>
+            <remarks>
+            a)本接口只支持将安保基础数据中人员的人脸图片导入到人脸监控的人脸分组中。
+            b)一次性添加一批人脸，添加结果由接口同步返回成功还是失败。
+            c)一次最多导入1000个人脸。
+            d)若添加的人脸对应的人脸分组已经配置有识别计划，则新添加的人脸会被一并下发到设备上。
+            e)入参和单个添加人脸的接口不相同，批量接口只需要传入安保基础数据人员indexCode和要加入的人脸分组indexCode。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceBatchDeletionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionRequest)">
+            <summary>
+            批量删除人脸
+            
+            </summary>
+            <remarks>
+            a)根据人脸删除条件删除一批人脸，返回的data为布尔类型，true代表操作成功，false代表操作失败。
+            b)若删除的人脸对应的人脸分组已经配置有识别计划，则删除的人脸会被一并从设备上删除。
+            c)该接口是从指定分组内删除指定人脸。
+            d)人脸分组唯一标识和人脸的唯一标识集合均不能为空。
+            e)一次性最多从一个分组内删除1000个人脸。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceSingleUpdateAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest)">
+            <summary>
+            单个修改人脸
+            
+            </summary>
+            <remarks>
+            a)修改单张人脸信息,返回的data为布尔类型，true代表操作成功，false代表操作失败。
+            b)若修改的人脸对应的人脸分组已经配置有识别计划，则修改后的人脸会被重新下发到设备上。
+            c)修改后的字段信息以修改时传入的字段为准，若不传字段或传入null字段，则该字段会被置为null。
+            d)如果要修改人脸信息，则需要传递faceInfo对象。
+            e)如果要修改人脸图片，则需要传递facePic对象。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest)">
+            <summary>
+            按条件批量查询人脸
+            
+            </summary>
+            <remarks>
+            a)根据查询条件，批量查询人脸信息，一次性最多查询1000条人脸。
+            b)查询条件之间的关系为与，即所有条件同时生效。
+            c)可以通过传入faceGroupIndexCode，查询指定人脸分组下的人脸。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceBatchCopyAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchCopyRequest)">
+            <summary>
+            批量拷贝人脸到人脸分组
+            </summary>
+            <remarks>
+            a)批量将若干人脸拷贝到若干分组内。
+            b)这个接口可以实现将平台已经存在的人脸迁移到其它分组内。
+            c)无论如何调用该接口，同一个分组内不会出现两个indexCode相同的人脸。
+            d)若人脸已经在人脸分组内了，重复的迁移操作也会返回成功。
+            e)拷贝一次性最多拷贝1000张图片，最多同时拷贝到16个分组内。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceGroupSingleAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionRequest)">
+            <summary>
+            单个添加人脸分组
+            
+            </summary>
+            <remarks>一次性添加一个人脸分组，返回结果为添加成功的人脸分组。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceGroupBatchDeletionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupBatchDeletionRequest)">
+            <summary>
+            删除人脸分组
+            
+            </summary>
+            <remarks>a)根据删除条件，删除一批人脸分组,最大1000个，返回的data为布尔类型，true代表操作成功，false代表操作失败。
+            b)已经配置有识别计划的人脸分组，不允许删除，由特定错误码标识。
+            c)根据唯一标识删除时，会校验唯一标识的有效性，若任意分组唯一标识无效，则返回错误。传入的唯一标识重复，做去重处理。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceGroupSingleUpdateAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleUpdateRequest)">
+            <summary>
+            单个修改人脸分组
+            
+            </summary>
+            <remarks>a)修改单个人脸分组，返回的data为布尔类型，true代表操作成功，false代表操作失败。
+            b)修改后的字段信息以修改时传入的字段为准，若不传字段或传入null字段，则该字段会被置为null。
+            c)若该人脸分组已经被配置到识别计划中，则修改人脸分组后，会将修改后的信息，一并下发到设备上。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.FaceGroupAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupRequest)">
+             <summary>
+             按条件查询人脸分组
+            
+             </summary>
+             <remarks> a)根据查询条件，查询人脸分组集合。</remarks>
+             <param name="model"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.ResourceRecognitionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest)">
+            <summary>
+            按条件查询识别资源
+            
+            </summary>
+            <remarks>a)根据条件，查询识别资源。
+            b)该接口和识别计划配置有关，识别计划配置时需要选择识别资源，通过该接口查询。
+            c)查询接口之间的关系为与，若不传任何条件，为查询全部的识别资源。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupBatchDeletionRequest.IndexCodes">
+            <summary>
+            通过indexCode集合查询指定的识别资源集合
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupRequest.IndexCode">
+            <summary>
+            通过唯一标识集合查询指定的人脸分组集合
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupRequest.Name">
+            <summary>
+            人脸分组名称模糊查询
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupResponseData.IndexCode">
+            <summary>
+            人脸分组的唯一标识,由人脸监控应用服务生成
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupResponseData.Name">
+            <summary>
+            人脸分组的名称,人脸分组的名称是唯一的
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupResponseData.Description">
+            <summary>
+            人脸分组的描述
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionRequest.Name" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionRequest.Description">
+            <summary>
+            分组的描述，1~128个字符
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionResponseData.IndexCode">
+            <summary>
+            人脸分组的唯一标识,由人脸监控应用服务生成
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionResponseData.Name">
+            <summary>
+            人脸分组的名称,人脸分组的名称是唯一的
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionResponseData.Description">
+            <summary>
+            人脸分组的描述
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleUpdateRequest.IndexCode">
+            <summary>
+            人脸分组的唯一标识,可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleUpdateRequest.Name" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleUpdateRequest.Description">
+            <summary>
+            人脸分组的描述，1~128个字符
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceInfo">
+            <summary>
+            人脸信息对象
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceInfo.Name" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceInfo.Sex">
+            <summary>
+            人脸的性别信息，
+            1-男性，
+            2-女性，
+            UNKNOWN-未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceInfo.CertificateType">
+            <summary>
+            人脸的证件类别，
+            111-身份证，
+            OTHER-其它证件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceInfo.CertificateNum">
+            <summary>
+            人脸的证件号码信。1~20个数字、字母。
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FacePic">
+            <summary>
+            人脸图片对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FacePic.FaceUrl">
+            <summary>
+            人脸图片的URL。和faceBinaryData不能同时为空，同时存在时优先取faceBinaryData；图片的大小范围在10KB到200KB之间，只支持JGP格式图片。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FacePic.FaceBinaryData">
+            <summary>
+            人脸图片的二进制数据经过Base64编码后的字符串，和faceUrl不能同时为空，同时存在时优先取faceBinaryData。 图片的大小范围在10KB到200KB之间，只支持JGP格式图片。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequestItem.IndexCode">
+            <summary>
+            人脸唯一标识，单次批量添加操作，不允许重复。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequestItem.FaceGroupIndexCode">
+            <summary>
+            指定人脸添加到的人脸分组的唯一标识,人脸监控应用服务会校验该值的有效性，可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchCopyRequest.IndexCodes">
+            <summary>
+            待拷贝的若干人脸唯一标识集合，，可从按条件批量查询人脸获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchCopyRequest.FaceGroupIndexCodes">
+            <summary>
+            目标人脸分组的唯一标识集合，，可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionRequest.IndexCodes">
+            <summary>
+            人脸的唯一标识集合，可从按条件批量查询人脸获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionRequest.FaceGroupIndexCode">
+            <summary>
+            人脸分组的唯一标识，可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest.IndexCodes">
+            <summary>
+            通过人脸的唯一标识集合查询指定的人脸集合
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest.FaceGroupIndexCode">
+            <summary>
+            根据人脸所属的分组搜索该分组下符合条件的人脸
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest.Name">
+            <summary>
+            人脸名称模糊查询
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest.Sex">
+            <summary>
+            人脸的性别信息，
+            1-男性，
+            2-女性，
+            UNKNOWN-未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest.CertificateType">
+            <summary>
+            人脸的证件类别，
+            111-身份证，
+            OTHER-其它证件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest.CertificateNum">
+            <summary>
+            人脸的证件号码模糊查询
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceResponseData.IndexCodes">
+            <summary>
+            人脸的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceResponseData.FaceGroupIndexCode">
+            <summary>
+            人脸所属的人脸分组的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceResponseData.FaceInfo">
+            <summary>
+            人脸信息对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceResponseData.FacePic">
+            <summary>
+            人脸图片对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest.FaceGroupIndexCode">
+            <summary>
+            指定人脸添加到的人脸分组的唯一标识,人脸监控应用服务会校验该值的有效性，可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest.FaceInfo">
+            <summary>
+            人脸信息对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest.FacePic">
+            <summary>
+            人脸图片对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionResponseData.IndexCode">
+            <summary>
+            人脸的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionResponseData.FaceGroupIndexCode">
+            <summary>
+            人脸所属的人脸分组的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionResponseData.FaceInfo">
+            <summary>
+            人脸信息对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionResponseData.FacePic">
+            <summary>
+            人脸图片对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest.IndexCode">
+            <summary>
+            人脸的唯一标识，可从按条件批量查询人脸获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest.FaceInfo">
+            <summary>
+            人脸信息对象
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest.FacePic">
+            <summary>
+            人脸图片对象
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.Name" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.FaceGroupIndexCodes">
+            <summary>
+            人脸分组唯一标识的集合，非空，人脸监控应用服务会校验标识的有效性，
+            可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.CameraIndexCodes">
+            <summary>
+            抓拍点通道唯一标识的集合，非空，人脸监控应用服务会校验抓拍点标识的有效性，
+            可通过分页获取监控点资源获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.RecognitionResourceIndexCodes">
+            <summary>
+            识别资源唯一标识的集合。人脸监控应用服务会校验识别资源标识的有效性，若有重复、无效的标识，校验不通过。识别资源类型为深眸时，可以为空。
+            可从按条件查询识别资源获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.RecognitionResourceType">
+            <summary>
+            识别资源类型，
+            SUPER_BRAIN 超脑，
+            FACE_RECOGNITION_SERVER 脸谱，
+            COMPARISON 深眸
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.Description">
+            <summary>
+            识别计划描述，1~128个字符
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.Threshold">
+            <summary>
+            识别计划的阈值，重点人员是指相似度超过该值时报警，范围[1, 100)
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.TimeBlockList">
+            <summary>
+            时间计划模板，不填默认全天候
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionRequest.IndexCodes">
+            <summary>
+            操作的计划的唯一标识集合，操作可能是删除等，可从查询重点人员识别计划获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailRequest.IndexCodes">
+            <summary>
+            识别计划的唯一标识，可从查询重点人员识别计划获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.IndexCode">
+            <summary>
+            识别计划的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.Name">
+            <summary>
+            识别计划的名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.RecognitionPlanType">
+            <summary>
+            识别计划的类型，
+            BLACK_LIST-重点人员识别计划
+            WHITE_LIST-陌生人识别计划
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.StartTime">
+            <summary>
+            识别计划开始下发的时间,遵循ISO8601的时间格式
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.UsingTime">
+            <summary>
+            识别计划下发已经用的时间,单位:秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.Status">
+            <summary>
+            识别计划的状态,，参考附录A.33
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.FaceGroupIssuedResults">
+            <summary>
+            每个人脸分组的下发结果集合
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.CameraControlResults">
+            <summary>
+            每个通道的布控结果集合
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponseData.FaceIssuedResultPage">
+            <summary>
+            每张人脸的下发情况分页结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRequest.Description">
+            <summary>
+            根据识别计划描述模糊搜索
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRequest.FaceGroupIndexCodes">
+            <summary>
+            根据人脸分组唯一标识集合搜索
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRequest.Name">
+            <summary>
+            根据识别计划名称模糊搜索
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRequest.Status">
+            <summary>
+            根据下发状态搜索，参考附录A.33
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.IndexCode">
+            <summary>
+            识别计划的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.Name">
+            <summary>
+            识别计划的名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.FaceGroupIndexCodes">
+            <summary>
+            人脸分组唯一标识的集合，非空，人脸监控应用服务会校验标识的有效性，
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.CameraIndexCodes">
+            <summary>
+            抓拍点通道唯一标识的集合，非空，人脸监控应用服务会校验抓拍点标识的有效性，
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.RecognitionResourceIndexCodes">
+            <summary>
+            识别资源唯一标识的集合。人脸监控应用服务会校验识别资源标识的有效性，若有重复、无效的标识，校验不通过。识别资源类型为深眸时，可以为空。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.RecognitionResourceType">
+            <summary>
+            识别资源类型，
+            SUPER_BRAIN 超脑，
+            FACE_RECOGNITION_SERVER 脸谱，
+            COMPARISON 深眸
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.Description">
+            <summary>
+            识别计划描述，1~128个字符
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.Status">
+            <summary>
+            识别计划的状态,参考附录A.33
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.Available">
+            <summary>
+            是否启用,true:启用,false:禁用
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.StartTime">
+            <summary>
+            识别计划开始下发的时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.UsingTime">
+            <summary>
+            识别计划下发已经用的时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackResponseData.Threshold">
+            <summary>
+            识别计划的阈值，重点人员是指相似度超过该值时报警，范围[1, 100)
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRestartRequest.IndexCode">
+            <summary>
+            识别计划的唯一标识，可从查询重点人员识别计划获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.IndexCode">
+            <summary>
+            识别计划唯一标识，可从查询重点人员识别计划获取
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.Name" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.FaceGroupIndexCodes">
+            <summary>
+            人脸分组唯一标识的集合，非空，人脸监控应用服务会校验标识的有效性，
+            可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.CameraIndexCodes">
+            <summary>
+            抓拍点通道唯一标识的集合，非空，人脸监控应用服务会校验抓拍点标识的有效性，
+            可通过分页获取监控点资源获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.RecognitionResourceIndexCodes">
+            <summary>
+            识别资源唯一标识的集合。人脸监控应用服务会校验识别资源标识的有效性，若有重复、无效的标识，校验不通过。识别资源类型为深眸时，可以为空。
+            可从按条件查询识别资源获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.Description">
+            <summary>
+            识别计划描述，1~128个字符
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.Threshold">
+            <summary>
+            识别计划的阈值，重点人员是指相似度超过该值时报警，范围[1, 100)
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.TimeBlockList">
+            <summary>
+            时间计划模板，不填默认全天候
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceIssuedResultPage">
+            <summary>
+            每张人脸的下发情况分页结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.IssuedResult">
+            <summary>
+            下发结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.IssuedResult.IndexCode">
+            <summary>
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.IssuedResult.DataType">
+            <summary>
+            下发项的类型,
+            FACE-人脸
+            FACE_GROUP-人脸分组
+            CHANNEL-监控点通道
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.IssuedResult.ErrorCode">
+            <summary>
+            下发项的结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.TimeBlock">
+            <summary>
+            时间计划模板，不填默认全天候
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.TimeBlock.DayOfWeek">
+            <summary>
+            星期几，1-7分别表示周一至周七
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.TimeBlock.TimeRange">
+            <summary>
+            时间段数组，一天可以有多个时间段
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.TimeRange">
+            <summary>
+            时间段数组，一天可以有多个时间段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.TimeRange.StartTime">
+            <summary>
+            开始时间，时分，如“00:00”
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.TimeRange.EndTime">
+            <summary>
+            结束时间，时分，如“00:00”
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest.IndexCodes">
+            <summary>
+            通过indexCode集合查询指定的识别资源集合
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest.Name">
+            <summary>
+            识别资源名称模糊查询
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest.RecognitionResourceType">
+            <summary>
+            根据识别资源的类型搜索，SUPER_BRAIN 超脑，FACE_RECOGNITION_SERVER 脸谱，COMPARISON 深眸
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionResponseData.IndexCode">
+            <summary>
+            识别计划的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionResponseData.Name">
+            <summary>
+            识别计划的名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionResponseData.RecognitionResourceType">
+            <summary>
+            根据识别资源的类型搜索，SUPER_BRAIN 超脑，FACE_RECOGNITION_SERVER 脸谱，COMPARISON 深眸
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.RemoteCertificateValidate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            远程证书验证
+            </summary>
+            <param name="sender"></param>
+            <param name="cert"></param>
+            <param name="chain"></param>
+            <param name="error"></param>
+            <returns>验证是否通过，始终通过</returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.GetString(System.String,System.Decimal)">
+            <summary>
+            get
+            </summary>
+            <param name="url"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.GetStringAsync(System.String,System.Decimal)">
+            <summary>
+            异步get
+            </summary>
+            <param name="url"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.PostAndGetString(System.String,System.String,System.Decimal)">
+            <summary>
+            post
+            </summary>
+            <param name="url"></param>
+            <param name="bodyStr"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.PostAndGetStringAsync(System.String,System.String,System.Decimal)">
+            <summary>
+            异步post
+            </summary>
+            <param name="url"></param>
+            <param name="bodyStr"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.CardInfoAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager">
+            <summary>
+            卡片API
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager.CardInfoAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest)">
+            <summary>
+            获取单个卡片信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。
+            注：卡号为精确查找</remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest">
+            <summary>
+            获取单个卡片信息请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest.CardNo">
+            <summary>
+            卡片号码，卡片号码和卡片ID两者同时只能传一种参数
+            获取卡片列表接口获取返回参数cardNo
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest.CardId">
+            <summary>
+            卡号ID，卡片号码和卡片ID两者同时只能传一种参数
+            获取卡片列表接口获取返回参数cardId
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponse">
+            <summary>
+            获取单个卡片信息结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData">
+            <summary>
+            获取单个卡片信息结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.CardId">
+            <summary>
+            卡片ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.PersonId">
+            <summary>
+            持卡人员id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.PersonName">
+            <summary>
+            持卡人名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.UseStatus">
+            <summary>
+            使用状态标记
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.StartDate">
+            <summary>
+             生效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.EndDate">
+            <summary>
+            失效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.LossDate">
+            <summary>
+            挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.UnlossDate">
+            <summary>
+            解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.IHikMpcApiManager.AlarmBlackAdd(Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequest)">
+            <summary>
+            批量添加车辆黑名单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>批量添加车辆黑名单，该车辆布控为黑名单后，当有过车事件上报时，会产生对应的黑名单事件，一次添加最大不超过400个车辆黑名单。</remarks>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.PlateNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.BeginTime">
+            <summary>
+            布控开始时间（格式：yyyy-MM-ddTHH:mm:ss.sss+当前时区）
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.EndTime">
+            <summary>
+            布控结束时间（格式：yyyy-MM-ddTHH:mm:ss.sss+当前时区）
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.OwnerName">
+            <summary>
+            车主姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.Phone">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.Reason">
+            <summary>
+            布控原因,1（被盗车），2（被抢车），3（嫌疑车），4（交通违法车），5（紧急查控车）
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddResponseData.IndexCode">
+            <summary>
+            黑名单唯一编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddResponseData.PlateNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.HikPmsApiManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.HikPmsApiManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.HikPmsApiManager.ParkRemainSpaceNumAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumRequest)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.HikPmsApiManager.AlarmCarAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.HikPmsApiManager.AlarmCarDeletionAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarDeletionRequest)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.HikPmsApiManager.AlarmCarPageAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageRequest)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.IHikPmsApiManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.IHikPmsApiManager.ParkRemainSpaceNumAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumRequest)">
+            <summary>
+            查询停车库剩余车位数
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.IHikPmsApiManager.AlarmCarAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest)">
+            <summary>
+            车辆布控
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>简述：车辆被布控后，进出场时出入口岗亭会对车辆进行相应的布控措施，完善出入口管控场景；根据布控时间段进行管控，时间段为空时则全时段布控。        支持：支持通过车牌号或卡号进行车辆布控。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.IHikPmsApiManager.AlarmCarDeletionAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarDeletionRequest)">
+            <summary>
+            取消车辆布控
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>简述：车辆取消布控后，进出场和普通车辆一样，不再被布控。
+            支持：支持通过布控车辆编号集合取消车辆布控。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.IHikPmsApiManager.AlarmCarPageAsync(Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageRequest)">
+            <summary>
+            查询布控车辆
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest">
+            <summary>
+            车辆布控请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.PlateNo">
+            <summary>
+            车牌号码（车牌、卡号二选一）
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.Driver">
+            <summary>
+            驾驶员名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.DriverPhone">
+            <summary>
+            驾驶员电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.Remark">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.EndTime">
+            <summary>
+            布控结束时间,ISO8601格式：
+            yyyy-MM-ddTHH:mm:ss+当前时区，例如北京时间：
+            2018-07-26T15:00:00+08:00
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionResponse">
+            <summary>
+            车辆布控结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionResponseData">
+            <summary>
+            车辆布控结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionResponseData.AlarmSyscode">
+            <summary>
+            布控车辆唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionResponseData.PlateNo">
+            <summary>
+            车牌号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionResponseData.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarDeletionRequest">
+            <summary>
+            取消车辆布控
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarDeletionRequest.AlarmSyscodes">
+            <summary>
+            布控车辆唯一标识集合(编号间用‘,’分隔)
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarDeletionResponse">
+            <summary>
+            取消车辆布控
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageRequest">
+            <summary>
+            查询布控车辆
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageRequest.SearchKey">
+            <summary>
+            车牌号/卡号
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponse">
+            <summary>
+            查询布控车辆结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData">
+            <summary>
+            查询布控车辆结果数据
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData.AlarmSyscode" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData.PlateNo">
+            <summary>
+            车牌号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData.Driver">
+            <summary>
+            驾驶员名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData.DriverPhone">
+            <summary>
+            驾驶员电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData.Remark">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarPageResponseData.EndTime">
+            <summary>
+            布控结束时间,ISO8601格式：
+            yyyy-MM-ddTHH:mm:ss+当前时区，例如北京时间：
+            2018-07-26T15:00:00+08:00
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumRequest">
+            <summary>
+            查询停车库剩余车位数请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumRequest.ParkSyscode">
+            <summary>
+            停车库唯一标识码（最大长度64）
+            为空时获取全部停车库的车位剩余情况，可通过获取停车库列表接口获取
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponse">
+            <summary>
+            剩余车位结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData">
+            <summary>
+            车位剩余结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.ParkSyscode">
+            <summary>
+            停车库唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.ParkName">
+            <summary>
+            停车库名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.ParentParkSyscode">
+            <summary>
+            父停车库唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.TotalPlace">
+            <summary>
+            停车库车位总数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.TotalPermPlace">
+            <summary>
+            停车库固定车位总数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.TotalReservePlace">
+            <summary>
+            停车库预约车位总数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.LeftPlace">
+            <summary>
+            停车库车位剩余数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.LeftPermPlace">
+            <summary>
+            停车库固定车位剩余数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumResponseData.LeftReservePlace">
+            <summary>
+            停车库预约车位剩余数
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.HikResourceApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager">
+            <summary>
+            组织api
+            </summary>
+            <summary>
+            组织api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.AcsDoorAdvanceAcsDoorListAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest)">
+            <summary>
+            查询门禁点列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>查询门禁点列表接口可以根据门禁点唯一标识集、门禁点名称、门禁设备唯一标识、所属区域唯一标识这些查询条件来进行高级查询；若不指定查询条件，即全量获取所有的门禁点信息。返回结果分页展示。
+            注：若指定多个查询条件，表示将这些查询条件进行”与”的组合后进行精确查询。
+            根据”门禁点名称doorName”查询为模糊查询。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListRequest)">
+            <summary>
+            获取卡片列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.OrgListAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListRequest)">
+            <summary>
+            获取组织列表
+            </summary>
+            <remarks>
+            根据该接口全量同步组织信息,不作权限过滤，返回结果分页展示。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PersonIdPersonInfoAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.OrgIndexCodePersonListV2Request)">
+            <summary>
+            获取组织下人员列表v2
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>根据组织编号获取组织下的人员信息列表，返回结果分页展示。
+            本接口支持自定义属性的返回， 通过获取资源属性接口获取平台已支持人员属性的说明。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PhoneNoPersonInfoAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PhoneNoPersonInfoRequest)">
+            <summary>
+            根据手机号码获取单个人员信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>根据手机号码获取指定人员的信息。此接口不支持自定义属性</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.CertificateNoPersonInfoAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.CertificateNoPersonInfoRequest)">
+            <summary>
+            根据证件号码获取单个人员信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>根据证件类型、证件号码获取指定人员的信息。此接口不支持自定义属性</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PersonIdPersonInfoAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoRequest)">
+            <summary>
+            根据人员编号获取单个人员信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>根据人员ID获取指定人员的信息。此接口不支持自定义属性</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PersonListV2Async(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonListV2Request)">
+            <summary>
+            获取人员列表v2
+            </summary>
+            <remarks>获取人员列表接口可用来全量同步人员信息，返回结果分页展示。
+            本接口支持自定义属性的返回， 通过获取资源属性接口获取平台已支持人员属性的说明。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.AdvancePersonListV2Async(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request)">
+            <summary>
+            查询人员列表v2
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>查询人员列表接口可以根据人员ID集、人员姓名、人员性别、所属组织、证件类型、证件号码、人员状态这些查询条件来进行高级查询；若不指定查询条件，即全量获取所有的人员信息。返回结果分页展示。
+            注：若指定多个查询条件，表示将这些查询条件进行”与”的组合后进行精确查询。
+            根据”人员名称personName”查询为模糊查询。
+            本接口支持自定义属性的返回，及自定义属性进行查找， 通过获取资源属性接口获取平台已支持人员属性的说明。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PersonSingleAddAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddRequest)">
+            <summary>
+            添加人员
+            </summary>
+            <remarks>添加人员信息接口，注意，在安保基础数据配置的必选字段必须都包括在入参中。
+            人员添加的时候，可以指定人员personId，不允许与其他人员personId重复，包括已删除的人员。
+            本接口支持人员信息的扩展字段，按照属性定义key:value上传即可， 可通过获取资源属性接口，获取平台已启用的人员属性信息。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PersonBatchAddAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequest)">
+            <summary>
+            批量添加人员
+            </summary>
+            <remarks>
+            添加人员信息接口，注意，在安保基础数据配置的必选字段必须都包括在入参中。
+            批量添加仅支持人员基础属性。
+            人员批量添加的时候，可以指定人员personId，不允许与其他人员personId重复，包括已删除的人员。
+            如果用户不想指定personId，那么需要指定clientId，请求内的每一条数据的clientid必须唯一， 返回值会将平台生成的personid与clientid做绑定。
+            若personId和clientId都不指定，则无法准确判断哪部分人员添加成功。
+            本接口支持人员信息的扩展字段，按照属性定义key:value上传即可， 可通过获取资源属性接口，获取平台已启用的人员属性信息。
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PersonSingleUpdateAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleUpdateRequest)">
+            <summary>
+            修改人员
+            </summary>
+            <remarks>根据人员编号修改人员信息。
+            本接口支持人员信息的扩展字段，按照属性定义key:value上传即可， 可通过获取资源属性接口，获取平台已启用的人员属性信息。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.PersonBatchDeleteAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteRequest)">
+            <summary>
+            批量删除人员
+            </summary>
+            <remarks>根据编号删除人员，人员删除是软删除，可以在安保基础数据查询已删除人员。支持批量删除人员。删除人员将会同时删除人员关联的指纹和人脸信息。</remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest.DoorIndexCodes">
+            <summary>
+            门禁点唯一标识符集 
+            多个值使用英文逗号分隔， 获取门禁设备列表接口可以获取
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest.DoorName" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest.AcsDevIndexCode">
+            <summary>
+            门禁设备唯一标识，获取门禁设备列表接口可以获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest.RegionIndexCode">
+            <summary>
+            所属区域唯一标识，分页获取区域列表
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.DoorIndexCode">
+            <summary>
+            门禁点唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.DoorName">
+            <summary>
+            门禁点名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.DoorNo">
+            <summary>
+            门禁点序号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.AcsDevIndexCode">
+            <summary>
+            所属门禁设备唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.RegionIndexCode">
+            <summary>
+            所属区域唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.ChannelType">
+            <summary>
+            通道类型, 参考附录A.8 门禁设备通道类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.ChannelNo">
+            <summary>
+            通道号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.InstallLocation">
+            <summary>
+            安装位置
+            communityPerimeter：小区周界
+            communityEntrance：小区出入口
+            fireChannel：消防通道
+            landscapePool：景观池
+            outsideBuilding：住宅楼外
+            parkEntrance：停车场（库）出入口
+            parkArea：停车场区
+            equipmentRoom：设备房（机房、配电房、泵房）
+            monitorCenter：监控中心
+            stopArea：禁停区
+            vault：金库
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponseData.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListRequest">
+            <summary>
+            获取卡片列表请求
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponse">
+            <summary>
+            获取卡片列表结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData">
+            <summary>
+            获取卡片列表结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.CardId">
+            <summary>
+            卡片ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.PersonId">
+            <summary>
+            持卡人员id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.PersonName">
+            <summary>
+            持卡人名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.UseStatus">
+            <summary>
+            使用状态标记
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.StartDate">
+            <summary>
+             	生效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.EndDate">
+            <summary>
+            失效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.LossDate">
+            <summary>
+            挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.UnlossDate">
+            <summary>
+             	解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponseData.OrgIndexCode">
+            <summary>
+            组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponseData.OrgNo">
+            <summary>
+            组织编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponseData.OrgName">
+            <summary>
+            组织名称，如默认部门
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponseData.OrgPath">
+            <summary>
+            组织路径，例如：默认部门/综合安防/开发小组
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponseData.ParentOrgIndexCode">
+            <summary>
+            父组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponseData.ParentOrgName">
+            <summary>
+            父组织名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponseData.UpdateTime">
+            <summary>
+            更新时间 要求遵守ISO8601标准
+            如2018-07-26T21:30:08.000+08:00 表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.PersonIds">
+            <summary>
+            人员ID集合
+            多个值使用英文逗号分隔，不超过1000个
+            获取人员列表v2 接口获取
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.PersonName" -->
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.Gender">
+            <summary>
+            性别
+            1：男
+            2：女
+            0：未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.OrgIndexCodes">
+            <summary>
+             	所属组织唯一标识码集合
+             	多个值使用英文逗号分隔，不超过1000个
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.CertificateType">
+            <summary>
+             	证件类型
+             	111:身份证
+             	414:护照
+             	113:户口簿
+             	335:驾驶证
+             	131:工作证
+             	133:学生证
+             	990:其他
+             	平台上人员信息实名标识选择为身份证件时必填
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.CertificateNo">
+            <summary>
+            证件号码(最大长度64)
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.IsSubOrg">
+            <summary>
+            是否包含下级组织，true时，搜索orgIndexCodes及其所有子孙组织的人员；
+            false时，只搜索orgIndexCodes的人员
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.CardNo">
+            <summary>
+            卡号, 获取卡片列表接口可以获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.PlateNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.OrderBy">
+            <summary>
+            排序字段，注意：排序字段必须是查询条件，否则返回参数错误
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.OrderType">
+            <summary>
+            降序：desc
+            升序：asc
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.Expressions">
+            <summary>
+            查询表达式
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.CertificateNoPersonInfoRequest.CertificateNo">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.CertificateNoPersonInfoRequest.CertificateType">
+            <summary>
+            证件类型
+            111:身份证
+            414:护照
+            113:户口簿
+            335:驾驶证
+            131:工作证
+            133:学生证
+            990:其他
+            平台上人员信息实名标识选择为身份证件时必填
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.FaceInfo.FaceDate">
+            <summary>
+            人脸图片base64编码后的字符
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.OrgIndexCodePersonListV2Request.OrgIndexCode">
+            <summary>
+            组织唯一标识码， 获取组织列表 接口获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequestItem.ClientId">
+            <summary>
+            人员临时标志，
+            当调用方未指定personId时，clientId作为人员标志，在返回值中标志每个人员的添加结果。
+            所以每次接口调用，每个人员的clientid需保持唯一，1~10个字符，只支持数字。
+            注：clientid只对本次调用有效
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseData.Successes">
+            <summary>
+            批量添加成功的记录
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseData.Failures">
+            <summary>
+            批量添加失败的记录
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseFailures.ClientId">
+            <summary>
+            调用方指定人员临时标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseFailures.Code">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseFailures.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseSuccess.ClientId">
+            <summary>
+            调用方指定人员临时标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseSuccess.PersonId">
+            <summary>
+            服务端生成的唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteRequest.PersonIds">
+            <summary>
+            人员Id，单次操作上限为1000条。
+            获取人员列表v2 接口获取返回参数personId
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteResponseData.PersonId">
+            <summary>
+            人员标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteResponseData.Code">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteResponseData.Msg">
+            <summary>
+            错误消息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoRequest">
+            <summary>
+            根据人员编号获取单个人员信息请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoRequest.PersonId">
+            <summary>
+            人员ID, 获取人员列表v2 接口获取
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoResponse">
+            <summary>
+             根据人员编号获取单个人员信息结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoResponseData">
+            <summary>
+             根据人员编号获取单个人员信息结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.PersonName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.Gender">
+            <summary>
+            性别
+            1：男
+            2：女
+            0：未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.OrgPath">
+            <summary>
+            所属组织路径，@进行分割，例如 @root000000@
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.OrgPathName">
+            <summary>
+            所属组织名称，@进行分割，如@默认部门@
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.OrgIndexCode">
+            <summary>
+            所属组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.CertificateType">
+            <summary>
+            证件类型
+            111:身份证
+            414:护照
+            113:户口簿
+            335:驾驶证
+            131:工作证
+            133:学生证
+            990:其他
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.CertificateNo">
+            <summary> 
+            证件号码
+            一串数字字符串
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.UpdateTime">
+            <summary>
+            更新时间        
+            要求遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00
+            表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.Birthday">
+            <summary>
+             	出生日期
+             	格式：yyyy-MM-dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.PhoneNo">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.Email">
+            <summary>
+            邮件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.Education">
+            <summary>
+            学历
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.Nation">
+            <summary>
+            民族
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoData.PersonPhoto">
+            <summary>
+            人员图片信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2">
+            <summary>
+            人员信息基础
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.PersonName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.Gender">
+            <summary>
+            性别
+            1：男
+            2：女
+            0：未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.OrgIndexCode">
+            <summary>
+            所属组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.PhoneNo">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.CertificateType">
+            <summary>
+            证件类型
+            111:身份证
+            414:护照
+            113:户口簿
+            335:驾驶证
+            131:工作证
+            133:学生证
+            990:其他
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.CertificateNo">
+            <summary> 
+            证件号码
+            一串数字字符串
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.CreateTime">
+            <summary>
+            创建时间
+            要求遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00
+            表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.UpdateTime">
+            <summary>
+            更新时间        
+            要求遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00
+            表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.OrgPath">
+            <summary>
+            所属组织路径，@进行分割，例如 @root000000@
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.OrgPathName">
+            <summary>
+            所属组织名称，@进行分割，如@默认部门@
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonInfoDataV2.PersonPhoto">
+            <summary>
+            人员图片信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonListV2Request">
+            <summary>
+            获取人员列表v2请求
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonListV2Response">
+            <summary>
+            获取人员列表v2结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonListV2ResponseData">
+            <summary>
+            获取人员列表v2结果数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonPhoto">
+            <summary>
+            人员图片信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonPhoto.PersonPhotoIndexCode">
+            <summary>
+            人脸图片唯一标示
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonPhoto.PicUri">
+            <summary>
+            图片相对url, 通过提取人员图片接口获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonPhoto.ServerIndexCode">
+            <summary>
+            图片服务器唯一标示        提取人员图片接口必要参数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonPhoto.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.PersonName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.Gender">
+            <summary>
+            性别
+            1：男
+            2：女
+            0：未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.OrgIndexCode">
+            <summary>
+            所属组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.PhoneNo">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.CertificateType">
+            <summary>
+            证件类型
+            111:身份证
+            414:护照
+            113:户口簿
+            335:驾驶证
+            131:工作证
+            133:学生证
+            990:其他
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.CertificateNo">
+            <summary> 
+            证件号码
+            一串数字字符串
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddRequest.Faces">
+            <summary>
+            人脸信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddResponse.Data">
+            <summary>
+            成功添加的人员的Id
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Utils.ComputeForHMACSHA256(System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="strToSign"></param>
+            <param name="sk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Utils.ComputeBodyMd5(System.String)">
+            <summary>
+            生成body的md5内容
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Utils.BuildSignHeader(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            计算签名头
+            </summary>
+            <param name="header">请求头</param>
+            <returns>签名头</returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Utils.BuildSignString(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            生成SignString
+            </summary>
+            <param name="method">HTTP请求方法，如“POST”</param>
+            <param name="url">接口Url，如/artemis/api/resource/v1/org/advance/orgList</param>
+            <param name="header">请求头</param>
+            <returns>签名字符串</returns>
+        </member>
+    </members>
+</doc>

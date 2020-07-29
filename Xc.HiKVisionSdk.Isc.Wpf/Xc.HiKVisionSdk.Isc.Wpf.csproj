@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Xc.HiKVisionSdk.Isc.Wpf</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <Version>0.0.1</Version>
+    <Description>针对海康安防平台的二次封装的调用例子</Description>
+    <Authors>litesz</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
+    <PackageReference Include="Stylet" Version="1.3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xc.HiKVisionSdk.Isc\Xc.HiKVisionSdk.Isc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\EventService\EventServiceView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\EventService\EventServiceRootView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Frs\BlackView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Frs\FaceView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Frs\FaceGroupView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Frs\FrsRootView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OmnipotentCard\AcsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\OmnipotentCard\OmnipotentCardRootView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Vehicle\CarParkView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Vehicle\VehicleRootView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\EventService\EventServiceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EventService\EventServiceRootView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Frs\BlackView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Frs\FaceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Frs\FaceGroupView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Frs\FrsRootView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OmnipotentCard\AcsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\OmnipotentCard\OmnipotentCardRootView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Vehicle\CarParkView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Vehicle\VehicleRootView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

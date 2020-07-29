@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Isc", "Xc.HiKVisionSdk.Isc\Xc.HiKVisionSdk.Isc.csproj", "{D000D5F5-4978-49C0-8A3D-CFE9683CE8DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Isc.Wpf", "Xc.HiKVisionSdk.Isc.Wpf\Xc.HiKVisionSdk.Isc.Wpf.csproj", "{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D000D5F5-4978-49C0-8A3D-CFE9683CE8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D000D5F5-4978-49C0-8A3D-CFE9683CE8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D000D5F5-4978-49C0-8A3D-CFE9683CE8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D000D5F5-4978-49C0-8A3D-CFE9683CE8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A648310-D948-42A5-9208-718DECFABCA8}
+	EndGlobalSection
+EndGlobal
