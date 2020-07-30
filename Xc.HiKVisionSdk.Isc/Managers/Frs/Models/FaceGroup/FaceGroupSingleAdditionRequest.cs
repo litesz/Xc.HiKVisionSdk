@@ -1,9 +1,12 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 人脸分组新增请求
+    /// </summary>
     public class FaceGroupSingleAdditionRequest
     {
         /// <summary>
-        /// 人脸分组的名称，1~32个字符；不能包含 ’ / \ : * ? " < >
+        /// 人脸分组的名称，1~32个字符；不能包含 ’ / \ : * ? " 
         /// </summary>
         public string Name { get; set; }
 

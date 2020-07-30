@@ -4,12 +4,14 @@ using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource
 {
-
+    /// <summary>
+    /// 资源api
+    /// </summary>
     public partial class HikResourceApiManager : IHikResourceApiManager
     {
 
         /// <summary>
-        /// 
+        /// 卡列表
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>

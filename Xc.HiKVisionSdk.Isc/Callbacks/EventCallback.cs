@@ -1,6 +1,9 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks
 {
-
+    /// <summary>
+    /// 回调事件
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class EventCallback<T>
     {
         /// <summary>

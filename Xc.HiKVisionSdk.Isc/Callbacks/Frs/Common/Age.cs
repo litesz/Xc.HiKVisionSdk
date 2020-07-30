@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs
 {
+    /// <summary>
+    /// 年龄段
+    /// </summary>
     public class Age
     {
         /// <summary>

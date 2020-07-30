@@ -3,6 +3,9 @@ using System.Net;
 
 namespace Xc.HiKVisionSdk.Isc
 {
+    /// <summary>
+    /// 请求建造者
+    /// </summary>
     internal class HttpRequestBuilder
     {
         private readonly string _address;
@@ -11,30 +14,51 @@ namespace Xc.HiKVisionSdk.Isc
         private string _method = Const.Get;
         private bool _keepAlive = false;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="address"></param>
         public HttpRequestBuilder(string address)
         {
             _address = address;
         }
 
-
+        /// <summary>
+        /// 超时
+        /// </summary>
+        /// <param name="timeout"></param>
+        /// <returns></returns>
         public HttpRequestBuilder WithTimeOut(int timeout)
         {
             _timeout = timeout;
             return this;
         }
 
+        /// <summary>
+        /// 头
+        /// </summary>
+        /// <param name="header"></param>
+        /// <returns></returns>
         public HttpRequestBuilder WithHeader(Dictionary<string, string> header)
         {
             _header = header;
             return this;
         }
 
+        /// <summary>
+        /// 是post
+        /// </summary>
+        /// <returns></returns>
         public HttpRequestBuilder IsPost()
         {
             _method = Const.Post;
             return this;
         }
 
+        /// <summary>
+        /// 长连接
+        /// </summary>
+        /// <returns></returns>
         public HttpRequestBuilder IsKeepAlive()
         {
             _keepAlive = true;
@@ -42,7 +66,10 @@ namespace Xc.HiKVisionSdk.Isc
         }
 
 
-
+        /// <summary>
+        /// 构造请求
+        /// </summary>
+        /// <returns></returns>
         public HttpWebRequest Build()
         {
             // 创建POST请求

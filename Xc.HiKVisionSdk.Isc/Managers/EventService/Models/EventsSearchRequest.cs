@@ -3,7 +3,10 @@ using Xc.HiKVisionSdk.Isc.Models.Common;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
 {
-    public class EventsSearchRequest : IPaged
+    /// <summary>
+    /// 获取联动事件列表请求
+    /// </summary>
+    public class EventsSearchRequest : IPagedQuery
     {
         /// <summary>
         ///  事件规则id

@@ -2,6 +2,9 @@
 
 namespace Xc.HiKVisionSdk.Isc.Managers
 {
+    /// <summary>
+    /// 网络实现
+    /// </summary>
     public interface IHikVisionApiManager
     {
         /// <summary>
@@ -34,7 +37,11 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         /// <param name="ver"></param>
         /// <returns></returns>
         Task<string> PostAndGetStringAsync(string url, string bodyStr, decimal ver);
-
+        /// <summary>
+        /// 查询图片
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         byte[] GetImageBytes(string url);
     }
 }

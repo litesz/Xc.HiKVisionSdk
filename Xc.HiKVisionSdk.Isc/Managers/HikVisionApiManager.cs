@@ -9,6 +9,9 @@ using Xc.HiKVisionSdk.Isc.Models;
 
 namespace Xc.HiKVisionSdk.Isc.Managers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class HikVisionApiManager : IHikVisionApiManager
     {
         private readonly int _timeout = 3000;
@@ -19,16 +22,31 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(RemoteCertificateValidate);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="option"></param>
         public HikVisionApiManager(IscSdkOption option)
         {
             _option = option;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="options"></param>
         public HikVisionApiManager(IOptions<IscSdkOption> options) : this(options.Value)
         {
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ak"></param>
+        /// <param name="sk"></param>
+        /// <param name="address"></param>
+        /// <param name="ver"></param>
         public HikVisionApiManager(string ak, string sk, string address, decimal ver) : this(new IscSdkOption
         {
             Ak = ak.Trim(),
@@ -39,6 +57,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="ver"></param>
+        /// <returns></returns>
         public string GetString(string url, decimal ver)
         {
             Check(ver);
@@ -48,6 +72,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             return req.ReadAsString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="ver"></param>
+        /// <returns></returns>
         public Task<string> GetStringAsync(string url, decimal ver)
         {
             Check(ver);
@@ -60,6 +90,13 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             });
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="bodyStr"></param>
+        /// <param name="ver"></param>
+        /// <returns></returns>
         public string PostAndGetString(string url, string bodyStr, decimal ver)
         {
             Check(ver);
@@ -76,6 +113,13 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             return req.ReadAsString();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="bodyStr"></param>
+        /// <param name="ver"></param>
+        /// <returns></returns>
         public Task<string> PostAndGetStringAsync(string url, string bodyStr, decimal ver)
         {
             Check(ver);
@@ -97,6 +141,11 @@ namespace Xc.HiKVisionSdk.Isc.Managers
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public byte[] GetImageBytes(string url)
         {
             Check(1);

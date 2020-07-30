@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 人脸批量拷贝
+    /// </summary>
     public class FaceBatchCopyRequest
     {
         /// <summary>

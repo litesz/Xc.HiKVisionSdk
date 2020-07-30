@@ -6,9 +6,18 @@ using System.Text;
 
 namespace Xc.HiKVisionSdk.Isc.Managers
 {
+    /// <summary>
+    /// HttpWebRequestExtensions
+    /// </summary>
     public static class HttpWebRequestExtensions
     {
 
+        /// <summary>
+        /// 发送request
+        /// </summary>
+        /// <param name="req"></param>
+        /// <param name="body"></param>
+        /// <returns></returns>
         internal static bool WriteBody(this HttpWebRequest req, string body)
         {
             if (string.IsNullOrWhiteSpace(body))
@@ -39,6 +48,11 @@ namespace Xc.HiKVisionSdk.Isc.Managers
 
         }
 
+        /// <summary>
+        /// 获得response
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         internal static string ReadAsString(this HttpWebRequest req)
         {
             HttpWebResponse rsp = null;
@@ -75,6 +89,11 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             return string.Empty;
         }
 
+        /// <summary>
+        /// 作为byte读取
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         internal static byte[] ReadAsBytes(this HttpWebRequest req)
         {
             HttpWebResponse rsp = null;

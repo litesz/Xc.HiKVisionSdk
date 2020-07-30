@@ -2,6 +2,9 @@
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 按条件批量查询人脸
+    /// </summary>
     public class FaceRequest : PagedQuery
     {
         /// <summary>

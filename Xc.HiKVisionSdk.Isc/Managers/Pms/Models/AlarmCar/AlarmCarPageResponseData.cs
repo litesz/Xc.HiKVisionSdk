@@ -5,7 +5,7 @@
     /// </summary>
     public class AlarmCarPageResponseData
     {
-        // <summary>
+        /// <summary>
         /// 布控车辆唯一标识
         /// </summary>
         public string AlarmSyscode { get; set; }

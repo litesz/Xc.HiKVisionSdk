@@ -1,9 +1,12 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 重点监控人员添加识别计划请求
+    /// </summary>
     public class PlanRecognitionBlackAdditionRequest
     {
         /// <summary>
-        /// 识别计划名称,1~32个字符；不能包含 ’ / \ : * ? " < >
+        /// 识别计划名称,1~32个字符；不能包含 ’ / \ : * ? " 
         /// </summary>
         public string Name { get; set; }
         /// <summary>

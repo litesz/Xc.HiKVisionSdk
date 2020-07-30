@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 请求
+    /// </summary>
     public class PlanRecognitionBlackDeletionRequest
     {
         /// <summary>

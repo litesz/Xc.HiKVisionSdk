@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Acs
 {
+    /// <summary>
+    /// 人员类型
+    /// </summary>
     public enum UserType
     {
         /// <summary>

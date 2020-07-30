@@ -2,9 +2,12 @@
 
 namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency
 {
+    /// <summary>
+    /// 人脸信息
+    /// </summary>
     public class FaceInfo
     {
-        // <summary>
+        /// <summary>
         /// 抓拍到的人脸图片的URL，可能位于设备或ASW服务上。
         /// 调用人脸服务图片下载 获取图片数据
         /// </summary>

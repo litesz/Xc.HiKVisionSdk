@@ -102,6 +102,9 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
             //EventInfosByType.Add(ability, list);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void InitAcs()
         {
 
@@ -128,7 +131,9 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
                 Action = "acs"
             });
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void InitPms()
         {
 
@@ -143,7 +148,9 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
                 Action = "pms"
             });
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void InitFace()
         {
             Items.Add(1644175361, new EventCollectionItem

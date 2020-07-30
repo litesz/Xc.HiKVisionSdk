@@ -53,7 +53,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
         public int[] EventTypes { get; set; }
 
         /// <summary>
-        /// 人员姓名(支持中英文字符，不能包含 ’ / \ : * ? " < >
+        /// 人员姓名(支持中英文字符，不能包含 ’ / \ : * ? " 
         /// </summary>
         public string PersonName { get; set; }
 

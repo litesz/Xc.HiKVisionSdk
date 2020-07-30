@@ -3,6 +3,9 @@ using Xc.HiKVisionSdk.Isc.Managers.EventService.Models;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService
 {
+    /// <summary>
+    /// 事件服务api
+    /// </summary>
     public interface IHikEventServiceApiManager
     {
 

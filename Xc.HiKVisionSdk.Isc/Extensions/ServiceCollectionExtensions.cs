@@ -17,15 +17,25 @@ using Xc.HiKVisionSdk.Isc.Models;
 
 namespace Xc.HiKVisionSdk.Isc
 {
+    /// <summary>
+    /// di扩展
+    /// </summary>
     public static class ServiceCollectionExtensions
     {
+        /// <summary>
+        /// 添加海康API管理
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration"></param>
+        /// <returns></returns>
         public static IServiceCollection AddHikVisionIsc(this IServiceCollection services, IConfiguration configuration)
         {
 
             services.Configure<IscSdkOption>(configuration.GetSection(IscSdkOption.Position));
 
-            services.AddSingleton<IInstallLocation, InstallLocation>();
+            services.AddSingleton<IInstallLocationCollection, InstallLocationCollection>();
             services.AddSingleton<IEventCollection, EventCollection>();
+            services.AddScoped<IDoorEventSortCollection, DoorEventSortCollection>();
 
             services.AddSingleton<IHikVisionApiManager, HikVisionApiManager>();
             services.AddScoped<IHikAcsApiManager, HikAcsApiManager>();
@@ -36,7 +46,7 @@ namespace Xc.HiKVisionSdk.Isc
             services.AddScoped<IHikIrdsApiManager, HikIrdsApiManager>();
             services.AddScoped<IHikMpcApiManager, HikMpcApiManager>();
 
-
+            
             return services;
         }
     }

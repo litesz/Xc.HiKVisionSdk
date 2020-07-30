@@ -4,7 +4,7 @@ using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card;
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource
 {
     /// <summary>
-    /// 组织api
+    /// 资源api
     /// </summary>
     public partial interface IHikResourceApiManager
     {

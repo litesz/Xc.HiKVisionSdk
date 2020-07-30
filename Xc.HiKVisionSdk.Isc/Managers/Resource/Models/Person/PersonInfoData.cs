@@ -2,6 +2,9 @@
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
+    /// <summary>
+    /// 基本人员信息
+    /// </summary>
     public class PersonInfoData
     {
 

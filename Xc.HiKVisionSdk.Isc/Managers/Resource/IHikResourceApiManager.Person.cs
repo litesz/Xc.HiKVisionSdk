@@ -13,7 +13,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         /// <remarks>根据组织编号获取组织下的人员信息列表，返回结果分页展示。
         /// 本接口支持自定义属性的返回， 通过获取资源属性接口获取平台已支持人员属性的说明。</remarks>
-        Task<OrgIndexCodePersonListV2Response> PersonIdPersonInfoAsync(OrgIndexCodePersonListV2Request model);
+        Task<OrgIndexCodePersonListV2Response> OrgIndexCodePersonListV2Async(OrgIndexCodePersonListV2Request model);
 
         /// <summary>
         /// 根据手机号码获取单个人员信息

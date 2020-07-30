@@ -3,6 +3,9 @@ using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource
 {
+    /// <summary>
+    /// 资源api
+    /// </summary>
     public partial interface IHikResourceApiManager
     {
       

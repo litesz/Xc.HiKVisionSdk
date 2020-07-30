@@ -2,6 +2,9 @@
 
 namespace Xc.HiKVisionSdk.Isc.Callbacks.Acs
 {
+    /// <summary>
+    /// 人员身份证信息
+    /// </summary>
     public class ExtEventIdentityCardInfo
     {
         /// <summary>

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
 {
+    /// <summary>
+    /// 事件处理状态
+    /// </summary>
     public enum HandleStatus
     {
         /// <summary>
@@ -16,6 +19,9 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
         Processed
     }
 
+    /// <summary>
+    /// 事件级别
+    /// </summary>
     public enum EventLevel
     {
         /// <summary>
@@ -33,6 +39,9 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
 
     }
 
+    /// <summary>
+    /// 订阅类型
+    /// </summary>
     public enum SubType
     {
         /// <summary>

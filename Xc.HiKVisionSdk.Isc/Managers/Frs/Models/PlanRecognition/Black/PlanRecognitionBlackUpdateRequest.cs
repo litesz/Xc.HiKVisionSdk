@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 单个修改重点人员识别计划请求
+    /// </summary>
     public class PlanRecognitionBlackUpdateRequest
     {
         /// <summary>
@@ -8,7 +11,7 @@
         public string IndexCode { get; set; }
 
         /// <summary>
-        /// 识别计划名称,1~32个字符；不能包含 ’ / \ : * ? " < >
+        /// 识别计划名称,1~32个字符；不能包含 ’ / \ : * ? " 
         /// </summary>
         public string Name { get; set; }
         /// <summary>

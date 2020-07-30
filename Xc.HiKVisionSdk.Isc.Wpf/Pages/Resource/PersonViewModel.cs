@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models;
+using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person;
 
 namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
@@ -130,9 +131,9 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
             {
                 IsRun = false;
 
-                IHikIrdsApiManager resourceApiManager = Container.Get<IHikIrdsApiManager>();
+                IHikResourceApiManager resourceApiManager = Container.Get<IHikResourceApiManager>();
 
-                var result = await resourceApiManager.CardListAsync(new Managers.Irds.Models.CardListRequest
+                var result = await resourceApiManager.CardListAsync(new CardListRequest
                 {
                     PageNo = 1,
                     PageSize = 100

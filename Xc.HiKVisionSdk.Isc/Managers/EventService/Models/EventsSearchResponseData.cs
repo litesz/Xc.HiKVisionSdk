@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
 {
+    /// <summary>
+    /// 获取联动事件列表结果数据
+    /// </summary>
     public class EventsSearchResponseData
     {
         /// <summary>

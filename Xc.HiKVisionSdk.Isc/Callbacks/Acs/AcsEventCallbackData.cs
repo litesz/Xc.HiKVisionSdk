@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Acs
 {
+    /// <summary>
+    /// 门禁事件回调数据
+    /// </summary>
     public class AcsEventCallbackData
     {
         /// <summary>

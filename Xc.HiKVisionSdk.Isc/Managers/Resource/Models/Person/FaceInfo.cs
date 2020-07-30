@@ -2,6 +2,9 @@
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
+    /// <summary>
+    /// 人脸数据
+    /// </summary>
     public class FaceInfo
     {
         /// <summary>

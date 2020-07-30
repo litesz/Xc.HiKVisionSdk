@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 人脸组添加结果数据
+    /// </summary>
     public class FaceGroupSingleAdditionResponseData
     {
         /// <summary>

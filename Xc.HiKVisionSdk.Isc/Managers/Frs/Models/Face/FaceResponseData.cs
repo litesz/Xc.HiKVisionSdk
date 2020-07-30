@@ -1,12 +1,15 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 按条件批量查询人脸结果数据
+    /// </summary>
     public class FaceResponseData
     {
 
         /// <summary>
         /// 人脸的唯一标识
         /// </summary>
-        public string IndexCodes { get; set; }
+        public string IndexCode { get; set; }
         /// <summary>
         /// 人脸所属的人脸分组的唯一标识
         /// </summary>

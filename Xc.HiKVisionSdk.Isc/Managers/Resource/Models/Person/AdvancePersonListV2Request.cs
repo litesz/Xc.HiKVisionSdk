@@ -4,7 +4,9 @@ using Xc.HiKVisionSdk.Isc.Models.Commons;
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
 
-
+    /// <summary>
+    /// 查询人员列表V2请求
+    /// </summary>
     public class AdvancePersonListV2Request : PagedQuery
     {
         /// <summary>
@@ -15,7 +17,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
         public string PersonIds { get; set; }
         /// <summary>
         /// 人员姓名
-        /// 支持中英文字符，不能包含 ’ / \ : * ? " < >
+        /// 支持中英文字符，不能包含 ’ / \ : * ? " 
         /// </summary>
         public string PersonName { get; set; }
         /// <summary>

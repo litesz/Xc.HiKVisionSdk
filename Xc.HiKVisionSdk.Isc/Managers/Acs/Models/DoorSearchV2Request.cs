@@ -17,8 +17,8 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
         /// <summary>
         /// 区域编号,可以为空;
         /// String[]，支持根据区域批量查询；
-        /// 区域编号个数 <=1000个；
-        /// 单个长度<=64Byte；，可从查询区域列表v2接口获取返回参数indexCode
+        /// 区域编号个数 小于等于1000个；
+        /// 单个长度小于等于64Byte；，可从查询区域列表v2接口获取返回参数indexCode
         /// </summary>
         public string[] RegionIndexCodes { get; set; }
 

@@ -4,13 +4,18 @@ using System.Text;
 
 namespace Xc.HiKVisionSdk.Isc.Dictionaries
 {
-
-    public class InstallLocation : IInstallLocation
+    /// <summary>
+    /// 安装位置
+    /// </summary>
+    public class InstallLocationCollection : IInstallLocationCollection
     {
 
         private readonly Dictionary<string, string> _locations = new Dictionary<string, string>();
 
-        public InstallLocation()
+        /// <summary>
+        /// 安装位置
+        /// </summary>
+        public InstallLocationCollection()
         {
             _locations.Add("    communityPerimeter".Trim(), "小区周界           ".Trim());
             _locations.Add(" communityEntrance".Trim(), "小区出入口             ".Trim());
@@ -26,6 +31,11 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
 
         }
 
+        /// <summary>
+        /// 索引器
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public string this[string key]
         {
             get

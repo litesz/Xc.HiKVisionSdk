@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Acs
 {
+    /// <summary>
+    /// 通道事件信息
+    /// </summary>
     public class ExtEventCustomerNumInfo
     {
         /// <summary>

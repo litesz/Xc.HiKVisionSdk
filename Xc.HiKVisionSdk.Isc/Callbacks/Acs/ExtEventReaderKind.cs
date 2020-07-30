@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Acs
 {
+    /// <summary>
+    /// 读卡器类别
+    /// </summary>
     public enum ExtEventReaderKind
     {
         /// <summary>

@@ -4,7 +4,7 @@ using Xc.HiKVisionSdk.Isc.Managers.Pms.Models;
 namespace Xc.HiKVisionSdk.Isc.Managers.Pms
 {
     /// <summary>
-    /// 
+    /// 停车场api
     /// </summary>
     public class HikPmsApiManager : IHikPmsApiManager
     {
@@ -45,7 +45,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms
         /// <returns></returns>
         public Task<AlarmCarDeletionResponse> AlarmCarDeletionAsync(AlarmCarDeletionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AlarmCarDeletionRequest, AlarmCarDeletionResponse>("/artemis/api/pms/v1/alarmCar/addition", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<AlarmCarDeletionRequest, AlarmCarDeletionResponse>("/artemis/api/pms/v1/alarmCar/deletion", model, Const.V1_2);
         }
 
         /// <summary>

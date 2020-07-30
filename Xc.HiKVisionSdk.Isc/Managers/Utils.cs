@@ -6,6 +6,9 @@ using System.Text;
 
 namespace Xc.HiKVisionSdk.Isc
 {
+    /// <summary>
+    /// 工具
+    /// </summary>
     internal static class Utils
     {
         /// <summary>

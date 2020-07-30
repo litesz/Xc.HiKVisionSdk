@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Acs
 {
+    /// <summary>
+    /// 有效截止日期
+    /// </summary>
     public enum TermOfValidity
     {
         /// <summary>

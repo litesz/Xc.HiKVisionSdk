@@ -6,7 +6,7 @@
     public class FaceInfo
     {
         /// <summary>
-        /// 人脸的名称,1~32个字符；不能包含 ’ / \ : * ? " < >
+        /// 人脸的名称,1~32个字符；不能包含 ’ / \ : * ? " 
         /// </summary>
         public string Name { get; set; }
         /// <summary>

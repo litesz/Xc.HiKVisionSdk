@@ -5,20 +5,11 @@ using System.Text;
 
 namespace Xc.HiKVisionSdk.Isc.Models.Common
 {
+    /// <summary>
+    /// 请求
+    /// </summary>
     public interface IRequestModel
     {
     }
 
-    public interface IResponseModel
-    {
-
-    }
-
-    public interface IPaged
-    {
-        int PageSize { get; set; }
-
-        int PageNo { get; set; }
-    }
-  
 }

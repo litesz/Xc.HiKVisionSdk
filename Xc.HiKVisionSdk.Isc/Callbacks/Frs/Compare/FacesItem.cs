@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare
 {
+    /// <summary>
+    /// 人脸信息
+    /// </summary>
     public class FacesItem
     {
         /// <summary>

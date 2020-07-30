@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 单个查询重点人员识别计划详情结果数据
+    /// </summary>
     public class PlanRecognitionBlackDetailResponseData
     {
         /// <summary>

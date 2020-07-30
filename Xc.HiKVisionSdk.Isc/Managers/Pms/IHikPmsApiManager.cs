@@ -4,7 +4,7 @@ using Xc.HiKVisionSdk.Isc.Managers.Pms.Models;
 namespace Xc.HiKVisionSdk.Isc.Managers.Pms
 {
     /// <summary>
-    /// 
+    /// 停车场api
     /// </summary>
     public interface IHikPmsApiManager
     {
