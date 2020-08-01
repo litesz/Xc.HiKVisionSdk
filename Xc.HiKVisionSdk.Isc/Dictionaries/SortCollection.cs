@@ -3,7 +3,7 @@
     /// <summary>
     /// 
     /// </summary>
-    public class DoorEventSortCollection : IDoorEventSortCollection
+    public class SortCollection : ISortCollection
     {
 
 

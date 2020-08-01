@@ -33,9 +33,10 @@ namespace Xc.HiKVisionSdk.Isc
 
             services.Configure<IscSdkOption>(configuration.GetSection(IscSdkOption.Position));
 
+            services.AddSingleton<IPlanStatusCollection, PlanStatusCollection>();
             services.AddSingleton<IInstallLocationCollection, InstallLocationCollection>();
             services.AddSingleton<IEventCollection, EventCollection>();
-            services.AddScoped<IDoorEventSortCollection, DoorEventSortCollection>();
+            services.AddSingleton<ISortCollection, SortCollection>();
 
             services.AddSingleton<IHikVisionApiManager, HikVisionApiManager>();
             services.AddScoped<IHikAcsApiManager, HikAcsApiManager>();
@@ -46,7 +47,7 @@ namespace Xc.HiKVisionSdk.Isc
             services.AddScoped<IHikIrdsApiManager, HikIrdsApiManager>();
             services.AddScoped<IHikMpcApiManager, HikMpcApiManager>();
 
-            
+
             return services;
         }
     }
