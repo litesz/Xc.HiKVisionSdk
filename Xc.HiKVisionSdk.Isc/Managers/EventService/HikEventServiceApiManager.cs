@@ -40,7 +40,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         }
 
         /// <summary>
-        /// 
+        /// 按事件类型订阅事件
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -49,26 +49,49 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
             return _hikVisionApiManager.PostAndGet<EventSubscriptionByEventTypesRequest, EventSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventSubscriptionByEventTypes", model, Const.V1_3);
         }
 
+        /// <summary>
+        /// 按事件类型订阅事件
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public Task<EventSubscriptionByEventTypesResponse> EventSubscriptionByEventTypesAsync(EventSubscriptionByEventTypesRequest model)
         {
             return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionByEventTypesRequest, EventSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventSubscriptionByEventTypes", model, Const.V1_3);
         }
 
+        /// <summary>
+        /// 查询事件订阅信息
+        /// </summary>
+        /// <returns></returns>
         public EventSubscriptionViewResponse EventSubscriptionView()
         {
             return _hikVisionApiManager.PostAndGet<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/artemis/api/eventService/v1/eventSubscriptionView", null, Const.V1_0);
         }
 
+        /// <summary>
+        /// 查询事件订阅信息
+        /// </summary>
+        /// <returns></returns>
         public Task<EventSubscriptionViewResponse> EventSubscriptionViewAsync()
         {
             return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/artemis/api/eventService/v1/eventSubscriptionView", null, Const.V1_0);
         }
 
+        /// <summary>
+        /// 按事件类型取消订阅
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public EventUnSubscriptionByEventTypesResponse EventUnSubscriptionByEventTypes(EventUnSubscriptionByEventTypesRequest model)
         {
             return _hikVisionApiManager.PostAndGet<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventUnSubscriptionByEventTypes", model, Const.V1_0);
         }
 
+        /// <summary>
+        /// 按事件类型取消订阅
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public Task<EventUnSubscriptionByEventTypesResponse> EventUnSubscriptionByEventTypesAsync(EventUnSubscriptionByEventTypesRequest model)
         {
             return _hikVisionApiManager.PostAndGetAsync<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventUnSubscriptionByEventTypes", model, Const.V1_0);

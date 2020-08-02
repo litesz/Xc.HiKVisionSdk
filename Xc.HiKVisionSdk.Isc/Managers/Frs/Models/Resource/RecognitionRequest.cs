@@ -5,6 +5,9 @@ using Xc.HiKVisionSdk.Isc.Models;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 按条件查询识别资源请求
+    /// </summary>
     public class RecognitionRequest
     {
         /// <summary>

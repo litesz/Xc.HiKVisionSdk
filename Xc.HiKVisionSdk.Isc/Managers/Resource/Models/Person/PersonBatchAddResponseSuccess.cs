@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
+    /// <summary>
+    /// 成功信息
+    /// </summary>
     public class PersonBatchAddResponseSuccess
     {
         /// <summary>

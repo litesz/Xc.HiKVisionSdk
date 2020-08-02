@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
 {
-
+    /// <summary>
+    /// 组织请求数据
+    /// </summary>
     public class OrgListResponseData
     {
         /// <summary>

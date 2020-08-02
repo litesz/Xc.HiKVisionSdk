@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
+    /// <summary>
+    /// 失败信息
+    /// </summary>
     public class PersonBatchAddResponseFailures
     {
         /// <summary>

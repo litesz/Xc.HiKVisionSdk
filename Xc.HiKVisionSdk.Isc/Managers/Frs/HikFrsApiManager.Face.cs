@@ -12,7 +12,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
     public partial class HikFrsApiManager
     {
         /// <summary>
-        /// 
+        /// 单个添加人脸
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -22,7 +22,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         }
 
         /// <summary>
-        /// 
+        /// 批量添加人脸
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -32,7 +32,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         }
 
         /// <summary>
-        /// 
+        /// 批量删除人脸
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -42,7 +42,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         }
 
         /// <summary>
-        /// 
+        /// 单个修改人脸
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -52,7 +52,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         }
 
         /// <summary>
-        /// 
+        /// 按条件批量查询人脸
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
@@ -62,7 +62,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         }
 
         /// <summary>
-        /// 
+        /// 批量拷贝人脸到人脸分组
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>

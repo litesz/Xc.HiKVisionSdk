@@ -2,11 +2,10 @@
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
-    public class PersonSingleAddResponse : HiKVisionResponse
+    /// <summary>
+    /// 添加人员结果
+    /// </summary>
+    public class PersonSingleAddResponse : HiKVisionDataResponse<string>
     {
-        /// <summary>
-        /// 成功添加的人员的Id
-        /// </summary>
-        public string Data { get; set; }
     }
 }

@@ -3,6 +3,9 @@ using Xc.HiKVisionSdk.Isc.Models.Commons;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
+    /// <summary>
+    /// 人员信息请求
+    /// </summary>
     public abstract class PersonRequestBase
     {
 

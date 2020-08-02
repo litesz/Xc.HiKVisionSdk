@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
+    /// <summary>
+    /// 批量添加人员请求详细
+    /// </summary>
     public class PersonBatchAddRequestItem : PersonRequestBase
     {
         /// <summary>

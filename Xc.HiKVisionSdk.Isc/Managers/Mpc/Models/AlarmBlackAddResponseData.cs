@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Mpc.Models
 {
+    /// <summary>
+    /// 批量添加车辆黑名单结果数据
+    /// </summary>
     public class AlarmBlackAddResponseData
     {
         /// <summary>

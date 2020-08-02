@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 按条件查询识别资源结果数据
+    /// </summary>
     public class RecognitionResponseData {
         /// <summary>
         /// 识别计划的唯一标识

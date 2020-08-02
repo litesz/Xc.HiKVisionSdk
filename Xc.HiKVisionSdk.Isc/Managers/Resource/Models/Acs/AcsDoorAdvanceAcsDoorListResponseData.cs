@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs
 {
+    /// <summary>
+    /// 查询门禁点列表结果数据
+    /// </summary>
     public class AcsDoorAdvanceAcsDoorListResponseData
     {
         /// <summary>

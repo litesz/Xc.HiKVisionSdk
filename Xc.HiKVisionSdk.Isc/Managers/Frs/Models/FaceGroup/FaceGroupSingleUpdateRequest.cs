@@ -1,7 +1,7 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
     /// <summary>
-    /// 人脸分组更新
+    /// 单个修改人脸分组请求
     /// </summary>
     public class FaceGroupSingleUpdateRequest
     {

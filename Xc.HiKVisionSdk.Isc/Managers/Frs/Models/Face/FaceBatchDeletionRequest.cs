@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 批量删除人脸请求
+    /// </summary>
     public class FaceBatchDeletionRequest
     {
         /// <summary>

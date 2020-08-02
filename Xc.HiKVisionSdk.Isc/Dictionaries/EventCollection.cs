@@ -90,17 +90,7 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
             InitFace();
         }
 
-        private void AddInfo(string ability, string abilityName, Func<string, string, string> func)
-        {
-            //string template = "[" + func(ability, abilityName) + "]";
-            //EventTypes.Add(ability, abilityName);
-            //IList<EventInfoItem> list = JsonExtensions.DeserializeObject<IList<EventInfoItem>>(template);
-            //foreach (var info in list)
-            //{
-            //    Items.Add(info.Code, info);
-            //}
-            //EventInfosByType.Add(ability, list);
-        }
+    
 
         /// <summary>
         /// 
@@ -145,7 +135,7 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
                 TypeName = "车辆管理",
                 Subclass = "Pms",
                 SubclassName = "停车场",
-                Action = "pms"
+                Action = "AlarmCar"
             });
         }
         /// <summary>

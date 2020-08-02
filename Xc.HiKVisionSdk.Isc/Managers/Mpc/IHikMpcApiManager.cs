@@ -6,6 +6,9 @@ using Xc.HiKVisionSdk.Isc.Managers.Mpc.Models;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Mpc
 {
+    /// <summary>
+    /// 园区卡口api
+    /// </summary>
     public interface IHikMpcApiManager
     {
         /// <summary>

@@ -3,7 +3,7 @@
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs
 {
     /// <summary>
-    /// 
+    /// 查询门禁点列表请求
     /// </summary>
     public class AcsDoorAdvanceAcsDoorListRequest : PagedQuery
     {

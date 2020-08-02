@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
+    /// <summary>
+    /// 按条件查询人脸分组结果数据
+    /// </summary>
     public class FaceGroupResponseData
     {
         /// <summary>

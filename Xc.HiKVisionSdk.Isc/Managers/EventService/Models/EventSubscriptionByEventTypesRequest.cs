@@ -2,6 +2,9 @@
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
 {
+    /// <summary>
+    /// 按事件类型订阅事件请求
+    /// </summary>
     public class EventSubscriptionByEventTypesRequest
     {
         /// <summary>
