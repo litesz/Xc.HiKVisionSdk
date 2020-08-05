@@ -83,10 +83,6 @@ namespace Company.WpfApplication1.Pages
             ActiveItem = Items.FirstOrDefault();
 
 
-          //  var path = Path.Combine(Directory.GetCurrentDirectory(), "a.json");
-            //var str = File.ReadAllText(path);
-
-          //  var d = Newtonsoft.Json.JsonConvert.DeserializeObject<Xc.HiKVisionSdk.Isc.Managers.Resource.Models.PersonListV2Response>(str);
         }
 
 
@@ -108,7 +104,6 @@ namespace Company.WpfApplication1.Pages
                     IscSdkOption.Ver = temp.Ver;
 
                 }
-                return;
             }
 
         }
@@ -122,47 +117,5 @@ namespace Company.WpfApplication1.Pages
 
 
 
-        //public bool ValidInput()
-        //{
-
-        //    if (string.IsNullOrEmpty(Address))
-        //    {
-        //        _windowManager.ShowMessageBox("请输入地址");
-        //        return false;
-        //    }
-
-        //    if (Address.StartsWith("http://") == false && Address.StartsWith("https://") == false)
-        //    {
-        //        _windowManager.ShowMessageBox("地址必须以http://或https://开头");
-        //        return false;
-        //    }
-
-
-        //    if (Address.IndexOf(":") == -1)
-        //    {
-        //        _windowManager.ShowMessageBox("地址必须包含端口号，:必须为英文");
-        //        return false;
-        //    }
-
-
-        //    if (string.IsNullOrEmpty(Ak))
-        //    {
-        //        _windowManager.ShowMessageBox("请输入Ak");
-        //        return false;
-        //    }
-
-        //    if (string.IsNullOrEmpty(Sk))
-        //    {
-        //        _windowManager.ShowMessageBox("请输入Sk");
-        //        return false;
-        //    }
-
-
-        //    IscSdkOption.Ak = Ak.Trim();
-        //    IscSdkOption.Sk = Sk.Trim();
-        //    IscSdkOption.BaseUrl = Address.Trim();
-
-        //    return true;
-        //}
     }
 }

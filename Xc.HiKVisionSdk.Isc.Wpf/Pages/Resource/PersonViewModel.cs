@@ -1,12 +1,9 @@
 ﻿using Stylet;
 using StyletIoC;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
-using Xc.HiKVisionSdk.Isc.Managers.Resource.Models;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person;
 

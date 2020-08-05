@@ -1,8 +1,5 @@
 ﻿using Stylet;
 using StyletIoC;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Xc.HiKVisionSdk.Isc.Wpf.Pages
 {

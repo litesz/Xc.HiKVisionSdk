@@ -3042,7 +3042,40 @@
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.HikEventServiceApiManager.EventSubscriptionByEventTypes(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
             <summary>
-            
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.HikEventServiceApiManager.EventSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.HikEventServiceApiManager.EventSubscriptionView">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.HikEventServiceApiManager.EventSubscriptionViewAsync">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.HikEventServiceApiManager.EventUnSubscriptionByEventTypes(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.HikEventServiceApiManager.EventUnSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
             </summary>
             <param name="model"></param>
             <returns></returns>
@@ -3396,6 +3429,11 @@
             事件扩展信息
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest">
+            <summary>
+            按事件类型订阅事件请求
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.EventTypes">
             <summary>
             事件类型
@@ -3425,6 +3463,36 @@
              	数组大小不超过32，事件等级大小不超过31
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesResponse">
+            <summary>
+            按事件类型订阅事件结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewRequest">
+            <summary>
+            查询事件订阅信息请求
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewResponse">
+            <summary>
+            查询事件订阅信息结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewResponseData">
+            <summary>
+            查询事件订阅信息结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewResponseData.Detail">
+            <summary>
+            详细数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewResponseDataDetail">
+            <summary>
+            查询事件订阅信息详细
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionViewResponseDataDetail.EventTypes">
             <summary>
             事件类型
@@ -3435,9 +3503,19 @@
             事件接收地址
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest">
+            <summary>
+            按事件类型取消订阅请求
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest.EventTypes">
             <summary>
             事件类型
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventUnSubscriptionByEventTypesResponse">
+            <summary>
+            按事件类型取消订阅结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager">
@@ -3445,7 +3523,13 @@
             人脸api
             </summary>
             <summary>
+            人脸识别api
+            </summary>
+            <summary>
             
+            </summary>
+            <summary>
+            人脸识别api
             </summary>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.PlanRecognitionBlackAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest)">
@@ -3490,44 +3574,85 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceSingleAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager)">
             <summary>
             
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.ResourceRecognitionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest)">
+            <summary>
+            按条件查询识别资源
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceSingleAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest)">
+            <summary>
+            单个添加人脸
             </summary>
             <param name="model"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceBatchAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequest)">
             <summary>
-            
+            批量添加人脸
             </summary>
             <param name="model"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceBatchDeletionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionRequest)">
             <summary>
-            
+            批量删除人脸
             </summary>
             <param name="model"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceSingleUpdateAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest)">
             <summary>
-            
+            单个修改人脸
             </summary>
             <param name="model"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest)">
             <summary>
-            
+            按条件批量查询人脸
             </summary>
             <param name="model"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceBatchCopyAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchCopyRequest)">
             <summary>
-            
+            批量拷贝人脸到人脸分组
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceGroupSingleAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionRequest)">
+            <summary>
+            单个添加人脸分组
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceGroupBatchDeletionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupBatchDeletionRequest)">
+            <summary>
+            删除人脸分组
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceGroupSingleUpdateAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleUpdateRequest)">
+            <summary>
+            单个修改人脸分组
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.FaceGroupAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupRequest)">
+            <summary>
+            按条件查询人脸分组
             </summary>
             <param name="model"></param>
             <returns></returns>
@@ -3764,9 +3889,24 @@
             <param name="model"></param>
             <returns></returns>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupBatchDeletionRequest">
+            <summary>
+            删除人脸分组请求
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupBatchDeletionRequest.IndexCodes">
             <summary>
             通过indexCode集合查询指定的识别资源集合
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupBatchDeletionResponse">
+            <summary>
+            删除人脸分组结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupRequest">
+            <summary>
+            按条件查询人脸分组请求
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupRequest.IndexCode">
@@ -3777,6 +3917,16 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupRequest.Name">
             <summary>
             人脸分组名称模糊查询
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupResponse">
+            <summary>
+            按条件查询人脸分组结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupResponseData">
+            <summary>
+            按条件查询人脸分组结果数据
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupResponseData.IndexCode">
@@ -3809,6 +3959,11 @@
             分组的描述，1~128个字符
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionResponse">
+            <summary>
+            单个添加人脸分组结果
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleAdditionResponseData">
             <summary>
             人脸组添加结果数据
@@ -3831,7 +3986,7 @@
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleUpdateRequest">
             <summary>
-            人脸分组更新
+            单个修改人脸分组请求
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceGroupSingleUpdateRequest.IndexCode">
@@ -3949,6 +4104,11 @@
             人脸批量拷贝结果
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionRequest">
+            <summary>
+            批量删除人脸请求
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionRequest.IndexCodes">
             <summary>
             人脸的唯一标识集合，可从按条件批量查询人脸获取
@@ -3957,6 +4117,11 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionRequest.FaceGroupIndexCode">
             <summary>
             人脸分组的唯一标识，可从按条件查询人脸分组获取
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchDeletionResponse">
+            <summary>
+            批量删除人脸结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceRequest">
@@ -4029,6 +4194,11 @@
             人脸图片对象
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest">
+            <summary>
+            单个添加人脸请求
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest.FaceGroupIndexCode">
             <summary>
             指定人脸添加到的人脸分组的唯一标识,人脸监控应用服务会校验该值的有效性，可从按条件查询人脸分组获取
@@ -4042,6 +4212,16 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionRequest.FacePic">
             <summary>
             人脸图片对象
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionResponse">
+            <summary>
+            单个添加人脸结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionResponseData">
+            <summary>
+            单个添加人脸结果数据
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleAdditionResponseData.IndexCode">
@@ -4064,6 +4244,11 @@
             人脸图片对象
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest">
+            <summary>
+            单个修改人脸请求
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest.IndexCode">
             <summary>
             人脸的唯一标识，可从按条件批量查询人脸获取
@@ -4077,6 +4262,11 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateRequest.FacePic">
             <summary>
             人脸图片对象
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceSingleUpdateResponse">
+            <summary>
+            单个修改人脸结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest">
@@ -4441,6 +4631,11 @@
             结束时间，时分，如“00:00”
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest">
+            <summary>
+            按条件查询识别资源请求
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest.IndexCodes">
             <summary>
             通过indexCode集合查询指定的识别资源集合
@@ -4454,6 +4649,16 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest.RecognitionResourceType">
             <summary>
             根据识别资源的类型搜索，SUPER_BRAIN 超脑，FACE_RECOGNITION_SERVER 脸谱，COMPARISON 深眸
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionResponse">
+            <summary>
+            按条件查询识别资源结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionResponseData">
+            <summary>
+            按条件查询识别资源结果数据
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionResponseData.IndexCode">
@@ -4698,6 +4903,29 @@
             解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.HikMpcApiManager">
+            <summary>
+            园区卡口api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.HikMpcApiManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.HikMpcApiManager.AlarmBlackAdd(Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequest)">
+            <summary>
+            批量添加车辆黑名单
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.IHikMpcApiManager">
+            <summary>
+            园区卡口api
+            </summary>
+        </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.IHikMpcApiManager.AlarmBlackAdd(Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequest)">
             <summary>
             批量添加车辆黑名单
@@ -4705,6 +4933,21 @@
             <param name="model"></param>
             <returns></returns>
             <remarks>批量添加车辆黑名单，该车辆布控为黑名单后，当有过车事件上报时，会产生对应的黑名单事件，一次添加最大不超过400个车辆黑名单。</remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequest">
+            <summary>
+            批量添加车辆黑名单请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequest.Items">
+            <summary>
+            批量添加车辆黑名单详细
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData">
+            <summary>
+            批量添加车辆黑名单请求详细
+            </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.PlateNo">
             <summary>
@@ -4739,6 +4982,16 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.Description">
             <summary>
             描述信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddResponse">
+            <summary>
+            批量添加车辆黑名单结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddResponseData">
+            <summary>
+            批量添加车辆黑名单结果数据
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddResponseData.IndexCode">
@@ -5856,6 +6109,11 @@
             其他
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListRequest">
+            <summary>
+            组织请求
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListResponse">
             <summary>
             组织结果  
@@ -6067,6 +6325,11 @@
             批量添加人员信息
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequestItem">
+            <summary>
+            批量添加人员请求详细
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequestItem.ClientId">
             <summary>
             人员临时标志，
@@ -6095,6 +6358,11 @@
             批量添加失败的记录
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseFailures">
+            <summary>
+            失败信息
+            </summary>
+        </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseFailures.ClientId">
             <summary>
             调用方指定人员临时标志
@@ -6108,6 +6376,11 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseFailures.Message">
             <summary>
             错误信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseSuccess">
+            <summary>
+            成功信息
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponseSuccess.ClientId">
@@ -6403,6 +6676,11 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonPhoto.PersonId">
             <summary>
             人员ID
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase">
+            <summary>
+            人员信息请求
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.PersonId">

@@ -160,16 +160,16 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         {
             if (string.IsNullOrWhiteSpace(_option.BaseUrl))
             {
-                throw new NullReferenceException("address");
+                throw new ArgumentNullException("address");
             }
 
             if (string.IsNullOrWhiteSpace(_option.Ak))
             {
-                throw new NullReferenceException("ak");
+                throw new ArgumentNullException("ak");
             }
             if (string.IsNullOrWhiteSpace(_option.Sk))
             {
-                throw new NullReferenceException("sk");
+                throw new ArgumentNullException("sk");
             }
 
             if (_timeout <= 0)
@@ -188,13 +188,15 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         private Dictionary<string, string> InitHeaderInfo(string url, string body = "", bool isPost = false)
         {
 
-            Dictionary<string, string> header = new Dictionary<string, string>();
+            Dictionary<string, string> header = new Dictionary<string, string>
+            {
 
-            // Accept                
-            header.Add(Const.Accept, "application/json");
+                // Accept                
+                { Const.Accept, "application/json" },
 
-            // ContentType  
-            header.Add(Const.ContentType, "application/json");
+                // ContentType  
+                { Const.ContentType, "application/json" }
+            };
 
             //if (isPost)
             //{
@@ -215,8 +217,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers
 
             // build string to sign
             string strToSign = Utils.BuildSignString(isPost ? "POST" : "GET", url, header);
-
-            Console.WriteLine("strToSign:\r\n" + strToSign);
 
             string signedStr = Utils.ComputeForHMACSHA256(strToSign, _option.Sk);
 

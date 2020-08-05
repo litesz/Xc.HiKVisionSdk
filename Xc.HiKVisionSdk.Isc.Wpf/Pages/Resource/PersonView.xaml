@@ -11,7 +11,7 @@
     <StackPanel Orientation="Horizontal" >
         <!--<Button Command="{s:Action PersonList}" Margin="10,5">获取人员列表V2</Button>-->
         <Button Command="{s:Action OrgList}" Margin="10,5">获取组织列表</Button>
-        <Button Command="{s:Action AdvancePersonList}" Margin="10,5">获取人员列表</Button>
+        <Button Command="{s:Action PersonList}" Margin="10,5">获取人员列表</Button>
         <Button Command="{s:Action CardList}" Margin="10,5">卡片信息</Button>
     </StackPanel>
 </UserControl>

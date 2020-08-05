@@ -8,6 +8,7 @@
     <Version>0.0.1</Version>
     <Description>针对海康安防平台的二次封装的调用例子</Description>
     <Authors>litesz</Authors>
+    <SonarQubeExclude>True</SonarQubeExclude>
   </PropertyGroup>
 
   <ItemGroup>

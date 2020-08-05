@@ -8,6 +8,7 @@
     <Description>跟着当前项目对海康平台API的封装。当前仅ISC。风格基于原API。</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/litesz/Xc.HiKVisionSdk</PackageProjectUrl>
+    <SonarQubeExclude>True</SonarQubeExclude>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

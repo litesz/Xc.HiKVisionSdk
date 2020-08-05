@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Xc.HiKVisionSdk.Isc.Models
+﻿namespace Xc.HiKVisionSdk.Isc.Models
 {
     /// <summary>
     /// 配置选项
