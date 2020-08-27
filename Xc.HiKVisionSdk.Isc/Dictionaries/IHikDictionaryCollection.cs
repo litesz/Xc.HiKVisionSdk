@@ -3,7 +3,9 @@
     /// <summary>
     /// 海康字典表索引
     /// </summary>
-    public interface IHikDictionaryCollection<TKey,TResult>
+    /// <typeparam name="TKey"></typeparam>
+    /// <typeparam name="TResult"></typeparam>
+    public interface IHikDictionaryCollection<TKey, TResult>
     {
         /// <summary>
         /// 索引器

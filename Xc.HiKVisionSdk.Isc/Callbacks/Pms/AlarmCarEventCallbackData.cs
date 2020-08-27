@@ -1,4 +1,6 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Pms
+﻿using Xc.HiKVisionSdk.Isc.Models.Pms;
+
+namespace Xc.HiKVisionSdk.Isc.Callbacks.Pms
 {
     /// <summary>
     /// 车辆黑名单数据

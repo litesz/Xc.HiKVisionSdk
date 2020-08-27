@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture
+﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture
 {
     /// <summary>
     /// 抓拍结果
@@ -14,7 +12,7 @@ namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture
         /// <summary>
         /// 目标属性
         /// </summary>
-        public TargetAttrs TargetAttrs { get; set; }
+        public TargetAttr TargetAttrs { get; set; }
     }
 
 }

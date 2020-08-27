@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Pms
+﻿namespace Xc.HiKVisionSdk.Isc.Models.Pms
 {
     /// <summary>
     /// 车牌类型

@@ -3,7 +3,7 @@
     /// <summary>
     /// 门禁点事件排序
     /// </summary>
-    public interface ISortCollection : IHikDictionaryCollection<string, string>
+    public interface IDoorEventSortCollection : IHikDictionaryCollection<string, string>
     {
 
     }

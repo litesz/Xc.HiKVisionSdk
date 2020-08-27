@@ -36,9 +36,9 @@ namespace Xc.HiKVisionSdk.Isc
             services.AddSingleton<IPlanStatusCollection, PlanStatusCollection>();
             services.AddSingleton<IInstallLocationCollection, InstallLocationCollection>();
             services.AddSingleton<IEventCollection, EventCollection>();
-            services.AddSingleton<ISortCollection, SortCollection>();
+            services.AddSingleton<IDoorEventSortCollection, DoorEventSortCollection>();
 
-            services.AddSingleton<IHikVisionApiManager, HikVisionApiManager>();
+            services.AddScoped<IHikVisionApiManager, HikVisionApiManager>();
             services.AddScoped<IHikAcsApiManager, HikAcsApiManager>();
             services.AddScoped<IHikEventServiceApiManager, HikEventServiceApiManager>();
             services.AddScoped<IHikFrsApiManager, HikFrsApiManager>();

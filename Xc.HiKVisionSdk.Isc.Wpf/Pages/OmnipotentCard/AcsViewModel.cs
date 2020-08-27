@@ -2,6 +2,7 @@
 using StyletIoC;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Managers.Acs;
@@ -38,7 +39,8 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.OmnipotentCard
                     return;
                 }
 
-
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "acs.json");
+                File.WriteAllText(path, JsonExtensions.Serialize(result));
                 WindowManager.ShowMessageBox($"查询成功，共有{result.Data.Total}个人门禁信息");
             }
             catch (Exception ex)

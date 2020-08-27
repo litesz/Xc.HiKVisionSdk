@@ -19,5 +19,16 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
             return _hikVisionApiManager.PostAndGetAsync<OrgListRequest, OrgListResponse>("/artemis/api/resource/v1/org/orgList", model, Const.V1_0);
         }
 
+
+        /// <summary>
+        /// 根组织
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public Task<RootOrgResponse> RootOrgAsync(RootOrgRequest model)
+        {
+            return _hikVisionApiManager.PostAndGetAsync<RootOrgRequest, RootOrgResponse>("/artemis/api/resource/v1/org/rootOrg", model, Const.V1_0);
+        }
+
     }
 }

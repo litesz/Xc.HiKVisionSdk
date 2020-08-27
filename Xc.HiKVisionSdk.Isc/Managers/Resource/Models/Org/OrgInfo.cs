@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
+﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
 {
     /// <summary>
     /// 组织请求数据
     /// </summary>
-    public class OrgListResponseData
+    public class OrgInfo
     {
         /// <summary>
         /// 组织唯一标识码

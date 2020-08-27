@@ -1,9 +1,9 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.Capture
+﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.FaceRecognition.HighFrequency
 {
     /// <summary>
     /// 目标属性
     /// </summary>
-    public class TargetAttrs
+    public class TargetAttr
     {
         /// <summary>
         /// 抓拍图片的完整原图
@@ -19,6 +19,14 @@
         /// </summary>
         public string DeviceIndexCode { get; set; }
         /// <summary>
+        /// 设备通道号
+        /// </summary>
+        public int DeviceChannel { get; set; }
+        /// <summary>
+        /// 设备名称
+        /// </summary>
+        public string DeviceName { get; set; }
+        /// <summary>
         /// 抓拍这张图片时的时间
         /// </summary>
         public string FaceTime { get; set; }
@@ -27,9 +35,12 @@
         /// </summary>
         public string PicServerIndexCode { get; set; }
         /// <summary>
-        /// 人脸坐标
+        /// 图片服务编号
+        /// 若云存储配置服务编码则有该字段
         /// </summary>
-        public FaceRect Rect { get; set; }
+        public string ImageServerCode { get; set; }
     }
+
+
 
 }

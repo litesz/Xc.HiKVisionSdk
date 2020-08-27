@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
+﻿using System.Collections.Generic;
 using Xc.HiKVisionSdk.Isc.Models;
 
 namespace Xc.HiKVisionSdk.Isc.Dictionaries
@@ -28,9 +25,9 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
         public KeyValuePair<string, string>[] GetEventTypes()
         {
             return new[] {
-                new KeyValuePair<string, string>("一卡通", "SmartCard") ,
-                new KeyValuePair<string, string>("车辆管理", "Vehicle") ,
-                new KeyValuePair<string, string>("人脸监控", "Face") ,
+                new KeyValuePair<string, string>("SmartCard","一卡通" ) ,
+                new KeyValuePair<string, string>("Vehicle","车辆管理" ) ,
+                new KeyValuePair<string, string>( "Face","人脸监控") ,
             };
         }
 
@@ -44,13 +41,15 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
             switch (type)
             {
                 case "SmartCard":
-                    return new[] { new KeyValuePair<string, string>("门禁", "Acs") };
+                    return new[] { new KeyValuePair<string, string>("Acs", "门禁") };
                 case "Vehicle":
-                    return new[] { new KeyValuePair<string, string>("停车场", "Pms") };
+                    return new[] { new KeyValuePair<string, string>("Pms", "停车场") };
                 case "Face":
-                    return new[] { new KeyValuePair<string, string>("人脸监控", "Face") };
+                    return new[] { new KeyValuePair<string, string>("Face", "人脸监控") };
+                default:
+                    return new KeyValuePair<string, string>[0];
             }
-            return null;
+
         }
 
         /// <summary>
@@ -69,7 +68,7 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
                 return new EventCollectionItem
                 {
                     Name = "未定义",
-                    Code = code
+                    Id = code
                 };
             }
         }
@@ -80,17 +79,12 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
         public EventCollection()
         {
             InitAcs();
-            //InitVis();
-            //InitVisitor();
-            //InitPms();
-            //InitMpc();
-            //InitIas();
 
             InitPms();
             InitFace();
         }
 
-    
+
 
         /// <summary>
         /// 
@@ -100,7 +94,7 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
 
             Items.Add(198914, new EventCollectionItem
             {
-                Code = 198914,
+                Id = 198914,
                 Name = "合法卡比对通过",
                 Type = "SmartCard",
                 TypeName = "一卡通",
@@ -112,7 +106,7 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
 
             Items.Add(196893, new EventCollectionItem
             {
-                Code = 196893,
+                Id = 196893,
                 Name = "人脸认证通过",
                 Type = "SmartCard",
                 TypeName = "一卡通",
@@ -129,7 +123,7 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
 
             Items.Add(771756034, new EventCollectionItem
             {
-                Code = 771756034,
+                Id = 771756034,
                 Name = "黑名单",
                 Type = "Vehicle",
                 TypeName = "车辆管理",
@@ -145,7 +139,7 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
         {
             Items.Add(1644175361, new EventCollectionItem
             {
-                Code = 1644175361,
+                Id = 1644175361,
                 Name = "重点人员识别事件",
                 Type = "Face",
                 TypeName = "人脸监控",

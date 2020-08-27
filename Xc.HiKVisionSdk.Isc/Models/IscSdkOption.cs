@@ -25,5 +25,9 @@
         /// 平台版本号
         /// </summary>
         public decimal Ver { get; set; } = 1;
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool DownloadImg { get; set; }
     }
 }

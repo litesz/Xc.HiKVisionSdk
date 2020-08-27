@@ -12,7 +12,7 @@
         /// <summary>
         /// 目标属性
         /// </summary>
-        public TargetAttrs TargetAttrs { get; set; }
+        public TargetAttr TargetAttrs { get; set; }
     }
 
 }

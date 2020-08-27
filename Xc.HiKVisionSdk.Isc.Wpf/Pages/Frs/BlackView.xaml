@@ -10,5 +10,6 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel Orientation="Horizontal" >
         <Button Command="{s:Action Black}" Margin="10,5">查询重点人员识别计划</Button>
+        <Button Command="{s:Action BlackSearch}" Margin="10,5">查询重点人员识别记录</Button>
     </StackPanel>
 </UserControl>

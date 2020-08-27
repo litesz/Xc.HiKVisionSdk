@@ -1,9 +1,9 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs.Compare
+﻿namespace Xc.HiKVisionSdk.Isc.Callbacks.Frs
 {
     /// <summary>
     /// 目标属性
     /// </summary>
-    public class TargetAttrs
+    public class TargetAttr
     {
         /// <summary>
         /// 抓拍图片的完整原图

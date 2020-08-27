@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
+﻿namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
 {
     /// <summary>
     /// 查询事件订阅信息结果数据

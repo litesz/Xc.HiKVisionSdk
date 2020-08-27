@@ -16,7 +16,7 @@
         /// <summary>
         /// 
         /// </summary>
-        public TargetAttrs TargetAttrs { get; set; }
+        public TargetAttr TargetAttrs { get; set; }
     }
 
 

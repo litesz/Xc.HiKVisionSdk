@@ -1,6 +1,7 @@
 ﻿using Stylet;
 using StyletIoC;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
@@ -40,7 +41,8 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
                     return;
                 }
 
-                //
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "PersonList.json");
+                File.WriteAllText(path, JsonExtensions.Serialize(result));
                 WindowManager.ShowMessageBox($"查询成功，共有{result.Data.Total}个人员信息");
             }
             catch (Exception ex)
@@ -109,6 +111,9 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
                     return;
                 }
 
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "OrgList.json");
+                File.WriteAllText(path, JsonExtensions.Serialize(orgList));
+
                 WindowManager.ShowMessageBox($"查询成功，共有{orgList.Data.Total}个组织");
             }
             catch (Exception ex)
@@ -141,6 +146,10 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
                     WindowManager.ShowMessageBox($"查询结果为空\r\n状态:{result.Code}\r\n消息:${result.Msg}");
                     return;
                 }
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "CardList.json");
+                File.WriteAllText(path, JsonExtensions.Serialize(result));
+
 
                 WindowManager.ShowMessageBox($"查询成功:{result.Data.Total}张卡");
             }

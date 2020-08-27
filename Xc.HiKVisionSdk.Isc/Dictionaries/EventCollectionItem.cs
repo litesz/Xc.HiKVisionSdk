@@ -8,7 +8,7 @@
         /// <summary>
         /// 代码
         /// </summary>
-        public int Code { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// 名称
         /// </summary>

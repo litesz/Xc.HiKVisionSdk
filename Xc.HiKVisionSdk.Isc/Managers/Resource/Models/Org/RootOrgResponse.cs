@@ -3,9 +3,9 @@
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
 {
     /// <summary>
-    /// 组织结果  
+    /// 获取根组织结果  
     /// </summary>
-    public class OrgListResponse : HiKVisionPagedDataResponse<OrgInfo>
+    public class RootOrgResponse : HiKVisionDataResponse<OrgInfo>
     {
 
     }

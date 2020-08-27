@@ -17,5 +17,13 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <param name="model"></param>
         /// <returns></returns>
         Task<OrgListResponse> OrgListAsync(OrgListRequest model);
+
+        /// <summary>
+        /// 获取根组织
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        /// <remarks>获取根组织接口用来获取组织的根节点</remarks>
+        Task<RootOrgResponse> RootOrgAsync(RootOrgRequest model);
     }
 }
