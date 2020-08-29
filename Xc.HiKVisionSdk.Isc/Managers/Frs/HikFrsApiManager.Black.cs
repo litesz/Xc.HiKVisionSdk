@@ -18,7 +18,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<PlanRecognitionBlackAdditionResponse> PlanRecognitionBlackAdditionAsync(PlanRecognitionBlackAdditionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackAdditionRequest, PlanRecognitionBlackAdditionResponse>("/artemis/api/frs/v1/plan/recognition/black/addition", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackAdditionRequest, PlanRecognitionBlackAdditionResponse>("/api/frs/v1/plan/recognition/black/addition", model, Const.V1_2);
 
         }
 
@@ -29,7 +29,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<PlanRecognitionBlackDeletionResponse> PlanRecognitionBlackDeletionAsync(PlanRecognitionBlackDeletionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackDeletionRequest, PlanRecognitionBlackDeletionResponse>("/artemis/api/frs/v1/plan/recognition/black/deletion", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackDeletionRequest, PlanRecognitionBlackDeletionResponse>("/api/frs/v1/plan/recognition/black/deletion", model, Const.V1_2);
 
         }
 
@@ -40,7 +40,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<PlanRecognitionBlackUpdateResponse> PlanRecognitionBlackUpdateAsync(PlanRecognitionBlackUpdateRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackUpdateRequest, PlanRecognitionBlackUpdateResponse>("/artemis/api/frs/v1/plan/recognition/black/update", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackUpdateRequest, PlanRecognitionBlackUpdateResponse>("/api/frs/v1/plan/recognition/black/update", model, Const.V1_2);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<PlanRecognitionBlackDetailResponse> PlanRecognitionBlackDetailAsync(PlanRecognitionBlackDetailRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackDetailRequest, PlanRecognitionBlackDetailResponse>("/artemis/api/frs/v1/plan/recognition/black/detail", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackDetailRequest, PlanRecognitionBlackDetailResponse>("/api/frs/v1/plan/recognition/black/detail", model, Const.V1_2);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<PlanRecognitionBlackResponse> PlanRecognitionBlackAsync(PlanRecognitionBlackRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackRequest, PlanRecognitionBlackResponse>("/artemis/api/frs/v1/plan/recognition/black", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackRequest, PlanRecognitionBlackResponse>("/api/frs/v1/plan/recognition/black", model, Const.V1_2);
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<PlanRecognitionBlackRestartResponse> PlanRecognitionBlackRestartAsync(PlanRecognitionBlackRestartRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackRestartRequest, PlanRecognitionBlackRestartResponse>("/artemis/api/frs/v1/plan/recognition/black/restart", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<PlanRecognitionBlackRestartRequest, PlanRecognitionBlackRestartResponse>("/api/frs/v1/plan/recognition/black/restart", model, Const.V1_2);
         }
     }
 }

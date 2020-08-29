@@ -1,9 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Net.Http;
 using Xc.HiKVisionSdk.Isc.Dictionaries;
 using Xc.HiKVisionSdk.Isc.Managers;
 using Xc.HiKVisionSdk.Isc.Managers.Acs;
@@ -38,7 +35,21 @@ namespace Xc.HiKVisionSdk.Isc
             services.AddSingleton<IEventCollection, EventCollection>();
             services.AddSingleton<IDoorEventSortCollection, DoorEventSortCollection>();
 
-            services.AddScoped<IHikVisionApiManager, HikVisionApiManager>();
+
+            services
+                .AddHttpClient<IHikVisionApiManager, HikVisionApiManager>(option =>
+                {
+                    option.DefaultRequestHeaders.Accept.Add(
+                        new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                })
+                .ConfigurePrimaryHttpMessageHandler(() =>
+                {
+                    return new HttpClientHandler()
+                    {
+                        ServerCertificateCustomValidationCallback = (message, certificate2, arg3, arg4) => true
+                    };
+                });
+
             services.AddScoped<IHikAcsApiManager, HikAcsApiManager>();
             services.AddScoped<IHikEventServiceApiManager, HikEventServiceApiManager>();
             services.AddScoped<IHikFrsApiManager, HikFrsApiManager>();

@@ -1,6 +1,7 @@
 ﻿using Company.WpfApplication1.Pages;
 using Stylet;
 using StyletIoC;
+using System.Net.Http;
 using Xc.HiKVisionSdk.Isc.Managers;
 using Xc.HiKVisionSdk.Isc.Managers.Acs;
 using Xc.HiKVisionSdk.Isc.Managers.EventService;
@@ -16,7 +17,19 @@ namespace Company.WpfApplication1
     {
         protected override void ConfigureIoC(IStyletIoCBuilder builder)
         {
-            // Configure the IoC container in here
+
+
+            builder.Bind<HttpClient>().ToFactory(container =>
+            {
+
+                var client = new HttpClient(
+                    new HttpClientHandler
+                    {
+                        ServerCertificateCustomValidationCallback = (message, certificate2, arg3, arg4) => true
+                    });
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                return client;
+            });
 
             builder.Bind<IscSdkOption>().ToSelf().InSingletonScope();
             builder.Bind<IHikVisionApiManager>().To<HikVisionApiManager>();

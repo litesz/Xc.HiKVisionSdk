@@ -25,7 +25,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Mpc
         /// <returns></returns>
         public Task<AlarmBlackAddResponse> AlarmBlackAdd(AlarmBlackAddRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AlarmBlackAddRequest, AlarmBlackAddResponse>("/artemis/api/mpc/v1/alarm/black/add", model, Const.V1_4);
+            return _hikVisionApiManager.PostAndGetAsync<AlarmBlackAddRequest, AlarmBlackAddResponse>("/api/mpc/v1/alarm/black/add", model, Const.V1_4);
         }
 
 

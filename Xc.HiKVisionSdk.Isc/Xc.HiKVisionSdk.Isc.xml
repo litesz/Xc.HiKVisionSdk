@@ -4975,19 +4975,19 @@
             
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.#ctor(Xc.HiKVisionSdk.Isc.Models.IscSdkOption)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.#ctor(System.Net.Http.HttpClient,Xc.HiKVisionSdk.Isc.Models.IscSdkOption)">
             <summary>
             
             </summary>
             <param name="option"></param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.#ctor(Microsoft.Extensions.Options.IOptions{Xc.HiKVisionSdk.Isc.Models.IscSdkOption})">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Options.IOptions{Xc.HiKVisionSdk.Isc.Models.IscSdkOption})">
             <summary>
             
             </summary>
             <param name="options"></param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.#ctor(System.String,System.String,System.String,System.Decimal)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.#ctor(System.String,System.String,System.String,System.Decimal,System.Net.Http.HttpClient)">
             <summary>
             
             </summary>
@@ -4995,22 +4995,6 @@
             <param name="sk"></param>
             <param name="address"></param>
             <param name="ver"></param>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.GetString(System.String,System.Decimal)">
-            <summary>
-            
-            </summary>
-            <param name="url"></param>
-            <param name="ver"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.GetStringAsync(System.String,System.Decimal)">
-            <summary>
-            
-            </summary>
-            <param name="url"></param>
-            <param name="ver"></param>
-            <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.PostAndGetString(System.String,System.String,System.Decimal)">
             <summary>
@@ -5030,14 +5014,74 @@
             <param name="ver"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.GetImageBytes(System.String)">
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.#ctor(Xc.HiKVisionSdk.Isc.Models.IscSdkOption)">
+            <summary>
+            
+            </summary>
+            <param name="option"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.#ctor(Microsoft.Extensions.Options.IOptions{Xc.HiKVisionSdk.Isc.Models.IscSdkOption})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.#ctor(System.String,System.String,System.String,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="ak"></param>
+            <param name="sk"></param>
+            <param name="address"></param>
+            <param name="ver"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.GetString(System.String,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.GetStringAsync(System.String,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.PostAndGetString(System.String,System.String,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="bodyStr"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.PostAndGetStringAsync(System.String,System.String,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <param name="bodyStr"></param>
+            <param name="ver"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.GetImageBytes(System.String)">
             <summary>
             
             </summary>
             <param name="url"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManager.RemoteCertificateValidate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.HikVisionApiManagerV0.RemoteCertificateValidate(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
             <summary>
             远程证书验证
             </summary>
@@ -5051,22 +5095,6 @@
             <summary>
             网络实现
             </summary>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.GetString(System.String,System.Decimal)">
-            <summary>
-            get
-            </summary>
-            <param name="url"></param>
-            <param name="ver"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.GetStringAsync(System.String,System.Decimal)">
-            <summary>
-            异步get
-            </summary>
-            <param name="url"></param>
-            <param name="ver"></param>
-            <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.PostAndGetString(System.String,System.String,System.Decimal)">
             <summary>
@@ -5084,13 +5112,6 @@
             <param name="url"></param>
             <param name="bodyStr"></param>
             <param name="ver"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.IHikVisionApiManager.GetImageBytes(System.String)">
-            <summary>
-            查询图片
-            </summary>
-            <param name="url"></param>
             <returns></returns>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager">

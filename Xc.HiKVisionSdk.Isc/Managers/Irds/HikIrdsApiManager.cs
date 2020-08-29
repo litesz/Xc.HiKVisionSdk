@@ -25,7 +25,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds
         /// <returns></returns>
         public Task<CardInfoResponse> CardInfoAsync(CardInfoRequest request)
         {
-            return _hikVisionApiManager.PostAndGetAsync<CardInfoRequest, CardInfoResponse>("/artemis/api/irds/v1/card/cardInfo", request, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<CardInfoRequest, CardInfoResponse>("/api/irds/v1/card/cardInfo", request, Const.V1_2);
         }
    
     }

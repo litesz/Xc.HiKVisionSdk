@@ -27,7 +27,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs
         /// <returns></returns>
         public Task<DoorEventsResponse> DoorEventsAsync(DoorEventsRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<DoorEventsRequest, DoorEventsResponse>("/artemis/api/acs/v1/door/events", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<DoorEventsRequest, DoorEventsResponse>("/api/acs/v1/door/events", model, Const.V1_0);
         }
         /// <summary>
         /// 
@@ -36,7 +36,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs
         /// <returns></returns>
         public Task<DoorEventsV2Response> DoorEventsV2Async(DoorEventsV2Request model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<DoorEventsV2Request, DoorEventsV2Response>("/artemis/api/acs/v2/door/events", model, Const.V1_41);
+            return _hikVisionApiManager.PostAndGetAsync<DoorEventsV2Request, DoorEventsV2Response>("/api/acs/v2/door/events", model, Const.V1_41);
         }
         /// <summary>
         /// 
@@ -45,7 +45,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs
         /// <returns></returns>
         public Task<DoorSearchV2Response> DoorSearchV2Async(DoorSearchV2Request model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<DoorSearchV2Request, DoorSearchV2Response>("/artemis/api/resource/v2/door/search", model, Const.V1_4);
+            return _hikVisionApiManager.PostAndGetAsync<DoorSearchV2Request, DoorSearchV2Response>("/api/resource/v2/door/search", model, Const.V1_4);
         }
 
 

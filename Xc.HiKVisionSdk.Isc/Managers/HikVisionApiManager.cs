@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Http;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Models;
 
@@ -14,20 +16,16 @@ namespace Xc.HiKVisionSdk.Isc.Managers
     /// </summary>
     public class HikVisionApiManager : IHikVisionApiManager
     {
-        private readonly int _timeout = 3000;
         private readonly IscSdkOption _option;
-
-        static HikVisionApiManager()
-        {
-            ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(RemoteCertificateValidate);
-        }
+        private readonly HttpClient _httpClient;
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="option"></param>
-        public HikVisionApiManager(IscSdkOption option)
+        public HikVisionApiManager(HttpClient client, IscSdkOption option)
         {
+            _httpClient = client;
             _option = option;
         }
 
@@ -35,7 +33,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         /// 
         /// </summary>
         /// <param name="options"></param>
-        public HikVisionApiManager(IOptions<IscSdkOption> options) : this(options.Value)
+        public HikVisionApiManager(HttpClient client, IOptions<IscSdkOption> options) : this(client, options.Value)
         {
 
         }
@@ -47,7 +45,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         /// <param name="sk"></param>
         /// <param name="address"></param>
         /// <param name="ver"></param>
-        public HikVisionApiManager(string ak, string sk, string address, decimal ver) : this(new IscSdkOption
+        public HikVisionApiManager(string ak, string sk, string address, decimal ver, HttpClient client) : this(client, new IscSdkOption
         {
             Ak = ak.Trim(),
             Sk = sk.Trim(),
@@ -61,56 +59,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         /// 
         /// </summary>
         /// <param name="url"></param>
-        /// <param name="ver"></param>
-        /// <returns></returns>
-        public string GetString(string url, decimal ver)
-        {
-            Check(ver);
-            var header = InitHeaderInfo(url);
-            var req = new HttpRequestBuilder($"{_option.BaseUrl}{url}").WithHeader(header).WithTimeOut(_timeout).Build();
-
-            return req.ReadAsString();
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="url"></param>
-        /// <param name="ver"></param>
-        /// <returns></returns>
-        public Task<string> GetStringAsync(string url, decimal ver)
-        {
-            Check(ver);
-            var header = InitHeaderInfo(url);
-            var req = new HttpRequestBuilder($"{_option.BaseUrl}{url}").WithHeader(header).WithTimeOut(_timeout).Build();
-
-            return Task.Run(() =>
-            {
-                return req.ReadAsString();
-            });
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="url"></param>
         /// <param name="bodyStr"></param>
         /// <param name="ver"></param>
         /// <returns></returns>
         public string PostAndGetString(string url, string bodyStr, decimal ver)
         {
-            Check(ver);
-
-            var header = InitHeaderInfo(url, bodyStr, true);
-
-            var req = new HttpRequestBuilder($"{_option.BaseUrl}{url}").WithHeader(header).IsPost().WithTimeOut(_timeout).Build();
-
-            if (!req.WriteBody(bodyStr))
-            {
-                return null;
-            }
-
-            return req.ReadAsString();
+            return PostAndGetStringAsync(url, bodyStr, ver).Result;
         }
 
         /// <summary>
@@ -120,40 +74,25 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         /// <param name="bodyStr"></param>
         /// <param name="ver"></param>
         /// <returns></returns>
-        public Task<string> PostAndGetStringAsync(string url, string bodyStr, decimal ver)
+        public async Task<string> PostAndGetStringAsync(string url, string bodyStr, decimal ver)
         {
             Check(ver);
-
-            var header = InitHeaderInfo(url, bodyStr, true);
-
-            var req = new HttpRequestBuilder($"{_option.BaseUrl}{url}").WithHeader(header).IsPost().WithTimeOut(_timeout).Build();
-
-            return Task.Run(() =>
+           
+            var bodyJson = new StringContent(bodyStr, Encoding.UTF8, "application/json");
+            var header = InitHeaderInfo($"/artemis{url}", true);
+            foreach (string headerKey in header.Keys)
             {
-
-                if (!req.WriteBody(bodyStr))
+                if (headerKey.Contains(Const.XCa))
                 {
-                    return null;
+                    bodyJson.Headers.Add(headerKey, header[headerKey]);
                 }
+            }
 
-                return req.ReadAsString();
-            });
+            var response = await _httpClient.PostAsync($"{_option.BaseUrl}/artemis{url}", bodyJson);
 
+            return await response.Content.ReadAsStringAsync();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="url"></param>
-        /// <returns></returns>
-        public byte[] GetImageBytes(string url)
-        {
-            Check(1);
-
-            var req = new HttpRequestBuilder(url).WithTimeOut(_timeout).Build();
-
-            return req.ReadAsBytes();
-        }
 
 
         private void Check(decimal ver)
@@ -172,10 +111,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers
                 throw new ArgumentNullException("sk");
             }
 
-            if (_timeout <= 0)
-            {
-                throw new ArgumentOutOfRangeException("timeout必须大于0");
-            }
+           
 
             if (ver > _option.Ver)
             {
@@ -185,25 +121,17 @@ namespace Xc.HiKVisionSdk.Isc.Managers
 
         }
 
-        private Dictionary<string, string> InitHeaderInfo(string url, string body = "", bool isPost = false)
+        private Dictionary<string, string> InitHeaderInfo(string url, bool isPost = false)
         {
 
             Dictionary<string, string> header = new Dictionary<string, string>
             {
-
                 // Accept                
                 { Const.Accept, "application/json" },
 
                 // ContentType  
-                { Const.ContentType, "application/json" }
+                { Const.ContentType, "application/json; charset=utf-8" }
             };
-
-            //if (isPost)
-            //{
-            //    // content-md5，be careful it must be lower case.
-            //    string contentMd5 = ComputeBodyMd5(body);
-            //    header.Add("content-md5", contentMd5);
-            //}
 
             // x-ca-timestamp
             string timestamp = ((DateTime.Now.Ticks - TimeZoneInfo.ConvertTime(new DateTime(1970, 1, 1, 0, 0, 0, 0), TimeZoneInfo.Local).Ticks) / 1000).ToString();
@@ -226,18 +154,19 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             return header;
         }
 
-
-        /// <summary>
-        /// 远程证书验证
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="cert"></param>
-        /// <param name="chain"></param>
-        /// <param name="error"></param>
-        /// <returns>验证是否通过，始终通过</returns>
-        private static bool RemoteCertificateValidate(object sender, X509Certificate cert, X509Chain chain, SslPolicyErrors error)
+        private HttpRequestMessage GenerateHttpRequestMessage(string url)
         {
-            return true;
+            var request = new HttpRequestMessage(HttpMethod.Get, url);
+
+            var header = InitHeaderInfo(url);
+            foreach (string headerKey in header.Keys)
+            {
+                if (headerKey.Contains(Const.XCa))
+                {
+                    request.Headers.Add(headerKey, header[headerKey]);
+                }
+            }
+            return request;
         }
     }
 }

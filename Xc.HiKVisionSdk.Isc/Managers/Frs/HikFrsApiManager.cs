@@ -28,7 +28,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<RecognitionResponse> ResourceRecognitionAsync(RecognitionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<RecognitionRequest, RecognitionResponse>("/artemis/api/frs/v1/resource/recognition", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<RecognitionRequest, RecognitionResponse>("/api/frs/v1/resource/recognition", model, Const.V1_2);
         }
 
 

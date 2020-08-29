@@ -17,7 +17,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<CardListResponse> CardListAsync(CardListRequest request)
         {
-            return _hikVisionApiManager.PostAndGetAsync<CardListRequest, CardListResponse>("/artemis/api/resource/v1/card/cardList", request, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<CardListRequest, CardListResponse>("/api/resource/v1/card/cardList", request, Const.V1_2);
         }
 
     }

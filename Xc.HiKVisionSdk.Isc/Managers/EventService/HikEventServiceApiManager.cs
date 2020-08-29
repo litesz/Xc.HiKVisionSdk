@@ -26,7 +26,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public EventsSearchResponse EventsSearch(EventsSearchRequest model)
         {
-            return _hikVisionApiManager.PostAndGet<EventsSearchRequest, EventsSearchResponse>("/artemis/api/eventService/v1/events/search", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGet<EventsSearchRequest, EventsSearchResponse>("/api/eventService/v1/events/search", model, Const.V1_3);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public Task<EventsSearchResponse> EventsSearchAsync(EventsSearchRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventsSearchRequest, EventsSearchResponse>("/artemis/api/eventService/v1/events/search", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<EventsSearchRequest, EventsSearchResponse>("/api/eventService/v1/events/search", model, Const.V1_3);
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public EventSubscriptionByEventTypesResponse EventSubscriptionByEventTypes(EventSubscriptionByEventTypesRequest model)
         {
-            return _hikVisionApiManager.PostAndGet<EventSubscriptionByEventTypesRequest, EventSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventSubscriptionByEventTypes", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGet<EventSubscriptionByEventTypesRequest, EventSubscriptionByEventTypesResponse>("/api/eventService/v1/eventSubscriptionByEventTypes", model, Const.V1_3);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public Task<EventSubscriptionByEventTypesResponse> EventSubscriptionByEventTypesAsync(EventSubscriptionByEventTypesRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionByEventTypesRequest, EventSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventSubscriptionByEventTypes", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionByEventTypesRequest, EventSubscriptionByEventTypesResponse>("/api/eventService/v1/eventSubscriptionByEventTypes", model, Const.V1_3);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public EventSubscriptionViewResponse EventSubscriptionView()
         {
-            return _hikVisionApiManager.PostAndGet<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/artemis/api/eventService/v1/eventSubscriptionView", null, Const.V1_0);
+            return _hikVisionApiManager.PostAndGet<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/api/eventService/v1/eventSubscriptionView", null, Const.V1_0);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public Task<EventSubscriptionViewResponse> EventSubscriptionViewAsync()
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/artemis/api/eventService/v1/eventSubscriptionView", null, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/api/eventService/v1/eventSubscriptionView", null, Const.V1_0);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public EventUnSubscriptionByEventTypesResponse EventUnSubscriptionByEventTypes(EventUnSubscriptionByEventTypesRequest model)
         {
-            return _hikVisionApiManager.PostAndGet<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventUnSubscriptionByEventTypes", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGet<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/api/eventService/v1/eventUnSubscriptionByEventTypes", model, Const.V1_0);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public Task<EventUnSubscriptionByEventTypesResponse> EventUnSubscriptionByEventTypesAsync(EventUnSubscriptionByEventTypesRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/artemis/api/eventService/v1/eventUnSubscriptionByEventTypes", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/api/eventService/v1/eventUnSubscriptionByEventTypes", model, Const.V1_0);
         }
     }
 }

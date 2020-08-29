@@ -15,7 +15,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<EventBlackSearchResponse> EventBlackSearch(EventBlackSearchRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventBlackSearchRequest, EventBlackSearchResponse>("/artemis/api/frs/v1/event/black/search", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<EventBlackSearchRequest, EventBlackSearchResponse>("/api/frs/v1/event/black/search", model, Const.V1_3);
         }
 
        

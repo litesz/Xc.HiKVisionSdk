@@ -16,7 +16,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgListResponse> OrgListAsync(OrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgListRequest, OrgListResponse>("/artemis/api/resource/v1/org/orgList", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<OrgListRequest, OrgListResponse>("/api/resource/v1/org/orgList", model, Const.V1_0);
         }
 
 
@@ -27,7 +27,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<RootOrgResponse> RootOrgAsync(RootOrgRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<RootOrgRequest, RootOrgResponse>("/artemis/api/resource/v1/org/rootOrg", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<RootOrgRequest, RootOrgResponse>("/api/resource/v1/org/rootOrg", model, Const.V1_0);
         }
 
     }

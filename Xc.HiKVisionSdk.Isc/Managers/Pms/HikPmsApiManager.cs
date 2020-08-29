@@ -25,7 +25,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms
         /// <returns></returns>
         public Task<ParkRemainSpaceNumResponse> ParkRemainSpaceNumAsync(ParkRemainSpaceNumRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<ParkRemainSpaceNumRequest, ParkRemainSpaceNumResponse>("/artemis/api/pms/v1/park/remainSpaceNum", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<ParkRemainSpaceNumRequest, ParkRemainSpaceNumResponse>("/api/pms/v1/park/remainSpaceNum", model, Const.V1_0);
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms
         /// <returns></returns>
         public Task<AlarmCarAdditionResponse> AlarmCarAdditionAsync(AlarmCarAdditionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AlarmCarAdditionRequest, AlarmCarAdditionResponse>("/artemis/api/pms/v1/alarmCar/addition", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<AlarmCarAdditionRequest, AlarmCarAdditionResponse>("/api/pms/v1/alarmCar/addition", model, Const.V1_2);
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms
         /// <returns></returns>
         public Task<AlarmCarDeletionResponse> AlarmCarDeletionAsync(AlarmCarDeletionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AlarmCarDeletionRequest, AlarmCarDeletionResponse>("/artemis/api/pms/v1/alarmCar/deletion", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<AlarmCarDeletionRequest, AlarmCarDeletionResponse>("/api/pms/v1/alarmCar/deletion", model, Const.V1_2);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms
         /// <returns></returns>
         public Task<AlarmCarPageResponse> AlarmCarPageAsync(AlarmCarPageRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AlarmCarPageRequest, AlarmCarPageResponse>("/artemis/api/pms/v1/alarmCar/page", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<AlarmCarPageRequest, AlarmCarPageResponse>("/api/pms/v1/alarmCar/page", model, Const.V1_2);
         }
     }
 }
