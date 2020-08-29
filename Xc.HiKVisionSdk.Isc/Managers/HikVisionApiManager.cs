@@ -1,10 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
-using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Models;
@@ -22,37 +19,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="client"></param>
         /// <param name="option"></param>
-        public HikVisionApiManager(HttpClient client, IscSdkOption option)
+        public HikVisionApiManager(HttpClient client, IOptions<IscSdkOption> option)
         {
             _httpClient = client;
-            _option = option;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="options"></param>
-        public HikVisionApiManager(HttpClient client, IOptions<IscSdkOption> options) : this(client, options.Value)
-        {
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ak"></param>
-        /// <param name="sk"></param>
-        /// <param name="address"></param>
-        /// <param name="ver"></param>
-        public HikVisionApiManager(string ak, string sk, string address, decimal ver, HttpClient client) : this(client, new IscSdkOption
-        {
-            Ak = ak.Trim(),
-            Sk = sk.Trim(),
-            BaseUrl = address.Trim(),
-            Ver = ver
-        })
-        {
+            _option = option.Value;
         }
 
         /// <summary>
@@ -77,7 +49,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         public async Task<string> PostAndGetStringAsync(string url, string bodyStr, decimal ver)
         {
             Check(ver);
-           
+
             var bodyJson = new StringContent(bodyStr, Encoding.UTF8, "application/json");
             var header = InitHeaderInfo($"/artemis{url}", true);
             foreach (string headerKey in header.Keys)
@@ -111,7 +83,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers
                 throw new ArgumentNullException("sk");
             }
 
-           
+
 
             if (ver > _option.Ver)
             {
@@ -154,19 +126,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             return header;
         }
 
-        private HttpRequestMessage GenerateHttpRequestMessage(string url)
-        {
-            var request = new HttpRequestMessage(HttpMethod.Get, url);
 
-            var header = InitHeaderInfo(url);
-            foreach (string headerKey in header.Keys)
-            {
-                if (headerKey.Contains(Const.XCa))
-                {
-                    request.Headers.Add(headerKey, header[headerKey]);
-                }
-            }
-            return request;
-        }
     }
 }

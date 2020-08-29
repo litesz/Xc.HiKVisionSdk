@@ -1,4 +1,5 @@
-﻿using Stylet;
+﻿using Microsoft.Extensions.Options;
+using Stylet;
 using StyletIoC;
 using System.IO;
 using System.Linq;
@@ -66,7 +67,7 @@ namespace Company.WpfApplication1.Pages
         private readonly IWindowManager _windowManager;
         private readonly IContainer _container;
 
-        private IscSdkOption IscSdkOption => _container.Get<IscSdkOption>();
+        private SdkOption IscSdkOption => (SdkOption)_container.Get<IOptions<IscSdkOption>>();
         public ShellViewModel(IWindowManager windowManager, IContainer container)
         {
             _windowManager = windowManager;

@@ -1,4 +1,5 @@
 ﻿using Company.WpfApplication1.Pages;
+using Microsoft.Extensions.Options;
 using Stylet;
 using StyletIoC;
 using System.Net.Http;
@@ -13,6 +14,40 @@ using Xc.HiKVisionSdk.Isc.Models;
 
 namespace Company.WpfApplication1
 {
+    public class SdkOption : IOptions<IscSdkOption>
+    {
+
+        public IscSdkOption Value => new IscSdkOption
+        {
+            Ak = this.Ak,
+            BaseUrl = this.BaseUrl,
+            DownloadImg = this.DownloadImg,
+            Sk = this.Sk,
+            Ver = this.Ver
+        };
+
+        /// <summary>
+        /// ak
+        /// </summary>
+        public string Ak { get; set; }
+        /// <summary>
+        /// sk
+        /// </summary>
+        public string Sk { get; set; }
+        /// <summary>
+        /// 海康平台地址
+        /// </summary>
+        public string BaseUrl { get; set; }
+        /// <summary>
+        /// 平台版本号
+        /// </summary>
+        public decimal Ver { get; set; } = 1;
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool DownloadImg { get; set; }
+    }
+
     public class Bootstrapper : Bootstrapper<ShellViewModel>
     {
         protected override void ConfigureIoC(IStyletIoCBuilder builder)
@@ -31,7 +66,11 @@ namespace Company.WpfApplication1
                 return client;
             });
 
-            builder.Bind<IscSdkOption>().ToSelf().InSingletonScope();
+            // builder.Bind<IscSdkOption>().ToSelf().InSingletonScope();
+
+            builder.Bind<IOptions<IscSdkOption>>().To<SdkOption>().InSingletonScope();
+
+
             builder.Bind<IHikVisionApiManager>().To<HikVisionApiManager>();
             builder.Bind<IHikPmsApiManager>().To<HikPmsApiManager>();
             builder.Bind<IHikResourceApiManager>().To<HikResourceApiManager>();
