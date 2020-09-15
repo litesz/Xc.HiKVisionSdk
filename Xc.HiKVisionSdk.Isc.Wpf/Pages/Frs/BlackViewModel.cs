@@ -68,7 +68,7 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Frs
                     PageSize = 1000
                 };
 
-                var result = await api.EventBlackSearch(request);
+                var result = await api.EventBlackSearchAsync(request);
 
                 if (result.Data == null)
                 {

@@ -31,7 +31,7 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
                 var result = await resourceApiManagerV2.PersonListV2Async(new PersonListV2Request
                 {
-                    PageSize = 1,
+                    PageSize = 10,
                     PageNo = 1
                 });
 
@@ -56,38 +56,7 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
             }
         }
 
-        public async Task AdvancePersonList()
-        {
 
-            try
-            {
-                IsRun = false;
-
-                IHikResourceApiManager resourceApiManagerV2 = Container.Get<IHikResourceApiManager>();
-
-                var result = await resourceApiManagerV2.PersonIdPersonInfoAsync(new PersonIdPersonInfoRequest
-                {
-                    PersonId = "e51ba852420c49b087fe9602a066f823"
-                });
-                if (result.Data == null)
-                {
-                    WindowManager.ShowMessageBox($"查询结果为空\r\n状态:{result.Code}\r\n消息:${result.Msg}");
-                    return;
-                }
-
-                //"e51ba852420c49b087fe9602a066f823"
-                WindowManager.ShowMessageBox($"查询成功，姓名：{result.Data.PersonName}");
-            }
-            catch (Exception ex)
-            {
-                WindowManager.ShowMessageBox($"查询失败\r\n" + ex);
-
-            }
-            finally
-            {
-                IsRun = true;
-            }
-        }
 
 
         public async Task OrgList()
@@ -101,7 +70,7 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
                 var orgList = await resourceApiManager.OrgListAsync(new Managers.Resource.Models.Org.OrgListRequest
                 {
-                    PageSize = 1,
+                    PageSize = 10,
                     PageNo = 1
                 });
 
@@ -138,7 +107,7 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
                 var result = await resourceApiManager.CardListAsync(new CardListRequest
                 {
                     PageNo = 1,
-                    PageSize = 100
+                    PageSize = 10
                 });
 
                 if (result.Data == null)

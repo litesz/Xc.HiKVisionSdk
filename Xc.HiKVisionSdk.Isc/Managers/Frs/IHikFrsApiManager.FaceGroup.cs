@@ -8,7 +8,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
     /// </summary>
     public partial interface IHikFrsApiManager
     {
-        #region facegroup
         /// <summary>
         /// 单个添加人脸分组
         /// 
@@ -48,7 +47,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <param name="model"></param>
         /// <returns></returns>
         Task<FaceGroupResponse> FaceGroupAsync(FaceGroupRequest model);
-        #endregion
-
+      
     }
 }

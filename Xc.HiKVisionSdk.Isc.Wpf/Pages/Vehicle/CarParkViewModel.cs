@@ -1,6 +1,7 @@
 ﻿using Stylet;
 using StyletIoC;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Managers.Pms;
 using Xc.HiKVisionSdk.Isc.Managers.Pms.Models;
@@ -71,7 +72,10 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Vehicle
                     total += xx.TotalPlace;
                 }
 
-                WindowManager.ShowMessageBox($"查询成功，共有{total}个车位");
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "ParkRemainSpaceNum.json");
+                File.WriteAllText(path, JsonExtensions.Serialize(result));
+
+                WindowManager.ShowMessageBox($"查询成功，共有{total}个剩余车位");
             }
             catch (Exception ex)
             {

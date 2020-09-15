@@ -3,9 +3,9 @@
 namespace Xc.HiKVisionSdk.Isc.Callbacks.Pms
 {
     /// <summary>
-    /// 车辆黑名单数据
+    /// 停车场进出事件
     /// </summary>
-    public class AlarmCarEventCallbackData
+    public class ParkingInOrOutEventCallbackData
     {
         /// <summary>
         /// 是否黑名单标识（1-黑名单 0-非黑名单）
@@ -103,5 +103,15 @@ namespace Xc.HiKVisionSdk.Isc.Callbacks.Pms
         /// 车辆类型
         /// </summary>
         public int VehicleType { get; set; }
+
+        /// <summary>
+        /// 进场结果
+        /// </summary>
+        public InResult InResult { get; set; }
+
+        /// <summary>
+        /// 出场结果
+        /// </summary>
+        public OutResult OutResult { get; set; }
     }
 }

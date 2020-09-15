@@ -114,6 +114,18 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
                 SubclassName = "门禁",
                 Action = "acs"
             });
+
+
+            Items.Add(197162, new EventCollectionItem
+            {
+                Id = 197162,
+                Name = "人证比对通过",
+                Type = "SmartCard",
+                TypeName = "一卡通",
+                Subclass = "Acs",
+                SubclassName = "门禁",
+                Action = "acs"
+            });
         }
         /// <summary>
         /// 
@@ -129,8 +141,32 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
                 TypeName = "车辆管理",
                 Subclass = "Pms",
                 SubclassName = "停车场",
-                Action = "AlarmCar"
+                Action = "ParkingInOrOut"
             });
+
+
+            Items.Add(771760131, new EventCollectionItem
+            {
+                Id = 771760131,
+                Name = "入场放行",
+                Type = "Vehicle",
+                TypeName = "车辆管理",
+                Subclass = "Pms",
+                SubclassName = "停车场",
+                Action = "ParkingInOrOut"
+            });
+
+            Items.Add(771760134, new EventCollectionItem
+            {
+                Id = 771760134,
+                Name = "出场放行",
+                Type = "Vehicle",
+                TypeName = "车辆管理",
+                Subclass = "Pms",
+                SubclassName = "停车场",
+                Action = "ParkingInOrOut"
+            });
+
         }
         /// <summary>
         /// 

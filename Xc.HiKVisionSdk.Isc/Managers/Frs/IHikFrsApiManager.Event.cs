@@ -17,7 +17,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// a)按条件查询重点人员事件。
         /// b)检索出来的结果是分页的集合，分页参数由接口参数传入。
         /// </remarks>
-        Task<EventBlackSearchResponse> EventBlackSearch(EventBlackSearchRequest model);
+        Task<EventBlackSearchResponse> EventBlackSearchAsync(EventBlackSearchRequest model);
 
     }
 }

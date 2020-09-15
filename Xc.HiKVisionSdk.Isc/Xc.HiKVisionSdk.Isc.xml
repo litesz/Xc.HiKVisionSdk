@@ -1255,136 +1255,6 @@
             源事件的唯一标识，即转自的人脸比对事件的唯一标识
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallback">
-            <summary>
-            车辆黑名单
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData">
-            <summary>
-            车辆黑名单数据
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.AlarmCar">
-            <summary>
-            是否黑名单标识（1-黑名单 0-非黑名单）
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.CarAttributeName">
-            <summary>
-            车辆属性名称
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.CardNo">
-            <summary>
-            卡号
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.EventCmd">
-            <summary>
-            事件号
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.EventIndex">
-            <summary>
-            事件编号
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.GateIndex">
-            <summary>
-            出入口编号
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.GateName">
-            <summary>
-            出入口名称
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.InoutType">
-            <summary>
-            进出场类型，0：进场，1：出场
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.MainLogo">
-            <summary>
-            车辆主品牌
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.ParkIndex">
-            <summary>
-            停车库编号
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.ParkName">
-            <summary>
-            停车库名称
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.PlateBelieve">
-            <summary>
-            车牌置信度
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.PlateColor">
-            <summary>
-            车牌颜色
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.PlateNo">
-            <summary>
-            车牌号
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.PlateType">
-            <summary>
-            车牌类型
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.RoadwayIndex">
-            <summary>
-            车道编号
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.RoadwayName">
-            <summary>
-            车道名称
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.RoadwayType">
-            <summary>
-            车道类型
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.SubLogo">
-            <summary>
-            车辆子品牌
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.SubModel">
-            <summary>
-            子品牌年款
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.Time">
-            <summary>
-            时间
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.VehicleClass">
-            <summary>
-            车辆分类信息
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.VehicleColor">
-            <summary>
-            车辆颜色
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.AlarmCarEventCallbackData.VehicleType">
-            <summary>
-            车辆类型
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.EventCmd">
             <summary>
             事件号
@@ -1448,6 +1318,216 @@
         <member name="F:Xc.HiKVisionSdk.Isc.Callbacks.Pms.InOrOutType.Out">
             <summary>
             出场
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.InResult">
+            <summary>
+            进场放行结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.InResult.RlsResult">
+            <summary>
+            放行结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.OutResult">
+            <summary>
+            事件出场结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.OutResult.ChargeIndex">
+            <summary>
+            账单编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.OutResult.RealCost">
+            <summary>
+            出场实收金额
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.OutResult.RlsResult">
+            <summary>
+            放行结果信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.OutResult.TollerId">
+            <summary>
+            收费员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.OutResult.TotalCost">
+            <summary>
+            出场应收金额
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallback">
+            <summary>
+            停车场进出事件
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData">
+            <summary>
+            停车场进出事件
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.AlarmCar">
+            <summary>
+            是否黑名单标识（1-黑名单 0-非黑名单）
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.CarAttributeName">
+            <summary>
+            车辆属性名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.EventCmd">
+            <summary>
+            事件号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.EventIndex">
+            <summary>
+            事件编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.GateIndex">
+            <summary>
+            出入口编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.GateName">
+            <summary>
+            出入口名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.InoutType">
+            <summary>
+            进出场类型，0：进场，1：出场
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.MainLogo">
+            <summary>
+            车辆主品牌
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.ParkIndex">
+            <summary>
+            停车库编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.ParkName">
+            <summary>
+            停车库名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.PlateBelieve">
+            <summary>
+            车牌置信度
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.PlateColor">
+            <summary>
+            车牌颜色
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.PlateNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.PlateType">
+            <summary>
+            车牌类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.RoadwayIndex">
+            <summary>
+            车道编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.RoadwayName">
+            <summary>
+            车道名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.RoadwayType">
+            <summary>
+            车道类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.SubLogo">
+            <summary>
+            车辆子品牌
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.SubModel">
+            <summary>
+            子品牌年款
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.VehicleClass">
+            <summary>
+            车辆分类信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.VehicleColor">
+            <summary>
+            车辆颜色
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.VehicleType">
+            <summary>
+            车辆类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.InResult">
+            <summary>
+            进场结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.ParkingInOrOutEventCallbackData.OutResult">
+            <summary>
+            出场结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.RlsResult">
+            <summary>
+            放行结果信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.RlsResult.ReleaseAuth">
+            <summary>
+            放行权限
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.RlsResult.ReleaseResult">
+            <summary>
+            放行结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.RlsResult.ReleaseReason">
+            <summary>
+            新体系放行结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.RlsResult.ReleaseResultEx">
+            <summary>
+            放行原因
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Callbacks.Pms.RlsResult.ReleaseWay">
+            <summary>
+            放行方式
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Callbacks.Pms.RoadwayType">
@@ -3615,6 +3695,12 @@
             <summary>
             人脸识别api
             </summary>
+            <summary>
+            人脸识别api
+            </summary>
+            <summary>
+            人脸识别api
+            </summary>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.PlanRecognitionBlackAdditionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest)">
             <summary>
@@ -3671,7 +3757,7 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.EventBlackSearch(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.EventBlackSearchRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.EventBlackSearchAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.EventBlackSearchRequest)">
             <summary>
             按条件查询重点人员事件
             </summary>
@@ -3748,7 +3834,27 @@
             <param name="model"></param>
             <returns></returns>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.GetFaceRelationAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationRequest)">
+            <summary>
+            按条件查询重点人员事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.HikFrsApiManager.CaptureConfigurationAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.CaptureConfigurationRequest)">
+            <summary>
+            抓拍计划配置
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager">
+            <summary>
+            人脸应用服务
+            </summary>
+            <summary>
+            人脸应用服务
+            </summary>
             <summary>
             人脸应用服务
             </summary>
@@ -3845,7 +3951,7 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.EventBlackSearch(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.EventBlackSearchRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.EventBlackSearchAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.EventBlackSearchRequest)">
             <summary>
             按条件查询重点人员事件
             </summary>
@@ -3982,6 +4088,32 @@
              <remarks> a)根据查询条件，查询人脸分组集合。</remarks>
              <param name="model"></param>
              <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.GetFaceRelationAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationRequest)">
+            <summary>
+            获取人脸及分组关联关系
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>
+            a)已经配置了一条或多条识别计划。
+            b)调用方获取到人脸比对事件后，可通过调用该接口获取关联关系，将人脸比对事件报文中的人脸编号、分组编号和人脸监控应用服务中相对应。
+            c)调用方可在识别计划下发完成后调用该接口获取关联关系。
+            d)严禁在事件接收时调用此接口，避免造成接口性能不佳。
+            </remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.CaptureConfigurationAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.CaptureConfigurationRequest)">
+            <summary>
+            抓拍计划配置
+            </summary>
+            <param name="model"></param>
+            <returns>
+            a)配置平台的抓拍计划，目前支持开启和关闭两种操作。
+            b)当抓拍计划关闭后，也就无法从消息队列中获取到人脸抓拍事件了。
+            c)关闭抓拍计划不会影响到识别计划，因此人脸比对报警、重点人员识别报警、陌生人识别报警，仍旧会上报。
+            d)关闭抓拍计划的接口，是为了在部分场景下，去除无用的抓拍事件。这样可以释放消息队列、事件服务和人脸监控的压力，将性能用在更需要的地方。
+            e)重复的开启或者关闭，接口会返回成功。
+            </returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.IHikFrsApiManager.ResourceRecognitionAsync(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest)">
             <summary>
@@ -4639,7 +4771,7 @@
             单个查询重点人员识别计划详情请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailRequest.IndexCodes">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailRequest.IndexCode">
             <summary>
             识别计划的唯一标识，可从查询重点人员识别计划获取
             </summary>
@@ -4923,6 +5055,68 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.TimeRange.EndTime">
             <summary>
             结束时间，时分，如“00:00”
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.CaptureConfigurationRequest">
+            <summary>
+            抓拍计划配置
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.CaptureConfigurationRequest.EventSwitch">
+            <summary>
+            开启或者关闭平台的抓拍计划:
+            true:开启,
+            false:关闭
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.CaptureConfigurationResponse">
+            <summary>
+            抓拍计划配置
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationRequest">
+            <summary>
+            获取人脸及分组关联关系
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationRequest.IndexCodes">
+            <summary>
+            人脸唯一编号数组，，可从按条件批量查询人脸获取
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationResponse">
+            <summary>
+            获取人脸及分组关联关系
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationResponseData">
+            <summary>
+            获取人脸及分组关联关系
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationResponseData.FaceIndexCode">
+            <summary>
+            人脸监控应用服务人脸编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationResponseData.FaceGroupIndexCode">
+            <summary>
+            人脸监控应用服务人脸分组唯一编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationResponseData.ResFaceIndexCode">
+            <summary>
+            识别资源上人脸的唯一编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationResponseData.ResFaceGroupIndexCode">
+            <summary>
+            识别资源上人脸库的唯一编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.GetFaceRelationResponseData.ResIndexCode">
+            <summary>
+            识别资源的唯一编号
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.RecognitionRequest">

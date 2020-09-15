@@ -2,7 +2,7 @@
 {
     public static class AppConst
     {
-        public const string Version = "0.8";
+        public const string Version = "0.9";
         public const string JsonName = "IscConfig.json";
     }
 }

@@ -50,7 +50,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers
         {
             Check(ver);
 
-            var bodyJson = new StringContent(bodyStr, Encoding.UTF8, "application/json");
+            var bodyJson = new StringContent(string.IsNullOrWhiteSpace(bodyStr) ? "" : bodyStr, Encoding.UTF8, "application/json");
             var header = InitHeaderInfo($"/artemis{url}", true);
             foreach (string headerKey in header.Keys)
             {
@@ -65,6 +65,8 @@ namespace Xc.HiKVisionSdk.Isc.Managers
             return await response.Content.ReadAsStringAsync();
         }
 
+
+  
 
 
         private void Check(decimal ver)

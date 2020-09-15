@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Xc.HiKVisionSdk.Isc
+﻿namespace Xc.HiKVisionSdk.Isc
 {
     /// <summary>
     /// 固定值

@@ -13,7 +13,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public Task<EventBlackSearchResponse> EventBlackSearch(EventBlackSearchRequest model)
+        public Task<EventBlackSearchResponse> EventBlackSearchAsync(EventBlackSearchRequest model)
         {
             return _hikVisionApiManager.PostAndGetAsync<EventBlackSearchRequest, EventBlackSearchResponse>("/api/frs/v1/event/black/search", model, Const.V1_3);
         }
