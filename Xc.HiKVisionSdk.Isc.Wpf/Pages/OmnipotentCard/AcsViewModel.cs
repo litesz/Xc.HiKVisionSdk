@@ -31,7 +31,11 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.OmnipotentCard
 
                 IHikAcsApiManager resourceApiManagerV2 = Container.Get<IHikAcsApiManager>();
 
-                var result = await resourceApiManagerV2.DoorEventsV2Async(new Managers.Acs.Models.DoorEventsV2Request());
+                var result = await resourceApiManagerV2.DoorEventsV2Async(new Managers.Acs.Models.DoorEventsV2Request()
+                {
+                    PageSize = 1000
+
+                });
 
                 if (result.Data == null)
                 {

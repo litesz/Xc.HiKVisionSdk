@@ -2257,7 +2257,7 @@
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.MonitorDoorListItemDto">
             <summary>
-            监听们项
+            监听门项
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.MonitorDoorListItemDto.Id">
@@ -2273,6 +2273,11 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.MonitorDoorListItemDto.Remark">
             <summary>
             备注
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.MonitorDoorListItemDto.IsReverse">
+            <summary>
+            取反
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.EventType">

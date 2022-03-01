@@ -58,7 +58,7 @@ namespace Company.WpfApplication1.Pages
             }
         }
 
-        public decimal[] Versions => new[] { 1, 1.1m, 1.2m, 1.3m, 1.4m };
+        public decimal[] Versions => new[] { 1, 1.1m, 1.2m, 1.3m, 1.4m,1.41m };
 
         public bool IsRun { get; set; }
 

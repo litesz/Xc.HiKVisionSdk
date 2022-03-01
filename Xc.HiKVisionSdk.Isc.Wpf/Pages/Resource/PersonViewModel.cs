@@ -3,6 +3,7 @@ using StyletIoC;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using Xc.HiKVisionSdk.Isc.Managers.Eaas;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card;
@@ -29,10 +30,19 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
                 IHikResourceApiManager resourceApiManagerV2 = Container.Get<IHikResourceApiManager>();
 
+                //var r = await resourceApiManagerV2.AcsDoorAdvanceAcsDoorListAsync(new Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest
+                //{
+
+                //    PageNo = 1,
+                //    PageSize = 10
+
+                //});
+
                 var result = await resourceApiManagerV2.PersonListV2Async(new PersonListV2Request
                 {
-                    PageSize = 10,
-                    PageNo = 1
+                    PageSize = 100,
+                    PageNo = 1,
+
                 });
 
                 if (result.Data == null)
@@ -61,6 +71,25 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
         public async Task OrgList()
         {
+
+            //try
+            //{
+            //    IHikResourceApiManager hikEaasServiceApiManager = Container.Get<IHikResourceApiManager>();
+
+            //    var x = await hikEaasServiceApiManager.OrgBatchAddAsync(new Managers.Resource.Models.Org.OrgBatchAddRequest
+            //    {
+            //        Items = new Managers.Resource.Models.Org.OrgBatchAddRequestItem[1]{
+            //         new Managers.Resource.Models.Org.OrgBatchAddRequestItem{
+            //              ClientId=1,
+            //              OrgName="test",
+            //              ParentIndexCode="root000000",
+            //         }
+            //    }
+            //    });
+            //}
+            //catch (Exception ex)
+            //{
+            //}
 
             try
             {

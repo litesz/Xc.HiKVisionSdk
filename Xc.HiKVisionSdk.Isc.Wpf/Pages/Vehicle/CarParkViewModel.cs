@@ -60,8 +60,9 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Vehicle
                 IHikPmsApiManager pmsApiManagerV1 = Container.Get<IHikPmsApiManager>();
 
                 var result = await pmsApiManagerV1.ParkRemainSpaceNumAsync(new ParkRemainSpaceNumRequest());
-
-                int total = 0;
+                int parks = 0;
+                int left = 0;
+                int place = 0;
                 if (result.Data == null)
                 {
                     WindowManager.ShowMessageBox($"查询结果为空\r\n状态:{result.Code}\r\n消息:${result.Msg}");
@@ -69,13 +70,15 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Vehicle
                 }
                 foreach (var xx in result.Data)
                 {
-                    total += xx.TotalPlace;
+                    parks++;
+                    place += xx.TotalPlace;
+                    left += xx.LeftPlace;
                 }
 
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "ParkRemainSpaceNum.json");
                 File.WriteAllText(path, JsonExtensions.Serialize(result));
 
-                WindowManager.ShowMessageBox($"查询成功，共有{total}个剩余车位");
+                WindowManager.ShowMessageBox($"查询成功，共有{parks}个停个车，共{place}个车位，剩余{left}个车位");
             }
             catch (Exception ex)
             {

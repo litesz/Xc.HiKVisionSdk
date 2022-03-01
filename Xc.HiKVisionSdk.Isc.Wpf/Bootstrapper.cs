@@ -5,6 +5,7 @@ using StyletIoC;
 using System.Net.Http;
 using Xc.HiKVisionSdk.Isc.Managers;
 using Xc.HiKVisionSdk.Isc.Managers.Acs;
+using Xc.HiKVisionSdk.Isc.Managers.Eaas;
 using Xc.HiKVisionSdk.Isc.Managers.EventService;
 using Xc.HiKVisionSdk.Isc.Managers.Frs;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
@@ -78,6 +79,9 @@ namespace Company.WpfApplication1
             builder.Bind<IHikFrsApiManager>().To<HikFrsApiManager>();
             builder.Bind<IHikAcsApiManager>().To<HikAcsApiManager>();
             builder.Bind<IHikIrdsApiManager>().To<HikIrdsApiManager>();
+
+
+            builder.Bind<IHikEaasServiceApiManager>().To<HikEaasServiceApiManager>();
 
 
 

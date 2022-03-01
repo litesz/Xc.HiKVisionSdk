@@ -1,7 +1,7 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Events.Acs.Dtos
 {
     /// <summary>
-    /// 监听们项
+    /// 监听门项
     /// </summary>
     public class MonitorDoorListItemDto
     {
@@ -17,6 +17,11 @@
         /// 备注
         /// </summary>
         public string Remark { get; set; }
+
+        /// <summary>
+        /// 取反
+        /// </summary>
+        public bool IsReverse { get; set; }
     }
 
 

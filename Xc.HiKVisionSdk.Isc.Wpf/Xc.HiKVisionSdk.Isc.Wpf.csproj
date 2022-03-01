@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Xc.HiKVisionSdk.Isc.Wpf</RootNamespace>
     <UseWPF>true</UseWPF>
     <Version>0.0.1</Version>
