@@ -77,9 +77,9 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public Task<OrgListResponseResponse> SubOrgListAsync(SubOrgListRequest model)
+        public Task<SubOrgListResponse> SubOrgListAsync(SubOrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<SubOrgListRequest, OrgListResponseResponse>("/api/resource/v1/org/parentOrgIndexCode/subOrgList", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<SubOrgListRequest, SubOrgListResponse>("/api/resource/v1/org/parentOrgIndexCode/subOrgList", model, Const.V1_0);
         }
 
         /// <summary>

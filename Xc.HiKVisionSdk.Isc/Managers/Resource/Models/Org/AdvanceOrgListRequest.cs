@@ -38,5 +38,15 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
         /// 升序：asc
         /// </summary>
         public string OrderType { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pageNo"></param>
+        /// <param name="pageSize"></param>
+        public AdvanceOrgListRequest(int pageNo, int pageSize) : base(pageNo, pageSize)
+        {
+        }
+
     }
 }

@@ -8,11 +8,22 @@ using Xc.HiKVisionSdk.Isc.Models.Common;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Eaas
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IHikEaasServiceApiManager
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         Task<OvertimeSearchResponse> OvertimeSearch(OvertimeSearchRequest model);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class HikEaasServiceApiManager : IHikEaasServiceApiManager
     {
         private readonly IHikVisionApiManager _hikVisionApiManager;
@@ -39,7 +50,9 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Eaas
 
 
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class OvertimeSearchRequest : IPagedQuery
     {
         /// <summary>
@@ -63,14 +76,22 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Eaas
         [Required]
         public int PageNo { get; set; }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class OvertimeSearchResponse : HiKVisionPagedDataResponse<OvertimeSearchResponseData>
     {
 
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class OvertimeSearchResponseData
     {
-        public string name { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string Name { get; set; }
     }
 }

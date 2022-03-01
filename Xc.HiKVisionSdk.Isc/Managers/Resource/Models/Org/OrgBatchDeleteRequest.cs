@@ -9,5 +9,19 @@
         /// 待删除的组织indexCode列表，单次提交上限为1000条        从获取组织列表 接口获取返回参数orgIndexCode
         /// </summary>
         public string[] IndexCodes { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="indexCodes"></param>
+        public OrgBatchDeleteRequest(params string[] indexCodes)
+        {
+            if (indexCodes == null || indexCodes.Length == 0)
+            {
+                throw new System.ArgumentNullException("indexCodes");
+            }
+            IndexCodes = indexCodes;
+        }
+
     }
 }

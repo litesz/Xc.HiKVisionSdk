@@ -13,5 +13,10 @@
         /// 批量添加失败的记录
         /// </summary>
         public OrgBatchAddResponseFailures[] Failures { get; set; }
+
+        /// <summary>
+        /// 有失败记录
+        /// </summary>
+        public bool HasFailed => Failures != null && Failures.Length > 0;
     }
 }

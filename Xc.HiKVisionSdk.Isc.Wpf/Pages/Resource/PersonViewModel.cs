@@ -91,6 +91,18 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
             //{
             //}
 
+
+            //try
+            //{
+            //    IHikResourceApiManager hikEaasServiceApiManager = Container.Get<IHikResourceApiManager>();
+
+            //    var x = await hikEaasServiceApiManager.OrgBatchDeleteAsync(new Managers.Resource.Models.Org.OrgBatchDeleteRequest("8cd881aa-d348-45ea-9ab0-0b606f9215dc"));
+            //}
+            //catch (Exception ex)
+            //{
+            //}
+
+
             try
             {
                 IsRun = false;

@@ -65,7 +65,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// </summary>
         /// <param name="model"></param>
         /// <returns>根据父组织编号获取下级组织列表，主要用于逐层获取父组织的下级组织信息，返回结果分页展示</returns>
-        Task<OrgListResponseResponse> SubOrgListAsync(SubOrgListRequest model);
+        Task<SubOrgListResponse> SubOrgListAsync(SubOrgListRequest model);
 
         /// <summary>
         /// 增量获取组织数据
