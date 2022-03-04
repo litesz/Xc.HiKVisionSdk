@@ -1,5 +1,5 @@
 ﻿
-using Xc.HiKVisionSdk.Isc.Models.Commons;
+using Xc.HiKVisionSdk.Enums;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
 {

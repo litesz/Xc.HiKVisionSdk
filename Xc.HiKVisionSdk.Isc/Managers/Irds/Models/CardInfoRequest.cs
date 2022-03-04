@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xc.HiKVisionSdk.Isc.Models.Common;
-
-namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
+﻿namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
 {
     /// <summary>
     /// 获取单个卡片信息请求

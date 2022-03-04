@@ -8,12 +8,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds
     /// </summary>
     public class HikIrdsApiManager : IHikIrdsApiManager
     {
-        private readonly IHikVisionApiManager _hikVisionApiManager;
+        private readonly IHikVisionIscApiManager _hikVisionApiManager;
      /// <summary>
      /// 
      /// </summary>
      /// <param name="hikVisionApiManager"></param>
-        public HikIrdsApiManager(IHikVisionApiManager hikVisionApiManager)
+        public HikIrdsApiManager(IHikVisionIscApiManager hikVisionApiManager)
         {
             _hikVisionApiManager = hikVisionApiManager;
         }
@@ -25,7 +25,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds
         /// <returns></returns>
         public Task<CardInfoResponse> CardInfoAsync(CardInfoRequest request)
         {
-            return _hikVisionApiManager.PostAndGetAsync<CardInfoRequest, CardInfoResponse>("/api/irds/v1/card/cardInfo", request, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<CardInfoRequest, CardInfoResponse>("/api/irds/v1/card/cardInfo", request, VersionConsts.V1_2);
         }
    
     }

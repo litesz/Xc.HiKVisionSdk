@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Projects\2020\海康api\代码\Xc.HiKVisionSdk\Xc.HiKVisionSdk.Ia\Xc.HiKVisionSdk.Ia.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Projects\2020\海康api\代码\Xc.HiKVisionSdk\Xc.HiKVisionSdk.Ia\Xc.HiKVisionSdk.Ia.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Xc.HiKVisionSdk.Isc\Xc.HiKVisionSdk.Isc.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Request\" />
+  </ItemGroup>
+
+</Project>

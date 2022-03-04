@@ -11,12 +11,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
     /// </summary>
     public partial class HikFrsApiManager : IHikFrsApiManager
     {
-        private readonly IHikVisionApiManager _hikVisionApiManager;
+        private readonly IHikVisionIscApiManager _hikVisionApiManager;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="hikVisionApiManager"></param>
-        public HikFrsApiManager(IHikVisionApiManager hikVisionApiManager)
+        public HikFrsApiManager(IHikVisionIscApiManager hikVisionApiManager)
         {
             _hikVisionApiManager = hikVisionApiManager;
         }
@@ -28,7 +28,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<RecognitionResponse> ResourceRecognitionAsync(RecognitionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<RecognitionRequest, RecognitionResponse>("/api/frs/v1/resource/recognition", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<RecognitionRequest, RecognitionResponse>("/api/frs/v1/resource/recognition", model, VersionConsts.V1_2);
         }
 
 

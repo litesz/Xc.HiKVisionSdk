@@ -4,7 +4,6 @@ using System.Net.Http;
 using Xc.HiKVisionSdk.Isc.Dictionaries;
 using Xc.HiKVisionSdk.Isc.Managers;
 using Xc.HiKVisionSdk.Isc.Managers.Acs;
-using Xc.HiKVisionSdk.Isc.Managers.Eaas;
 using Xc.HiKVisionSdk.Isc.Managers.EventService;
 using Xc.HiKVisionSdk.Isc.Managers.Frs;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
@@ -21,7 +20,7 @@ namespace Xc.HiKVisionSdk.Isc
     public static class ServiceCollectionExtensions
     {
         /// <summary>
-        /// 添加海康API管理
+        /// 添加海康ISCAPI管理
         /// </summary>
         /// <param name="services"></param>
         /// <param name="configuration"></param>
@@ -38,7 +37,7 @@ namespace Xc.HiKVisionSdk.Isc
 
 
             services
-                .AddHttpClient<IHikVisionApiManager, HikVisionApiManager>(option =>
+                .AddHttpClient<IHikVisionIscApiManager, HikVisionIscApiManager>(option =>
                 {
                     option.DefaultRequestHeaders.Accept.Add(
                         new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));

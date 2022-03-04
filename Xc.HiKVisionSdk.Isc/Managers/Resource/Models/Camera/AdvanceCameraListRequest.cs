@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Xc.HiKVisionSdk.Isc.Models;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera
 {

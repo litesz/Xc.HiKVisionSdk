@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Xc.HiKVisionSdk.Ia\Xc.HiKVisionSdk.Ia.csproj" />
     <ProjectReference Include="..\Xc.HiKVisionSdk.Isc\Xc.HiKVisionSdk.Isc.csproj" />
   </ItemGroup>
 

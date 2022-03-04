@@ -1,0 +1,1025 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xc.HiKVisionSdk.Ia</name>
+    </assembly>
+    <members>
+        <member name="T:Xc.HiKVisionSdk.Ia.Enums.AttendanceState">
+            <summary>
+            出勤状态
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.AttendanceState.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.AttendanceState.Late">
+            <summary>
+            迟到
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.AttendanceState.LeaveEarly">
+            <summary>
+            早退
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.AttendanceState.Absence">
+            <summary>
+            旷工
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.AttendanceState.Leave">
+            <summary>
+            请假
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.AttendanceState.Out">
+            <summary>
+            出差
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Enums.DateType">
+            <summary>
+            日期类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.DateType.Workday">
+            <summary>
+            工作日
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.DateType.Playday">
+            <summary>
+            休息日
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.DateType.Holiday">
+            <summary>
+            节假日
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Enums.YesOrNo">
+            <summary>
+            是/否
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.YesOrNo.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Enums.YesOrNo.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Extensions.ServiceCollectionExtensions">
+            <summary>
+            di扩展
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Extensions.ServiceCollectionExtensions.AddHikVisionIa(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            添加海康考勤平台API管理
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest">
+            <summary>
+            批量查询员工考勤数据请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.JobNo">
+            <summary>
+            人员工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.PersonName">
+            <summary>
+            人员姓名 支持中英文字符
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.StartTime">
+            <summary>
+            开始时间，如2021-10-01 00:00:00
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.EndTime">
+            <summary>
+            结束时间，如2021-10-31 23:59:59
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.#ctor(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="size"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.SetJobNo(System.String)">
+            <summary>
+            设置工号
+            </summary>
+            <param name="jobNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.SetPersonName(System.String)">
+            <summary>
+            设置姓名
+            </summary>
+            <param name="personName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.SetStartTime(System.DateTime)">
+            <summary>
+            设置开始时间
+            </summary>
+            <param name="startTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest.SetEndTime(System.DateTime)">
+            <summary>
+            设置结束时间
+            </summary>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponse">
+            <summary>
+            批量查询员工考勤数据结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponseData">
+            <summary>
+            批量查询员工考勤数据结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponseData.AttendanceId">
+            <summary>
+            考勤数据id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponseData.PersonName">
+            <summary>
+            人员姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponseData.TimeGroupName">
+            <summary>
+            考勤组名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponseData.OrgPathName">
+            <summary>
+            组织路径名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponseData.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchResponseData.DayValue">
+            <summary>
+            班次日期集合数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest">
+            <summary>
+            批量查询员工考勤数据请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.Fields">
+            <summary>
+            检索字段名，全部查询为*，多个字段英文逗号分隔，具体属性值可自定义
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.FieldOptions">
+            <summary>
+            查询参数
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            批量查询员工考勤数据请求
+            </summary>
+            <param name="pageNo">当前页</param>
+            <param name="pageSize">容量</param>
+            <param name="fields">检索字段名</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.AddFieldOption(System.String,System.String,System.String)">
+            <summary>
+            添加查询条件
+            </summary>
+            <param name="fieldName">查询字段名称</param>
+            <param name="fieldValue">查询字段值</param>
+            <param name="type">查询类型</param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponse">
+            <summary>
+            批量查询员工考勤数据结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData">
+            <summary>
+            批量查询员工考勤数据结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ModelDataId">
+            <summary>
+            数据唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.PersonId">
+            <summary>
+            人员标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.PersonName">
+            <summary>
+            人员名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Sex">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Pinyin">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.EmpLevel">
+            <summary>
+            员工级别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.EmpType">
+            <summary>
+            员工种类
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.WorkPlace">
+            <summary>
+            工作地点
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgId">
+            <summary>
+            组织id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgName">
+            <summary>
+            组织名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgName1">
+            <summary>
+            组织名称1
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgName2">
+            <summary>
+            组织名称2
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgName3">
+            <summary>
+            组织名称3
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgName4">
+            <summary>
+            组织名称4
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgName5">
+            <summary>
+            组织名称5
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OrgName6">
+            <summary>
+            组织名称6
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.TimeGroupId">
+            <summary>
+            考勤组id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.GroupName">
+            <summary>
+            考勤组名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Date">
+            <summary>
+            当日日期
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.DateType">
+            <summary>
+            日期类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsShouldAttendance">
+            <summary>
+            是否应出勤
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsAlterSchedule">
+             <summary>
+            是否替班
+             </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsSupplyClock">
+            <summary>
+            是否补签
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ScheduleType">
+            <summary>
+            排班类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.WorkPlanId">
+            <summary>
+            工作计划id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.PlanName">
+            <summary>
+            工作计划名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ShiftId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ShiftName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ShiftType">
+            <summary>
+            班次类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ShouldRestTime">
+            <summary>
+            应休息时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ActualRestTime">
+            <summary>
+            实际休息时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ShouldAttendanceTime">
+            <summary>
+            应出勤时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ActualAttendanceTime">
+            <summary>
+            实际出勤时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.AttendanceState">
+            <summary>
+            出勤状态
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsNormal">
+            <summary>
+            是否正常
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsLate">
+            <summary>
+            是否迟到
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsAbsent">
+            <summary>
+            是否旷工
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.LateTime">
+            <summary>
+            迟到时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.EarlyTime">
+            <summary>
+            早退时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.AbsentTime">
+            <summary>
+            旷工时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsOvertime">
+            <summary>
+            是否加班
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OvertimeTime">
+            <summary>
+            加班时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsTurnOffVacation">
+            <summary>
+            是否加班转调休
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OvertimeByRestTime">
+            <summary>
+            加班转调休时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsTurnOffMoney">
+            <summary>
+            是否加班转加班费
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.OvertimeByMoneyCount">
+            <summary>
+            加班费金额
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsMealAllowance">
+            <summary>
+            是否餐补
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.MealAllowance">
+            <summary>
+            餐补金额
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsTransportationAllowance">
+            <summary>
+            是否交补
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.TransportationAllowance">
+            <summary>
+            交补金额
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsSpecialAttendance">
+            <summary>
+            是否出差
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsSpecialAttendanceAllDay">
+            <summary>
+            是否全天出差
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.SpecialAttendanceTime">
+            <summary>
+            出差时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsBeAwayOnBusiness">
+            <summary>
+            是否因公外出
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsTrained">
+            <summary>
+            是否培训
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsExpatriate">
+            <summary>
+            是否外派
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsBusiness">
+            <summary>
+            是否出差
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.BeAwayOnBusinessTime">
+            <summary>
+            因公外出时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.TrainedTime">
+            <summary>
+            培训时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ExpatriateTime">
+            <summary>
+            外派时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.BusinessTime">
+            <summary>
+            出差时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsLeave">
+            <summary>
+             	是否请假
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.LeaveDuration">
+            <summary>
+            请假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.IsLeaveAllDay">
+            <summary>
+            是否全天请假
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.TimeOffInLieu">
+            <summary>
+            调休假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.SickLeave">
+            <summary>
+            病假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.PersonalLeave">
+            <summary>
+            事假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.MaternityLeave">
+            <summary>
+            产假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.PaternityLeave">
+            <summary>
+            陪产假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.InjuryLeave">
+            <summary>
+            工伤假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.MarriageLeave">
+            <summary>
+            婚假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.FuneralLeave">
+            <summary>
+            丧假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.AnnualLeave">
+            <summary>
+            年假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.BreastfeedingLeave">
+            <summary>
+            哺乳假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.MaternityCheckLeave">
+            <summary>
+            产检假时长
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.FirstGoWorkClockTime">
+            <summary>
+            第一次上班打卡时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.FirstOutWorClockTime">
+            <summary>
+            第一次下班打卡时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.SecondGoWorkClockTime">
+            <summary>
+            第二次上班打卡时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.SecondOutWorClockTime">
+            <summary>
+            第二次下班打卡时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.EarlyClockTime">
+            <summary>
+            最早打卡时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.LateClockTime">
+            <summary>
+            最晚打卡时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Year">
+            <summary>
+            年
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Quarter">
+            <summary>
+            季度
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Month">
+            <summary>
+            月
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Week">
+            <summary>
+            周
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.Day">
+            <summary>
+            日
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.CertificateNo">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData.ClockTimes">
+            <summary>
+            当天几次上下班
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.HikEaasApiManager">
+            <summary>
+            考勤api
+            </summary>
+            <summary>
+            打卡
+            </summary>
+            <summary>
+            资源api
+            </summary>
+            <summary>
+            请假
+            </summary>
+            <summary>
+            出差
+            </summary>
+            <summary>
+            加班
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.HikEaasApiManager.AttendanceBatchSearchAsync(Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest)">
+            <summary>
+            批量查询员工考勤数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.HikEaasApiManager.AttendanceResultListAsync(Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest)">
+            <summary>
+            考勤结果查询
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.HikEaasApiManager.#ctor(Xc.HiKVisionSdk.Ia.Managers.IHikVisionIaApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.IHikEaasApiManager">
+            <summary>
+            考勤
+            </summary>
+            <summary>
+            资源api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.IHikEaasApiManager.AttendanceBatchSearchAsync(Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest)">
+            <summary>
+            批量查询员工考勤数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>批量查询员工考勤数据</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.IHikEaasApiManager.AttendanceResultListAsync(Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest)">
+            <summary>
+            考勤结果查询
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>考勤结果查询接口</remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.HikEattendanceEngineApiManager">
+            <summary>
+            配置api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.HikEattendanceEngineApiManager.#ctor(Xc.HiKVisionSdk.Ia.Managers.IHikVisionIaApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.HikEattendanceEngineApiManager.QueryIsCardAsync(Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest)">
+            <summary>
+            查询是否是指定打卡地点
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.HikEattendanceEngineApiManager.QueryGaoDeKeyAsync">
+            <summary>
+            查询高德授权密钥
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.HikEattendanceEngineApiManager.QueryMobileCardAsync(Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest)">
+            <summary>
+            获取移动考勤有效打卡地点
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.IHikEattendanceEngineApiManager">
+            <summary>
+            配置api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.IHikEattendanceEngineApiManager.QueryIsCardAsync(Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest)">
+            <summary>
+            查询是否是指定打卡地点
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>查询是否是指定打卡地点,移动端调用此接口，可识别员工是否需要在指定区域进行打卡</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.IHikEattendanceEngineApiManager.QueryGaoDeKeyAsync">
+            <summary>
+            查询高德授权密钥
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.IHikEattendanceEngineApiManager.QueryMobileCardAsync(Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest)">
+            <summary>
+            获取移动考勤有效打卡地点
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>获取移动考勤有效打卡地点</remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryGaoDeKeyResponse">
+            <summary>
+            查询高德授权密钥结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest">
+            <summary>
+            查询是否是指定打卡地点请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest.#ctor(System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="id">人员标识</param>
+            <param name="date">日期</param>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest.Id">
+            <summary>
+            人员标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest">
+            <summary>
+            获取移动考勤有效打卡地点请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest.#ctor(System.String,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="id">人员标识</param>
+            <param name="date">日期</param>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest.Id">
+            <summary>
+            人员标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardResponse">
+            <summary>
+            查询是否是指定打卡地点结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardResponse.IsOk">
+            <summary>
+            是否是指定地点
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponse">
+            <summary>
+            获取移动考勤有效打卡地点结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData">
+            <summary>
+            获取移动考勤有效打卡地点结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData.Id">
+            <summary>
+            规则标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData.Name">
+            <summary>
+            规则名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData.CardPlaceRange">
+            <summary>
+            打卡范围
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData.CenterRange">
+            <summary>
+            中心点
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData.UpdateTime">
+            <summary>
+            更新时间
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.HikVisionIaApiManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.HikVisionIaApiManager.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Options.IOptions{Xc.HiKVisionSdk.Ia.Models.IaSdkOption})">
+            <summary>
+            
+            </summary>
+            <param name="client"></param>
+            <param name="option"></param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.IHikVisionIaApiManager">
+            <summary>
+            网络实现
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Models.IaSdkOption">
+            <summary>
+            配置选项
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Models.IaSdkOption.Position">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.IaSdkOption.DownloadImg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem">
+            <summary>
+            班次日期数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem.Date">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem.ShiftName">
+            <summary>
+            班次名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem.ShiftId">
+            <summary>
+            班次id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem.UUID">
+            <summary>
+            打卡id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem.Status">
+            <summary>
+            考勤状态
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem.IsSignStatus">
+            <summary>
+            是否补签
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.DayValueItem.IsLeaveStatus">
+            <summary>
+            是否请假
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption">
+            <summary>
+            查询参数
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.#ctor(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="fieldName">查询字段名称</param>
+            <param name="fieldValue">查询字段值</param>
+            <param name="type">查询类型</param>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.FieldName">
+            <summary>
+            查询字段名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.FieldValue">
+            <summary>
+            查询字段值
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.Type">
+            <summary>
+            查询类型:
+            eq相等,like相似，lt小于，gt大于,lte小于等于，gte大于等于，in范围（不超过32767个），isNull为空，notNull不为空，neq不等于，notIn不在范围。
+            注：时间类型时，以下几种时间格式均支持：2020-11-10 11:00:00、2020-11-10T05:50:26Z
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.VersionConsts">
+            <summary>
+            固定值
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.VersionConsts.V1_0">
+            <summary>
+            1.0版本
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.VersionConsts.V1_3">
+            <summary>
+            1.3
+            </summary>
+        </member>
+    </members>
+</doc>

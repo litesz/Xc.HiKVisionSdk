@@ -8,12 +8,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Mpc
     /// </summary>
     public class HikMpcApiManager : IHikMpcApiManager
     {
-        private readonly IHikVisionApiManager _hikVisionApiManager;
+        private readonly IHikVisionIscApiManager _hikVisionApiManager;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="hikVisionApiManager"></param>
-        public HikMpcApiManager(IHikVisionApiManager hikVisionApiManager)
+        public HikMpcApiManager(IHikVisionIscApiManager hikVisionApiManager)
         {
             _hikVisionApiManager = hikVisionApiManager;
         }
@@ -25,7 +25,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Mpc
         /// <returns></returns>
         public Task<AlarmBlackAddResponse> AlarmBlackAdd(AlarmBlackAddRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AlarmBlackAddRequest, AlarmBlackAddResponse>("/api/mpc/v1/alarm/black/add", model, Const.V1_4);
+            return _hikVisionApiManager.PostAndGetAsync<AlarmBlackAddRequest, AlarmBlackAddResponse>("/api/mpc/v1/alarm/black/add", model, VersionConsts.V1_4);
         }
 
 

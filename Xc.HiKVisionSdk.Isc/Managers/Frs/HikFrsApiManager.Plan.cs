@@ -15,7 +15,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<GetFaceRelationResponse> GetFaceRelationAsync(GetFaceRelationRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<GetFaceRelationRequest, GetFaceRelationResponse>("/api/frs/v1/plan/getFaceRelation", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<GetFaceRelationRequest, GetFaceRelationResponse>("/api/frs/v1/plan/getFaceRelation", model, VersionConsts.V1_2);
         }
 
 
@@ -26,7 +26,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<GetFaceRelationResponse> CaptureConfigurationAsync(CaptureConfigurationRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<CaptureConfigurationRequest, GetFaceRelationResponse>("/api/frs/v1/plan/capture/configuration", model, Const.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<CaptureConfigurationRequest, GetFaceRelationResponse>("/api/frs/v1/plan/capture/configuration", model, VersionConsts.V1_2);
         }
 
     }

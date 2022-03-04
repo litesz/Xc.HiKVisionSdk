@@ -3,6 +3,7 @@ using Stylet;
 using StyletIoC;
 using System.IO;
 using System.Linq;
+using Xc.HiKVisionSdk.Ia.Models;
 using Xc.HiKVisionSdk.Isc.Models;
 using Xc.HiKVisionSdk.Isc.Wpf;
 using Xc.HiKVisionSdk.Isc.Wpf.Pages.EventService;
@@ -58,7 +59,7 @@ namespace Company.WpfApplication1.Pages
             }
         }
 
-        public decimal[] Versions => new[] { 1, 1.1m, 1.2m, 1.3m, 1.4m,1.41m };
+        public decimal[] Versions => new[] { 1, 1.1m, 1.2m, 1.3m, 1.4m, 1.41m };
 
         public bool IsRun { get; set; }
 
@@ -68,6 +69,7 @@ namespace Company.WpfApplication1.Pages
         private readonly IContainer _container;
 
         private SdkOption IscSdkOption => (SdkOption)_container.Get<IOptions<IscSdkOption>>();
+        private IaOption IaSdkOption => (IaOption)_container.Get<IOptions<IaSdkOption>>();
         public ShellViewModel(IWindowManager windowManager, IContainer container)
         {
             _windowManager = windowManager;
@@ -103,6 +105,13 @@ namespace Company.WpfApplication1.Pages
                     IscSdkOption.Sk = temp.Sk;
                     IscSdkOption.BaseUrl = temp.BaseUrl;
                     IscSdkOption.Ver = temp.Ver;
+
+                    IaSdkOption.Ak = temp.Ak;
+                    IaSdkOption.Sk = temp.Sk;
+                    IaSdkOption.BaseUrl = temp.BaseUrl;
+                    IaSdkOption.Ver = temp.Ver;
+
+                    
 
                 }
             }

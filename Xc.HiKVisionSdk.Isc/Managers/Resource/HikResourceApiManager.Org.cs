@@ -16,7 +16,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgListResponse> OrgListAsync(OrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgListRequest, OrgListResponse>("/api/resource/v1/org/orgList", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<OrgListRequest, OrgListResponse>("/api/resource/v1/org/orgList", model, VersionConsts.V1_0);
         }
 
 
@@ -27,7 +27,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<RootOrgResponse> RootOrgAsync(RootOrgRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<RootOrgRequest, RootOrgResponse>("/api/resource/v1/org/rootOrg", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<RootOrgRequest, RootOrgResponse>("/api/resource/v1/org/rootOrg", model, VersionConsts.V1_0);
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgSingleUpdateResponse> OrgSingleUpdateAsync(OrgSingleUpdateRequest request)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgSingleUpdateRequest, OrgSingleUpdateResponse>("/api/resource/v1/org/single/update", request, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<OrgSingleUpdateRequest, OrgSingleUpdateResponse>("/api/resource/v1/org/single/update", request, VersionConsts.V1_3);
         }
 
 
@@ -48,7 +48,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgBatchDeleteResponse> OrgBatchDeleteAsync(OrgBatchDeleteRequest request)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgBatchDeleteRequest, OrgBatchDeleteResponse>("/api/resource/v1/org/batch/delete", request, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<OrgBatchDeleteRequest, OrgBatchDeleteResponse>("/api/resource/v1/org/batch/delete", request, VersionConsts.V1_3);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgBatchAddResponse> OrgBatchAddAsync(OrgBatchAddRequest request)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgBatchAddRequestItem[], OrgBatchAddResponse>("/api/resource/v1/org/batch/add", request.Items, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<OrgBatchAddRequestItem[], OrgBatchAddResponse>("/api/resource/v1/org/batch/add", request.Items, VersionConsts.V1_3);
         }
 
 
@@ -69,7 +69,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<AdvanceOrgListResponse> AdvanceOrgListAsync(AdvanceOrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AdvanceOrgListRequest, AdvanceOrgListResponse>("/api/resource/v2/org/advance/orgList", model, Const.V1_4);
+            return _hikVisionApiManager.PostAndGetAsync<AdvanceOrgListRequest, AdvanceOrgListResponse>("/api/resource/v2/org/advance/orgList", model, VersionConsts.V1_4);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<SubOrgListResponse> SubOrgListAsync(SubOrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<SubOrgListRequest, SubOrgListResponse>("/api/resource/v1/org/parentOrgIndexCode/subOrgList", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<SubOrgListRequest, SubOrgListResponse>("/api/resource/v1/org/parentOrgIndexCode/subOrgList", model, VersionConsts.V1_0);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgTimeRangeResponse> OrgTimeRangeAsync(OrgTimeRangeRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgTimeRangeRequest, OrgTimeRangeResponse>("/api/resource/v1/org/timeRange", model, Const.V1_4);
+            return _hikVisionApiManager.PostAndGetAsync<OrgTimeRangeRequest, OrgTimeRangeResponse>("/api/resource/v1/org/timeRange", model, VersionConsts.V1_4);
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgInfoResponse> OrgInfoAsync(OrgInfoRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgInfoRequest, OrgInfoResponse>("/api/resource/v1/org/orgIndexCodes/orgInfo", model, Const.V1_4);
+            return _hikVisionApiManager.PostAndGetAsync<OrgInfoRequest, OrgInfoResponse>("/api/resource/v1/org/orgIndexCodes/orgInfo", model, VersionConsts.V1_4);
         }
     }
 }

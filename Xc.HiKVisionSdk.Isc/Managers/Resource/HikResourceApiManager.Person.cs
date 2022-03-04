@@ -16,7 +16,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgIndexCodePersonListV2Response> OrgIndexCodePersonListV2Async(OrgIndexCodePersonListV2Request model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgIndexCodePersonListV2Request, OrgIndexCodePersonListV2Response>("/api/resource/v2/person/orgIndexCode/personList", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<OrgIndexCodePersonListV2Request, OrgIndexCodePersonListV2Response>("/api/resource/v2/person/orgIndexCode/personList", model, VersionConsts.V1_3);
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PersonIdPersonInfoResponse> PersonIdPersonInfoAsync(PersonIdPersonInfoRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PersonIdPersonInfoRequest, PersonIdPersonInfoResponse>("/api/resource/v1/person/personId/personInfo", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<PersonIdPersonInfoRequest, PersonIdPersonInfoResponse>("/api/resource/v1/person/personId/personInfo", model, VersionConsts.V1_0);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<CertificateNoPersonInfoResponse> CertificateNoPersonInfoAsync(CertificateNoPersonInfoRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<CertificateNoPersonInfoRequest, CertificateNoPersonInfoResponse>("/api/resource/v1/person/certificateNo/personInfo", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<CertificateNoPersonInfoRequest, CertificateNoPersonInfoResponse>("/api/resource/v1/person/certificateNo/personInfo", model, VersionConsts.V1_0);
         }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PhoneNoPersonInfoResponse> PhoneNoPersonInfoAsync(PhoneNoPersonInfoRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PhoneNoPersonInfoRequest, PhoneNoPersonInfoResponse>("/api/resource/v1/person/phoneNo/personInfo", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<PhoneNoPersonInfoRequest, PhoneNoPersonInfoResponse>("/api/resource/v1/person/phoneNo/personInfo", model, VersionConsts.V1_0);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PersonListV2Response> PersonListV2Async(PersonListV2Request model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PersonListV2Request, PersonListV2Response>("/api/resource/v2/person/personList", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<PersonListV2Request, PersonListV2Response>("/api/resource/v2/person/personList", model, VersionConsts.V1_3);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<AdvancePersonListV2Response> AdvancePersonListV2Async(AdvancePersonListV2Request model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AdvancePersonListV2Request, AdvancePersonListV2Response>("/api/resource/v2/person/advance/personList", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<AdvancePersonListV2Request, AdvancePersonListV2Response>("/api/resource/v2/person/advance/personList", model, VersionConsts.V1_3);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PersonSingleAddResponse> PersonSingleAddAsync(PersonSingleAddRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PersonSingleAddRequest, PersonSingleAddResponse>("/api/resource/v1/person/single/add", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<PersonSingleAddRequest, PersonSingleAddResponse>("/api/resource/v1/person/single/add", model, VersionConsts.V1_3);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PersonBatchAddResponse> PersonBatchAddAsync(PersonBatchAddRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PersonBatchAddRequestItem[], PersonBatchAddResponse>("/api/resource/v1/person/batch/add", model.Items, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<PersonBatchAddRequestItem[], PersonBatchAddResponse>("/api/resource/v1/person/batch/add", model.Items, VersionConsts.V1_3);
         }
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PersonSingleUpdateResponse> PersonSingleUpdateAsync(PersonSingleUpdateRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PersonSingleUpdateRequest, PersonSingleUpdateResponse>("/api/resource/v1/person/single/update", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<PersonSingleUpdateRequest, PersonSingleUpdateResponse>("/api/resource/v1/person/single/update", model, VersionConsts.V1_3);
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PersonBatchDeleteResponse> PersonBatchDeleteAsync(PersonBatchDeleteRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PersonBatchDeleteRequest, PersonBatchDeleteResponse>("/api/resource/v1/person/batch/delete", model, Const.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<PersonBatchDeleteRequest, PersonBatchDeleteResponse>("/api/resource/v1/person/batch/delete", model, VersionConsts.V1_3);
         }
 
 

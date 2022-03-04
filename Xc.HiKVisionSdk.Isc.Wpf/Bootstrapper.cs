@@ -3,9 +3,12 @@ using Microsoft.Extensions.Options;
 using Stylet;
 using StyletIoC;
 using System.Net.Http;
+using Xc.HiKVisionSdk.Ia.Managers;
+using Xc.HiKVisionSdk.Ia.Managers.Eaas;
+using Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine;
+using Xc.HiKVisionSdk.Ia.Models;
 using Xc.HiKVisionSdk.Isc.Managers;
 using Xc.HiKVisionSdk.Isc.Managers.Acs;
-using Xc.HiKVisionSdk.Isc.Managers.Eaas;
 using Xc.HiKVisionSdk.Isc.Managers.EventService;
 using Xc.HiKVisionSdk.Isc.Managers.Frs;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
@@ -15,39 +18,6 @@ using Xc.HiKVisionSdk.Isc.Models;
 
 namespace Company.WpfApplication1
 {
-    public class SdkOption : IOptions<IscSdkOption>
-    {
-
-        public IscSdkOption Value => new IscSdkOption
-        {
-            Ak = this.Ak,
-            BaseUrl = this.BaseUrl,
-            DownloadImg = this.DownloadImg,
-            Sk = this.Sk,
-            Ver = this.Ver
-        };
-
-        /// <summary>
-        /// ak
-        /// </summary>
-        public string Ak { get; set; }
-        /// <summary>
-        /// sk
-        /// </summary>
-        public string Sk { get; set; }
-        /// <summary>
-        /// 海康平台地址
-        /// </summary>
-        public string BaseUrl { get; set; }
-        /// <summary>
-        /// 平台版本号
-        /// </summary>
-        public decimal Ver { get; set; } = 1;
-        /// <summary>
-        /// 
-        /// </summary>
-        public bool DownloadImg { get; set; }
-    }
 
     public class Bootstrapper : Bootstrapper<ShellViewModel>
     {
@@ -70,9 +40,9 @@ namespace Company.WpfApplication1
             // builder.Bind<IscSdkOption>().ToSelf().InSingletonScope();
 
             builder.Bind<IOptions<IscSdkOption>>().To<SdkOption>().InSingletonScope();
+            builder.Bind<IOptions<IaSdkOption>>().To<IaOption>().InSingletonScope();
 
-
-            builder.Bind<IHikVisionApiManager>().To<HikVisionApiManager>();
+            builder.Bind<IHikVisionIscApiManager>().To<HikVisionIscApiManager>();
             builder.Bind<IHikPmsApiManager>().To<HikPmsApiManager>();
             builder.Bind<IHikResourceApiManager>().To<HikResourceApiManager>();
             builder.Bind<IHikEventServiceApiManager>().To<HikEventServiceApiManager>();
@@ -81,7 +51,9 @@ namespace Company.WpfApplication1
             builder.Bind<IHikIrdsApiManager>().To<HikIrdsApiManager>();
 
 
-            builder.Bind<IHikEaasServiceApiManager>().To<HikEaasServiceApiManager>();
+            builder.Bind<IHikVisionIaApiManager>().To<HikVisionIaApiManager>();
+            builder.Bind<IHikEattendanceEngineApiManager>().To<HikEattendanceEngineApiManager>();
+            builder.Bind<IHikEaasApiManager>().To<HikEaasApiManager>();
 
 
 

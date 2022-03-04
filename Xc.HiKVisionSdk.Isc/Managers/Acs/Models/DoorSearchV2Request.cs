@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Xc.HiKVisionSdk.Isc.Models;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
 {

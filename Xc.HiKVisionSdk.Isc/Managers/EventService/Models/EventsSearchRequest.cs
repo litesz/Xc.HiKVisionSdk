@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Xc.HiKVisionSdk.Isc.Models.Common;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
 {

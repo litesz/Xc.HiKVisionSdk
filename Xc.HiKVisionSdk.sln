@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Isc", "Xc.H
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Isc.Wpf", "Xc.HiKVisionSdk.Isc.Wpf\Xc.HiKVisionSdk.Isc.Wpf.csproj", "{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xc.HiKVisionSdk.Ia", "Xc.HiKVisionSdk.Ia\Xc.HiKVisionSdk.Ia.csproj", "{74CC8BD6-C000-4332-B8DE-B5339C437C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xc.HiKVisionSdk.Commons", "Xc.HiKVisionSdk.Commons\Xc.HiKVisionSdk.Commons.csproj", "{F84B1D14-5E9D-4E34-8AB6-EF85948855F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CC8BD6-C000-4332-B8DE-B5339C437C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CC8BD6-C000-4332-B8DE-B5339C437C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CC8BD6-C000-4332-B8DE-B5339C437C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CC8BD6-C000-4332-B8DE-B5339C437C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84B1D14-5E9D-4E34-8AB6-EF85948855F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84B1D14-5E9D-4E34-8AB6-EF85948855F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84B1D14-5E9D-4E34-8AB6-EF85948855F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84B1D14-5E9D-4E34-8AB6-EF85948855F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

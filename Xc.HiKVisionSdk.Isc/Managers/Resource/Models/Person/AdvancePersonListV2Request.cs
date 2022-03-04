@@ -1,5 +1,5 @@
-﻿using Xc.HiKVisionSdk.Isc.Models;
-using Xc.HiKVisionSdk.Isc.Models.Commons;
+﻿using Xc.HiKVisionSdk.Enums;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {

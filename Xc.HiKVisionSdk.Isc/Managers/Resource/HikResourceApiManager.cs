@@ -5,13 +5,13 @@
     /// </summary>
     public partial class HikResourceApiManager : IHikResourceApiManager
     {
-        private readonly IHikVisionApiManager _hikVisionApiManager;
+        private readonly IHikVisionIscApiManager _hikVisionApiManager;
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="hikVisionApiManager"></param>
-        public HikResourceApiManager(IHikVisionApiManager hikVisionApiManager)
+        public HikResourceApiManager(IHikVisionIscApiManager hikVisionApiManager)
         {
             _hikVisionApiManager = hikVisionApiManager;
         }

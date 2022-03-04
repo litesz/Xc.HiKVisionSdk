@@ -1,6 +1,6 @@
 ﻿using System;
-using Xc.HiKVisionSdk.Isc.Models;
-
+using Xc.HiKVisionSdk.Models.Request;
+using Xc.HiKVisionSdk.Utils;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
 {

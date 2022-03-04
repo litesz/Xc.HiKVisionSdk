@@ -3,7 +3,8 @@ using StyletIoC;
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using Xc.HiKVisionSdk.Isc.Managers.Eaas;
+using Xc.HiKVisionSdk.Ia.Managers.Eaas;
+using Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card;
@@ -72,24 +73,16 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
         public async Task OrgList()
         {
 
-            //try
-            //{
-            //    IHikResourceApiManager hikEaasServiceApiManager = Container.Get<IHikResourceApiManager>();
+            try
+            {
+                IHikEaasApiManager hikEaasServiceApiManager = Container.Get<IHikEaasApiManager>();
 
-            //    var x = await hikEaasServiceApiManager.OrgBatchAddAsync(new Managers.Resource.Models.Org.OrgBatchAddRequest
-            //    {
-            //        Items = new Managers.Resource.Models.Org.OrgBatchAddRequestItem[1]{
-            //         new Managers.Resource.Models.Org.OrgBatchAddRequestItem{
-            //              ClientId=1,
-            //              OrgName="test",
-            //              ParentIndexCode="root000000",
-            //         }
-            //    }
-            //    });
-            //}
-            //catch (Exception ex)
-            //{
-            //}
+                //var x = await hikEaasServiceApiManager.AttendanceBatchSearchAsync(new Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest(1, 1000));
+                var x = await hikEaasServiceApiManager.AttendanceResultListAsync(new Ia.Managers.Eaas.Attendance.AttendanceResultListRequest(1, 1000));
+            }
+            catch (Exception ex)
+            {
+            }
 
 
             //try
@@ -101,7 +94,15 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
             //catch (Exception ex)
             //{
             //}
+            //try
+            //{
+            //    IHikResourceApiManager hikEaasServiceApiManager = Container.Get<IHikResourceApiManager>();
 
+            //    var x = await hikEaasServiceApiManager.OrgSingleUpdateAsync(new Managers.Resource.Models.Org.OrgSingleUpdateRequest("7257b84f-2dd6-491e-af76-68d6ba7ec82c", "bba"));
+            //}
+            //catch (Exception ex)
+            //{
+            //}
 
             try
             {

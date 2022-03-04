@@ -1,4 +1,4 @@
-﻿using Xc.HiKVisionSdk.Isc.Models;
+﻿using Xc.HiKVisionSdk.Models.Responses;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {

@@ -1,4 +1,4 @@
-﻿using Xc.HiKVisionSdk.Isc.Models;
+﻿using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs
 {

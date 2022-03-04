@@ -16,7 +16,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<AcsDoorAdvanceAcsDoorListResponse> AcsDoorAdvanceAcsDoorListAsync(AcsDoorAdvanceAcsDoorListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AcsDoorAdvanceAcsDoorListRequest, AcsDoorAdvanceAcsDoorListResponse>("/api/resource/v1/acsDoor/advance/acsDoorList", model, Const.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<AcsDoorAdvanceAcsDoorListRequest, AcsDoorAdvanceAcsDoorListResponse>("/api/resource/v1/acsDoor/advance/acsDoorList", model, VersionConsts.V1_0);
         }
 
     }
