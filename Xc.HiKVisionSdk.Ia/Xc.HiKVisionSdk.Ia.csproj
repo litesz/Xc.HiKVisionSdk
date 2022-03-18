@@ -13,11 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Xc.HiKVisionSdk.Isc\Xc.HiKVisionSdk.Isc.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\Request\" />
+    <ProjectReference Include="..\Xc.HiKVisionSdk.Commons\Xc.HiKVisionSdk.Commons.csproj" />
   </ItemGroup>
 
 </Project>

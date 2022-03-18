@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using Xc.HiKVisionSdk.Ia.Models.Reponse;
+using Xc.HiKVisionSdk.Ia.Models.Request;
 using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
 {
     /// <summary>
-    /// 批量查询员工考勤数据请求
+    /// 考勤结果查询请求
     /// </summary>
     public class AttendanceResultListRequest : PagedQuery
     {
@@ -18,6 +18,11 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
         /// 查询参数
         /// </summary>
         public List<FieldOption> FieldOptions { get; private set; }
+
+        /// <summary>
+        /// /排序参数
+        /// </summary>
+        public List<SortOption> Sorts { get; private set; }
 
         /// <summary>
         /// 批量查询员工考勤数据请求
@@ -36,7 +41,7 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
         /// <param name="fieldName">查询字段名称</param>
         /// <param name="fieldValue">查询字段值</param>
         /// <param name="type">查询类型</param>
-        public AttendanceResultListRequest AddFieldOption(string fieldName, string fieldValue, string type)
+        public AttendanceResultListRequest AddQueryField(string fieldName, string fieldValue, string type)
         {
             if (FieldOptions == null)
             {
@@ -47,6 +52,21 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
             return this;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sortField"></param>
+        /// <param name="sortType"></param>
+        /// <returns></returns>
+        public AttendanceResultListRequest AddSort(string sortField, string sortType)
+        {
+            if (Sorts == null)
+            {
+                Sorts = new List<SortOption>();
+            }
 
+            Sorts.Add(new SortOption(sortField, sortType));
+            return this;
+        }
     }
 }

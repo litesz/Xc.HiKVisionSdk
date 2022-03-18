@@ -22,7 +22,7 @@
         /// <summary>
         /// 总页数
         /// </summary>
-        public int TotalPage { get; set; }
+        public int? TotalPage { get; set; }
         /// <summary>
         /// 具体数据
         /// </summary>

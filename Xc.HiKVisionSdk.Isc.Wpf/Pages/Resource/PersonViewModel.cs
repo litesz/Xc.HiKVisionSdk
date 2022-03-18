@@ -5,6 +5,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Ia.Managers.Eaas;
 using Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine;
+using Xc.HiKVisionSdk.Isc.Managers.Acs;
 using Xc.HiKVisionSdk.Isc.Managers.Irds;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card;
@@ -75,14 +76,41 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
             try
             {
-                IHikEaasApiManager hikEaasServiceApiManager = Container.Get<IHikEaasApiManager>();
+                IHikAcsApiManager hikEaasServiceApiManager = Container.Get<IHikAcsApiManager>();
 
                 //var x = await hikEaasServiceApiManager.AttendanceBatchSearchAsync(new Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest(1, 1000));
-                var x = await hikEaasServiceApiManager.AttendanceResultListAsync(new Ia.Managers.Eaas.Attendance.AttendanceResultListRequest(1, 1000));
+                var requestDto = new Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request
+                {
+                    PageSize = 1000,
+                    PageNo = 1,
+                    StartTime = $"2022-03-18T00:00:00+08:00",
+                    EndTime = $"2022-03-19T00:00:00+08:00",
+                    Order = "asc",
+                    Sort = "eventTime",
+                    PersonName = "柳锡华"
+                };
+                var result = await hikEaasServiceApiManager.DoorEventsV2Async(requestDto);
             }
             catch (Exception ex)
             {
             }
+
+
+
+            //try
+            //{
+            //    IHikEaasApiManager hikEaasServiceApiManager = Container.Get<IHikEaasApiManager>();
+
+            //    //var x = await hikEaasServiceApiManager.AttendanceBatchSearchAsync(new Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest(1, 1000));
+            //    var x = await hikEaasServiceApiManager.AttendanceResultListAsync(new Ia.Managers.Eaas.Attendance.AttendanceResultListRequest(1, 10)
+            //        //.AddFieldOption("create_time", "2022-03-13 06:00:00", "gte")
+            //        //.AddFieldOption("date", "2022-03-13 00:00:00", "eq")
+            //        .AddSort("date", "desc")
+            //        );
+            //}
+            //catch (Exception ex)
+            //{
+            //}
 
 
             //try

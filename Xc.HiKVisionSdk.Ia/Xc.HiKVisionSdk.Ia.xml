@@ -189,7 +189,7 @@
         </member>
         <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest">
             <summary>
-            批量查询员工考勤数据请求
+            考勤结果查询请求
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.Fields">
@@ -202,6 +202,11 @@
             查询参数
             </summary>
         </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.Sorts">
+            <summary>
+            /排序参数
+            </summary>
+        </member>
         <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.#ctor(System.Int32,System.Int32,System.String)">
             <summary>
             批量查询员工考勤数据请求
@@ -210,7 +215,7 @@
             <param name="pageSize">容量</param>
             <param name="fields">检索字段名</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.AddFieldOption(System.String,System.String,System.String)">
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.AddQueryField(System.String,System.String,System.String)">
             <summary>
             添加查询条件
             </summary>
@@ -218,9 +223,17 @@
             <param name="fieldValue">查询字段值</param>
             <param name="type">查询类型</param>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListRequest.AddSort(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sortField"></param>
+            <param name="sortType"></param>
+            <returns></returns>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponse">
             <summary>
-            批量查询员工考勤数据结果
+            考勤结果查询结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance.AttendanceResultListResponseData">
@@ -976,12 +989,12 @@
             是否请假
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption">
+        <member name="T:Xc.HiKVisionSdk.Ia.Models.Request.FieldOption">
             <summary>
             查询参数
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.#ctor(System.String,System.String,System.String)">
+        <member name="M:Xc.HiKVisionSdk.Ia.Models.Request.FieldOption.#ctor(System.String,System.String,System.String)">
             <summary>
             
             </summary>
@@ -989,21 +1002,43 @@
             <param name="fieldValue">查询字段值</param>
             <param name="type">查询类型</param>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.FieldName">
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Request.FieldOption.FieldName">
             <summary>
             查询字段名称
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.FieldValue">
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Request.FieldOption.FieldValue">
             <summary>
             查询字段值
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Ia.Models.Reponse.FieldOption.Type">
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Request.FieldOption.Type">
             <summary>
             查询类型:
             eq相等,like相似，lt小于，gt大于,lte小于等于，gte大于等于，in范围（不超过32767个），isNull为空，notNull不为空，neq不等于，notIn不在范围。
             注：时间类型时，以下几种时间格式均支持：2020-11-10 11:00:00、2020-11-10T05:50:26Z
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Models.Request.SortOption">
+            <summary>
+            排序参数
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Models.Request.SortOption.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sortField"></param>
+            <param name="sortType"></param>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Request.SortOption.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Models.Request.SortOption.SortType">
+            <summary>
+            排序类型：esc、desc
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Ia.VersionConsts">

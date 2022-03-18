@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Xc.HiKVisionSdk.Enums;
 using Xc.HiKVisionSdk.Ia.Enums;
-using Xc.HiKVisionSdk.Ia.Models.Reponse;
 
 namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
 {
@@ -126,30 +125,30 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
         /// 日期类型
         /// </summary>
         [JsonProperty(PropertyName = "date_type")]
-        public DateType DateType { get; set; }
+        public DateType? DateType { get; set; }
         /// <summary>
         /// 是否应出勤
         /// </summary>
         [JsonProperty(PropertyName = "is_should_attendance")]
-        public YesOrNo IsShouldAttendance { get; set; }
+        public YesOrNo? IsShouldAttendance { get; set; }
 
         /// <summary>
         ///是否替班
         /// </summary>
         [JsonProperty(PropertyName = "is_alter_schedule")]
-        public YesOrNo IsAlterSchedule { get; set; }
+        public YesOrNo? IsAlterSchedule { get; set; }
 
         /// <summary>
         /// 是否补签
         /// </summary>
         [JsonProperty(PropertyName = "is_supply_clock")]
-        public YesOrNo IsSupplyClock { get; set; }
+        public YesOrNo? IsSupplyClock { get; set; }
 
         /// <summary>
         /// 排班类型
         /// </summary>
         [JsonProperty(PropertyName = "schedule_type")]
-        public int ScheduleType { get; set; }
+        public int? ScheduleType { get; set; }
 
         /// <summary>
         /// 工作计划id
@@ -179,272 +178,272 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
         /// 班次类型
         /// </summary>
         [JsonProperty(PropertyName = "shift_type")]
-        public int ShiftType { get; set; }
+        public int? ShiftType { get; set; }
 
         /// <summary>
         /// 应休息时长
         /// </summary>
         [JsonProperty(PropertyName = "should_rest_time")]
-        public int ShouldRestTime { get; set; }
+        public int? ShouldRestTime { get; set; }
 
         /// <summary>
         /// 实际休息时长
         /// </summary>
         [JsonProperty(PropertyName = "actual_rest_time")]
-        public int ActualRestTime { get; set; }
+        public int? ActualRestTime { get; set; }
 
         /// <summary>
         /// 应出勤时长
         /// </summary>
         [JsonProperty(PropertyName = "should_attendance_time")]
-        public int ShouldAttendanceTime { get; set; }
+        public decimal? ShouldAttendanceTime { get; set; }
 
         /// <summary>
         /// 实际出勤时长
         /// </summary>
         [JsonProperty(PropertyName = "actual_attendance_time")]
-        public string ActualAttendanceTime { get; set; }
+        public decimal? ActualAttendanceTime { get; set; }
 
         /// <summary>
         /// 出勤状态
         /// </summary>
         [JsonProperty(PropertyName = "attendance_state")]
-        public AttendanceState AttendanceState { get; set; }
+        public AttendanceState? AttendanceState { get; set; }
 
         /// <summary>
         /// 是否正常
         /// </summary>
         [JsonProperty(PropertyName = "is_normal")]
-        public YesOrNo IsNormal { get; set; }
+        public YesOrNo? IsNormal { get; set; }
 
         /// <summary>
         /// 是否迟到
         /// </summary>
         [JsonProperty(PropertyName = "is_late")]
-        public YesOrNo IsLate { get; set; }
+        public YesOrNo? IsLate { get; set; }
 
         /// <summary>
         /// 是否旷工
         /// </summary>
         [JsonProperty(PropertyName = "is_absent")]
-        public YesOrNo IsAbsent { get; set; }
+        public YesOrNo? IsAbsent { get; set; }
 
         /// <summary>
         /// 迟到时长
         /// </summary>
         [JsonProperty(PropertyName = "late_time")]
-        public int LateTime { get; set; }
+        public decimal? LateTime { get; set; }
 
         /// <summary>
         /// 早退时长
         /// </summary>
         [JsonProperty(PropertyName = "early_time")]
-        public int EarlyTime { get; set; }
+        public decimal? EarlyTime { get; set; }
 
         /// <summary>
         /// 旷工时长
         /// </summary>
         [JsonProperty(PropertyName = "absent_time")]
-        public int AbsentTime { get; set; }
+        public decimal? AbsentTime { get; set; }
 
         /// <summary>
         /// 是否加班
         /// </summary>
         [JsonProperty(PropertyName = "is_overtime")]
-        public YesOrNo IsOvertime { get; set; }
+        public YesOrNo? IsOvertime { get; set; }
 
         /// <summary>
         /// 加班时长
         /// </summary>
         [JsonProperty(PropertyName = "overtime_time")]
-        public int OvertimeTime { get; set; }
+        public decimal? OvertimeTime { get; set; }
 
         /// <summary>
         /// 是否加班转调休
         /// </summary>
         [JsonProperty(PropertyName = "is_turn_off_vacation")]
-        public YesOrNo IsTurnOffVacation { get; set; }
+        public YesOrNo? IsTurnOffVacation { get; set; }
 
         /// <summary>
         /// 加班转调休时长
         /// </summary>
         [JsonProperty(PropertyName = "overtime_by_rest_time")]
-        public int OvertimeByRestTime { get; set; }
+        public decimal? OvertimeByRestTime { get; set; }
 
         /// <summary>
         /// 是否加班转加班费
         /// </summary>
         [JsonProperty(PropertyName = "is_turn_off_money")]
-        public YesOrNo IsTurnOffMoney { get; set; }
+        public YesOrNo? IsTurnOffMoney { get; set; }
 
         /// <summary>
         /// 加班费金额
         /// </summary>
         [JsonProperty(PropertyName = "overtime_by_money_count")]
-        public int OvertimeByMoneyCount { get; set; }
+        public decimal? OvertimeByMoneyCount { get; set; }
 
 
         /// <summary>
         /// 是否餐补
         /// </summary>
         [JsonProperty(PropertyName = "is_meal_allowance")]
-        public YesOrNo IsMealAllowance { get; set; }
+        public YesOrNo? IsMealAllowance { get; set; }
 
         /// <summary>
         /// 餐补金额
         /// </summary>
         [JsonProperty(PropertyName = "meal_allowance")]
-        public int MealAllowance { get; set; }
+        public decimal? MealAllowance { get; set; }
 
 
         /// <summary>
         /// 是否交补
         /// </summary>
         [JsonProperty(PropertyName = "is_transportation_allowance")]
-        public YesOrNo IsTransportationAllowance { get; set; }
+        public YesOrNo? IsTransportationAllowance { get; set; }
 
         /// <summary>
         /// 交补金额
         /// </summary>
         [JsonProperty(PropertyName = "transportation_allowance")]
-        public int TransportationAllowance { get; set; }
+        public decimal? TransportationAllowance { get; set; }
         /// <summary>
         /// 是否出差
         /// </summary>
         [JsonProperty(PropertyName = "is_special_attendance")]
-        public YesOrNo IsSpecialAttendance { get; set; }
+        public YesOrNo? IsSpecialAttendance { get; set; }
         /// <summary>
         /// 是否全天出差
         /// </summary>
-        [JsonProperty(PropertyName = "is_special_attendance")]
+        [JsonProperty(PropertyName = "is_special_attendance_all_day")]
 
-        public YesOrNo IsSpecialAttendanceAllDay { get; set; }
+        public YesOrNo? IsSpecialAttendanceAllDay { get; set; }
         /// <summary>
         /// 出差时长
         /// </summary>
         [JsonProperty(PropertyName = "special_attendance_time")]
-        public int SpecialAttendanceTime { get; set; }
+        public decimal? SpecialAttendanceTime { get; set; }
 
 
         /// <summary>
         /// 是否因公外出
         /// </summary>
         [JsonProperty(PropertyName = "is_be_away_on_business")]
-        public YesOrNo IsBeAwayOnBusiness { get; set; }
+        public YesOrNo? IsBeAwayOnBusiness { get; set; }
 
 
         /// <summary>
         /// 是否培训
         /// </summary>
         [JsonProperty(PropertyName = "is_trained")]
-        public YesOrNo IsTrained { get; set; }
+        public YesOrNo? IsTrained { get; set; }
         /// <summary>
         /// 是否外派
         /// </summary>
         [JsonProperty(PropertyName = "is_expatriate")]
-        public YesOrNo IsExpatriate { get; set; }
+        public YesOrNo? IsExpatriate { get; set; }
         /// <summary>
         /// 是否出差
         /// </summary>
         [JsonProperty(PropertyName = "is_business")]
-        public YesOrNo IsBusiness { get; set; }
+        public YesOrNo? IsBusiness { get; set; }
         /// <summary>
         /// 因公外出时长
         /// </summary>
         [JsonProperty(PropertyName = "be_away_on_business_time")]
-        public int BeAwayOnBusinessTime { get; set; }
+        public decimal? BeAwayOnBusinessTime { get; set; }
         /// <summary>
         /// 培训时长
         /// </summary>
         [JsonProperty(PropertyName = "trained_time")]
-        public int TrainedTime { get; set; }
+        public decimal? TrainedTime { get; set; }
 
         /// <summary>
         /// 外派时长
         /// </summary>
         [JsonProperty(PropertyName = "expatriate_time")]
-        public int ExpatriateTime { get; set; }
+        public decimal? ExpatriateTime { get; set; }
 
 
         /// <summary>
         /// 出差时长
         /// </summary>
         [JsonProperty(PropertyName = "business_time")]
-        public int BusinessTime { get; set; }
+        public decimal? BusinessTime { get; set; }
         /// <summary>
         ///  	是否请假
         /// </summary>
         [JsonProperty(PropertyName = "is_leave")]
-        public YesOrNo IsLeave { get; set; }
+        public YesOrNo? IsLeave { get; set; }
 
         /// <summary>
         /// 请假时长
         /// </summary>
         [JsonProperty(PropertyName = "leave_duration")]
-        public int LeaveDuration { get; set; }
+        public decimal? LeaveDuration { get; set; }
         /// <summary>
         /// 是否全天请假
         /// </summary>
         [JsonProperty(PropertyName = "is_leave_all_day")]
-        public YesOrNo IsLeaveAllDay { get; set; }
+        public YesOrNo? IsLeaveAllDay { get; set; }
 
         /// <summary>
         /// 调休假时长
         /// </summary>
         [JsonProperty(PropertyName = "time_off_in_lieu")]
-        public int TimeOffInLieu { get; set; }
+        public decimal? TimeOffInLieu { get; set; }
         /// <summary>
         /// 病假时长
         /// </summary>
         [JsonProperty(PropertyName = "sick_leave")]
-        public int SickLeave { get; set; }
+        public decimal? SickLeave { get; set; }
         /// <summary>
         /// 事假时长
         /// </summary>
         [JsonProperty(PropertyName = "personal_leave")]
-        public int PersonalLeave { get; set; }
+        public decimal? PersonalLeave { get; set; }
         /// <summary>
         /// 产假时长
         /// </summary>
         [JsonProperty(PropertyName = "maternity_leave")]
-        public int MaternityLeave { get; set; }
+        public decimal? MaternityLeave { get; set; }
         /// <summary>
         /// 陪产假时长
         /// </summary>
         [JsonProperty(PropertyName = "paternity_leave")]
-        public int PaternityLeave { get; set; }
+        public decimal? PaternityLeave { get; set; }
         /// <summary>
         /// 工伤假时长
         /// </summary>
         [JsonProperty(PropertyName = "injury_leave")]
-        public int InjuryLeave { get; set; }
+        public decimal? InjuryLeave { get; set; }
         /// <summary>
         /// 婚假时长
         /// </summary>
         [JsonProperty(PropertyName = "marriage_leave")]
-        public int MarriageLeave { get; set; }
+        public decimal? MarriageLeave { get; set; }
         /// <summary>
         /// 丧假时长
         /// </summary>
         [JsonProperty(PropertyName = "funeral_leave")]
-        public int FuneralLeave { get; set; }
+        public decimal? FuneralLeave { get; set; }
         /// <summary>
         /// 年假时长
         /// </summary>
         [JsonProperty(PropertyName = "annual_leave")]
-        public int AnnualLeave { get; set; }
+        public decimal? AnnualLeave { get; set; }
         /// <summary>
         /// 哺乳假时长
         /// </summary>
         [JsonProperty(PropertyName = "breastfeeding_leave")]
-        public int BreastfeedingLeave { get; set; }
+        public decimal? BreastfeedingLeave { get; set; }
 
 
         /// <summary>
         /// 产检假时长
         /// </summary>
         [JsonProperty(PropertyName = "maternity_check_leave")]
-        public int MaternityCheckLeave { get; set; }
+        public decimal? MaternityCheckLeave { get; set; }
 
         /// <summary>
         /// 第一次上班打卡时间
@@ -487,23 +486,23 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
         /// <summary>
         /// 年
         /// </summary>
-        public int Year { get; set; }
+        public int? Year { get; set; }
         /// <summary>
         /// 季度
         /// </summary>
-        public int Quarter { get; set; }
+        public int? Quarter { get; set; }
         /// <summary>
         /// 月
         /// </summary>
-        public int Month { get; set; }
+        public int? Month { get; set; }
         /// <summary>
         /// 周
         /// </summary>
-        public int Week { get; set; }
+        public int? Week { get; set; }
         /// <summary>
         /// 日
         /// </summary>
-        public int Day { get; set; }
+        public int? Day { get; set; }
         /// <summary>
         /// 证件号码
         /// </summary>
@@ -514,7 +513,7 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
         /// 当天几次上下班
         /// </summary>
         [JsonProperty(PropertyName = "clock_times")]
-        public int ClockTimes { get; set; }
+        public int? ClockTimes { get; set; }
 
 
 
