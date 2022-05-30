@@ -51,6 +51,9 @@ namespace Company.WpfApplication1
             builder.Bind<IHikIrdsApiManager>().To<HikIrdsApiManager>();
 
 
+
+            builder.Bind<Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager>().To<Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager>();
+
             builder.Bind<IHikVisionIaApiManager>().To<HikVisionIaApiManager>();
             builder.Bind<IHikEattendanceEngineApiManager>().To<HikEattendanceEngineApiManager>();
             builder.Bind<IHikEaasApiManager>().To<HikEaasApiManager>();

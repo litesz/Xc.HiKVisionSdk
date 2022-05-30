@@ -3,7 +3,7 @@
     /// <summary>
     /// 分页
     /// </summary>
-    public interface IPagedQuery
+    public interface IPagedRequest
     {
         /// <summary>
         /// 页容量
@@ -14,5 +14,4 @@
         /// </summary>
         int PageNo { get; set; }
     }
-
 }

@@ -7,7 +7,7 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
     /// <summary>
     /// 考勤结果查询请求
     /// </summary>
-    public class AttendanceResultListRequest : PagedQuery
+    public class AttendanceResultListRequest : PagedRequest
     {
         /// <summary>
         /// 检索字段名，全部查询为*，多个字段英文逗号分隔，具体属性值可自定义

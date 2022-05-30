@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
 using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
     /// <summary>
     /// 获取联动事件列表请求
     /// </summary>
-    public class EventsSearchRequest : IPagedQuery
+    public class EventsSearchRequest : ISOTimeRangeWithPagedRequest
     {
         /// <summary>
         ///  事件规则id
@@ -52,26 +52,26 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
         ///  处理状态，0-未处理，1-已处理
         /// </summary>
         public HandleStatus HandleStatus { get; set; }
+
         /// <summary>
-        ///  开始时间,ISO8601时间
+        /// 获取联动事件列表请求
         /// </summary>
-        [Required]
-        public string StartTime { get; set; }
+        public EventsSearchRequest() { }
+
+
         /// <summary>
-        /// 结束时间,ISO8601时间
+        /// 获取联动事件列表请求
         /// </summary>
-        [Required]
-        public string EndTime { get; set; }
-        /// <summary>
-        /// 分页大小
-        /// </summary>
-        [Required]
-        public int PageSize { get; set; }
-        /// <summary>
-        /// 页码
-        /// </summary>
-        [Required]
-        public int PageNo { get; set; }
+        /// <param name="startTime"> 开始时间</param>
+        /// <param name="endTime">结束时间</param>
+        /// <param name="pageNo">当前页码</param>
+        /// <param name="pageSize">每页记录总数</param>
+        public EventsSearchRequest(DateTime startTime, DateTime endTime, int pageNo, int pageSize) : base(pageNo, pageSize, startTime, endTime)
+        {
+
+        }
+
+
     }
 
 }

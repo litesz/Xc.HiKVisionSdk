@@ -1,7 +1,7 @@
 ﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
 {
     /// <summary>
-    ///  组织请求数据
+    ///  组织请求数据V2
     /// </summary>
     public class OrgV2Info
     {
@@ -56,4 +56,6 @@
 
 
     }
+
+   
 }

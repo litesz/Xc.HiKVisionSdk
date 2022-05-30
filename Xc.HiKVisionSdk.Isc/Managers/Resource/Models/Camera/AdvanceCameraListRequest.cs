@@ -8,7 +8,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera
     /// <summary>
     /// 查询监控点列表请求
     /// </summary>
-    public class AdvanceCameraListRequest : PagedQuery
+    public class AdvanceCameraListRequest : PagedRequest
     {
         /// <summary>
         /// 监控点唯一标识集
@@ -42,6 +42,16 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera
         /// </summary>
         public CascadeType IsCascade { get; set; } = CascadeType.All;
 
+        /// <summary>
+        /// 查询监控点列表请求
+        /// </summary>
+        public AdvanceCameraListRequest() { }
 
+        /// <summary>
+        /// 查询监控点列表请求
+        /// </summary>
+        /// <param name="pageNo"></param>
+        /// <param name="pageSize"></param>
+        public AdvanceCameraListRequest(int pageNo, int pageSize) : base(pageNo, pageSize) { }
     }
 }

@@ -5,7 +5,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs
     /// <summary>
     /// 查询门禁点列表请求
     /// </summary>
-    public class AcsDoorAdvanceAcsDoorListRequest : PagedQuery
+    public class AcsDoorAdvanceAcsDoorListRequest : PagedRequest
     {
         /// <summary>
         /// 门禁点唯一标识符集 

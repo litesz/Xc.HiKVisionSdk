@@ -67,9 +67,19 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
+        public Task<AdvanceOrgListV2Response> AdvanceOrgListV2Async(AdvanceOrgListV2Request model)
+        {
+            return _hikVisionApiManager.PostAndGetAsync<AdvanceOrgListV2Request, AdvanceOrgListV2Response>("/api/resource/v2/org/advance/orgList", model, VersionConsts.V1_4);
+        }
+
+        /// <summary>
+        /// 查询组织列表
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public Task<AdvanceOrgListResponse> AdvanceOrgListAsync(AdvanceOrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AdvanceOrgListRequest, AdvanceOrgListResponse>("/api/resource/v2/org/advance/orgList", model, VersionConsts.V1_4);
+            return _hikVisionApiManager.PostAndGetAsync<AdvanceOrgListRequest, AdvanceOrgListResponse>("/api/resource/v1/org/advance/orgList", model, VersionConsts.V1_0);
         }
 
         /// <summary>

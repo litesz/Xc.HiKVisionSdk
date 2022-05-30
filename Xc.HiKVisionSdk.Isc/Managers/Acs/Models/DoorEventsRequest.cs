@@ -1,22 +1,13 @@
-﻿using Xc.HiKVisionSdk.Models.Request;
+﻿using System;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
 {
     /// <summary>
     /// 查询门禁事件
     /// </summary>
-    public class DoorEventsRequest : PagedQuery
+    public class DoorEventsRequest : ISOTimeRangeWithPagedRequest
     {
-
-        /// <summary>
-        /// 开始时间（事件开始时间，采用ISO8601时间格式，与endTime配对使用，不能单独使用，时间范围最大不能超过3个月），参考附录B ISO8601时间格式说明
-        /// </summary>
-        public string StartTime { get; set; }
-
-        /// <summary>
-        /// 结束时间（事件结束时间，采用ISO8601时间格式，最大长度32个字符，与startTime配对使用，不能单独使用，时间范围最大不能超过3个月），参考附录B ISO8601时间格式说明
-        /// </summary>
-        public string EndTime { get; set; }
         /// <summary>
         /// 事件类型，参考附录D2.1 门禁事件
         /// </summary>
@@ -50,5 +41,20 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
         /// 指定排序字段是使用升序（asc）还是降序（desc），例如：”asc”
         /// </summary>
         public string Order { get; set; }
+
+        /// <summary>
+        /// 查询门禁事件
+        /// </summary>
+        public DoorEventsRequest() : base(false) { }
+
+        /// <summary>
+        /// 查询门禁事件
+        /// </summary>
+        /// <param name="pageNo">当前页码</param>
+        /// <param name="pageSize">每页记录总数</param>
+        /// <param name="startTime">开始时间</param>
+        /// <param name="endTime">结束时间</param>
+        public DoorEventsRequest(int pageNo, int pageSize, DateTime startTime, DateTime endTime) : base(pageNo, pageSize, startTime, endTime, false) { }
+
     }
 }

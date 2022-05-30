@@ -8,7 +8,7 @@ namespace Xc.HiKVisionSdk.Models.Request
     /// <summary>
     /// 请求
     /// </summary>
-    public interface IRequestModel
+    public interface IBaseRequest
     {
     }
 

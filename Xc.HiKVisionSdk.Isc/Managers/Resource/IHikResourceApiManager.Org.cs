@@ -57,28 +57,47 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// 查询组织列表v2
         /// </summary>
         /// <param name="model"></param>
-        /// <returns>根据不同的组织属性分页查询组织信息。        查询组织列表接口可以根据组织唯一标识集、组织名称、组织状态等查询条件来进行高级查询。</returns>
+        /// <returns></returns>
+        /// <remarks>根据不同的组织属性分页查询组织信息。        
+        /// 查询组织列表接口可以根据组织唯一标识集、组织名称、组织状态等查询条件来进行高级查询。</remarks>
+        Task<AdvanceOrgListV2Response> AdvanceOrgListV2Async(AdvanceOrgListV2Request model);
+
+
+        /// <summary>
+        /// 查询组织列表
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// 根据不同的组织属性分页查询组织信息。
+        /// 查询组织列表接口可以根据组织唯一标识集、组织名称、组织状态这些查询条件来进行高级查询；若不指定查询条件，即全量获取所有的组织信息。返回结果分页展示。
+        /// 注：若指定多个查询条件，表示将这些查询条件进行”与”的组合后进行精确查询。
+        /// 根据”组织名称orgName”查询为模糊查询。
+        /// </remarks>
         Task<AdvanceOrgListResponse> AdvanceOrgListAsync(AdvanceOrgListRequest model);
 
         /// <summary>
         /// 根据父组织编号获取下级组织列表
         /// </summary>
         /// <param name="model"></param>
-        /// <returns>根据父组织编号获取下级组织列表，主要用于逐层获取父组织的下级组织信息，返回结果分页展示</returns>
+        /// <returns></returns>
+        /// <remarks>根据父组织编号获取下级组织列表，主要用于逐层获取父组织的下级组织信息，返回结果分页展示</remarks>
         Task<SubOrgListResponse> SubOrgListAsync(SubOrgListRequest model);
 
         /// <summary>
         /// 增量获取组织数据
         /// </summary>
         /// <param name="model"></param>
-        /// <returns>根据查询条件查询组织列表信息，主要根据时间段分页获取组织数据，包含已删除数据。其中开始日期与结束日期的时间差必须在1-48小时内。</returns>
+        /// <returns></returns>
+        /// <remarks>根据查询条件查询组织列表信息，主要根据时间段分页获取组织数据，包含已删除数据。其中开始日期与结束日期的时间差必须在1-48小时内。</remarks>
         Task<OrgTimeRangeResponse> OrgTimeRangeAsync(OrgTimeRangeRequest model);
 
         /// <summary>
         /// 根据组织编号获取组织详细信息
         /// </summary>
         /// <param name="model"></param>
-        /// <returns>根据组织编号orgIndexCode列表获取指定的组织信息，如存在多组织则返回总条数及多组织信息</returns>
+        /// <returns></returns>
+        /// <remarks>根据组织编号orgIndexCode列表获取指定的组织信息，如存在多组织则返回总条数及多组织信息</remarks>
         Task<OrgInfoResponse> OrgInfoAsync(OrgInfoRequest model);
     }
 }

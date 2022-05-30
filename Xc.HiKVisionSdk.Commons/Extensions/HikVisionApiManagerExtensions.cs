@@ -61,9 +61,10 @@ namespace Xc.HiKVisionSdk
 
             if (output.Status != 0)
             {
+                //output.Code = output.Status.ToString();
+                //output
                 throw new HttpRequestException(result);
             }
-
             return output;
         }
 

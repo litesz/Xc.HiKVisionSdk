@@ -1,10 +1,17 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
+﻿using Xc.HiKVisionSdk.Models.Request;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
 {
     /// <summary>
     /// 获取根组织请求
     /// </summary>
-    public class RootOrgRequest
+    public class RootOrgRequest : BaseRequest
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
+        protected override void CheckParams()
+        {
+        }
     }
 }

@@ -29,5 +29,9 @@ namespace Xc.HiKVisionSdk.Utils
             return DateTime.Parse(date.Split('+')[0]);
         }
 
+        //public static DateTime TryToDateTime(string date, out DateTime dt)
+        //{
+
+        //}
     }
 }

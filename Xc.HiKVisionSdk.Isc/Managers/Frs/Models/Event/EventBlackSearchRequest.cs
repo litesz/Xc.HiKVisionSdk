@@ -1,24 +1,13 @@
-﻿using Xc.HiKVisionSdk.Models.Request;
+﻿using System;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
     /// <summary>
     /// 按条件查询重点人员事件请求
     /// </summary>
-    public class EventBlackSearchRequest : PagedQuery
+    public class EventBlackSearchRequest : ISOTimeRangeWithPagedRequest
     {
-        /// <summary>
-        /// 指定查询的开始时间，要求遵守ISO8601标准，yyyy-MM-ddTHH:mm:ss+当前时区，例如北京时间：
-        /// 2018-07-26T15:00:00.000+08:00，
-        /// 且必须在endTime之前
-        /// </summary>
-        public string StartTime { get; set; }
-        /// <summary>
-        /// 指定查询的结束时间，要求遵守ISO8601标准，yyyy-MM-ddTHH:mm:ss+当前时区，例如北京时间：
-        /// 2018-07-26T15:00:00.000+08:00，
-        /// 且必须在startTime之后
-        /// </summary>
-        public string EndTime { get; set; }
         /// <summary>
         /// 监控点唯一标志集合，若不指定，则查询所有的监控点
         /// </summary>
@@ -69,6 +58,24 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         /// 排序字段。结果查询排序字段，0时间，1相似度，排序支持倒序排序，默认按照时间倒叙排序
         /// </summary>
         public string OrderType { get; set; }
+
+        /// <summary>
+        /// 按条件查询重点人员事件请求
+        /// </summary>
+        public EventBlackSearchRequest() { }
+
+        /// <summary>
+        /// 按条件查询重点人员事件请求
+        /// </summary>
+        /// <param name="similarity">指定查询的最小相似度, 最小为1，最大为100</param>
+        /// <param name="pageNo">当前页码</param>
+        /// <param name="pageSize">每页记录总数</param>
+        /// <param name="startTime">开始时间</param>
+        /// <param name="endTime">结束时间</param>
+        public EventBlackSearchRequest(int similarity, int pageNo, int pageSize, DateTime startTime, DateTime endTime) : base(pageNo, pageSize, startTime, endTime)
+        {
+            Similarity = similarity;
+        }
     }
 
 }

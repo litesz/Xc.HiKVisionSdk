@@ -7,7 +7,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
     /// <summary>
     /// 查询人员列表V2请求
     /// </summary>
-    public class AdvancePersonListV2Request : PagedQuery
+    public class AdvancePersonListV2Request : PagedRequest
     {
         /// <summary>
         /// 人员ID集合

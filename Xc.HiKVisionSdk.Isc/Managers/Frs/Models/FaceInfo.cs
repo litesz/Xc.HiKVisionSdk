@@ -1,9 +1,12 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
+﻿using Xc.HiKVisionSdk.Models.Request;
+using System;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
     /// <summary>
     /// 人脸信息对象
     /// </summary>
-    public class FaceInfo
+    public class FaceInfo : ICheckRequestItem
     {
         /// <summary>
         /// 人脸的名称,1~32个字符；不能包含 ’ / \ : * ? " 
@@ -27,6 +30,31 @@
         /// </summary>
         public string CertificateNum { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        public void Check()
+        {
+            if (string.IsNullOrWhiteSpace(Name))
+            {
+                throw new ArgumentNullException(nameof(Name));
+            }
+            if (!string.IsNullOrWhiteSpace(Sex))
+            {
+                if (Sex != "1" || Sex != "2" || Sex.ToUpper() != "UNKNOWN")
+                {
+                    throw new ArgumentOutOfRangeException(nameof(Sex), "性别可选项为1,2,UNKNOWN");
+                }
+            }
+            if (!string.IsNullOrWhiteSpace(CertificateNum))
+            {
+                if (CertificateNum.Length > 20)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(CertificateNum), "长度为1-20个数字、字母");
+                }
+            }
+        }
     }
 
 }

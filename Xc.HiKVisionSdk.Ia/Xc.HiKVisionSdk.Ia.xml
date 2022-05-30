@@ -830,7 +830,7 @@
         </member>
         <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest.#ctor(System.String,System.DateTime)">
             <summary>
-            
+            查询是否是指定打卡地点请求
             </summary>
             <param name="id">人员标识</param>
             <param name="date">日期</param>
@@ -845,14 +845,34 @@
             日期
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardRequest.CheckParams">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardResponse">
+            <summary>
+            查询是否是指定打卡地点结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardResponse.IsOk">
+            <summary>
+            是否是指定地点
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest">
+            <summary>
+            获取移动考勤有效打卡地点请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest.#ctor">
             <summary>
             获取移动考勤有效打卡地点请求
             </summary>
         </member>
         <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest.#ctor(System.String,System.DateTime)">
             <summary>
-            
+            获取移动考勤有效打卡地点请求
             </summary>
             <param name="id">人员标识</param>
             <param name="date">日期</param>
@@ -867,14 +887,9 @@
             日期
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardResponse">
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardRequest.CheckParams">
             <summary>
-            查询是否是指定打卡地点结果
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryIsCardResponse.IsOk">
-            <summary>
-            是否是指定地点
+            
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponse">
@@ -915,6 +930,544 @@
         <member name="P:Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile.QueryMobileCardResponseData.UpdateTime">
             <summary>
             更新时间
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager">
+            <summary>
+            事件服务api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.#ctor(Xc.HiKVisionSdk.Ia.Managers.IHikVisionIaApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventsSearch(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest)">
+            <summary>
+            获取联动事件列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventsSearchAsync(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest)">
+            <summary>
+            获取联动事件列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventSubscriptionByEventTypes(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventSubscriptionView">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventSubscriptionViewAsync">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventUnSubscriptionByEventTypes(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.HikEventServiceApiManager.EventUnSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager">
+            <summary>
+            事件服务api
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventsSearch(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest)">
+            <summary>
+            获取联动事件列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventsSearchAsync(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest)">
+            <summary>
+            获取联动事件列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionByEventTypes(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型订阅事件
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionView">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventSubscriptionViewAsync">
+            <summary>
+            查询事件订阅信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventUnSubscriptionByEventTypes(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager.EventUnSubscriptionByEventTypesAsync(Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest)">
+            <summary>
+            按事件类型取消订阅
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.HandleStatus">
+            <summary>
+            事件处理状态
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.HandleStatus.UnProcessed">
+            <summary>
+            未处理
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.HandleStatus.Processed">
+            <summary>
+            已处理
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventLevel">
+            <summary>
+            事件级别
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventLevel.Low">
+            <summary>
+            低
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventLevel.Middle">
+            <summary>
+            中
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventLevel.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.SubType">
+            <summary>
+            订阅类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.SubType.Raw">
+            <summary>
+            原始事件
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.SubType.Linkage">
+            <summary>
+            联动事件
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.SubType.RawAndLinkage">
+            <summary>
+            原始事件和联动事件
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest">
+            <summary>
+            获取联动事件列表请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.EventRuleId">
+            <summary>
+             事件规则id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.Ability">
+            <summary>
+             事件分类，详见附录A.62
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.RegionIndexCode">
+            <summary>
+            区域编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.LocationIndexCodes">
+            <summary>
+            所属位置，详见附录A.81 安装位置
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.ResName">
+            <summary>
+             事件源名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.ResIndexCodes">
+            <summary>
+            事件源编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.ResTypes">
+            <summary>
+             事件源类型，详见附录A.63
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.EventType">
+            <summary>
+            事件类型，详见附录D
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.EventLevels">
+            <summary>
+            事件等级，1-低，2-中，3-高
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.Remark">
+            <summary>
+            处理意见
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.HandleStatus">
+            <summary>
+             处理状态，0-未处理，1-已处理
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.#ctor">
+            <summary>
+            获取联动事件列表请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchRequest.#ctor(System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            获取联动事件列表请求
+            </summary>
+            <param name="startTime"> 开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="pageNo">当前页码</param>
+            <param name="pageSize">每页记录总数</param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponse">
+            <summary>
+            获取联动事件列表结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData">
+            <summary>
+            获取联动事件列表结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.Id">
+            <summary>
+            事件id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.EventRuleId">
+            <summary>
+            事件规则id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.RuleName">
+            <summary>
+            事件规则名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.StartTime">
+            <summary>
+            事件开始时间，ISO8601格式：yyyy-MM-ddTHH:mm:ss.zzz+当前时区，例如北京时间：2018-07-26T15:00:00.000+08:00
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.EndTime">
+            <summary>
+            事件结束时间，ISO8601格式：yyyy-MM-ddTHH:mm:ss.zzz+当前时区，例如北京时间：2018-07-26T15:00:00.000+08:00
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.EventLevel">
+            <summary>
+            事件等级,1-低，2-中，3-高
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.EventLevelValue">
+            <summary>
+            事件等级value，低、中、高
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.EventLevelColor">
+            <summary>
+            事件等级颜色，RGB格式，例如#AE8D06
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.EventTypeName">
+            <summary>
+            事件类型名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.Remark">
+            <summary>
+            处理意见
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.HandleStatus">
+            <summary>
+            事件处理状态，0-未处理，1-已处理
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseData.EventLogSrcList">
+            <summary>
+            事件记录列表
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc">
+            <summary>
+            事件记录
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Id">
+            <summary>
+            事件源id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventLogId">
+            <summary>
+            事件id
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Ability">
+            <summary>
+             事件分类，详见附录A.62
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventType">
+            <summary>
+            事件类型，详见附录D.1
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventTypeName">
+            <summary>
+            事件类型名称
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResIndexCode">
+            <summary>
+            事件源编号
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResType">
+            <summary>
+            事件源类型，详见附录A.63
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResName">
+            <summary>
+            事件源名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.RegionIndexCode">
+            <summary>
+            所属区域编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.RegionName">
+            <summary>
+            所属区域名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.LocationIndexCode">
+            <summary>
+            所属位置，详见附录A.81 安装位置
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.LocationName">
+            <summary>
+            所属位置名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Extend1">
+            <summary>
+            扩展字段1，暂不使用
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Extend2">
+            <summary>
+            扩展字段2，暂不使用
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.StartTime">
+            <summary>
+             开始时间,ISO8601时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Data">
+            <summary>
+            事件扩展信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest">
+            <summary>
+            按事件类型订阅事件请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.EventTypes">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.EventDest">
+            <summary>
+            指定事件接收的地址，采用restful回调模式，支持http和https，
+            样式如下：http://ip:port/eventRcv或者      
+            https://ip:port/eventRcv
+            不超过1024个字符，事件接收地址由应用方负责按指定的规范提供，事件接收接口不需要认证
+            三方客户收到消息，请注意立即返回HTTP/1.1 200 OK， 否则因为接收太慢，导致事件积压
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.SubType">
+            <summary>
+            订阅类型，0-订阅原始事件，1-联动事件，2-原始事件和联动事件，不填使用默认值0
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.EventLvl">
+            <summary>
+            事件等级，0-未配置，1-低，2-中，3-高
+            此处事件等级是指在事件联动中配置的等级
+            订阅类型为0时，此参数无效，使用默认值0
+            在订阅类型为1时，不填使用默认值[1, 2, 3]
+            在订阅类型为2时，不填使用默认值[0, 1, 2, 3]
+            数组大小不超过32，事件等级大小不超过31
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.#ctor(System.String,System.Int32[])">
+            <summary>
+            按事件类型订阅事件请求
+            </summary>
+            <param name="eventDest"> 指定事件接收的地址</param>
+            <param name="eventTypes">事件类型</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.#ctor(System.Int32[],System.String,Xc.HiKVisionSdk.Ia.Managers.EventService.Models.SubType,System.Int32[])">
+            <summary>
+            按事件类型订阅事件请求
+            </summary>
+            <param name="eventTypes">事件类型</param>
+            <param name="eventDest"> 指定事件接收的地址</param>
+            <param name="subType">订阅类型，0-订阅原始事件，1-联动事件，2-原始事件和联动事件，不填使用默认值0</param>
+            <param name="eventLvl">事件等级，0-未配置，1-低，2-中，3-高</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.IndexOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionByEventTypesResponse">
+            <summary>
+            按事件类型订阅事件结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewRequest">
+            <summary>
+            查询事件订阅信息请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewRequest.CheckParams">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewResponse">
+            <summary>
+            查询事件订阅信息结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewResponseData">
+            <summary>
+            查询事件订阅信息结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewResponseData.Detail">
+            <summary>
+            详细数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewResponseDataDetail">
+            <summary>
+            查询事件订阅信息详细
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewResponseDataDetail.EventTypes">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventSubscriptionViewResponseDataDetail.EventDest">
+            <summary>
+            事件接收地址
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest">
+            <summary>
+            按事件类型取消订阅请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest.EventTypes">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest.#ctor(System.Int32[])">
+            <summary>
+            按事件类型取消订阅请求
+            </summary>
+            <param name="eventTypes">事件类型</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.IndexOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Ia.Managers.EventService.Models.EventUnSubscriptionByEventTypesResponse">
+            <summary>
+            按事件类型取消订阅结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Ia.Managers.HikVisionIaApiManager">

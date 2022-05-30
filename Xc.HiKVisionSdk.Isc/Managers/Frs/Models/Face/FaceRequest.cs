@@ -5,7 +5,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
     /// <summary>
     /// 按条件批量查询人脸
     /// </summary>
-    public class FaceRequest : PagedQuery
+    public class FaceRequest : PagedRequest
     {
         /// <summary>
         /// 通过人脸的唯一标识集合查询指定的人脸集合
@@ -38,6 +38,17 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         /// </summary>
         public string CertificateNum { get; set; }
 
+        /// <summary>
+        /// 按条件批量查询人脸
+        /// </summary>
+        public FaceRequest() { }
+
+        /// <summary>
+        /// 按条件批量查询人脸
+        /// </summary>
+        /// <param name="pageNo">页码</param>
+        /// <param name="pageSize">页尺</param>
+        public FaceRequest(int pageNo, int pageSize) : base(pageNo, pageSize) { }
 
     }
 

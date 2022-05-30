@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
     /// <summary>
     /// 查询门禁请求
     /// </summary>
-    public class DoorSearchV2Request : PagedQuery
+    public class DoorSearchV2Request : PagedRequest
     {
         /// <summary>
         /// 名称，模糊搜索，最大长度32，若包含中文，最大长度指不超过按照指定编码的字节长度，即getBytes(“utf-8”).length
@@ -47,5 +47,18 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
         /// 降序升序,降序：desc 升序：asc
         /// </summary>
         public string OrderType { get; set; }
+
+        /// <summary>
+        /// 查询门禁请求
+        /// </summary>
+        public DoorSearchV2Request() { }
+
+        /// <summary>
+        /// 查询门禁请求
+        /// </summary>
+        /// <param name="pageNo">当前页码</param>
+        /// <param name="pageSize">每页记录总数</param>
+        public DoorSearchV2Request(int pageNo, int pageSize) : base(pageNo, pageSize) { }
+
     }
 }

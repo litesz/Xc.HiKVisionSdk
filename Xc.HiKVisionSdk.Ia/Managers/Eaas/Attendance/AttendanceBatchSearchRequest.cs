@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Ia.Managers.Eaas.Attendance
     /// <summary>
     /// 批量查询员工考勤数据请求
     /// </summary>
-    public class AttendanceBatchSearchRequest : PagedQuery
+    public class AttendanceBatchSearchRequest : PagedRequest
     {
         /// <summary>
         /// 人员工号

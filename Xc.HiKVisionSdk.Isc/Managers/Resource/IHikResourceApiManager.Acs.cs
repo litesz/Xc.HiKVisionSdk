@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs;
+using Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource
 {

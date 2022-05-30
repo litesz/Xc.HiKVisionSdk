@@ -1,9 +1,12 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Pms.Models
+﻿using Xc.HiKVisionSdk.Models.Request;
+using System;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Pms.Models
 {
     /// <summary>
     /// 车辆布控请求
     /// </summary>
-    public class AlarmCarAdditionRequest
+    public class AlarmCarAdditionRequest : BaseRequest
     {
         /// <summary>
         /// 车牌号码（车牌、卡号二选一）
@@ -35,6 +38,19 @@
         /// 2018-07-26T15:00:00+08:00
         /// </summary>
         public string EndTime { get; set; }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        protected override void CheckParams()
+        {
+            if (string.IsNullOrWhiteSpace(PlateNo) && string.IsNullOrWhiteSpace(CardNo))
+            {
+                throw new ArgumentNullException("PlateNo 或者 CardNo", "车牌、卡号二选一")；
+            }
+        }
 
     }
 }

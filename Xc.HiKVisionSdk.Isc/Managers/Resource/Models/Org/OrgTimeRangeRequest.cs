@@ -7,7 +7,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
     /// <summary>
     /// 增量获取组织数据
     /// </summary>
-    public class OrgTimeRangeRequest : PagedQuery
+    public class OrgTimeRangeRequest : PagedRequest
     {
         /// <summary>
         /// 针对更新时间的查询开始日期，IOS8601格式
@@ -35,9 +35,26 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
             }
             else
             {
+                if (end.Value < start)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(end), "查询截止时间必须大于开始时间");
+                }
                 EndTime = DateTimeFormat.ToIOS8601(end.Value);
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        protected override void CheckParams()
+        {
+            if (string.IsNullOrWhiteSpace(StartTime))
+            {
+                throw new ArgumentNullException(nameof(StartTime));
+            }
+
+            base.CheckParams();
+        }
     }
 }

@@ -42,7 +42,7 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
                 var result = await resourceApiManagerV2.PersonListV2Async(new PersonListV2Request
                 {
-                    PageSize = 100,
+                    PageSize = 1000,
                     PageNo = 1,
 
                 });
@@ -52,6 +52,8 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
                     WindowManager.ShowMessageBox($"查询结果为空\r\n状态:{result.Code}\r\n消息:${result.Msg}");
                     return;
                 }
+
+               
 
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "PersonList.json");
                 File.WriteAllText(path, JsonExtensions.Serialize(result));
@@ -76,6 +78,9 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
             try
             {
+                //Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager hikEventServiceApiManager = Container.Get<Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager>();
+                //var x = await hikEventServiceApiManager.EventsSearchAsync(new Ia.Managers.EventService.Models.EventsSearchRequest { PageNo = 1, PageSize = 1000 });
+
                 IHikAcsApiManager hikEaasServiceApiManager = Container.Get<IHikAcsApiManager>();
 
                 //var x = await hikEaasServiceApiManager.AttendanceBatchSearchAsync(new Ia.Managers.Eaas.Attendance.AttendanceBatchSearchRequest(1, 1000));
@@ -83,11 +88,11 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
                 {
                     PageSize = 1000,
                     PageNo = 1,
-                    StartTime = $"2022-03-18T00:00:00+08:00",
-                    EndTime = $"2022-03-19T00:00:00+08:00",
+                    StartTime = $"2022-03-25T00:00:00+08:00",
+                    EndTime = $"2022-03-26T00:00:00+08:00",
                     Order = "asc",
                     Sort = "eventTime",
-                    PersonName = "柳锡华"
+                    PersonName = "蒋伟东"
                 };
                 var result = await hikEaasServiceApiManager.DoorEventsV2Async(requestDto);
             }
