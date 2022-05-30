@@ -25,7 +25,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms
         /// <returns></returns>
         public Task<ParkRemainSpaceNumResponse> ParkRemainSpaceNumAsync(ParkRemainSpaceNumRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<ParkRemainSpaceNumRequest, ParkRemainSpaceNumResponse>("/api/pms/v1/park/remainSpaceNum", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<ParkRemainSpaceNumRequest, ParkRemainSpaceNumResponse>("/api/pms/v1/park/remainSpaceNum", model, VersionConsts.V1);
         }
 
         /// <summary>

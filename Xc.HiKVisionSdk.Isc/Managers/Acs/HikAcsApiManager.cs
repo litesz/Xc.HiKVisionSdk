@@ -28,7 +28,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs
         /// <returns></returns>
         public Task<DoorEventsResponse> DoorEventsAsync(DoorEventsRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<DoorEventsRequest, DoorEventsResponse>("/api/acs/v1/door/events", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<DoorEventsRequest, DoorEventsResponse>("/api/acs/v1/door/events", model, VersionConsts.V1);
         }
         /// <summary>
         /// 

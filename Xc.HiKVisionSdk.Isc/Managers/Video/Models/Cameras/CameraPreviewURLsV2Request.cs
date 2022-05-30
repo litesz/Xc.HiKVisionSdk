@@ -40,7 +40,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// <summary>
         /// 标识扩展内容，格式：key=value，
         /// 调用方根据其播放控件支持的解码格式选择相应的封装类型；
-        /// 多个扩展时，以“&”隔开；
+        /// 多个扩展时，以<![CDATA["&"]]>隔开；
         /// 支持的内容详见附录F expand扩展内容说明
         /// </summary>
         public string Expand { get; set; }

@@ -65,7 +65,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public EventSubscriptionViewResponse EventSubscriptionView()
         {
-            return _hikVisionApiManager.PostAndGet<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/api/eventService/v1/eventSubscriptionView", null, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGet<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/api/eventService/v1/eventSubscriptionView", null, VersionConsts.V1);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public Task<EventSubscriptionViewResponse> EventSubscriptionViewAsync()
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/api/eventService/v1/eventSubscriptionView", null, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<EventSubscriptionViewRequest, EventSubscriptionViewResponse>("/api/eventService/v1/eventSubscriptionView", null, VersionConsts.V1);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public EventUnSubscriptionByEventTypesResponse EventUnSubscriptionByEventTypes(EventUnSubscriptionByEventTypesRequest model)
         {
-            return _hikVisionApiManager.PostAndGet<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/api/eventService/v1/eventUnSubscriptionByEventTypes", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGet<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/api/eventService/v1/eventUnSubscriptionByEventTypes", model, VersionConsts.V1);
         }
 
         /// <summary>
@@ -94,7 +94,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public Task<EventUnSubscriptionByEventTypesResponse> EventUnSubscriptionByEventTypesAsync(EventUnSubscriptionByEventTypesRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/api/eventService/v1/eventUnSubscriptionByEventTypes", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<EventUnSubscriptionByEventTypesRequest, EventUnSubscriptionByEventTypesResponse>("/api/eventService/v1/eventUnSubscriptionByEventTypes", model, VersionConsts.V1);
         }
     }
 }

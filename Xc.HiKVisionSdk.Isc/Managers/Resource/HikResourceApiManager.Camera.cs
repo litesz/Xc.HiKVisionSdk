@@ -17,7 +17,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<AdvanceCameraListResponse> AdvanceCameraListAsync(AdvanceCameraListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AdvanceCameraListRequest, AdvanceCameraListResponse>("/api/resource/v1/camera/advance/cameraList", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<AdvanceCameraListRequest, AdvanceCameraListResponse>("/api/resource/v1/camera/advance/cameraList", model, VersionConsts.V1);
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<CamerasResponse> CamerasAsync(CamerasRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<CamerasRequest, CamerasResponse>("/api/resource/v1/cameras", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<CamerasRequest, CamerasResponse>("/api/resource/v1/cameras", model, VersionConsts.V1);
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<CamerasIndexCodeResponse> CamerasIndexCodeAsync(CamerasIndexCodeRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<CamerasIndexCodeRequest, CamerasIndexCodeResponse>("/api/resource/v1/cameras/indexCode", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<CamerasIndexCodeRequest, CamerasIndexCodeResponse>("/api/resource/v1/cameras/indexCode", model, VersionConsts.V1);
         }
 
     }

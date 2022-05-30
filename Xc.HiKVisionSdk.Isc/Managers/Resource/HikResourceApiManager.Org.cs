@@ -16,7 +16,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgListResponse> OrgListAsync(OrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgListRequest, OrgListResponse>("/api/resource/v1/org/orgList", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<OrgListRequest, OrgListResponse>("/api/resource/v1/org/orgList", model, VersionConsts.V1);
         }
 
 
@@ -27,7 +27,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<RootOrgResponse> RootOrgAsync(RootOrgRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<RootOrgRequest, RootOrgResponse>("/api/resource/v1/org/rootOrg", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<RootOrgRequest, RootOrgResponse>("/api/resource/v1/org/rootOrg", model, VersionConsts.V1);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<AdvanceOrgListResponse> AdvanceOrgListAsync(AdvanceOrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<AdvanceOrgListRequest, AdvanceOrgListResponse>("/api/resource/v1/org/advance/orgList", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<AdvanceOrgListRequest, AdvanceOrgListResponse>("/api/resource/v1/org/advance/orgList", model, VersionConsts.V1);
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<SubOrgListResponse> SubOrgListAsync(SubOrgListRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<SubOrgListRequest, SubOrgListResponse>("/api/resource/v1/org/parentOrgIndexCode/subOrgList", model, VersionConsts.V1_0);
+            return _hikVisionApiManager.PostAndGetAsync<SubOrgListRequest, SubOrgListResponse>("/api/resource/v1/org/parentOrgIndexCode/subOrgList", model, VersionConsts.V1);
         }
 
         /// <summary>

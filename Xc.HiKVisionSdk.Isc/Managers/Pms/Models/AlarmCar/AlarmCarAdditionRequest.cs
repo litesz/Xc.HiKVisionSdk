@@ -48,7 +48,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms.Models
         {
             if (string.IsNullOrWhiteSpace(PlateNo) && string.IsNullOrWhiteSpace(CardNo))
             {
-                throw new ArgumentNullException("PlateNo 或者 CardNo", "车牌、卡号二选一")；
+                throw new ArgumentNullException("PlateNo 或者 CardNo", "车牌、卡号二选一");
             }
         }
 

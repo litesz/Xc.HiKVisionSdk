@@ -23,7 +23,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         ///取流协议（应用层协议)，
         ///“hik”:HIK私有协议，使用视频SDK进行播放时，传入此类型；
         ///“rtsp”:RTSP协议；
-        ///“rtmp”:RTMP协议（RTMP协议只支持海康SDK协议、EHOME协议、ONVIF协议接入的设备；只支持H264视频编码和AAC音频编码；RTMP回放要求录像片段连续，需要在URL后自行拼接beginTime=20190902T100303&endTime=20190902T100400，其中20190902T100303至20190902T100400为查询出有连续录像的时间段。对于不连续的录像，需要分段查询分段播放）；
+        ///“rtmp”:RTMP协议（RTMP协议只支持海康SDK协议、EHOME协议、ONVIF协议接入的设备；只支持H264视频编码和AAC音频编码；RTMP回放要求录像片段连续，需要在URL后自行拼接<![CDATA[beginTime=20190902T100303&endTime=20190902T100400]]>，其中20190902T100303至20190902T100400为查询出有连续录像的时间段。对于不连续的录像，需要分段查询分段播放）；
         ///“hls”:HLS协议（HLS协议只支持海康SDK协议、EHOME协议、ONVIF协议接入的设备；只支持H264视频编码和AAC音频编码；hls协议只支持云存储，不支持设备存储，云存储版本要求v2.2.4及以上的2.x版本，或v3.0.5及以上的3.x版本；ISC版本要求v1.2.0版本及以上，需在运管中心-视频联网共享中切换成启动平台外置VOD）,
         ///“ws”:Websocket协议（一般用于H5视频播放器取流播放）。
         ///参数不填，默认为HIK协议
@@ -55,7 +55,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// <summary>
         /// 标识扩展内容，格式：key=value，
         /// 调用方根据其播放控件支持的解码格式选择相应的封装类型；
-        /// 多个扩展时，以“&”隔开；
+        /// 多个扩展时，以<![CDATA["&"]]>隔开；
         /// 支持的内容详见附录F expand扩展内容说明
         /// </summary>
         public string Expand { get; set; }
