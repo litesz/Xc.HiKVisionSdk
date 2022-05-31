@@ -29,7 +29,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (IndexCodes == null || IndexCodes.Length == 0)
             {

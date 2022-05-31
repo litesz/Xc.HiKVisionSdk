@@ -58,7 +58,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<OrgBatchAddResponse> OrgBatchAddAsync(OrgBatchAddRequest request)
         {
-            return _hikVisionApiManager.PostAndGetAsync<OrgBatchAddRequestItem[], OrgBatchAddResponse>("/api/resource/v1/org/batch/add", request.Items, VersionConsts.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<OrgBatchAddRequest, OrgBatchAddResponse>("/api/resource/v1/org/batch/add", request, VersionConsts.V1_3);
         }
 
 

@@ -3,10 +3,7 @@
 namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
 {
     /// <summary>
-    /// 获取单个卡片信息结果
+    /// 增量获取卡片数据结果
     /// </summary>
-    public class CardInfoResponse : HiKVisionDataResponse<CardInfo> { }
-
-
-
+    public class CardTimeRangeResponse : HiKVisionPagedDataResponse<CardInfo> { }
 }

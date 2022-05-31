@@ -64,7 +64,7 @@ namespace Xc.HiKVisionSdk.Models.Request
         }
 
 
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (!DateIsRequired)
             {

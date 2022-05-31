@@ -23,16 +23,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera
             CameraIndexCode = cameraIndexCode;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public CamerasIndexCodeRequest() { }
 
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (string.IsNullOrWhiteSpace(CameraIndexCode))
             {

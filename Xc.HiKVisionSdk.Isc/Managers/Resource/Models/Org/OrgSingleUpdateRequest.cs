@@ -38,7 +38,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
         /// 
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
 
             if (string.IsNullOrEmpty(OrgIndexCode))

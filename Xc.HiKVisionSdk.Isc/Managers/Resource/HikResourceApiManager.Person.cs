@@ -86,7 +86,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         public Task<PersonBatchAddResponse> PersonBatchAddAsync(PersonBatchAddRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<PersonBatchAddRequestItem[], PersonBatchAddResponse>("/api/resource/v1/person/batch/add", model.Items, VersionConsts.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<PersonBatchAddRequest, PersonBatchAddResponse>("/api/resource/v1/person/batch/add", model, VersionConsts.V1_3);
         }
 
         /// <summary>

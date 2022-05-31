@@ -13,10 +13,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         /// </summary>
         public FaceBatchAdditionRequestItem[] Items { get; set; }
 
-        /// <summary>
-        /// 人脸批量添加请求
-        /// </summary>
-        public FaceBatchAdditionRequest() { }
 
         /// <summary>
         /// 人脸批量添加请求
@@ -31,7 +27,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         /// 
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (Items == null)
             {
@@ -41,7 +37,16 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             {
                 item.Check();
             }
-
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return Items.SerializeByCamelCase();
+        }
+
     }
 }

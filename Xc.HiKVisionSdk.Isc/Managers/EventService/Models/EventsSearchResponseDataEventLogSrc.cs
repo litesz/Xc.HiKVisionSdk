@@ -16,27 +16,27 @@
         /// <summary>
         ///  事件分类，详见附录A.62
         /// </summary>
-        public string Ability;
+        public string Ability { get; set; }
         /// <summary>
         /// 事件类型，详见附录D.1
         /// </summary>
-        public string EventType;
+        public string EventType { get; set; }
         /// <summary>
         /// 事件类型名称
         /// </summary>
-        public string EventTypeName;
+        public string EventTypeName { get; set; }
         /// <summary>
         /// 事件源编号
         /// </summary>
-        public string ResIndexCode;
+        public string ResIndexCode { get; set; }
         /// <summary>
         /// 事件源类型，详见附录A.63
         /// </summary>
-        public string ResType;
+        public string ResType { get; set; }
         /// <summary>
         /// 事件源名称
         /// </summary>
-        public string ResName;
+        public string ResName { get; set; }
         /// <summary>
         /// 所属区域编号
         /// </summary>

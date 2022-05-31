@@ -45,7 +45,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         /// <summary>
         /// 
         /// </summary>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (string.IsNullOrWhiteSpace(IndexCode))
             {

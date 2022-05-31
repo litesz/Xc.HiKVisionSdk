@@ -10,7 +10,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
         /// <summary>
         /// 
         /// </summary>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
         }
     }

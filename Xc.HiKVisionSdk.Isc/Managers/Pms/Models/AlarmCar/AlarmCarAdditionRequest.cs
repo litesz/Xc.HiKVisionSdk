@@ -41,10 +41,28 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms.Models
 
 
         /// <summary>
+        /// 车辆布控请求
+        /// </summary>
+        /// <param name="content">内容</param>
+        /// <param name="isCardNo">是卡片号码还是车牌</param>
+        public AlarmCarAdditionRequest(string content, bool isCardNo = false)
+        {
+            if (isCardNo)
+            {
+                CardNo = content;
+            }
+            else
+            {
+                PlateNo = content;
+            }
+        }
+
+
+        /// <summary>
         /// 
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (string.IsNullOrWhiteSpace(PlateNo) && string.IsNullOrWhiteSpace(CardNo))
             {

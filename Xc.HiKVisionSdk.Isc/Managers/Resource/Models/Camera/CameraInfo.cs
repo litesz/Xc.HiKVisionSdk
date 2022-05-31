@@ -133,7 +133,7 @@
         /// <summary>
         /// 传输协议，参考附录A.40 传输协议
         /// </summary>
-        public TransType transType { get; set; }
+        public TransType TransType { get; set; }
         /// <summary>
         ///  	传输协议类型说明
         /// </summary>
@@ -156,5 +156,12 @@
         /// 表示北京时间2017年7月26日21时30分08秒
         /// </summary>
         public string UpdateTime { get; set; }
+
+
+
+        /// <summary>
+        /// 数据在界面上显示的顺序
+        /// </summary>
+        public int DisOrder { get; set; }
     }
 }

@@ -1,9 +1,12 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
+﻿using Xc.HiKVisionSdk.Models.Request;
+using System;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
     /// <summary>
     /// 重点监控人员添加识别计划请求
     /// </summary>
-    public class PlanRecognitionBlackAdditionRequest
+    public class PlanRecognitionBlackAdditionRequest : BaseRequest
     {
         /// <summary>
         /// 识别计划名称,1~32个字符；不能包含 ’ / \ : * ? " 
@@ -43,5 +46,62 @@
         /// 时间计划模板，不填默认全天候
         /// </summary>
         public TimeBlock[] TimeBlockList { get; set; }
+
+        /// <summary>
+        /// 重点监控人员添加识别计划请求
+        /// </summary>
+        public PlanRecognitionBlackAdditionRequest() { }
+
+        /// <summary>
+        /// 重点监控人员添加识别计划请求
+        /// </summary>
+        /// <param name="name">识别计划名称</param>
+        /// <param name="recognitionResourceType">识别资源类型，SUPER_BRAIN 超脑，FACE_RECOGNITION_SERVER 脸谱，COMPARISON 深眸</param>
+        /// <param name="threshold">识别计划的阈值</param>
+        /// <param name="faceGroupIndexCodes">人脸分组唯一标识的集合</param>
+        /// <param name="cameraIndexCodes">抓拍点通道唯一标识的集合</param>
+        public PlanRecognitionBlackAdditionRequest(string name, string recognitionResourceType, int threshold, string[] faceGroupIndexCodes, string[] cameraIndexCodes)
+        {
+            Name = name;
+            RecognitionResourceType = recognitionResourceType;
+            Threshold = threshold;
+            FaceGroupIndexCodes = faceGroupIndexCodes;
+            CameraIndexCodes = cameraIndexCodes;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void CheckParams()
+        {
+            if (string.IsNullOrWhiteSpace(Name))
+            {
+                throw new ArgumentNullException(nameof(Name));
+            }
+            if (string.IsNullOrWhiteSpace(RecognitionResourceType))
+            {
+                throw new ArgumentNullException(nameof(RecognitionResourceType));
+            }
+            if (Threshold < 1 || Threshold > 99)
+            {
+                throw new ArgumentOutOfRangeException(nameof(Threshold), "在 1 到 99 之间");
+            }
+            if (FaceGroupIndexCodes == null)
+            {
+                throw new ArgumentNullException(nameof(FaceGroupIndexCodes));
+            }
+            if (FaceGroupIndexCodes.Length == 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(FaceGroupIndexCodes), "最少一个人脸资源");
+            }
+            if (CameraIndexCodes == null)
+            {
+                throw new ArgumentNullException(nameof(CameraIndexCodes));
+            }
+            if (CameraIndexCodes.Length == 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(CameraIndexCodes), "最少一个摄像头资源");
+            }
+        }
     }
 }

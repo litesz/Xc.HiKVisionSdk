@@ -56,7 +56,7 @@
         }
 
 
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (PageSize < 1 || PageSize > 1000)
             {

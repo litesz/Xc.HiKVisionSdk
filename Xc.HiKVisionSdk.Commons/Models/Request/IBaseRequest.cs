@@ -10,6 +10,7 @@ namespace Xc.HiKVisionSdk.Models.Request
     /// </summary>
     public interface IBaseRequest
     {
+        void CheckParams();
     }
 
 }

@@ -34,5 +34,21 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         /// <returns></returns>
         /// <remarks>获取单个监控点信息是指根据监控点唯一标识来获取指定的监控点信息。</remarks>
         Task<CamerasIndexCodeResponse> CamerasIndexCodeAsync(CamerasIndexCodeRequest model);
+
+        /// <summary>
+        /// 根据区域编号获取下级监控点列表
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        /// <remarks>根据指定的区域编号获取该区域下的监控点列表信息，返回结果分页展示。        注：返回的监控点不包括下级区域的。</remarks>
+        Task<RegionIndexCodeCamerasResponse> RegionIndexCodeCamerasAsync(RegionIndexCodeCamerasRequest model);
+
+        ///// <summary>
+        ///// 增量获取监控点数据
+        ///// </summary>
+        ///// <param name="request">请求</param>
+        ///// <returns></returns>
+        ///// <remarks>根据资源类型、时间段增量获取资源，包含已删除数据。其中开始日期与结束日期的时间差必须在1-48小时内。        当返回字段对应的值为空时，该字段不返回。</remarks>
+        //Task<CameraTimeRangeResponse> CameraTimeRangeAsync(CameraTimeRangeRequest request);
     }
 }

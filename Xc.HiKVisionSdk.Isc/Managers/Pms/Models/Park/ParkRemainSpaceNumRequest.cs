@@ -17,7 +17,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms.Models
         /// <summary>
         /// 
         /// </summary>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (!string.IsNullOrWhiteSpace(ParkSyscode) && ParkSyscode.Length > 64)
             {

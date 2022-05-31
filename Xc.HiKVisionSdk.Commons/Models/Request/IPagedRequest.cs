@@ -14,4 +14,9 @@
         /// </summary>
         int PageNo { get; set; }
     }
+
+    public interface IArrayRequest<T>
+    {
+        T[] Items { get; }
+    }
 }

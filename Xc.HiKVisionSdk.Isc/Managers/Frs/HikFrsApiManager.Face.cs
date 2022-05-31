@@ -25,7 +25,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs
         /// <returns></returns>
         public Task<FaceBatchAdditionResponse> FaceBatchAdditionAsync(FaceBatchAdditionRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<FaceBatchAdditionRequestItem[], FaceBatchAdditionResponse>("/api/frs/v1/face/batch/addition", model.Items, VersionConsts.V1_2);
+            return _hikVisionApiManager.PostAndGetAsync<FaceBatchAdditionRequest, FaceBatchAdditionResponse>("/api/frs/v1/face/batch/addition", model, VersionConsts.V1_2);
         }
 
         /// <summary>

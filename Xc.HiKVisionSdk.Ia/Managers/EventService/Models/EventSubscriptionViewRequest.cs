@@ -10,7 +10,7 @@ namespace Xc.HiKVisionSdk.Ia.Managers.EventService.Models
         /// <summary>
         /// 
         /// </summary>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
         }
     }

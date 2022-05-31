@@ -1,6 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 using Xc.HiKVisionSdk.Commons.Managers;
+using Xc.HiKVisionSdk.Models.Request;
 using Xc.HiKVisionSdk.Models.Responses;
 
 namespace Xc.HiKVisionSdk
@@ -50,11 +51,12 @@ namespace Xc.HiKVisionSdk
         /// <param name="ver"></param>
         /// <returns></returns>
         public static async Task<TResult> PostAndGetAsync<T, TResult>(this IHikVisionApiManager manager, string url, T body, decimal ver)
-            where T : class
+            where T : class, IBaseRequest
               where TResult : HiKVisionResponse
         {
-            string bodyStr = body?.SerializeByCamelCase();
-
+            //body.CheckParams();
+            //string bodyStr = body?.SerializeByCamelCase();
+            string bodyStr = body.ToString();
             var result = await manager.PostAndGetStringAsync(url, bodyStr, ver);
 
             var output = Newtonsoft.Json.JsonConvert.DeserializeObject<TResult>(result);
@@ -67,6 +69,27 @@ namespace Xc.HiKVisionSdk
             }
             return output;
         }
+
+
+        //public static async Task<TResult> PostArrayAndGetAsync<T, TResult>(this IHikVisionApiManager manager, string url, T body, decimal ver)
+        //  where T : IBaseRequest, IArrayRequest<>
+        //    where TResult : HiKVisionResponse
+        //{
+        //    body.CheckParams();
+        //    string bodyStr = body?.SerializeByCamelCase();
+
+        //    var result = await manager.PostAndGetStringAsync(url, bodyStr, ver);
+
+        //    var output = Newtonsoft.Json.JsonConvert.DeserializeObject<TResult>(result);
+
+        //    if (output.Status != 0)
+        //    {
+        //        //output.Code = output.Status.ToString();
+        //        //output
+        //        throw new HttpRequestException(result);
+        //    }
+        //    return output;
+        //}
 
 
         public static async Task<TResult> GetAsync<TResult>(this IHikVisionApiManager manager, string url, decimal ver)

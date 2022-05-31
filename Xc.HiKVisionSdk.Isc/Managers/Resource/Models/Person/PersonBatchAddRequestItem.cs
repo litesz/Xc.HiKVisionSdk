@@ -1,9 +1,11 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
+﻿using Xc.HiKVisionSdk.Models.Request;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
     /// <summary>
     /// 批量添加人员请求详细
     /// </summary>
-    public class PersonBatchAddRequestItem : PersonRequestBase
+    public class PersonBatchAddRequestItem : PersonRequestBase, ICheckRequestItem
     {
         /// <summary>
         /// 人员临时标志，
@@ -12,5 +14,27 @@
         /// 注：clientid只对本次调用有效
         /// </summary>
         public int ClientId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="System.ArgumentNullException"></exception>
+        /// <exception cref="System.ArgumentOutOfRangeException"></exception>
+        public void Check()
+        {
+            if (string.IsNullOrWhiteSpace(PersonName))
+            {
+                throw new System.ArgumentNullException(nameof(PersonName));
+            }
+            if (PersonName.Length > 32)
+            {
+                throw new System.ArgumentOutOfRangeException(nameof(PersonName), "1~32个字符；不能包含 ’ / \\ : * ? \" < > ");
+            }
+
+            if (string.IsNullOrWhiteSpace(OrgIndexCode))
+            {
+                throw new System.ArgumentNullException(nameof(OrgIndexCode));
+            }
+        }
     }
 }

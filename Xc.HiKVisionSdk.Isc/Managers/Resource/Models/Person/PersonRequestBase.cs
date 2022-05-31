@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Xc.HiKVisionSdk.Enums;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
     /// <summary>
     /// 人员信息请求
     /// </summary>
-    public abstract class PersonRequestBase
+    public abstract class PersonRequestBase : BaseRequest
     {
 
         /// <summary>
@@ -62,5 +63,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
         /// 出生日期
         /// </summary>
         public string Birthday { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override void CheckParams()
+        {
+        }
     }
 }

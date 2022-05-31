@@ -43,7 +43,7 @@ namespace Xc.HiKVisionSdk.Ia.Managers.EattendanceEngine.Mobile
         /// <summary>
         /// 
         /// </summary>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
         }
     }

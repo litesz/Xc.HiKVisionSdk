@@ -35,7 +35,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (Items == null || Items.Length == 0)
             {
@@ -45,6 +45,15 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
             {
                 throw new ArgumentOutOfRangeException("Items", "最大1000个");
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return Items.SerializeByCamelCase();
         }
 
     }

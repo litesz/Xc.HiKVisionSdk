@@ -77,6 +77,20 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
         /// 查询表达式
         /// </summary>
         public RequestExpression[] Expressions { get; set; }
+
+        /// <summary>
+        /// 查询人员列表V2请求
+        /// </summary>
+        public AdvancePersonListV2Request() { }
+
+        /// <summary>
+        /// 查询人员列表V2请求
+        /// </summary>
+        /// <param name="pageNo"></param>
+        /// <param name="pageSize"></param>
+        public AdvancePersonListV2Request(int pageNo, int pageSize) : base(pageNo, pageSize) { }
+
+
     }
 
 }

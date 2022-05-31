@@ -1,9 +1,12 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
+﻿using Xc.HiKVisionSdk.Models.Request;
+using System;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {
     /// <summary>
     /// 根据证件号码获取单个人员信息请求
     /// </summary>
-    public class CertificateNoPersonInfoRequest
+    public class CertificateNoPersonInfoRequest : BaseRequest
     {
         /// <summary>
         /// 证件号码
@@ -21,6 +24,32 @@
         /// 平台上人员信息实名标识选择为身份证件时必填
         /// </summary>
         public int CertificateType { get; set; }
+
+        /// <summary>
+        /// 根据证件号码获取单个人员信息请求
+        /// </summary>
+        /// <param name="certificateNo">证件号码</param>
+        /// <param name="certificateType">证件类型</param>
+        public CertificateNoPersonInfoRequest(string certificateNo, int certificateType)
+        {
+            CertificateNo = certificateNo;
+            CertificateType = certificateType;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        public override void CheckParams()
+        {
+
+            if (string.IsNullOrWhiteSpace(CertificateNo))
+            {
+                throw new ArgumentNullException(nameof(CertificateNo));
+            }
+
+        }
+
     }
 
 }

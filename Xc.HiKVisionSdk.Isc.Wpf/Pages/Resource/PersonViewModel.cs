@@ -40,12 +40,8 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
                 //});
 
-                var result = await resourceApiManagerV2.PersonListV2Async(new PersonListV2Request
-                {
-                    PageSize = 1000,
-                    PageNo = 1,
-
-                });
+                var result = await resourceApiManagerV2.PersonListV2Async(new PersonListV2Request(1, 1000)
+               );
 
                 if (result.Data == null)
                 {
@@ -53,7 +49,7 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
                     return;
                 }
 
-               
+
 
                 var path = Path.Combine(Directory.GetCurrentDirectory(), "PersonList.json");
                 File.WriteAllText(path, JsonExtensions.Serialize(result));
@@ -218,10 +214,8 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
 
                 IHikIrdsApiManager resourceApiManager = Container.Get<IHikIrdsApiManager>();
 
-                var result = await resourceApiManager.CardInfoAsync(new Managers.Irds.Models.CardInfoRequest
-                {
-                    CardNo = "1314307314"
-                });
+                var result = await resourceApiManager.CardInfoAsync(new Managers.Irds.Models.CardInfoRequest("1314307314")
+               );
 
                 if (result.Data == null)
                 {

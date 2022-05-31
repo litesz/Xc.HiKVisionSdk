@@ -31,7 +31,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms.Models
         /// 
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (string.IsNullOrEmpty(AlarmSyscodes))
             {

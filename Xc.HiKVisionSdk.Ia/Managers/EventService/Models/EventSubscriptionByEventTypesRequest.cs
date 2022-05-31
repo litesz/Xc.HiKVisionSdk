@@ -67,7 +67,7 @@ namespace Xc.HiKVisionSdk.Ia.Managers.EventService.Models
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="IndexOutOfRangeException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (string.IsNullOrWhiteSpace(EventDest))
             {

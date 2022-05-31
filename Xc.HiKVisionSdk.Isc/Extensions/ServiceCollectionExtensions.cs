@@ -10,6 +10,7 @@ using Xc.HiKVisionSdk.Isc.Managers.Irds;
 using Xc.HiKVisionSdk.Isc.Managers.Mpc;
 using Xc.HiKVisionSdk.Isc.Managers.Pms;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
+using Xc.HiKVisionSdk.Isc.Managers.Video;
 using Xc.HiKVisionSdk.Isc.Models;
 
 namespace Xc.HiKVisionSdk.Isc
@@ -57,6 +58,7 @@ namespace Xc.HiKVisionSdk.Isc
             services.AddScoped<IHikResourceApiManager, HikResourceApiManager>();
             services.AddScoped<IHikIrdsApiManager, HikIrdsApiManager>();
             services.AddScoped<IHikMpcApiManager, HikMpcApiManager>();
+            services.AddScoped<IHikVideoApiManager, HikVideoApiManager>();
 
 
             return services;

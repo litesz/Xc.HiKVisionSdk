@@ -3156,32 +3156,32 @@
             事件id
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Ability">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.Ability">
             <summary>
              事件分类，详见附录A.62
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventType">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventType">
             <summary>
             事件类型，详见附录D.1
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventTypeName">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.EventTypeName">
             <summary>
             事件类型名称
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResIndexCode">
             <summary>
             事件源编号
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResType">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResType">
             <summary>
             事件源类型，详见附录A.63
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResName">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchResponseDataEventLogSrc.ResName">
             <summary>
             事件源名称
             </summary>
@@ -4273,11 +4273,6 @@
             请求内容
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequest.#ctor">
-            <summary>
-            人脸批量添加请求
-            </summary>
-        </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequest.#ctor(Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequestItem[])">
             <summary>
             人脸批量添加请求
@@ -4289,6 +4284,12 @@
             
             </summary>
             <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequest.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.FaceBatchAdditionRequestItem">
             <summary>
@@ -4634,6 +4635,26 @@
             时间计划模板，不填默认全天候
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.#ctor">
+            <summary>
+            重点监控人员添加识别计划请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.#ctor(System.String,System.String,System.Int32,System.String[],System.String[])">
+            <summary>
+            重点监控人员添加识别计划请求
+            </summary>
+            <param name="name">识别计划名称</param>
+            <param name="recognitionResourceType">识别资源类型，SUPER_BRAIN 超脑，FACE_RECOGNITION_SERVER 脸谱，COMPARISON 深眸</param>
+            <param name="threshold">识别计划的阈值</param>
+            <param name="faceGroupIndexCodes">人脸分组唯一标识的集合</param>
+            <param name="cameraIndexCodes">抓拍点通道唯一标识的集合</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionRequest.CheckParams">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackAdditionResponse">
             <summary>
             单个添加重点人员识别计划结果
@@ -4641,13 +4662,19 @@
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionRequest">
             <summary>
-            请求
+            删除重点人员识别计划请求
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionRequest.IndexCodes">
             <summary>
             操作的计划的唯一标识集合，操作可能是删除等，可从查询重点人员识别计划获取
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionRequest.#ctor(System.String[])">
+            <summary>
+            删除重点人员识别计划请求
+            </summary>
+            <param name="indexCodes">操作的计划的唯一标识集合</param>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionResponse">
             <summary>
@@ -4663,6 +4690,20 @@
             <summary>
             识别计划的唯一标识，可从查询重点人员识别计划获取
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailRequest.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            单个查询重点人员识别计划详情请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="indexCode"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDetailResponse">
             <summary>
@@ -4829,6 +4870,12 @@
             识别计划的唯一标识，可从查询重点人员识别计划获取
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRestartRequest.#ctor(System.String)">
+            <summary>
+            重新下发重点人员识别计划请求
+            </summary>
+            <param name="indexCode">识别计划的唯一标识</param>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackRestartResponse">
             <summary>
             重新下发重点人员识别计划结果
@@ -4881,6 +4928,17 @@
             <summary>
             时间计划模板，不填默认全天候
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.#ctor(System.String,System.String,System.String[],System.Int32,System.String[],System.String[])">
+            <summary>
+            单个修改重点人员识别计划请求
+            </summary>
+            <param name="indexCode">识别计划唯一标识</param>
+            <param name="name">识别计划名称</param>
+            <param name="recognitionResourceIndexCodes">识别资源唯一标识的集合</param>
+            <param name="threshold">阈值</param>
+            <param name="faceGroupIndexCodes">人脸分组唯一标识的集合</param>
+            <param name="cameraIndexCodes">抓拍点通道唯一标识的集合</param>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateResponse">
             <summary>
@@ -5140,6 +5198,27 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.AdvanceCardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.CardTimeRangeAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager">
             <summary>
             卡片API
@@ -5153,6 +5232,170 @@
             <returns></returns>
             <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。
             注：卡号为精确查找</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest)">
+            <summary>
+            获取卡片列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。
+            </remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager.AdvanceCardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest)">
+            <summary>
+            查询卡片列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            查询卡片列表接口可以根据卡片号码、人员姓名、卡片状态、人员ID集合等查询条件来进行高级查询；若不指定查询条件，即全量获取所有的卡片信息。返回结果分页展示。
+            注：若指定多个查询条件，表示将这些查询条件进行“与”的组合后进行查询。
+            “人员名称personName”条件查询为模糊查询。
+            “卡片号码cardNo”条件查询为模糊查询。
+            </remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager.CardTimeRangeAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest)">
+            <summary>
+            增量获取卡片数据
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            根据查询条件查询卡片列表信息，主要根据时间段分页获取卡片信息，包含已删除数据。其中开始日期与结束日期的时间差必须在48小时内。
+            </remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest">
+            <summary>
+            查询卡片列表请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.PersonName">
+            <summary>
+            人员姓名,模糊查询
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.CardNo">
+            <summary>
+            卡号,模糊查询， 根据获取卡片列表接口获取返回参数cardNo
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.PersonIds">
+            <summary>
+            人员ID集，多个值使用英文逗号分隔，不超过1000个， 根据获取人员列表v2接口获取返回参数personId
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.UseStatus">
+            <summary>
+            使用状态标记，1：正常.
+            2：挂失
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.OrderBy">
+            <summary>
+            排序字段必须是查询条件，否则返回参数错误
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.OrderType">
+            <summary>
+            降序：desc.        升序：asc
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListResponse">
+            <summary>
+            查询卡片列表结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo">
+            <summary>
+            卡片信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.CardId">
+            <summary>
+            卡片ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.PersonId">
+            <summary>
+            持卡人员id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.PersonName">
+            <summary>
+            持卡人名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.UseStatus">
+            <summary>
+            使用状态标记
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.StartDate">
+            <summary>
+             生效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.EndDate">
+            <summary>
+            失效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.LossDate">
+            <summary>
+            挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.UnlossDate">
+            <summary>
+            解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.CreateTime">
+            <summary>
+            创建时间，要求遵守ISO8601标准，如2018-07-26T21:30:08+08:00        表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.UpdateTime">
+            <summary>
+            修改时间，要求遵守ISO8601标准，如2018-07-26T21:30:08+08:00        表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.CardType">
+            <summary>
+            卡类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.OrgIndexCode">
+            <summary>
+            所属组织
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.IsBindFinger">
+            <summary>
+            是否绑定指纹，1-绑定，2-未绑定
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.IsBindFace">
+            <summary>
+            是否绑定人脸，1-绑定，2-未绑定
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfo.Status">
+            <summary>
+            资源状态，小于0则代表资源已被删除，0代表有效资源
+            </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest">
             <summary>
@@ -5171,59 +5414,89 @@
             获取卡片列表接口获取返回参数cardId
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest.#ctor(System.String,System.Boolean)">
+            <summary>
+            获取单个卡片信息请求
+            </summary>
+            <param name="content">请求内容</param>
+            <param name="isCardId">是卡片ID还是卡片号码</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponse">
             <summary>
             获取单个卡片信息结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData">
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest">
             <summary>
-            获取单个卡片信息结果数据
+            获取卡片列表请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.CardId">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest.#ctor(System.Int32,System.Int32)">
             <summary>
-            卡片ID
+            获取卡片列表请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListResponse">
+            <summary>
+            获取卡片列表结果
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.CardNo">
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest">
             <summary>
-            卡号
+            增量获取卡片数据请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.PersonId">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.StartTime">
             <summary>
-            持卡人员id
+            针对更新时间的查询开始日期，IOS8601格式，参考附录B ISO8601时间格式说明
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.PersonName">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.EndTime">
             <summary>
-            持卡人名称
+            针对更新时间的查询截止日期，IOS8601格式，参考附录B ISO8601时间格式说明
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.UseStatus">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            增量获取卡片数据请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeResponse">
+            <summary>
+            增量获取卡片数据结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.UseStatus">
             <summary>
             使用状态标记
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.StartDate">
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.UseStatus.Normal">
             <summary>
-             生效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            正常
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.EndDate">
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.UseStatus.Loss">
             <summary>
-            失效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.LossDate">
-            <summary>
-            挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponseData.UnlossDate">
-            <summary>
-            解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            丢失
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.HikMpcApiManager">
@@ -5267,6 +5540,19 @@
             批量添加车辆黑名单详细
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequest.#ctor(Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData[])">
+            <summary>
+            批量添加车辆黑名单请求
+            </summary>
+            <param name="items">批量添加车辆黑名单详细</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData">
             <summary>
             批量添加车辆黑名单请求详细
@@ -5306,6 +5592,21 @@
             <summary>
             描述信息
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.#ctor(System.String,System.Int32,System.DateTime)">
+            <summary>
+            批量添加车辆黑名单请求详细
+            </summary>
+            <param name="plateNo">车牌号</param>
+            <param name="reason">布控原因,1（被盗车），2（被抢车），3（嫌疑车），4（交通违法车），5（紧急查控车）</param>
+            <param name="end">布控结束时间</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddRequestData.Check">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.Models.AlarmBlackAddResponse">
             <summary>
@@ -5438,6 +5739,13 @@
             yyyy-MM-ddTHH:mm:ss+当前时区，例如北京时间：
             2018-07-26T15:00:00+08:00
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.#ctor(System.String,System.Boolean)">
+            <summary>
+            车辆布控请求
+            </summary>
+            <param name="content">内容</param>
+            <param name="isCardNo">是卡片号码还是车牌</param>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.AlarmCarAdditionRequest.CheckParams">
             <summary>
@@ -5681,21 +5989,28 @@
             <summary>
             查询监控点列表
             </summary>
-            <param name="model"></param>
+            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.HikResourceApiManager.CamerasAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CamerasRequest)">
             <summary>
             分页获取监控点资源
             </summary>
-            <param name="model"></param>
+            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.HikResourceApiManager.CamerasIndexCodeAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CamerasIndexCodeRequest)">
             <summary>
             根据编号获取监控点详细信息
             </summary>
-            <param name="model"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.HikResourceApiManager.RegionIndexCodeCamerasAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasRequest)">
+            <summary>
+            根据区域编号获取下级监控点列表
+            </summary>
+            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.HikResourceApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListRequest)">
@@ -5903,6 +6218,14 @@
             <param name="model"></param>
             <returns></returns>
             <remarks>获取单个监控点信息是指根据监控点唯一标识来获取指定的监控点信息。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.RegionIndexCodeCamerasAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasRequest)">
+            <summary>
+            根据区域编号获取下级监控点列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <remarks>根据指定的区域编号获取该区域下的监控点列表信息，返回结果分页展示。        注：返回的监控点不包括下级区域的。</remarks>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListRequest)">
             <summary>
@@ -6415,7 +6738,7 @@
             状态说明
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraInfo.transType">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraInfo.TransType">
             <summary>
             传输协议，参考附录A.40 传输协议
             </summary>
@@ -6447,6 +6770,11 @@
             表示北京时间2017年7月26日21时30分08秒
             </summary>
         </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraInfo.DisOrder">
+            <summary>
+            数据在界面上显示的顺序
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CamerasIndexCodeRequest">
             <summary>
             根据编号获取监控点详细信息请求
@@ -6463,11 +6791,6 @@
             根据编号获取监控点详细信息请求
             </summary>
             <param name="cameraIndexCode">监控点编号</param>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CamerasIndexCodeRequest.#ctor">
-            <summary>
-            
-            </summary>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CamerasIndexCodeRequest.CheckParams">
             <summary>
@@ -6500,6 +6823,41 @@
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CamerasResponse">
             <summary>
             分页获取监控点资源结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraTimeRangeRequest">
+            <summary>
+            增量获取监控点数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraTimeRangeRequest.StartTime">
+            <summary>
+            针对更新时间的查询开始日期，IOS8601格式，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraTimeRangeRequest.EndTime">
+            <summary>
+            针对更新时间的查询截止日期，IOS8601格式，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            增量获取监控点数据
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraTimeRangeRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraTimeRangeResponse">
+            <summary>
+            增量获取监控点数据结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraType">
@@ -6545,6 +6903,35 @@
         <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CascadeType.All">
             <summary>
             不限（包括级联和非级联）
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasRequest">
+            <summary>
+            根据区域编号获取下级监控点列表
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasRequest.RegionIndexCode">
+            <summary>
+            区域编号唯一标识
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasRequest.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据区域编号获取下级监控点列表
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="regionIndexCode">区域编号唯一标识</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasResponse">
+            <summary>
+            根据区域编号获取下级监控点列表结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.TransType">
@@ -6777,6 +7164,12 @@
             </summary>
             <exception cref="T:System.ArgumentNullException"></exception>
             <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgBatchAddRequest.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgBatchAddRequestItem">
             <summary>
@@ -7283,6 +7676,18 @@
             查询表达式
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.#ctor">
+            <summary>
+            查询人员列表V2请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Request.#ctor(System.Int32,System.Int32)">
+            <summary>
+            查询人员列表V2请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.AdvancePersonListV2Response">
             <summary>
             查询人员列表v2结果
@@ -7316,6 +7721,19 @@
             平台上人员信息实名标识选择为身份证件时必填
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.CertificateNoPersonInfoRequest.#ctor(System.String,System.Int32)">
+            <summary>
+            根据证件号码获取单个人员信息请求
+            </summary>
+            <param name="certificateNo">证件号码</param>
+            <param name="certificateType">证件类型</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.CertificateNoPersonInfoRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.CertificateNoPersonInfoResponse">
             <summary>
             根据证件号码获取单个人员信息结果
@@ -7346,6 +7764,20 @@
             组织唯一标识码， 获取组织列表 接口获取
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.OrgIndexCodePersonListV2Request.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取组织下人员列表v2请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="orgIndexCode">组织唯一标识码</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.OrgIndexCodePersonListV2Request.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.OrgIndexCodePersonListV2Response">
             <summary>
             获取组织下人员列表v2结果
@@ -7366,6 +7798,25 @@
             批量添加人员信息
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequest.#ctor(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequestItem[])">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequest.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequestItem">
             <summary>
             批量添加人员请求详细
@@ -7378,6 +7829,13 @@
             所以每次接口调用，每个人员的clientid需保持唯一，1~10个字符，只支持数字。
             注：clientid只对本次调用有效
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddRequestItem.Check">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchAddResponse">
             <summary>
@@ -7445,6 +7903,19 @@
             获取人员列表v2 接口获取返回参数personId
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteRequest.#ctor(System.String[])">
+            <summary>
+            批量删除人员请求
+            </summary>
+            <param name="personIds">人员Id，单次操作上限为1000条</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonBatchDeleteResponse">
             <summary>
             批量删除人员结果
@@ -7479,6 +7950,18 @@
             <summary>
             人员ID, 获取人员列表v2 接口获取
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoRequest.#ctor(System.String)">
+            <summary>
+            根据人员编号获取单个人员信息请求
+            </summary>
+            <param name="personId"> 人员ID</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonIdPersonInfoResponse">
             <summary>
@@ -7684,6 +8167,13 @@
             获取人员列表v2请求
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonListV2Request.#ctor(System.Int32,System.Int32)">
+            <summary>
+            获取人员列表v2请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonListV2Response">
             <summary>
             获取人员列表v2结果
@@ -7785,6 +8275,11 @@
             出生日期
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonRequestBase.CheckParams">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddRequest">
             <summary>
             添加人员请求
@@ -7795,6 +8290,25 @@
             人脸信息
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddRequest.#ctor">
+            <summary>
+            添加人员请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddRequest.#ctor(System.String,System.String)">
+            <summary>
+            添加人员请求
+            </summary>
+            <param name="personName">人员名称</param>
+            <param name="orgIndexCode">所属组织标识</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleAddResponse">
             <summary>
             添加人员结果
@@ -7804,6 +8318,23 @@
             <summary>
             修改人员请求
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleUpdateRequest.#ctor">
+            <summary>
+            修改人员请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleUpdateRequest.#ctor(System.String)">
+            <summary>
+            修改人员请求
+            </summary>
+            <param name="personId">人员id</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleUpdateRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PersonSingleUpdateResponse">
             <summary>
@@ -7819,6 +8350,19 @@
             <summary>
             电话号码
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PhoneNoPersonInfoRequest.#ctor(System.String)">
+            <summary>
+            根据手机号码获取单个人员信息
+            </summary>
+            <param name="phoneNo">电话号码</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PhoneNoPersonInfoRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person.PhoneNoPersonInfoResponse">
             <summary>
@@ -8054,21 +8598,6 @@
             
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation">
-            <summary>
-            存储类型
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation.Center">
-            <summary>
-            中心存储
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation.Device">
-            <summary>
-            设备存储
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Response">
             <summary>
             获取监控点预览取流URLv2结果
@@ -8102,6 +8631,21 @@
         <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.LockType.Lock">
             <summary>
             已锁定录像
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation">
+            <summary>
+            存储类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation.Center">
+            <summary>
+            中心存储
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation.Device">
+            <summary>
+            设备存储
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.StreamType">

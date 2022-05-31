@@ -1,9 +1,11 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
+﻿using Xc.HiKVisionSdk.Models.Request;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 {
     /// <summary>
     /// 查询重点人员识别计划请求
     /// </summary>
-    public class PlanRecognitionBlackRequest
+    public class PlanRecognitionBlackRequest : BaseRequest
     {
         /// <summary>
         /// 根据识别计划描述模糊搜索

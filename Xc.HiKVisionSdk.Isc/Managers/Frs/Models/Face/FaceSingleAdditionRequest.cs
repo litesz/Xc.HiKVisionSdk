@@ -43,7 +43,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         /// 
         /// </summary>
         /// <exception cref="ArgumentNullException"></exception>
-        protected override void CheckParams()
+        public override void CheckParams()
         {
             if (string.IsNullOrWhiteSpace(FaceGroupIndexCode))
             {

@@ -11,11 +11,15 @@ namespace Xc.HiKVisionSdk.Models.Request
         /// 验证必选项是否为空
         /// </summary>
         /// <exception cref="NotImplementedException"></exception>
-        protected virtual void CheckParams()
+        public virtual void CheckParams()
         {
-            throw new NotImplementedException("CheckParams");
+            //throw new NotImplementedException("CheckParams");
         }
 
+        public override string ToString()
+        {
+            return this.SerializeByCamelCase();
+        }
 
 
 
