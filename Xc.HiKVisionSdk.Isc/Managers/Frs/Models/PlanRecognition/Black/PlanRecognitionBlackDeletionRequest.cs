@@ -22,6 +22,11 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             IndexCodes = indexCodes;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public override void CheckParams()
         {
             if (IndexCodes == null)

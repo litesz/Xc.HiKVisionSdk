@@ -67,14 +67,19 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public override void CheckParams()
         {
             if (string.IsNullOrWhiteSpace(Name))
             {
                 throw new ArgumentNullException(nameof(Name));
             }
-          
-           
+
+
             if (Threshold < 1 || Threshold > 99)
             {
                 throw new ArgumentOutOfRangeException(nameof(Threshold), "在 1 到 99 之间");

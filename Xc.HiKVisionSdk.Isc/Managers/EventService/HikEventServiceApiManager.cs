@@ -36,7 +36,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService
         /// <returns></returns>
         public Task<EventsSearchResponse> EventsSearchAsync(EventsSearchRequest model)
         {
-            return _hikVisionApiManager.PostAndGetAsync<EventsSearchRequest, EventsSearchResponse>("/api/eventService/v1/events/search", model, VersionConsts.V1_3);
+            return _hikVisionApiManager.PostAndGetAsync<EventsSearchRequest, EventsSearchResponse>("/api/els/v1/events/search", model, VersionConsts.V1_3);
         }
 
         /// <summary>

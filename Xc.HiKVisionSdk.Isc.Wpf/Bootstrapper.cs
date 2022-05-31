@@ -23,7 +23,8 @@ namespace Company.WpfApplication1
     {
         protected override void ConfigureIoC(IStyletIoCBuilder builder)
         {
-
+            //var p = new Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest(System.DateTime.Now, System.DateTime.Now, 1, 50);
+            //var d = p.ToString();
 
             builder.Bind<HttpClient>().ToFactory(container =>
             {

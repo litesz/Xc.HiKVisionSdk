@@ -23,10 +23,11 @@ namespace Xc.HiKVisionSdk
         /// <param name="ver"></param>
         /// <returns></returns>
         public static TResult PostAndGet<T, TResult>(this IHikVisionApiManager manager, string url, T body, decimal ver)
-            where T : class
+            where T : class, IBaseRequest
             where TResult : HiKVisionResponse
         {
-            string bodyStr = body?.SerializeByCamelCase();
+            body.CheckParams();
+            string bodyStr = body.ToString();
             var result = manager.PostAndGetString(url, bodyStr, ver);
 
             var output = Newtonsoft.Json.JsonConvert.DeserializeObject<TResult>(result);
@@ -54,7 +55,7 @@ namespace Xc.HiKVisionSdk
             where T : class, IBaseRequest
               where TResult : HiKVisionResponse
         {
-            //body.CheckParams();
+            body.CheckParams();
             //string bodyStr = body?.SerializeByCamelCase();
             string bodyStr = body.ToString();
             var result = await manager.PostAndGetStringAsync(url, bodyStr, ver);
@@ -69,28 +70,6 @@ namespace Xc.HiKVisionSdk
             }
             return output;
         }
-
-
-        //public static async Task<TResult> PostArrayAndGetAsync<T, TResult>(this IHikVisionApiManager manager, string url, T body, decimal ver)
-        //  where T : IBaseRequest, IArrayRequest<>
-        //    where TResult : HiKVisionResponse
-        //{
-        //    body.CheckParams();
-        //    string bodyStr = body?.SerializeByCamelCase();
-
-        //    var result = await manager.PostAndGetStringAsync(url, bodyStr, ver);
-
-        //    var output = Newtonsoft.Json.JsonConvert.DeserializeObject<TResult>(result);
-
-        //    if (output.Status != 0)
-        //    {
-        //        //output.Code = output.Status.ToString();
-        //        //output
-        //        throw new HttpRequestException(result);
-        //    }
-        //    return output;
-        //}
-
 
         public static async Task<TResult> GetAsync<TResult>(this IHikVisionApiManager manager, string url, decimal ver)
               where TResult : HiKVisionResponse
@@ -111,9 +90,5 @@ namespace Xc.HiKVisionSdk
 
             return output;
         }
-
-
-
-
     }
 }

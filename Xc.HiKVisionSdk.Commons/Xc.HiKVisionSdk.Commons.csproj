@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Xc.HiKVisionSdk</RootNamespace>
+    <Authors>litesz</Authors>
+    <Company>Xc</Company>
+    <PackageProjectUrl>https://github.com/litesz/Xc.HiKVisionSdk</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

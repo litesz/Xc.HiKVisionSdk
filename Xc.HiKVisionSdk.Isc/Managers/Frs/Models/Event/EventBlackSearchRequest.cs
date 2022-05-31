@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
     /// <summary>
     /// 按条件查询重点人员事件请求
     /// </summary>
-    public class EventBlackSearchRequest : ISOTimeRangeWithPagedRequest
+    public class EventBlackSearchRequest : IOSTimeRangeWithPagedRequest
     {
         /// <summary>
         /// 监控点唯一标志集合，若不指定，则查询所有的监控点

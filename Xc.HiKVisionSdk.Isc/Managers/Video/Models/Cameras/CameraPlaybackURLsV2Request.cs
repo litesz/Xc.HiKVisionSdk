@@ -5,7 +5,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
     /// <summary>
     /// 获取监控点回放取流URLv2请求
     /// </summary>
-    public class CameraPlaybackURLsV2Request : ISOTimeRangeRequest
+    public class CameraPlaybackURLsV2Request : IOSTimeRangeRequest
     {
         /// <summary>
         /// 监控点唯一标识，分页获取监控点资源接口获取返回参数cameraIndexCode

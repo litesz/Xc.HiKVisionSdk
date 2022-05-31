@@ -12,6 +12,7 @@ using Xc.HiKVisionSdk.Isc.Managers.Pms;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Video;
 using Xc.HiKVisionSdk.Isc.Models;
+using Xc.HiKVisionSdk.Options;
 
 namespace Xc.HiKVisionSdk.Isc
 {
@@ -28,7 +29,8 @@ namespace Xc.HiKVisionSdk.Isc
         /// <returns></returns>
         public static IServiceCollection AddHikVisionIsc(this IServiceCollection services, IConfiguration configuration)
         {
-
+            //
+            services.Configure<HiKVisionOptions>(configuration.GetSection("Hikvision"));
             services.Configure<IscSdkOption>(configuration.GetSection(IscSdkOption.Position));
 
             services.AddSingleton<IPlanStatusCollection, PlanStatusCollection>();

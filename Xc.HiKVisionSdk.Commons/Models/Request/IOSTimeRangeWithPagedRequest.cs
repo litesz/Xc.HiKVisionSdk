@@ -6,9 +6,8 @@ namespace Xc.HiKVisionSdk.Models.Request
     /// <summary>
     /// 开始时间 - 结束时间
     /// </summary>
-    public class ISOTimeRangeRequest : BaseRequest
+    public class IOSTimeRangeWithPagedRequest : PagedRequest
     {
-
         /// <summary>
         /// 设置StartTime和EndTime为必填项
         /// </summary>
@@ -27,7 +26,7 @@ namespace Xc.HiKVisionSdk.Models.Request
         /// 开始时间 - 结束时间
         /// </summary>
         /// <param name="dateIsRequired">设置StartTime和EndTime为必填项</param>
-        public ISOTimeRangeRequest(bool? dateIsRequired = null)
+        public IOSTimeRangeWithPagedRequest(bool? dateIsRequired = null)
         {
             if (dateIsRequired.HasValue)
             {
@@ -36,12 +35,29 @@ namespace Xc.HiKVisionSdk.Models.Request
         }
 
 
+
         /// <summary>
         /// 开始时间 - 结束时间
         /// </summary>
+        /// <param name="pageNo">当前页码</param>
+        /// <param name="pageSize">每页记录总数</param>
+        /// <param name="dateIsRequired">设置StartTime和EndTime为必填项</param>
+        public IOSTimeRangeWithPagedRequest(int pageNo, int pageSize, bool? dateIsRequired = null) : base(pageNo, pageSize)
+        {
+            if (dateIsRequired.HasValue)
+            {
+                DateIsRequired = dateIsRequired.Value;
+            }
+        }
+
+        /// <summary>
+        /// 开始时间 - 结束时间
+        /// </summary>
+        /// <param name="pageNo">当前页码</param>
+        /// <param name="pageSize">每页记录总数</param>
         /// <param name="startTime">开始时间</param>
         /// <param name="endTime">结束时间</param>
-        public ISOTimeRangeRequest(DateTime startTime, DateTime endTime) : this(true)
+        public IOSTimeRangeWithPagedRequest(int pageNo, int pageSize, DateTime startTime, DateTime endTime, bool? dateIsRequired = null) : this(pageNo, pageSize, dateIsRequired)
         {
             StartTime = DateTimeFormat.ToIOS8601(startTime);
             EndTime = DateTimeFormat.ToIOS8601(endTime);
@@ -64,7 +80,10 @@ namespace Xc.HiKVisionSdk.Models.Request
                 throw new System.ArgumentNullException(nameof(EndTime));
             }
 
+            base.CheckParams();
         }
+
+
     }
 
 }

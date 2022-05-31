@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
     /// <summary>
     /// 查询门禁事件V2请求
     /// </summary>
-    public class DoorEventsV2Request : ISOTimeRangeWithPagedRequest
+    public class DoorEventsV2Request : IOSTimeRangeWithPagedRequest
     {
         /// <summary>
         /// 门禁点唯一标识数组，最大支持10个门禁点，查询门禁点列表v2接口获取返回报文中的doorIndexCode字段

@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
     /// <summary>
     /// 获取联动事件列表请求
     /// </summary>
-    public class EventsSearchRequest : ISOTimeRangeWithPagedRequest
+    public class EventsSearchRequest : IOSTimeRangeWithPagedRequest
     {
         /// <summary>
         ///  事件规则id

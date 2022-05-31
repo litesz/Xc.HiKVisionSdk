@@ -4676,6 +4676,13 @@
             </summary>
             <param name="indexCodes">操作的计划的唯一标识集合</param>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackDeletionResponse">
             <summary>
             删除重点人员识别计划结果
@@ -4939,6 +4946,13 @@
             <param name="threshold">阈值</param>
             <param name="faceGroupIndexCodes">人脸分组唯一标识的集合</param>
             <param name="cameraIndexCodes">抓拍点通道唯一标识的集合</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Frs.Models.PlanRecognitionBlackUpdateResponse">
             <summary>

@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
     /// <summary>
     /// 查询门禁事件
     /// </summary>
-    public class DoorEventsRequest : ISOTimeRangeWithPagedRequest
+    public class DoorEventsRequest : IOSTimeRangeWithPagedRequest
     {
         /// <summary>
         /// 事件类型，参考附录D2.1 门禁事件
