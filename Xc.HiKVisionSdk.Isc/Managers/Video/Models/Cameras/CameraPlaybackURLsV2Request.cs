@@ -17,7 +17,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 1：设备存储
         /// 默认为中心存储
         /// </summary>
-        public RecordLocation RecordLocation { get; set; }
+        public RecordLocation RecordLocation { get; set; } = RecordLocation.Center;
 
         /// <summary>
         ///取流协议（应用层协议)，
@@ -28,7 +28,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         ///“ws”:Websocket协议（一般用于H5视频播放器取流播放）。
         ///参数不填，默认为HIK协议
         /// </summary>
-        public string Protocol { get; set; }
+        public string Protocol { get; set; } = "hik";
 
         /// <summary>
         /// 传输协议（传输层协议），0:UDP
@@ -37,7 +37,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 注：EHOME设备回放只支持TCP传输
         /// GB28181 2011及以前版本只支持UDP传输
         /// </summary>
-        public Transmode Transmode { get; set; }
+        public Transmode Transmode { get; set; } = Transmode.TCP;
 
         /// <summary>
         /// 码流类型，0:主码流
@@ -45,7 +45,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 2:第三码流
         /// 参数不填，默认为主码流
         /// </summary>
-        public StreamType StreamType { get; set; }
+        public StreamType StreamType { get; set; } = StreamType.Main;
 
         /// <summary>
         /// 分页查询id，上一次查询返回的uuid，用于继续查询剩余片段，默认为空字符串。当存储类型为设备存储时，该字段生效，中心存储会一次性返回全部片段。
@@ -67,7 +67,132 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// <summary>
         /// 查询录像的锁定类型，0-查询全部录像；1-查询未锁定录像；2-查询已锁定录像，不传默认值为0。通过录像锁定与解锁接口来进行录像锁定与解锁。
         /// </summary>
-        public LockType LockType { get; set; }
+        public LockType LockType { get; set; } = LockType.All;
+
+
+        /// <summary>
+        /// 获取监控点回放取流URLv2请求
+        /// </summary>
+        /// <param name="cameraIndexCode">监控点唯一标识</param>
+        /// <param name="protocol">取流协议（应用层协议）</param>
+        /// <param name="expand">标识扩展内容</param>
+        /// <param name="recordLocation">存储类型</param>
+        public CameraPlaybackURLsV2Request(string cameraIndexCode, string protocol = "hik", string expand = "", RecordLocation recordLocation = RecordLocation.Center)
+        {
+            CameraIndexCode = cameraIndexCode;
+            Protocol = protocol.ToLower();
+            Expand = expand;
+            RecordLocation = recordLocation;
+        }
+
+
+        /// <summary>
+        /// 使用UDP
+        /// </summary>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseUdp()
+        {
+            Transmode = Transmode.UDP;
+            return this;
+        }
+
+        /// <summary>
+        /// 使用子码
+        /// </summary>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request SubStreamType()
+        {
+            StreamType = StreamType.Sub;
+            return this;
+        }
+
+        /// <summary>
+        /// 使用第三码流
+        /// </summary>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request OtherStreamType()
+        {
+            StreamType = StreamType.Other;
+            return this;
+        }
+
+        /// <summary>
+        /// hls
+        /// </summary>
+        /// <param name="expand">
+        /// 标识扩展内容，格式：key=value，
+        /// 调用方根据其播放控件支持的解码格式选择相应的封装类型；
+        /// 多个扩展时，以<![CDATA["&"]]>隔开；
+        /// 支持的内容详见附录F expand扩展内容说明
+        /// </param>
+        /// <param name="streamform">输出码流转封装格式</param>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseHls(string expand = "", string streamform = "")
+        {
+            Protocol = "hls";
+            Expand = expand;
+            Streamform = streamform;
+            return this;
+        }
+
+        /// <summary>
+        /// rtsp
+        /// </summary>
+        /// <param name="expand">
+        /// 标识扩展内容，格式：key=value，
+        /// 调用方根据其播放控件支持的解码格式选择相应的封装类型；
+        /// 多个扩展时，以<![CDATA["&"]]>隔开；
+        /// 支持的内容详见附录F expand扩展内容说明
+        /// </param>
+        /// <param name="streamform">输出码流转封装格式</param>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseRtsp(string expand = "", string streamform = "")
+        {
+            Protocol = "hls";
+            Expand = expand;
+            Streamform = streamform;
+            return this;
+        }
+        /// <summary>
+        /// rtmp
+        /// </summary>
+        /// <param name="expand">
+        /// 标识扩展内容，格式：key=value，
+        /// 调用方根据其播放控件支持的解码格式选择相应的封装类型；
+        /// 多个扩展时，以<![CDATA["&"]]>隔开；
+        /// 支持的内容详见附录F expand扩展内容说明
+        /// </param>
+        /// <param name="streamform">输出码流转封装格式</param>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseRtmp(string expand = "", string streamform = "")
+        {
+            Protocol = "hls";
+            Expand = expand;
+            Streamform = streamform;
+            return this;
+        }
+        /// <summary>
+        /// Websocket协议
+        /// </summary>
+        /// <param name="expand">
+        /// 标识扩展内容，格式：key=value，
+        /// 调用方根据其播放控件支持的解码格式选择相应的封装类型；
+        /// 多个扩展时，以<![CDATA["&"]]>隔开；
+        /// 支持的内容详见附录F expand扩展内容说明
+        /// </param>
+        /// <param name="streamform">输出码流转封装格式</param>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseWs(string expand = "", string streamform = "")
+        {
+            Protocol = "hls";
+            Expand = expand;
+            Streamform = streamform;
+            return this;
+        }
+
+
+
+
     }
 
 }

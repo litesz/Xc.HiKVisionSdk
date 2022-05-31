@@ -116,7 +116,8 @@ namespace Xc.HiKVisionSdk.Commons.Managers
 
             if (ver > _option.Ver)
             {
-                throw new ArgumentOutOfRangeException($"调用接口为{ver},设置版本为{_option.Ver}");
+                //throw new ArgumentOutOfRangeException($"调用接口为{ver},设置版本为{_option.Ver}");
+                throw new ArgumentOutOfRangeException("ver", $"接口最低可用版本为{ver},当前设置版本为{_option.Ver}");
 
             }
 
