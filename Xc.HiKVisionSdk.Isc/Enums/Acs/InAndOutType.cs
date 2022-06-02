@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Acs
 {
     /// <summary>
     /// 进出状态

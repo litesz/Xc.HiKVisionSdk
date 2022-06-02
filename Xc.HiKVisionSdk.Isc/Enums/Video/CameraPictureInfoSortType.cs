@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Video
 {
     /// <summary>
     /// 图片排序方式

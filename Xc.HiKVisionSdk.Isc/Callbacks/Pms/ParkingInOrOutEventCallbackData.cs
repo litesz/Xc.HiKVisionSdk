@@ -1,4 +1,4 @@
-﻿using Xc.HiKVisionSdk.Isc.Models.Pms;
+﻿using Xc.HiKVisionSdk.Isc.Enums.Pms;
 
 namespace Xc.HiKVisionSdk.Isc.Callbacks.Pms
 {

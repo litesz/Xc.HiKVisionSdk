@@ -1,9 +1,9 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Video
 {
     /// <summary>
     /// 存储类型
     /// </summary>
-    public enum RecordLocation
+    public enum RecordLocationTyep
     {
         /// <summary>
         /// 中心存储

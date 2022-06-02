@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Video
 {
     /// <summary>
     /// 码流类型

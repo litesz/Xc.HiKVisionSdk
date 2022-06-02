@@ -2,7 +2,7 @@
 using Xc.HiKVisionSdk.Models.Request;
 using Xc.HiKVisionSdk.Utils;
 
-namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
+namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card
 {
     /// <summary>
     /// 增量获取卡片数据请求

@@ -1,4 +1,6 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera
+﻿using Xc.HiKVisionSdk.Isc.Enums.Resource;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera
 {
     /// <summary>
     /// 查询监控点列表结果数据

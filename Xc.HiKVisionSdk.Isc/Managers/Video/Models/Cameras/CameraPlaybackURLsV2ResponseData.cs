@@ -1,4 +1,6 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
+﻿using Xc.HiKVisionSdk.Isc.Enums.Video;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
 {
     /// <summary>
     /// 获取监控点回放取流URLv2数据

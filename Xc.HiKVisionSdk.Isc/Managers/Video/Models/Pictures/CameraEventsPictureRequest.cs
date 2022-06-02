@@ -1,4 +1,5 @@
-﻿using Xc.HiKVisionSdk.Models.Request;
+﻿using Xc.HiKVisionSdk.Consts;
+using Xc.HiKVisionSdk.Models.Request;
 
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures
@@ -29,14 +30,14 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures
         /// <summary>
         /// 视频图片查询请求
         /// </summary>
-        /// <param name="svrIndexCode"></param>
-        /// <param name="picUri"></param>
-        /// <param name="netProtocol"></param>
-        public CameraEventsPictureRequest(string svrIndexCode, string picUri, string netProtocol = "https")
+        /// <param name="svrIndexCode">图片存储服务器唯一标识</param>
+        /// <param name="picUri">图片的相对地址</param>
+        /// <param name="useSsl">使用https请求</param>
+        public CameraEventsPictureRequest(string svrIndexCode, string picUri, bool useSsl = true)
         {
             SvrIndexCode = svrIndexCode;
             PicUri = picUri;
-            NetProtocol = netProtocol.ToLower();
+            NetProtocol = NetProtocolConsts.GetNetProtocol(useSsl);
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures
             {
                 throw new System.ArgumentNullException(nameof(PicUri));
             }
-            if (NetProtocol != "http" && NetProtocol != "https")
+            if (!NetProtocolConsts.Check(NetProtocol))
             {
                 throw new System.ArgumentOutOfRangeException(nameof(NetProtocol), "只能使用 http 或 https");
             }

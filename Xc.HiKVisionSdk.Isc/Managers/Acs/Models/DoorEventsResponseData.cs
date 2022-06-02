@@ -1,4 +1,6 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
+﻿using Xc.HiKVisionSdk.Isc.Enums.Acs;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Acs.Models
 {
     /// <summary>
     /// 查询门禁点事件结果数据

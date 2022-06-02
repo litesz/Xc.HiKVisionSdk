@@ -1,4 +1,5 @@
 ﻿using System;
+using Xc.HiKVisionSdk.Isc.Enums.Events;
 using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models

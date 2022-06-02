@@ -1,23 +1,35 @@
-﻿using Xc.HiKVisionSdk.Models.Request;
+﻿using Xc.HiKVisionSdk.Isc.Enums.Video;
+using Xc.HiKVisionSdk.Models.Request;
+using System;
+using Xc.HiKVisionSdk.Utils;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
 {
     /// <summary>
     /// 获取监控点回放取流URLv2请求
     /// </summary>
-    public class CameraPlaybackURLsV2Request : IOSTimeRangeRequest
+    public class CameraPlaybackURLsV2Request : BaseRequest
     {
         /// <summary>
         /// 监控点唯一标识，分页获取监控点资源接口获取返回参数cameraIndexCode
         /// </summary>
-        public string CameraIndexCode { get; set; }
+        public string CameraIndexCode { get; }
+
+        /// <summary>
+        /// 开始查询时间
+        /// </summary>
+        public string BeginTime { get; }
+        /// <summary>
+        /// 结束查询时间，开始时间和结束时间相差不超过三天
+        /// </summary>
+        public string EndTime { get; }
 
         /// <summary>
         /// 存储类型,0：中心存储
         /// 1：设备存储
         /// 默认为中心存储
         /// </summary>
-        public RecordLocation RecordLocation { get; set; } = RecordLocation.Center;
+        public RecordLocationTyep RecordLocation { get; set; } = RecordLocationTyep.Center;
 
         /// <summary>
         ///取流协议（应用层协议)，
@@ -28,7 +40,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         ///“ws”:Websocket协议（一般用于H5视频播放器取流播放）。
         ///参数不填，默认为HIK协议
         /// </summary>
-        public string Protocol { get; set; } = "hik";
+        public string Protocol { get; private set; } = "hik";
 
         /// <summary>
         /// 传输协议（传输层协议），0:UDP
@@ -37,7 +49,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 注：EHOME设备回放只支持TCP传输
         /// GB28181 2011及以前版本只支持UDP传输
         /// </summary>
-        public Transmode Transmode { get; set; } = Transmode.TCP;
+        public TransmodeType Transmode { get; private set; } = TransmodeType.TCP;
 
         /// <summary>
         /// 码流类型，0:主码流
@@ -45,12 +57,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 2:第三码流
         /// 参数不填，默认为主码流
         /// </summary>
-        public StreamType StreamType { get; set; } = StreamType.Main;
+        public StreamType StreamType { get; private set; } = StreamType.Main;
 
         /// <summary>
         /// 分页查询id，上一次查询返回的uuid，用于继续查询剩余片段，默认为空字符串。当存储类型为设备存储时，该字段生效，中心存储会一次性返回全部片段。
         /// </summary>
-        public string Uuid { get; set; }
+        public string Uuid { get; private set; }
 
         /// <summary>
         /// 标识扩展内容，格式：key=value，
@@ -58,33 +70,73 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 多个扩展时，以<![CDATA["&"]]>隔开；
         /// 支持的内容详见附录F expand扩展内容说明
         /// </summary>
-        public string Expand { get; set; }
+        public string Expand { get; private set; }
         /// <summary>
         /// 输出码流转封装格式，“ps”:PS封装格式、“rtp”:RTP封装协议。当protocol=rtsp时生效，且不传值时默认为RTP封装协议。
         /// </summary>
-        public string Streamform { get; set; }
+        public string Streamform { get; private set; }
 
         /// <summary>
         /// 查询录像的锁定类型，0-查询全部录像；1-查询未锁定录像；2-查询已锁定录像，不传默认值为0。通过录像锁定与解锁接口来进行录像锁定与解锁。
         /// </summary>
-        public LockType LockType { get; set; } = LockType.All;
+        public LockType LockType { get; private set; } = LockType.All;
 
 
         /// <summary>
         /// 获取监控点回放取流URLv2请求
         /// </summary>
         /// <param name="cameraIndexCode">监控点唯一标识</param>
+        /// <param name="beginTime">开始查询时间</param>
+        /// <param name="endTime"></param>
+        /// <param name="uuid">EndTime</param>
         /// <param name="protocol">取流协议（应用层协议）</param>
         /// <param name="expand">标识扩展内容</param>
-        /// <param name="recordLocation">存储类型</param>
-        public CameraPlaybackURLsV2Request(string cameraIndexCode, string protocol = "hik", string expand = "", RecordLocation recordLocation = RecordLocation.Center)
+        public CameraPlaybackURLsV2Request(string cameraIndexCode, DateTime beginTime, DateTime endTime, string uuid = "", string protocol = "hik", string expand = "")
         {
             CameraIndexCode = cameraIndexCode;
             Protocol = protocol.ToLower();
             Expand = expand;
-            RecordLocation = recordLocation;
+            Uuid = uuid;
+
+            if ((endTime - beginTime).TotalSeconds > 60 * 60 * 24 * 3)
+            {
+                throw new ArgumentOutOfRangeException(nameof(endTime));
+            }
+
+            BeginTime = DateTimeFormat.ToIOS8601(beginTime);
+            EndTime = DateTimeFormat.ToIOS8601(endTime);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseLockTypeLocked()
+        {
+            LockType = LockType.Locked;
+            return this;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseLockTypeUnLocked()
+        {
+
+            LockType = LockType.Unlocked;
+            return this;
+        }
+
+        /// <summary>
+        /// 使用设备存储
+        /// </summary>
+        /// <returns></returns>
+        public CameraPlaybackURLsV2Request UseRecordLocationDevice()
+        {
+            RecordLocation = RecordLocationTyep.Device;
+            return this;
+        }
 
         /// <summary>
         /// 使用UDP
@@ -92,7 +144,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// <returns></returns>
         public CameraPlaybackURLsV2Request UseUdp()
         {
-            Transmode = Transmode.UDP;
+            Transmode = TransmodeType.UDP;
             return this;
         }
 
@@ -100,7 +152,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 使用子码
         /// </summary>
         /// <returns></returns>
-        public CameraPlaybackURLsV2Request SubStreamType()
+        public CameraPlaybackURLsV2Request UseSubStreamType()
         {
             StreamType = StreamType.Sub;
             return this;
@@ -110,7 +162,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// 使用第三码流
         /// </summary>
         /// <returns></returns>
-        public CameraPlaybackURLsV2Request OtherStreamType()
+        public CameraPlaybackURLsV2Request UseOtherStreamType()
         {
             StreamType = StreamType.Other;
             return this;
@@ -148,7 +200,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// <returns></returns>
         public CameraPlaybackURLsV2Request UseRtsp(string expand = "", string streamform = "")
         {
-            Protocol = "hls";
+            Protocol = "rtsp";
             Expand = expand;
             Streamform = streamform;
             return this;
@@ -166,7 +218,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// <returns></returns>
         public CameraPlaybackURLsV2Request UseRtmp(string expand = "", string streamform = "")
         {
-            Protocol = "hls";
+            Protocol = "rtmp";
             Expand = expand;
             Streamform = streamform;
             return this;
@@ -184,13 +236,36 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         /// <returns></returns>
         public CameraPlaybackURLsV2Request UseWs(string expand = "", string streamform = "")
         {
-            Protocol = "hls";
+            Protocol = "ws";
             Expand = expand;
             Streamform = streamform;
             return this;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <exception cref="System.ArgumentOutOfRangeException"></exception>
+        public override void CheckParams()
+        {
+            if (Protocol != "hik" && Protocol != "rtsp" && Protocol != "rtmp" && Protocol != "hls" && Protocol != "ws")
+            {
+                throw new System.ArgumentOutOfRangeException(nameof(Protocol), "仅支持 hik,rtsp,rtmp,hls,ws");
+            }
 
+            if (string.IsNullOrWhiteSpace(BeginTime))
+            {
+                throw new ArgumentNullException(nameof(BeginTime));
+            }
+
+            if (string.IsNullOrWhiteSpace(EndTime))
+            {
+                throw new ArgumentNullException(nameof(EndTime));
+
+            }
+
+            base.CheckParams();
+        }
 
 
     }

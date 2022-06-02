@@ -1,6 +1,7 @@
-﻿using Xc.HiKVisionSdk.Models.Responses;
+﻿using Xc.HiKVisionSdk.Isc.Managers.Irds.Models;
+using Xc.HiKVisionSdk.Models.Responses;
 
-namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
+namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card
 {
     /// <summary>
     /// 增量获取卡片数据结果

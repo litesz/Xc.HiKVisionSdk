@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models
+namespace Xc.HiKVisionSdk.Isc.Enums.Resource
 {
 
     /// <summary>

@@ -1768,209 +1768,504 @@
             
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType">
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Acs.InAndOutType">
+            <summary>
+            进出状态
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Acs.InAndOutType.Unknown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Acs.InAndOutType.Out">
+            <summary>
+            出
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Acs.InAndOutType.In">
+            <summary>
+            进
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Events.HandleStatus">
+            <summary>
+            事件处理状态
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.HandleStatus.UnProcessed">
+            <summary>
+            未处理
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.HandleStatus.Processed">
+            <summary>
+            已处理
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Events.EventLevel">
+            <summary>
+            事件级别
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.EventLevel.Low">
+            <summary>
+            低
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.EventLevel.Middle">
+            <summary>
+            中
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.EventLevel.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Events.SubType">
+            <summary>
+            订阅类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.SubType.Raw">
+            <summary>
+            原始事件
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.SubType.Linkage">
+            <summary>
+            联动事件
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.SubType.RawAndLinkage">
+            <summary>
+            原始事件和联动事件
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Events.EventType">
+            <summary>
+            通知类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.EventType.Notify">
+            <summary>
+            通知
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.EventType.Add">
+            <summary>
+            新增
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Events.EventType.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Irds.UseStatus">
+            <summary>
+            使用状态标记
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Irds.UseStatus.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Irds.UseStatus.Loss">
+            <summary>
+            丢失
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType">
             <summary>
             车牌颜色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType.Blue">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType.Blue">
             <summary>
             蓝色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType.Yellow">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType.Yellow">
             <summary>
             黄色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType.White">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType.White">
             <summary>
             白色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType.Black">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType.Black">
             <summary>
             黑色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType.Green">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType.Green">
             <summary>
             绿色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType.CivilAviationBlack">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType.CivilAviationBlack">
             <summary>
             民航黑
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateColorType.Other">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateColorType.Other">
             <summary>
             其他
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType">
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType">
             <summary>
             车牌类型
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Civil">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Civil">
             <summary>
             标准民用
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Civil02">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Civil02">
             <summary>
             02民用
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Wj">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Wj">
             <summary>
             武警
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Police">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Police">
             <summary>
             警车
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.DoubleRow">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.DoubleRow">
             <summary>
             民用车双行尾牌
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Embassy">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Embassy">
             <summary>
             使馆车牌
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Agricultural">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Agricultural">
             <summary>
             农用车辆
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Motorcycle">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Motorcycle">
             <summary>
             摩托车
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.NewEnergy">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.NewEnergy">
             <summary>
             新能源
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.PlateType.Military">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.PlateType.Military">
             <summary>
             军车
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType">
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType">
             <summary>
             车辆颜色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Other">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Other">
             <summary>
             其他颜色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.White">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.White">
             <summary>
             白色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Silver">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Silver">
             <summary>
             银色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Gray">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Gray">
             <summary>
             灰色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Black">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Black">
             <summary>
             黑色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Red">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Red">
             <summary>
             红色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.DarkBlue">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.DarkBlue">
             <summary>
             深蓝色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Blue">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Blue">
             <summary>
             蓝色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Yellow">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Yellow">
             <summary>
             黄色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Green">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Green">
             <summary>
             绿色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Brown">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Brown">
             <summary>
             棕色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Pink">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Pink">
             <summary>
             粉色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Purple">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Purple">
             <summary>
             紫色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.DarkGray">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.DarkGray">
             <summary>
             深灰
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.Apricot">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.Apricot">
             <summary>
             杏色
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleColorType.UnKnown">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleColorType.UnKnown">
             <summary>
             未识别的车辆颜色
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleType">
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleType">
             <summary>
             车型
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleType.Other">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleType.Other">
             <summary>
             其他车
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleType.compact">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleType.compact">
             <summary>
             小型车
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleType.FullSize">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleType.FullSize">
             <summary>
             大型车
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Models.Pms.VehicleType.Motorbike">
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Pms.VehicleType.Motorbike">
             <summary>
             摩托车
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Resource.CameraType">
+            <summary>
+            摄像机类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CameraType.Box">
+            <summary>
+            枪机
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CameraType.Demo">
+            <summary>
+            半球
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CameraType.HighSpeedDemo">
+            <summary>
+            快球
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CameraType.Ptz">
+            <summary>
+            云台枪机
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Resource.CascadeType">
+            <summary>
+            级联性
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CascadeType.None">
+            <summary>
+            非级联
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CascadeType.Cascade">
+            <summary>
+            级联
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CascadeType.All">
+            <summary>
+            不限（包括级联和非级联）
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.IdentityCard">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.Passport">
+            <summary>
+            护照
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.ResidenceBooklet">
+            <summary>
+            户口簿
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.DriversLicense">
+            <summary>
+            驾驶证
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.EmployeeCard">
+            <summary>
+            工作证
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.StudentIDCard">
+            <summary>
+            学生证
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Resource.TransType">
+            <summary>
+            传输协议
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.TransType.UDP">
+            <summary>
+            udp
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.TransType.TCP">
+            <summary>
+            tpc
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Video.CameraPictureInfoSortType">
+            <summary>
+            图片排序方式
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.CameraPictureInfoSortType.OrderByName">
+            <summary>
+            按监控点排序
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.CameraPictureInfoSortType.OrderByTime">
+            <summary>
+            按时间排序
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Video.LockType">
+            <summary>
+            查询录像的锁定类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.LockType.All">
+            <summary>
+            全部录像
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.LockType.Unlocked">
+            <summary>
+            未锁定录像
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.LockType.Locked">
+            <summary>
+            已锁定录像
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Video.RecordLocationTyep">
+            <summary>
+            存储类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.RecordLocationTyep.Center">
+            <summary>
+            中心存储
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.RecordLocationTyep.Device">
+            <summary>
+            设备存储
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Video.StreamType">
+            <summary>
+            码流类型
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.StreamType.Main">
+            <summary>
+            0:主码流
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.StreamType.Sub">
+            <summary>
+            子码流
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.StreamType.Other">
+            <summary>
+            第三码流
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Enums.Video.TransmodeType">
+            <summary>
+            传输协议（传输层协议）
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.TransmodeType.UDP">
+            <summary>
+            udp
+            </summary>
+        </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Video.TransmodeType.TCP">
+            <summary>
+            tcp
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.MonitorDoorListChangedEventDto">
@@ -2011,26 +2306,6 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.MonitorDoorListItemDto.IsReverse">
             <summary>
             取反
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.EventType">
-            <summary>
-            通知类型
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.EventType.Notify">
-            <summary>
-            通知
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.EventType.Add">
-            <summary>
-            新增
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Events.Acs.Dtos.EventType.Delete">
-            <summary>
-            删除
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ServiceCollectionExtensions">
@@ -2638,26 +2913,6 @@
             安装位置，详见附录附录A.81 安装位置
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType">
-            <summary>
-            进出状态
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType.Unknown">
-            <summary>
-            未知
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType.Out">
-            <summary>
-            出
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.InAndOutType.In">
-            <summary>
-            进
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.Models.PersonDetail">
             <summary>
             人员信息详情
@@ -2942,61 +3197,6 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.HandleStatus">
-            <summary>
-            事件处理状态
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.HandleStatus.UnProcessed">
-            <summary>
-            未处理
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.HandleStatus.Processed">
-            <summary>
-            已处理
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventLevel">
-            <summary>
-            事件级别
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventLevel.Low">
-            <summary>
-            低
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventLevel.Middle">
-            <summary>
-            中
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventLevel.Height">
-            <summary>
-            高
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType">
-            <summary>
-            订阅类型
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType.Raw">
-            <summary>
-            原始事件
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType.Linkage">
-            <summary>
-            联动事件
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType.RawAndLinkage">
-            <summary>
-            原始事件和联动事件
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventsSearchRequest">
             <summary>
             获取联动事件列表请求
@@ -3272,7 +3472,7 @@
             <param name="eventDest"> 指定事件接收的地址</param>
             <param name="eventTypes">事件类型</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.#ctor(System.Int32[],System.String,Xc.HiKVisionSdk.Isc.Managers.EventService.Models.SubType,System.Int32[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.EventService.Models.EventSubscriptionByEventTypesRequest.#ctor(System.Int32[],System.String,Xc.HiKVisionSdk.Isc.Enums.Events.SubType,System.Int32[])">
             <summary>
             按事件类型订阅事件请求
             </summary>
@@ -5498,21 +5698,6 @@
             增量获取卡片数据结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.UseStatus">
-            <summary>
-            使用状态标记
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.UseStatus.Normal">
-            <summary>
-            正常
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.UseStatus.Loss">
-            <summary>
-            丢失
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.HikMpcApiManager">
             <summary>
             园区卡口api
@@ -5911,6 +6096,12 @@
             停车库唯一标识码（最大长度64）
             为空时获取全部停车库的车位剩余情况，可通过获取停车库列表接口获取
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumRequest.#ctor(System.String)">
+            <summary>
+            查询停车库剩余车位数请求
+            </summary>
+            <param name="parkSyscode">停车库唯一标识码,为空时获取全部停车库的车位剩余情况</param>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Pms.Models.ParkRemainSpaceNumRequest.CheckParams">
             <summary>
@@ -6874,51 +7065,6 @@
             增量获取监控点数据结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraType">
-            <summary>
-            摄像机类型
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraType.Box">
-            <summary>
-            枪机
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraType.Demo">
-            <summary>
-            半球
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraType.HighSpeedDemo">
-            <summary>
-            快球
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CameraType.Ptz">
-            <summary>
-            云台枪机
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CascadeType">
-            <summary>
-            级联性
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CascadeType.None">
-            <summary>
-            非级联
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CascadeType.Cascade">
-            <summary>
-            级联
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.CascadeType.All">
-            <summary>
-            不限（包括级联和非级联）
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasRequest">
             <summary>
             根据区域编号获取下级监控点列表
@@ -6946,21 +7092,6 @@
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.RegionIndexCodeCamerasResponse">
             <summary>
             根据区域编号获取下级监控点列表结果
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.TransType">
-            <summary>
-            传输协议
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.TransType.UDP">
-            <summary>
-            udp
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera.TransType.TCP">
-            <summary>
-            tpc
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListRequest">
@@ -7033,46 +7164,6 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.UnlossDate">
             <summary>
              	解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType">
-            <summary>
-            证件类型
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType.IdentityCard">
-            <summary>
-            身份证
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType.Passport">
-            <summary>
-            护照
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType.ResidenceBooklet">
-            <summary>
-            户口簿
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType.DriversLicense">
-            <summary>
-            驾驶证
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType.EmployeeCard">
-            <summary>
-            工作证
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType.StudentIDCard">
-            <summary>
-            学生证
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.CertificateType.Other">
-            <summary>
-            其他
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.AdvanceOrgListRequest">
@@ -8396,18 +8487,39 @@
             视频api
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.PreviewURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.CameraPreviewURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request)">
             <summary>
             获取监控点预览取流URLv2
             </summary>
-            <param name="model">请求</param>
+            <param name="request">请求</param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.PlaybackURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.CameraPlaybackURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request)">
             <summary>
             获取监控点回放取流URLv2
             </summary>
-            <param name="model">请求</param>
+            <param name="request">请求</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.CameraEventsPictureAsync(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest)">
+            <summary>
+            视频图片查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.CameraPictureInfosAsync(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest)">
+            <summary>
+            平台抓拍计划图片获取
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.ManualCaptureResponse(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureRequest)">
+            <summary>
+            手动抓图
+            </summary>
+            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.HikVideoApiManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionIscApiManager)">
@@ -8424,11 +8536,11 @@
             视频api
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.IHikVideoApiManager.PreviewURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.IHikVideoApiManager.CameraPreviewURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request)">
             <summary>
             获取监控点预览取流URLv2
             </summary>
-            <param name="model">请求</param>
+            <param name="request">请求</param>
             <returns></returns>
             <remarks>
             1.平台正常运行；平台已经添加过设备和监控点信息。
@@ -8439,11 +8551,11 @@
             6.为保证数据的安全性，取流URL设有有效时间，有效时间为5分钟。
             </remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.IHikVideoApiManager.PlaybackURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.IHikVideoApiManager.CameraPlaybackURLsV2Async(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request)">
             <summary>
             获取监控点回放取流URLv2
             </summary>
-            <param name="model">请求</param>
+            <param name="request">请求</param>
             <returns></returns>
             <remarks>
             1.平台正常运行；平台已经添加过设备和监控点信息。
@@ -8453,6 +8565,30 @@
             5.通过开放平台的开发包进行录像回放或者使用标准的GUI播放工具进行录像回放。（开发包使用说明参考开发包的使用说明文档）。
             </remarks>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.IHikVideoApiManager.CameraEventsPictureAsync(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest)">
+            <summary>
+            视频图片查询
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>通过该接口根据输入的图片的相对Uri地址，可以获取到具体的图片数据。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.IHikVideoApiManager.CameraPictureInfosAsync(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest)">
+            <summary>
+            平台抓拍计划图片获取
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>支持根据输入的监控点编号集合，分页获取通过平台配置抓图计划抓取的图片信息；或根据图片唯一标识获取单张图片信息。若监控点编号集合和图片唯一标识均不传入，则分页查询出所有配置了抓图计划的监控点图片信息。同时按照调用方指定的排序方式对图片进行排序。进行图片查询操作的用户需要配置相应监控点的图片查询权限，该接口会根据传入的userId对数据进行权限过滤。        建议：使用本接口前请先进行校时，确保本地时间与当前系统时间保持一致。全量查询时，结束时间请在当前时间的基础上至少提前一天，确保数据分页的准确性。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.IHikVideoApiManager.ManualCaptureResponse(Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureRequest)">
+            <summary>
+            手动抓图
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>该接口用于手动触发设备抓图，返回图片的地址，抓图前请确保平台上已配置图片存储信息。抓图时间为触发手动抓图命令的时间。</remarks>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request">
             <summary>
             获取监控点回放取流URLv2请求
@@ -8461,6 +8597,16 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.CameraIndexCode">
             <summary>
             监控点唯一标识，分页获取监控点资源接口获取返回参数cameraIndexCode
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.BeginTime">
+            <summary>
+            开始查询时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.EndTime">
+            <summary>
+            结束查询时间，开始时间和结束时间相差不超过三天
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.RecordLocation">
@@ -8521,9 +8667,138 @@
             查询录像的锁定类型，0-查询全部录像；1-查询未锁定录像；2-查询已锁定录像，不传默认值为0。通过录像锁定与解锁接口来进行录像锁定与解锁。
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.#ctor(System.String,System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取监控点回放取流URLv2请求
+            </summary>
+            <param name="cameraIndexCode">监控点唯一标识</param>
+            <param name="protocol">取流协议（应用层协议）</param>
+            <param name="expand">标识扩展内容</param>
+            <param name="recordLocation">存储类型</param>
+            <param name="lockType">查询录像的锁定类型</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseLockTypeLocked">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseLockTypeUnLocked">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseRecordLocationDevice">
+            <summary>
+            使用设备存储
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseUdp">
+            <summary>
+            使用UDP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseSubStreamType">
+            <summary>
+            使用子码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseOtherStreamType">
+            <summary>
+            使用第三码流
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseHls(System.String,System.String)">
+            <summary>
+            hls
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseRtsp(System.String,System.String)">
+            <summary>
+            rtsp
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseRtmp(System.String,System.String)">
+            <summary>
+            rtmp
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseWs(System.String,System.String)">
+            <summary>
+            Websocket协议
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Response">
             <summary>
             获取监控点回放取流URLv2结果
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Response.Data">
+            <summary>
+            获取监控点回放取流URLv2结果数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData.Uuid">
+            <summary>
+            分页标记        标记本次查询的全部标识符，用于查询分片时的多次查询
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData.Url">
+            <summary>
+            取流短url，注：rtsp的回放url后面要指定?playBackMode=1 在vlc上才能播放
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData.List">
+            <summary>
+            具体数据
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2ResponseData">
@@ -8601,16 +8876,89 @@
             输出码流转封装格式，“ps”:PS封装格式、“rtp”:RTP封装协议。当protocol=rtsp时生效，且不传值时默认为RTP封装协议。
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.#ctor(System.String)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.#ctor(System.String,System.String,System.String,Xc.HiKVisionSdk.Isc.Enums.Video.StreamType)">
             <summary>
             获取监控点预览取流URLv2请求
             </summary>
             <param name="cameraIndexCode">监控点唯一标识</param>
+            <param name="protocol">取流协议（应用层协议）</param>
+            <param name="expand">标识扩展内容</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseUdp">
+            <summary>
+            使用UDP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseSubStreamType">
+            <summary>
+            使用子码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseOtherStreamType">
+            <summary>
+            使用第三码流
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseHls(System.String,System.String)">
+            <summary>
+            hls
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseRtsp(System.String,System.String)">
+            <summary>
+            rtsp
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseRtmp(System.String,System.String)">
+            <summary>
+            rtmp
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseWs(System.String,System.String)">
+            <summary>
+            Websocket协议
+            </summary>
+            <param name="expand">
+            标识扩展内容，格式：key=value，
+            调用方根据其播放控件支持的解码格式选择相应的封装类型；
+            多个扩展时，以<![CDATA["&"]]>隔开；
+            支持的内容详见附录F expand扩展内容说明
+            </param>
+            <param name="streamform">输出码流转封装格式</param>
+            <returns></returns>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.CheckParams">
             <summary>
             
             </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Response">
             <summary>
@@ -8627,74 +8975,190 @@
             取流URL
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.LockType">
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest">
             <summary>
-            查询录像的锁定类型
+            视频图片查询请求
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.LockType.All">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.SvrIndexCode">
             <summary>
-            全部录像
+            图片存储服务器唯一标识，提供picUri处会提供此字段
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.LockType.Unlock">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.PicUri">
             <summary>
-            未锁定录像
+            图片的相对地址
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.LockType.Lock">
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.NetProtocol">
             <summary>
-            已锁定录像
+            网络协议：
+            “http”:HTTP协议
+            “https”:HTTPS协议
+            参数不填，优先返回https协议
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.#ctor(System.String,System.String,System.String)">
             <summary>
-            存储类型
+            视频图片查询请求
             </summary>
+            <param name="svrIndexCode"></param>
+            <param name="picUri"></param>
+            <param name="netProtocol"></param>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation.Center">
-            <summary>
-            中心存储
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.RecordLocation.Device">
-            <summary>
-            设备存储
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.StreamType">
-            <summary>
-            码流类型
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.StreamType.Main">
-            <summary>
-            0:主码流
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.StreamType.Sub">
-            <summary>
-            子码流
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.StreamType.Other">
-            <summary>
-            第三码流
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.Transmode">
-            <summary>
-            传输协议（传输层协议）
-            </summary>
-        </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.Transmode.UDP">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.CheckParams">
             <summary>
             
             </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.Transmode.TCP">
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureResponse">
+            <summary>
+            视频图片查询结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureResponseData">
+            <summary>
+            视频图片查询结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureResponseData.PicUrl">
+            <summary>
+            图片url ,有效期24小时
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest">
+            <summary>
+            平台抓拍计划图片获取请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.CameraIndexCodes">
+            <summary>
+            监控点编号集合，一次性最多传入5个监控点编号进行查询。与captureId取交集，两个参数都不传时返回所有配置了抓图计划的监控点的图片信息。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.CaptureId">
+            <summary>
+            图片唯一标识，与cameraIndexCodes取交集，主要用于本接口全量查询后通过获取的图片唯一标识查询单张图片信息。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.NetProtocol">
+            <summary>
+            网络协议。“http”:HTTP协议、“https”:HTTPS协议。参数不填，优先返回https协议
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.Sort">
+            <summary>
+            图片排序方式。0-按监控点排序，根据监控点名称ASCII码顺序排序。同一监控点的图片按照时间倒序排序；1-按时间排序，根据抓图时间倒序排序，最新的图片排在最前边。相同时间按监控点名称顺序排序。参数不填，默认按0-监控点排序。
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.CompressRatio">
+            <summary>
+            图片质量压缩比。标识返回缩略图的图片质量压缩比。通过修改图片压缩比来改变图片大小（图片占用字节数），不会改变图片尺寸。取值范围为0-99，不传时默认为50，取值越小，表示压缩更多，图片失真越严重。
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            平台抓拍计划图片获取请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="start"></param>
+            <param name="end"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.UseHttp">
+            <summary>
+            使用http
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.CheckParams">
             <summary>
             
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponse">
+            <summary>
+            平台抓拍计划图片获取结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData">
+            <summary>
+            平台抓拍计划图片获取结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData.CaptureId">
+            <summary>
+            图片唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData.CameraIndexCode">
+            <summary>
+            监控点唯一标识
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData.CameraName">
+            <summary>
+            监控点名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData.CameraType">
+            <summary>
+            通道类型。0-枪机；1-半球；2-球机；3-云台枪机
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData.CaptureUrl">
+            <summary>
+            原图图片地址，24小时后失效
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData.ThumbnailUrl">
+            <summary>
+            缩略图图片地址，24小时后失效
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosResponseData.CaptureTime">
+            <summary>
+            抓图时间（IOS8601格式：yyyy-MM-dd’T’HH:mm:ss.SSSzzz +当前时区，例如北京时间：2018-07-26T15:00:00.000+08:00）
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureRequest">
+            <summary>
+            手动抓图请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureRequest.CameraIndexCode">
+            <summary>
+            监控点唯一标识，        可通过分页获取监控点资源获取
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureRequest.#ctor(System.String)">
+            <summary>
+            手动抓图请求
+            </summary>
+            <param name="cameraIndexCode">监控点唯一标识，        可通过分页获取监控点资源获取</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureResponse">
+            <summary>
+            手动抓图结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureResponseData">
+            <summary>
+            手动抓图结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.ManualCaptureResponseData.PicUrl">
+            <summary>
+            图片url信息
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.VersionConsts">

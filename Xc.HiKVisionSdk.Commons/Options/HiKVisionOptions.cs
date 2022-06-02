@@ -17,6 +17,8 @@
         /// <summary>
         /// 平台版本号
         /// </summary>
-        public decimal Ver { get; set; } = 1;
+        public decimal Ver { get; set; } = 999.9M;
+
+        
     }
 }

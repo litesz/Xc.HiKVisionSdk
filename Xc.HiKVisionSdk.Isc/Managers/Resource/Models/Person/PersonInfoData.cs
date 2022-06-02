@@ -1,4 +1,5 @@
 ﻿using Xc.HiKVisionSdk.Enums;
+using Xc.HiKVisionSdk.Isc.Enums.Resource;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
 {

@@ -10,7 +10,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures
         /// <summary>
         /// 监控点唯一标识，        可通过分页获取监控点资源获取
         /// </summary>
-        public string CameraIndexCode { get; set; }
+        public string CameraIndexCode { get; }
 
         /// <summary>
         /// 手动抓图请求

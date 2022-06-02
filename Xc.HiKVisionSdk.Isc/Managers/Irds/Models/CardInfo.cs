@@ -1,4 +1,6 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
+﻿using Xc.HiKVisionSdk.Isc.Enums.Irds;
+
+namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
 {
     /// <summary>
     /// 卡片信息

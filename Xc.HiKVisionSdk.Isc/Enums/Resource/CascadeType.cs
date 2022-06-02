@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Camera
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Resource
 {
     /// <summary>
     /// 级联性

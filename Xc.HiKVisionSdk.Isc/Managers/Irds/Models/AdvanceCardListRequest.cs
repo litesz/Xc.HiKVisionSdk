@@ -1,4 +1,6 @@
-﻿using Xc.HiKVisionSdk.Models.Request;
+﻿using Xc.HiKVisionSdk.Consts;
+using Xc.HiKVisionSdk.Isc.Enums.Irds;
+using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
 {
@@ -32,6 +34,37 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
         /// 降序：desc.        升序：asc
         /// </summary>
         public string OrderType { get; set; }
+
+        /// <summary>
+        /// 查询卡片列表请求
+        /// </summary>
+        /// <param name="pageNo"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="personName">人员姓名</param>
+        /// <param name="cardNo">卡号</param>
+        /// <param name="onlyLoss">只看挂失</param>
+        /// <param name="orderBy">排序字段必须是查询条件</param>
+        /// <param name="isAsc">使用升序</param>
+        public AdvanceCardListRequest(int pageNo, int pageSize, string personName = "", string cardNo = "", bool onlyLoss = false, string orderBy = "", bool isAsc = true) : base(pageNo, pageSize)
+        {
+            PersonName = personName;
+            CardNo = cardNo;
+            UseStatus = onlyLoss ? UseStatus.Loss : UseStatus.Normal;
+            OrderBy = orderBy;
+            OrderType = OrderTypeConsts.GetOrderType(isAsc);
+        }
+
+        /// <summary>
+        /// 使用人员ID集
+        /// </summary>
+        /// <param name="personId"></param>
+        /// <returns></returns>
+        public AdvanceCardListRequest UserPersonIds(params string[] personId)
+        {
+            PersonIds = string.Join(",", personId);
+            return this;
+        }
+
 
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Events.Acs.Dtos
+﻿using Xc.HiKVisionSdk.Isc.Enums.Events;
+
+namespace Xc.HiKVisionSdk.Isc.Events.Acs.Dtos
 {
     /// <summary>
     /// 监听门改变事件传输模型

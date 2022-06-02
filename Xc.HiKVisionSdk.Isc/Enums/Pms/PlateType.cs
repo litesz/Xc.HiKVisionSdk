@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Models.Pms
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Pms
 {
     /// <summary>
     /// 车牌类型

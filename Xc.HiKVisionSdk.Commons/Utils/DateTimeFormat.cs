@@ -16,7 +16,7 @@ namespace Xc.HiKVisionSdk.Utils
         /// <returns></returns>
         public static string ToIOS8601(DateTime dt)
         {
-            return $"{dt:yyyy-MM-ddTHH:mm:ss}+08:00:00";
+            return $"{dt:yyyy-MM-ddTHH:mm:ss}.000+08:00:00";
         }
 
         /// <summary>

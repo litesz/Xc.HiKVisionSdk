@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Xc.HiKVisionSdk.Enums;
+using Xc.HiKVisionSdk.Isc.Enums.Resource;
 using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person

@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Events.Acs.Dtos
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Events
 {
     /// <summary>
     /// 通知类型

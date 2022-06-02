@@ -30,6 +30,30 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs
         /// </summary>
         public string RegionIndexCode { get; set; }
 
+        /// <summary>
+        /// 查询门禁点列表请求
+        /// </summary>
+        /// <param name="pageNo"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="regionIndexCode">所属区域唯一标识</param>
+        /// <param name="acsDevIndexCode">门禁设备唯一标识</param>
+        /// <param name="doorName">门禁点名称</param>
+        public AcsDoorAdvanceAcsDoorListRequest(int pageNo, int pageSize, string regionIndexCode = "", string acsDevIndexCode = "", string doorName = "") : base(pageNo, pageSize)
+        {
+            RegionIndexCode = regionIndexCode;
+            AcsDevIndexCode = acsDevIndexCode;
+            DoorName = doorName;
+        }
 
+        /// <summary>
+        /// 门禁点唯一标识符集
+        /// </summary>
+        /// <param name="doorIndexCodes">门禁点唯一标识符集</param>
+        /// <returns></returns>
+        public AcsDoorAdvanceAcsDoorListRequest UseDoorIndexCodes(params string[] doorIndexCodes)
+        {
+            DoorIndexCodes = string.Join(",", doorIndexCodes);
+            return this;
+        }
     }
 }

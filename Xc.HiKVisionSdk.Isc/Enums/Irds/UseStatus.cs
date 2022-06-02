@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Irds
 {
     /// <summary>
     /// 使用状态标记

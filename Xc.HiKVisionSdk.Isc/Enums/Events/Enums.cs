@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Events
 {
     /// <summary>
     /// 事件处理状态

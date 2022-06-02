@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
+﻿namespace Xc.HiKVisionSdk.Isc.Enums.Video
 {
     /// <summary>
     /// 查询录像的锁定类型
@@ -12,11 +12,11 @@
         /// <summary>
         /// 未锁定录像
         /// </summary>
-        Unlock,
+        Unlocked,
         /// <summary>
         /// 已锁定录像
         /// </summary>
-        Lock
+        Locked
 
     }
 
