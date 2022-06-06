@@ -11,6 +11,7 @@ using Xc.HiKVisionSdk.Isc.Managers.Mpc;
 using Xc.HiKVisionSdk.Isc.Managers.Pms;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Video;
+using Xc.HiKVisionSdk.Isc.ManagersV2.Cards;
 using Xc.HiKVisionSdk.Isc.Models;
 using Xc.HiKVisionSdk.Options;
 
@@ -53,6 +54,23 @@ namespace Xc.HiKVisionSdk.Isc
                     };
                 });
 
+
+
+            services.AddManagers();
+
+            services.AddV2Managers();
+
+
+            return services;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        private static IServiceCollection AddManagers(this IServiceCollection services)
+        {
             services.AddScoped<IHikAcsApiManager, HikAcsApiManager>();
             services.AddScoped<IHikEventServiceApiManager, HikEventServiceApiManager>();
             services.AddScoped<IHikFrsApiManager, HikFrsApiManager>();
@@ -61,9 +79,22 @@ namespace Xc.HiKVisionSdk.Isc
             services.AddScoped<IHikIrdsApiManager, HikIrdsApiManager>();
             services.AddScoped<IHikMpcApiManager, HikMpcApiManager>();
             services.AddScoped<IHikVideoApiManager, HikVideoApiManager>();
-
-
             return services;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        private static IServiceCollection AddV2Managers(this IServiceCollection services)
+        {
+
+            return services.AddScoped<IHikCardManager, HikCardManager>()
+
+                ;
+
         }
     }
 }

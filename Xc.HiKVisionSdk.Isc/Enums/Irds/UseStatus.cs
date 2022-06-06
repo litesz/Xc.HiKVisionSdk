@@ -6,12 +6,16 @@
     public enum UseStatus
     {
         /// <summary>
+        /// 无效
+        /// </summary>
+        None,
+        /// <summary>
         /// 正常
         /// </summary>
-        Normal,
+        Normal = 1,
         /// <summary>
         /// 丢失
         /// </summary>
-        Loss,
+        Loss = 2,
     }
 }

@@ -19,7 +19,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds
         Task<CardInfoResponse> CardInfoAsync(CardInfoRequest request);
 
 
-        
+
 
         /// <summary>
         /// 查询卡片列表
@@ -35,6 +35,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds
         Task<AdvanceCardListResponse> AdvanceCardListAsync(AdvanceCardListRequest request);
 
 
-      
+
     }
 }

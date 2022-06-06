@@ -1,11 +1,12 @@
-﻿using Xc.HiKVisionSdk.Isc.Enums.Irds;
+﻿using System;
+using Xc.HiKVisionSdk.Isc.Enums.Irds;
 
-namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
+namespace Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos
 {
     /// <summary>
-    /// 卡片信息
+    /// 查询卡片列表信息
     /// </summary>
-    public class CardInfo
+    public class AdvanceCardInfo
     {
 
         /// <summary>
@@ -24,7 +25,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
         /// 持卡人名称
         /// </summary>
         public string PersonName { get; set; }
-
         /// <summary>
         /// 所属组织路径
         /// </summary>
@@ -33,7 +33,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
         /// 所属组织路径名称
         /// </summary>
         public string OrgPathName { get; set; }
-
         /// <summary>
         /// 使用状态标记
         /// </summary>
@@ -41,19 +40,19 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
         /// <summary>
         ///  生效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
         /// </summary>
-        public string StartDate { get; set; }
+        public DateTimeOffset StartDate { get; set; }
         /// <summary>
         /// 失效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
         /// </summary>
-        public string EndDate { get; set; }
+        public DateTimeOffset? EndDate { get; set; }
         /// <summary>
         /// 挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
         /// </summary>
-        public string LossDate { get; set; }
+        public DateTimeOffset? LossDate { get; set; }
         /// <summary>
         /// 解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
         /// </summary>
-        public string UnlossDate { get; set; }
+        public DateTimeOffset? UnlossDate { get; set; }
         /// <summary>
         /// 描述
         /// </summary>
@@ -61,11 +60,11 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
         /// <summary>
         /// 创建时间，要求遵守ISO8601标准，如2018-07-26T21:30:08+08:00        表示北京时间2017年7月26日21时30分08秒
         /// </summary>
-        public string CreateTime { get; set; }
+        public DateTimeOffset CreateTime { get; set; }
         /// <summary>
         /// 修改时间，要求遵守ISO8601标准，如2018-07-26T21:30:08+08:00        表示北京时间2017年7月26日21时30分08秒
         /// </summary>
-        public string UpdateTime { get; set; }
+        public DateTimeOffset? UpdateTime { get; set; }
         /// <summary>
         /// 卡类型
         /// </summary>
@@ -82,11 +81,5 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
         /// 是否绑定人脸，1-绑定，2-未绑定
         /// </summary>
         public int IsBindFace { get; set; }
-
-        /// <summary>
-        /// 资源状态，小于0则代表资源已被删除，0代表有效资源
-        /// </summary>
-        public int Status { get; set; }
     }
-
 }

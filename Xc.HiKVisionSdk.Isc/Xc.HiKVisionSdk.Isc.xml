@@ -1868,6 +1868,11 @@
             使用状态标记
             </summary>
         </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Irds.UseStatus.None">
+            <summary>
+            无效
+            </summary>
+        </member>
         <member name="F:Xc.HiKVisionSdk.Isc.Enums.Irds.UseStatus.Normal">
             <summary>
             正常
@@ -2319,6 +2324,118 @@
             </summary>
             <param name="services"></param>
             <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ServiceCollectionExtensions.AddManagers(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ServiceCollectionExtensions.AddV2Managers(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto">
+            <summary>
+            获取卡片列表结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.CardId">
+            <summary>
+            卡片ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.CardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.PersonId">
+            <summary>
+            持卡人员id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.PersonName">
+            <summary>
+            持卡人名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.UseStatus">
+            <summary>
+            使用状态标记
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.StartDate">
+            <summary>
+             生效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.EndDate">
+            <summary>
+            失效日期，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.LossDate">
+            <summary>
+            挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardDto.UnlossDate">
+            <summary>
+            解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest">
+            <summary>
+            获取卡片列表请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest.#ctor(System.Int32,System.Int32)">
+            <summary>
+            获取卡片列表请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListResponse">
+            <summary>
+            获取卡片列表结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager">
+            <summary>
+            人员卡片接口
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest)">
+            <summary>
+            获取卡片列表
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。</remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager">
+            <summary>
+            人员卡片接口
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionIscApiManager)">
+            <summary>
+            
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest)">
+            <summary>
+            获取卡片列表
+            </summary>
+            <param name="request"></param>
             <returns></returns>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Acs.HikAcsApiManager">
@@ -5412,21 +5529,7 @@
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest)">
-            <summary>
-            
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.AdvanceCardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest)">
-            <summary>
-            
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.HikIrdsApiManager.CardTimeRangeAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest)">
             <summary>
             
             </summary>
@@ -5447,16 +5550,6 @@
             <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。
             注：卡号为精确查找</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager.CardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest)">
-            <summary>
-            获取卡片列表
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-            <remarks>
-            获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。
-            </remarks>
-        </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager.AdvanceCardListAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest)">
             <summary>
             查询卡片列表
@@ -5468,16 +5561,6 @@
             注：若指定多个查询条件，表示将这些查询条件进行“与”的组合后进行查询。
             “人员名称personName”条件查询为模糊查询。
             “卡片号码cardNo”条件查询为模糊查询。
-            </remarks>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.IHikIrdsApiManager.CardTimeRangeAsync(Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest)">
-            <summary>
-            增量获取卡片数据
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-            <remarks>
-            根据查询条件查询卡片列表信息，主要根据时间段分页获取卡片信息，包含已删除数据。其中开始日期与结束日期的时间差必须在48小时内。
             </remarks>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest">
@@ -5515,6 +5598,25 @@
             <summary>
             降序：desc.        升序：asc
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.#ctor(System.Int32,System.Int32,System.String,System.String,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            查询卡片列表请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="personName">人员姓名</param>
+            <param name="cardNo">卡号</param>
+            <param name="onlyLoss">只看挂失</param>
+            <param name="orderBy">排序字段必须是查询条件</param>
+            <param name="isAsc">使用升序</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListRequest.UserPersonIds(System.String[])">
+            <summary>
+            使用人员ID集
+            </summary>
+            <param name="personId"></param>
+            <returns></returns>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.AdvanceCardListResponse">
             <summary>
@@ -5644,58 +5746,6 @@
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardInfoResponse">
             <summary>
             获取单个卡片信息结果
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest">
-            <summary>
-            获取卡片列表请求
-            </summary>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListRequest.#ctor(System.Int32,System.Int32)">
-            <summary>
-            获取卡片列表请求
-            </summary>
-            <param name="pageNo"></param>
-            <param name="pageSize"></param>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardListResponse">
-            <summary>
-            获取卡片列表结果
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest">
-            <summary>
-            增量获取卡片数据请求
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.StartTime">
-            <summary>
-            针对更新时间的查询开始日期，IOS8601格式，参考附录B ISO8601时间格式说明
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.EndTime">
-            <summary>
-            针对更新时间的查询截止日期，IOS8601格式，参考附录B ISO8601时间格式说明
-            </summary>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
-            <summary>
-            增量获取卡片数据请求
-            </summary>
-            <param name="pageNo"></param>
-            <param name="pageSize"></param>
-            <param name="startTime"></param>
-            <param name="endTime"></param>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeRequest.CheckParams">
-            <summary>
-            
-            </summary>
-            <exception cref="T:System.ArgumentNullException"></exception>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Irds.Models.CardTimeRangeResponse">
-            <summary>
-            增量获取卡片数据结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Mpc.HikMpcApiManager">
@@ -6225,6 +6275,13 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.HikResourceApiManager.CardTimeRangeAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.HikResourceApiManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionIscApiManager)">
             <summary>
             
@@ -6440,6 +6497,16 @@
             <returns></returns>
             <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。</remarks>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.CardTimeRangeAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeRequest)">
+            <summary>
+            增量获取卡片数据
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <remarks>
+            根据查询条件查询卡片列表信息，主要根据时间段分页获取卡片信息，包含已删除数据。其中开始日期与结束日期的时间差必须在48小时内。
+            </remarks>
+        </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.IHikResourceApiManager.OrgListAsync(Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.OrgListRequest)">
             <summary>
             获取组织列表
@@ -6650,6 +6717,23 @@
             <summary>
             所属区域唯一标识，分页获取区域列表
             </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest.#ctor(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            查询门禁点列表请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="regionIndexCode">所属区域唯一标识</param>
+            <param name="acsDevIndexCode">门禁设备唯一标识</param>
+            <param name="doorName">门禁点名称</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListRequest.UseDoorIndexCodes(System.String[])">
+            <summary>
+            门禁点唯一标识符集
+            </summary>
+            <param name="doorIndexCodes">门禁点唯一标识符集</param>
+            <returns></returns>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Acs.AcsDoorAdvanceAcsDoorListResponse">
             <summary>
@@ -7164,6 +7248,41 @@
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardListResponseData.UnlossDate">
             <summary>
              	解除挂失时间，遵守ISO8601标准，如2018-07-26T21:30:08.000+08:00表示北京时间2017年7月26日21时30分08秒
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeRequest">
+            <summary>
+            增量获取卡片数据请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeRequest.StartTime">
+            <summary>
+            针对更新时间的查询开始日期，IOS8601格式，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeRequest.EndTime">
+            <summary>
+            针对更新时间的查询截止日期，IOS8601格式，参考附录B ISO8601时间格式说明
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            增量获取卡片数据请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Card.CardTimeRangeResponse">
+            <summary>
+            增量获取卡片数据结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org.AdvanceOrgListRequest">
@@ -8589,6 +8708,26 @@
             <returns></returns>
             <remarks>该接口用于手动触发设备抓图，返回图片的地址，抓图前请确保平台上已配置图片存储信息。抓图时间为触发手动抓图命令的时间。</remarks>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2PagedDataResponseData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2PagedDataResponseData.Uuid">
+            <summary>
+            分页标记        标记本次查询的全部标识符，用于查询分片时的多次查询
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2PagedDataResponseData.Url">
+            <summary>
+            取流短url，注：rtsp的回放url后面要指定?playBackMode=1 在vlc上才能播放
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2PagedDataResponseData.List">
+            <summary>
+            具体数据
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request">
             <summary>
             获取监控点回放取流URLv2请求
@@ -8672,10 +8811,11 @@
             获取监控点回放取流URLv2请求
             </summary>
             <param name="cameraIndexCode">监控点唯一标识</param>
+            <param name="beginTime">开始查询时间</param>
+            <param name="endTime"></param>
+            <param name="uuid">EndTime</param>
             <param name="protocol">取流协议（应用层协议）</param>
             <param name="expand">标识扩展内容</param>
-            <param name="recordLocation">存储类型</param>
-            <param name="lockType">查询录像的锁定类型</param>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2Request.UseLockTypeLocked">
             <summary>
@@ -8781,26 +8921,6 @@
             获取监控点回放取流URLv2结果数据
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData.Uuid">
-            <summary>
-            分页标记        标记本次查询的全部标识符，用于查询分片时的多次查询
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData.Url">
-            <summary>
-            取流短url，注：rtsp的回放url后面要指定?playBackMode=1 在vlc上才能播放
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsPagedDataResponseData.List">
-            <summary>
-            具体数据
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPlaybackURLsV2ResponseData">
             <summary>
             获取监控点回放取流URLv2数据
@@ -8876,7 +8996,7 @@
             输出码流转封装格式，“ps”:PS封装格式、“rtp”:RTP封装协议。当protocol=rtsp时生效，且不传值时默认为RTP封装协议。
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.#ctor(System.String,System.String,System.String,Xc.HiKVisionSdk.Isc.Enums.Video.StreamType)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.#ctor(System.String,System.String,System.String)">
             <summary>
             获取监控点预览取流URLv2请求
             </summary>
@@ -8890,13 +9010,13 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseSubStreamType">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseSubStream">
             <summary>
             使用子码
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseOtherStreamType">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras.CameraPreviewURLsV2Request.UseOtherStream">
             <summary>
             使用第三码流
             </summary>
@@ -8998,13 +9118,13 @@
             参数不填，优先返回https协议
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.#ctor(System.String,System.String,System.String)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.#ctor(System.String,System.String,System.Boolean)">
             <summary>
             视频图片查询请求
             </summary>
-            <param name="svrIndexCode"></param>
-            <param name="picUri"></param>
-            <param name="netProtocol"></param>
+            <param name="svrIndexCode">图片存储服务器唯一标识</param>
+            <param name="picUri">图片的相对地址</param>
+            <param name="useSsl">使用https请求</param>
         </member>
         <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraEventsPictureRequest.CheckParams">
             <summary>
@@ -9050,7 +9170,8 @@
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.Sort">
             <summary>
-            图片排序方式。0-按监控点排序，根据监控点名称ASCII码顺序排序。同一监控点的图片按照时间倒序排序；1-按时间排序，根据抓图时间倒序排序，最新的图片排在最前边。相同时间按监控点名称顺序排序。参数不填，默认按0-监控点排序。
+            图片排序方式。0-按监控点排序，根据监控点名称ASCII码顺序排序。同一监控点的图片按照时间倒序排序；1-按时间排序，根据抓图时间倒序排序，
+            最新的图片排在最前边。相同时间按监控点名称顺序排序。参数不填，默认按0-监控点排序。
             </summary>
         </member>
         <member name="P:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.CompressRatio">
@@ -9058,7 +9179,7 @@
             图片质量压缩比。标识返回缩略图的图片质量压缩比。通过修改图片压缩比来改变图片大小（图片占用字节数），不会改变图片尺寸。取值范围为0-99，不传时默认为50，取值越小，表示压缩更多，图片失真越严重。
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.DateTime)">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.DateTime,System.Int32,System.Boolean,System.String)">
             <summary>
             平台抓拍计划图片获取请求
             </summary>
@@ -9066,10 +9187,20 @@
             <param name="pageSize"></param>
             <param name="start"></param>
             <param name="end"></param>
+            <param name="compressRatio">图片质量压缩比</param>
+            <param name="useSsl">使用https</param>
+            <param name="captureId">图片唯一标识</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.UseHttp">
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.UseCameras(System.String[])">
             <summary>
-            使用http
+            传入监控点编号集合
+            </summary>
+            <param name="cameraIndexCodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.Managers.Video.Models.Pictures.CameraPictureInfosRequest.UseOrderByTime">
+            <summary>
+            按时间排序图片
             </summary>
             <returns></returns>
         </member>

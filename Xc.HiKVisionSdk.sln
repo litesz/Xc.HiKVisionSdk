@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Isc", "Xc.HiKVisionSdk.Isc\Xc.HiKVisionSdk.Isc.csproj", "{D000D5F5-4978-49C0-8A3D-CFE9683CE8DC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Isc.Wpf", "Xc.HiKVisionSdk.Isc.Wpf\Xc.HiKVisionSdk.Isc.Wpf.csproj", "{EC7E5869-5337-43A6-B3A4-0518E0BE87BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xc.HiKVisionSdk.Ia", "Xc.HiKVisionSdk.Ia\Xc.HiKVisionSdk.Ia.csproj", "{74CC8BD6-C000-4332-B8DE-B5339C437C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Ia", "Xc.HiKVisionSdk.Ia\Xc.HiKVisionSdk.Ia.csproj", "{74CC8BD6-C000-4332-B8DE-B5339C437C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xc.HiKVisionSdk.Commons", "Xc.HiKVisionSdk.Commons\Xc.HiKVisionSdk.Commons.csproj", "{F84B1D14-5E9D-4E34-8AB6-EF85948855F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xc.HiKVisionSdk.Commons", "Xc.HiKVisionSdk.Commons\Xc.HiKVisionSdk.Commons.csproj", "{F84B1D14-5E9D-4E34-8AB6-EF85948855F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
