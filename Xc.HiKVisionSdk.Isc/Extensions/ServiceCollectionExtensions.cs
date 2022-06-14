@@ -12,6 +12,10 @@ using Xc.HiKVisionSdk.Isc.Managers.Pms;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Video;
 using Xc.HiKVisionSdk.Isc.ManagersV2.Cards;
+using Xc.HiKVisionSdk.Isc.ManagersV2.Faces;
+using Xc.HiKVisionSdk.Isc.ManagersV2.Orgs;
+using Xc.HiKVisionSdk.Isc.ManagersV2.Persons;
+using Xc.HiKVisionSdk.Isc.ManagersV2.Resources;
 using Xc.HiKVisionSdk.Isc.Models;
 using Xc.HiKVisionSdk.Options;
 
@@ -92,9 +96,12 @@ namespace Xc.HiKVisionSdk.Isc
         {
 
             return services.AddScoped<IHikCardManager, HikCardManager>()
-
+                .AddScoped<IHikOrgManager, HikOrgManager>()
+                .AddScoped<IHikResourcesManager, HikResourcesManager>()
+                .AddScoped<IHikPersonManager, HikPersonManager>()
+                .AddScoped<IHikFaceManager, HikFaceManager>()
                 ;
-
+            
         }
     }
 }

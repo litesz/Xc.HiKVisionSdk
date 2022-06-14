@@ -61,12 +61,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             }
             if (Name.Length > 32)
             {
-                throw new ArgumentOutOfRangeException(nameof(Name), "长度超过32个字符");
+                throw new ArgumentOutOfRangeException(nameof(Name), Name.Length, "长度超过32个字符");
 
             }
             if (Description.Length > 128)
             {
-                throw new ArgumentOutOfRangeException(nameof(Description), "长度超过128个字符");
+                throw new ArgumentOutOfRangeException(nameof(Description), Description.Length, "长度超过128个字符");
             }
         }
     }

@@ -1,9 +1,13 @@
-﻿using System.Threading.Tasks;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Xc.HiKVisionSdk.Commons.Managers
 {
     public interface IHikVisionApiManager
     {
+
+        Task<HttpResponseMessage> PostAsync(string url, string bodyStr, decimal ver);
+
         /// <summary>
         /// post
         /// </summary>

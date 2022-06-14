@@ -37,7 +37,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
             }
             if (OrgIndexCodes.Length > 1000)
             {
-                throw new ArgumentOutOfRangeException("OrgIndexCodes", "最大1000个");
+                throw new ArgumentOutOfRangeException("OrgIndexCodes", OrgIndexCodes.Length, "最大1000个");
 
             }
         }

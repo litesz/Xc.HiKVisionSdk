@@ -51,12 +51,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 
             if (IndexCodes.Length > 1000 || IndexCodes.Length == 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(IndexCodes), "1 到 1000张图片");
+                throw new ArgumentOutOfRangeException(nameof(IndexCodes), IndexCodes.Length, "1 到 1000张图片");
             }
 
             if (FaceGroupIndexCodes.Length > 16 || FaceGroupIndexCodes.Length == 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(IndexCodes), "1 到 16 个分组");
+                throw new ArgumentOutOfRangeException(nameof(IndexCodes), FaceGroupIndexCodes.Length, "1 到 16 个分组");
             }
         }
     }

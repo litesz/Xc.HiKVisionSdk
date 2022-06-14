@@ -34,7 +34,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Person
             }
             if (Items.Length > 1000 || Items.Length == 0)
             {
-                throw new System.ArgumentOutOfRangeException(nameof(Items), "单次操作上限为1000条");
+                throw new System.ArgumentOutOfRangeException(nameof(Items), Items.Length, "单次操作上限为1000条");
             }
             foreach (var item in Items)
             {

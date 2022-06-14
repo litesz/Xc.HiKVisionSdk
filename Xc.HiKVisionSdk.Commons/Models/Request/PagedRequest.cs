@@ -60,12 +60,12 @@
         {
             if (PageSize < 1 || PageSize > 1000)
             {
-                throw new System.ArgumentOutOfRangeException(nameof(PageSize), "不能小于1或者大于1000");
+                throw new System.ArgumentOutOfRangeException(nameof(PageSize), PageSize, "不能小于1或者大于1000");
             }
 
             if (PageNo < 1)
             {
-                throw new System.ArgumentOutOfRangeException(nameof(PageNo), "不能小于1");
+                throw new System.ArgumentOutOfRangeException(nameof(PageNo), PageNo, "不能小于1");
             }
         }
     }

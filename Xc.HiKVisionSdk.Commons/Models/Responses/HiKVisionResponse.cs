@@ -8,6 +8,8 @@ namespace Xc.HiKVisionSdk.Models.Responses
     /// </summary>
     public abstract class HiKVisionResponse : IResponseModel
     {
+        private string msg;
+
         /// <summary>
         /// 是否成功
         /// </summary>
@@ -19,7 +21,17 @@ namespace Xc.HiKVisionSdk.Models.Responses
         /// <summary>
         /// 消息
         /// </summary>
-        public string Msg { get; set; }
+        public string Msg
+        {
+            get => msg; set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    return;
+                }
+                msg = value;
+            }
+        }
 
         /// <summary>
         /// 异常时间戳
@@ -36,14 +48,24 @@ namespace Xc.HiKVisionSdk.Models.Responses
         /// <summary>
         /// 异常消息
         /// </summary>
-        public string Message { get; set; }
+        public string Message
+        {
+            get => msg; set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    return;
+                }
+                msg = value;
+            }
+        }
         /// <summary>
         /// 异常请求路径
         /// </summary>
         public string Path { get; set; }
     }
 
-  
+
 
 
 }

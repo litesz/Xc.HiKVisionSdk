@@ -32,6 +32,10 @@
         /// </summary>
         internal const decimal V1_41 = 1.41m;
         /// <summary>
+        /// 1.5.0
+        /// </summary>
+        internal const decimal V1_5 = 1.5m;
+        /// <summary>
         /// 1.5.1
         /// </summary>
         internal const decimal V1_51 = 1.51m;

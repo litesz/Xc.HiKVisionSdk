@@ -30,14 +30,14 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Mpc.Models
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public override void CheckParams()
         {
-            if (Items == null)
+            if (Items == null || Items.Length == 0)
             {
                 throw new ArgumentNullException(nameof(Items));
             }
 
-            if (Items.Length == 0 || Items.Length > 400)
+            if (Items.Length > 400)
             {
-                throw new ArgumentOutOfRangeException(nameof(Items), "一次添加最大不超过400个");
+                throw new ArgumentOutOfRangeException(nameof(Items), Items.Length, "一次添加最大不超过400个");
             }
 
             foreach (var item in Items)

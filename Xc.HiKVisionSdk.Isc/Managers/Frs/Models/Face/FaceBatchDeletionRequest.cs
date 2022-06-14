@@ -54,7 +54,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             }
             if (IndexCodes.Length == 0 || IndexCodes.Length > 1000)
             {
-                throw new ArgumentOutOfRangeException(nameof(IndexCodes), "一次性最多从一个分组内删除1000个人脸");
+                throw new ArgumentOutOfRangeException(nameof(IndexCodes), IndexCodes.Length, "一次性最多从一个分组内删除1000个人脸");
             }
         }
     }

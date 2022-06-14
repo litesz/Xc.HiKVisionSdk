@@ -27,6 +27,25 @@ namespace Xc.HiKVisionSdk.Commons.Managers
             _option = option;
         }
 
+
+        public async Task<HttpResponseMessage> PostAsync(string url, string bodyStr, decimal ver)
+        {
+            Check(ver);
+
+            var bodyJson = new StringContent(string.IsNullOrWhiteSpace(bodyStr) ? "" : bodyStr, Encoding.UTF8, "application/json");
+            var header = InitHeaderInfo($"/artemis{url}", true);
+            foreach (string headerKey in header.Keys)
+            {
+                if (headerKey.Contains(SignConsts.XCa))
+                {
+                    bodyJson.Headers.Add(headerKey, header[headerKey]);
+                }
+            }
+
+           return await _httpClient.PostAsync($"{_option.BaseUrl}/artemis{url}", bodyJson);
+            
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -62,7 +81,7 @@ namespace Xc.HiKVisionSdk.Commons.Managers
 
             var response = await _httpClient.PostAsync($"{_option.BaseUrl}/artemis{url}", bodyJson);
             //var response = await _httpClient.PostAsync($"{_option.BaseUrl}{url}", bodyJson);
-
+            
             return await response.Content.ReadAsStringAsync();
         }
 

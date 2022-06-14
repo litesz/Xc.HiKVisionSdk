@@ -32,7 +32,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Pms.Models
         {
             if (!string.IsNullOrWhiteSpace(ParkSyscode) && ParkSyscode.Length > 64)
             {
-                throw new ArgumentOutOfRangeException(nameof(ParkSyscode), "最大长度 64 位");
+                throw new ArgumentOutOfRangeException(nameof(ParkSyscode), ParkSyscode.Length, "最大长度 64 位");
             }
         }
     }

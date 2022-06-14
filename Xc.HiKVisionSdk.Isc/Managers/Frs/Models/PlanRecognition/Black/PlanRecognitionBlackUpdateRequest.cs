@@ -82,7 +82,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
 
             if (Threshold < 1 || Threshold > 99)
             {
-                throw new ArgumentOutOfRangeException(nameof(Threshold), "在 1 到 99 之间");
+                throw new ArgumentOutOfRangeException(nameof(Threshold), Threshold, "在 1 到 99 之间");
             }
 
             if (RecognitionResourceIndexCodes == null)

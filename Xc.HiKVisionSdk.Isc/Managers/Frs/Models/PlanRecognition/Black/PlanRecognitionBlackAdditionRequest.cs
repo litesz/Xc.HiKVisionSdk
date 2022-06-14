@@ -84,7 +84,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             }
             if (Threshold < 1 || Threshold > 99)
             {
-                throw new ArgumentOutOfRangeException(nameof(Threshold), "在 1 到 99 之间");
+                throw new ArgumentOutOfRangeException(nameof(Threshold), Threshold, "在 1 到 99 之间");
             }
             if (FaceGroupIndexCodes == null)
             {
@@ -92,7 +92,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             }
             if (FaceGroupIndexCodes.Length == 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(FaceGroupIndexCodes), "最少一个人脸资源");
+                throw new ArgumentOutOfRangeException(nameof(FaceGroupIndexCodes), FaceGroupIndexCodes.Length, "最少一个人脸资源");
             }
             if (CameraIndexCodes == null)
             {
@@ -100,7 +100,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             }
             if (CameraIndexCodes.Length == 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(CameraIndexCodes), "最少一个摄像头资源");
+                throw new ArgumentOutOfRangeException(nameof(CameraIndexCodes), CameraIndexCodes.Length, "最少一个摄像头资源");
             }
         }
     }

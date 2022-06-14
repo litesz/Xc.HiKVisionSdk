@@ -61,9 +61,15 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Irds.Models
         /// <returns></returns>
         public AdvanceCardListRequest UsePersonIds(params string[] personIds)
         {
-            if (personIds == null || personIds.Length > 1000)
+            if (personIds == null)
             {
-                throw new System.ArgumentOutOfRangeException(nameof(personIds), "人员ID集，不超过1000个");
+                throw new System.ArgumentNullException(nameof(personIds));
+
+            }
+
+            if (personIds.Length > 1000)
+            {
+                throw new System.ArgumentOutOfRangeException(nameof(personIds), personIds.Length, "人员ID集，不超过1000个");
             }
 
             PersonIds = string.Join(",", personIds);

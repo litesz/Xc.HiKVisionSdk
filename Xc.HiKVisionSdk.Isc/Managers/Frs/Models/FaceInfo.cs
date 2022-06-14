@@ -44,14 +44,14 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
             {
                 if (Sex != "1" || Sex != "2" || Sex.ToUpper() != "UNKNOWN")
                 {
-                    throw new ArgumentOutOfRangeException(nameof(Sex), "性别可选项为1,2,UNKNOWN");
+                    throw new ArgumentOutOfRangeException(nameof(Sex), Sex, "性别可选项为1,2,UNKNOWN");
                 }
             }
             if (!string.IsNullOrWhiteSpace(CertificateNum))
             {
                 if (CertificateNum.Length > 20)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(CertificateNum), "长度为1-20个数字、字母");
+                    throw new ArgumentOutOfRangeException(nameof(CertificateNum), CertificateNum.Length, "长度为1-20个数字、字母");
                 }
             }
         }

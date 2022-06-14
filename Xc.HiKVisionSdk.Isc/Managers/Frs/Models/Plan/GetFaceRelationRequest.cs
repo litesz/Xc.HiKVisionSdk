@@ -35,15 +35,12 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Frs.Models
         public override void CheckParams()
         {
 
-            if (IndexCodes == null)
+            if (IndexCodes == null || IndexCodes.Length == 0)
             {
                 throw new ArgumentNullException(nameof(IndexCodes));
             }
 
-            if (IndexCodes.Length == 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(IndexCodes), "不能为 0");
-            }
+           
 
         }
     }

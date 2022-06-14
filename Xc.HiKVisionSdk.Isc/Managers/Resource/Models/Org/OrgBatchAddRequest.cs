@@ -43,7 +43,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource.Models.Org
             }
             if (Items.Length > 1000)
             {
-                throw new ArgumentOutOfRangeException("Items", "最大1000个");
+                throw new ArgumentOutOfRangeException("Items", Items.Length, "最大1000个");
             }
         }
 

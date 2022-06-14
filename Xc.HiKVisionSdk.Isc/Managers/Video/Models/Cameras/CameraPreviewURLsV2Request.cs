@@ -175,7 +175,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Video.Models.Cameras
         {
             if (Protocol != "hik" && Protocol != "rtsp" && Protocol != "rtmp" && Protocol != "hls" && Protocol != "ws")
             {
-                throw new System.ArgumentOutOfRangeException(nameof(Protocol), "仅支持 hik,rtsp,rtmp,hls,ws");
+                throw new System.ArgumentOutOfRangeException(nameof(Protocol), Protocol, "仅支持 hik,rtsp,rtmp,hls,ws");
             }
         }
 
