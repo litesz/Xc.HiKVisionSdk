@@ -1,5 +1,8 @@
 ﻿namespace Xc.HiKVisionSdk.Options
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class HiKVisionOptions
     {
         /// <summary>
@@ -19,6 +22,7 @@
         /// </summary>
         public decimal Ver { get; set; } = 999.9M;
 
-        
+
+
     }
 }

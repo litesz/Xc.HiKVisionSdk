@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xc.HiKVisionSdk.Consts;
 using Xc.HiKVisionSdk.Options;
 using Xc.HiKVisionSdk.Utils;
 
@@ -21,17 +23,25 @@ namespace Xc.HiKVisionSdk.Commons.Managers
         /// </summary>
         /// <param name="client"></param>
         /// <param name="option"></param>
-        public HikVisionApiManager(HttpClient client, HiKVisionOptions option)
+        /// <param name="logger"></param>
+        public HikVisionApiManager(HttpClient client, HiKVisionOptions option )
         {
             _httpClient = client;
             _option = option;
+          
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="bodyStr"></param>
+        /// <param name="ver"></param>
+        /// <returns></returns>
         public async Task<HttpResponseMessage> PostAsync(string url, string bodyStr, decimal ver)
         {
             Check(ver);
-
+            //Logger?.LogDebug($"url:{url}")
             var bodyJson = new StringContent(string.IsNullOrWhiteSpace(bodyStr) ? "" : bodyStr, Encoding.UTF8, "application/json");
             var header = InitHeaderInfo($"/artemis{url}", true);
             foreach (string headerKey in header.Keys)
@@ -42,8 +52,8 @@ namespace Xc.HiKVisionSdk.Commons.Managers
                 }
             }
 
-           return await _httpClient.PostAsync($"{_option.BaseUrl}/artemis{url}", bodyJson);
-            
+            return await _httpClient.PostAsync($"{_option.BaseUrl}/artemis{url}", bodyJson);
+
         }
 
         /// <summary>
@@ -67,21 +77,8 @@ namespace Xc.HiKVisionSdk.Commons.Managers
         /// <returns></returns>
         public async Task<string> PostAndGetStringAsync(string url, string bodyStr, decimal ver)
         {
-            Check(ver);
+            var response = await PostAsync(url, bodyStr, ver);
 
-            var bodyJson = new StringContent(string.IsNullOrWhiteSpace(bodyStr) ? "" : bodyStr, Encoding.UTF8, "application/json");
-            var header = InitHeaderInfo($"/artemis{url}", true);
-            foreach (string headerKey in header.Keys)
-            {
-                if (headerKey.Contains(SignConsts.XCa))
-                {
-                    bodyJson.Headers.Add(headerKey, header[headerKey]);
-                }
-            }
-
-            var response = await _httpClient.PostAsync($"{_option.BaseUrl}/artemis{url}", bodyJson);
-            //var response = await _httpClient.PostAsync($"{_option.BaseUrl}{url}", bodyJson);
-            
             return await response.Content.ReadAsStringAsync();
         }
 
@@ -114,7 +111,12 @@ namespace Xc.HiKVisionSdk.Commons.Managers
         }
 
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ver"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         private void Check(decimal ver)
         {
             if (string.IsNullOrWhiteSpace(_option.BaseUrl))
@@ -141,7 +143,12 @@ namespace Xc.HiKVisionSdk.Commons.Managers
             }
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="isPost"></param>
+        /// <returns></returns>
         private Dictionary<string, string> InitHeaderInfo(string url, bool isPost = false)
         {
 

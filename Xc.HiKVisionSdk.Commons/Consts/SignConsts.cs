@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk
+﻿namespace Xc.HiKVisionSdk.Consts
 {
     /// <summary>
     /// 固定值
@@ -62,6 +62,6 @@
         /// </summary>
         internal const string Delete = "DELETE";
 
-        
+
     }
 }

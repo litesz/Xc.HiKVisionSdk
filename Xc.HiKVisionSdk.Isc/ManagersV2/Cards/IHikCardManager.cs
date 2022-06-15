@@ -4,7 +4,7 @@ using Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos;
 namespace Xc.HiKVisionSdk.Isc.ManagersV2.Cards
 {
     /// <summary>
-    /// 人员卡片管理
+    /// 人员卡片接口
     /// </summary>
     public interface IHikCardManager
     {

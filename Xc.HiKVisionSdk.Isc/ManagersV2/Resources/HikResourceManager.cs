@@ -7,7 +7,7 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Resources
     /// <summary>
     /// 人员及照片管理
     /// </summary>
-    public class HikResourcesManager : IHikResourcesManager
+    public class HikResourceManager : IHikResourceManager
     {
         private readonly IHikVisionIscApiManager _hikVisionApiManager;
 
@@ -15,7 +15,7 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Resources
         /// 人员及照片管理
         /// </summary>
         /// <param name="hikVisionApiManager"></param>
-        public HikResourcesManager(IHikVisionIscApiManager hikVisionApiManager)
+        public HikResourceManager(IHikVisionIscApiManager hikVisionApiManager)
         {
             _hikVisionApiManager = hikVisionApiManager;
         }

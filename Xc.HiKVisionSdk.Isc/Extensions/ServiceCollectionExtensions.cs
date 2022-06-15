@@ -97,7 +97,7 @@ namespace Xc.HiKVisionSdk.Isc
 
             return services.AddScoped<IHikCardManager, HikCardManager>()
                 .AddScoped<IHikOrgManager, HikOrgManager>()
-                .AddScoped<IHikResourcesManager, HikResourcesManager>()
+                .AddScoped<IHikResourceManager, HikResourceManager>()
                 .AddScoped<IHikPersonManager, HikPersonManager>()
                 .AddScoped<IHikFaceManager, HikFaceManager>()
                 ;

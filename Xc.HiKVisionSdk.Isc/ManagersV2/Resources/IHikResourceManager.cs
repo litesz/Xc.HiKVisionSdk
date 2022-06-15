@@ -6,7 +6,7 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Resources
     /// <summary>
     /// 人员及照片管理
     /// </summary>
-    public interface IHikResourcesManager
+    public interface IHikResourceManager
     {
         /// <summary>
         /// 获取资源属性

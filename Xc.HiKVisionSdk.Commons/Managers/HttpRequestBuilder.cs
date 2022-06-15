@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Net;
+using Xc.HiKVisionSdk.Consts;
 
 namespace Xc.HiKVisionSdk.Commons.Managers
 {

@@ -9,6 +9,11 @@ namespace Xc.HiKVisionSdk.Isc.Enums.Resource
     public enum CertificateType
     {
         /// <summary>
+        /// 无
+        /// </summary>
+        [Description("无")]
+        None = 0,
+        /// <summary>
         /// 身份证
         /// </summary>
         [Description("身份证")]
