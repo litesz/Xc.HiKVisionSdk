@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Xc.HiKVisionSdk.Isc.Dictionaries
+namespace Xc.HiKVisionSdk.Dictionaries
 {
     /// <summary>
     /// 安装位置
     /// </summary>
-    public class InstallLocationCollection : IInstallLocationCollection
+    public static class InstallLocationCollection
     {
 
-        private readonly Dictionary<string, string> _locations = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> _locations = new Dictionary<string, string>();
 
         /// <summary>
         /// 安装位置
         /// </summary>
-        public InstallLocationCollection()
+        static InstallLocationCollection()
         {
             _locations.Add("    communityPerimeter".Trim(), "小区周界           ".Trim());
             _locations.Add(" communityEntrance".Trim(), "小区出入口             ".Trim());
@@ -31,26 +29,21 @@ namespace Xc.HiKVisionSdk.Isc.Dictionaries
 
         }
 
-        /// <summary>
-        /// 索引器
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
-        public string this[string key]
+
+        public static string Get(string key)
         {
-            get
+            if (string.IsNullOrWhiteSpace(key))
             {
-                if (string.IsNullOrWhiteSpace(key))
-                {
-                    return "未设置";
-                }
-                if (_locations.ContainsKey(key))
-                {
-                    return _locations[key];
-                }
-                return key;
+                return "未设置";
             }
+            if (_locations.ContainsKey(key))
+            {
+                return _locations[key];
+            }
+            return key;
         }
+
+        
 
     }
 }

@@ -20,6 +20,16 @@ namespace Xc.HiKVisionSdk.Utils
         }
 
         /// <summary>
+        /// datetime转yyyy-MM-dd
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static string ToDate(DateTime dt)
+        {
+            return dt.ToString("yyyy-MM-dd");
+        }
+
+        /// <summary>
         /// ios8601转datetime
         /// </summary>
         /// <param name="date"></param>

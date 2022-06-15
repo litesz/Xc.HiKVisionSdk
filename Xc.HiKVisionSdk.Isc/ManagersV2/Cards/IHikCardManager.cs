@@ -5,6 +5,44 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Cards
 {
     /// <summary>
     /// 人员卡片接口
+    /// <list type="bullet">
+    /// <item>
+    /// <term>GetListAsync</term>
+    /// <description>获取卡片列表</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByTimeRangeAsync</term>
+    /// <description>增量获取卡片数据</description>
+    /// </item>
+    /// <item>
+    /// <term>GetInfoAsync</term>
+    /// <description>获取单个卡片信息</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByParametersAsync</term>
+    /// <description>查询卡片列表</description>
+    /// </item>
+    /// <item>
+    /// <term>GenerateBarCodeAsync</term>
+    /// <description>生成卡片二维码</description>
+    /// </item>
+    /// <item>
+    /// <term>BindingAsync</term>
+    /// <description>批量开卡</description>
+    /// </item>
+    /// <item>
+    /// <term>DeletionAsync</term>
+    /// <description>卡片退卡</description>
+    /// </item>
+    /// <item>
+    /// <term>AddLossAsync</term>
+    /// <description>批量挂失</description>
+    /// </item>
+    /// <item>
+    /// <term>DeleteLossAsync</term>
+    /// <description>批量解挂</description>
+    /// </item>
+    /// </list>
     /// </summary>
     public interface IHikCardManager
     {

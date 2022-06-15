@@ -2163,6 +2163,11 @@
             证件类型
             </summary>
         </member>
+        <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.None">
+            <summary>
+            无
+            </summary>
+        </member>
         <member name="F:Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType.IdentityCard">
             <summary>
             身份证
@@ -2365,6 +2370,27 @@
             <param name="services"></param>
             <returns></returns>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.AddCardsLossRequest">
+            <summary>
+            挂失请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.AddCardsLossRequest.CardList">
+            <summary>
+            人卡关联结合数组(批量挂失数量不能超过200个)
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.AddCardsLossRequest.#ctor(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardNoAndPersonIdItem[])">
+            <summary>
+            挂失请求
+            </summary>
+            <param name="cardList">人卡关联结合数组</param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.AddCardsLossResponse">
+            <summary>
+            批量挂失结果
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.AdvanceCardInfo">
             <summary>
             查询卡片列表信息
@@ -2460,32 +2486,32 @@
             是否绑定人脸，1-绑定，2-未绑定
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest">
             <summary>
             批量开卡请求
             </summary>
         </member>
-        <member name="F:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest.maxEndDate">
+        <member name="F:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest.maxEndDate">
             <summary>
             卡片最大截止有效时间
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest.StartDate">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest.StartDate">
             <summary>
             卡片开始有效时间，时间格式：yyyy-MM-dd
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest.EndDate">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest.EndDate">
             <summary>
             卡片截止有效时间,时间格式：yyyy-MM-dd。        不能大于2037年12月31日
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest.CardList">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest.CardList">
             <summary>
             待开卡列表,最大支持50张卡
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest.#ctor(System.DateTime,System.DateTime,Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequestItem[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest.#ctor(System.DateTime,System.DateTime,Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequestItem[])">
             <summary>
             批量开卡请求
             </summary>
@@ -2494,12 +2520,12 @@
             <param name="cardList">待开卡列表,最大支持50张卡</param>
             <exception cref="T:System.ArgumentOutOfRangeException"></exception>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequestItem">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequestItem">
             <summary>
             批量开卡请求项
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequestItem.#ctor(System.String,System.String,Xc.HiKVisionSdk.Isc.Enums.Resource.CardType,System.String)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequestItem.#ctor(System.String,System.String,Xc.HiKVisionSdk.Isc.Enums.Resource.CardType,System.String)">
             <summary>
             批量开卡请求项
             </summary>
@@ -2508,52 +2534,52 @@
             <param name="cardType">卡片类型</param>
             <param name="orgIndexCode">人员所属组织IndexCode，不传默认使用根组织</param>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequestItem.CardNo">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequestItem.CardNo">
             <summary>
             卡号,8~20个字符，支持数字和大写字母
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequestItem.PersonId">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequestItem.PersonId">
             <summary>
             人员ID
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequestItem.OrgIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequestItem.OrgIndexCode">
             <summary>
             人员所属组织IndexCode，不传默认使用根组织
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequestItem.CardType">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequestItem.CardType">
             <summary>
             卡片类型
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsResponse">
             <summary>
             批量开卡结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingResponseData">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsResponseData">
             <summary>
             批量开卡结果数据
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingResponseData.CardId">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsResponseData.CardId">
             <summary>
             卡片ID
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingResponseData.PersonId">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsResponseData.PersonId">
             <summary>
             人员ID
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingResponseData.OrgIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsResponseData.OrgIndexCode">
             <summary>
             人员组织IndexCode
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingResponseData.CardNo">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsResponseData.CardNo">
             <summary>
             卡号
             </summary>
@@ -2630,29 +2656,50 @@
             人员唯一标示
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeleteCardsLossRequest">
+            <summary>
+            批量解挂请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeleteCardsLossRequest.CardList">
+            <summary>
+            人卡关联结合数组(批量挂失数量不能超过200个)
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeleteCardsLossRequest.#ctor(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardNoAndPersonIdItem[])">
+            <summary>
+            批量解挂请求
+            </summary>
+            <param name="cardList">人卡关联结合数组</param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeleteCardsLossResponse">
+            <summary>
+            批量解挂结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionCardRequest">
             <summary>
             卡片退卡请求
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionRequest.#ctor(System.String,System.String)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionCardRequest.#ctor(System.String,System.String)">
             <summary>
             卡片退卡请求
             </summary>
             <param name="cardNumber">卡号</param>
             <param name="personId">人员Id</param>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionRequest.CardNumber">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionCardRequest.CardNumber">
             <summary>
             卡号
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionRequest.PersonId">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionCardRequest.PersonId">
             <summary>
             人员Id
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionCardResponse">
             <summary>
             卡片退卡结果
             </summary>
@@ -2779,43 +2826,43 @@
             卡号
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest">
             <summary>
             查询卡片列表请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.PersonName">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.PersonName">
             <summary>
             人员姓名,模糊查询
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.CardNo">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.CardNo">
             <summary>
             卡号,模糊查询， 根据获取卡片列表接口获取返回参数cardNo
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.PersonIds">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.PersonIds">
             <summary>
             人员ID集，多个值使用英文逗号分隔，不超过1000个， 根据获取人员列表v2接口获取返回参数personId
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.UseStatus">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.UseStatus">
             <summary>
             使用状态标记，1：正常.
             2：挂失
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.OrderBy">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.OrderBy">
             <summary>
             排序字段必须是查询条件，否则返回参数错误
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.OrderType">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.OrderType">
             <summary>
             降序：desc.        升序：asc
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.#ctor(System.Int32,System.Int32,System.String,System.String,System.Nullable{System.Boolean},System.String,System.Boolean)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.#ctor(System.Int32,System.Int32,System.String,System.String,System.Nullable{System.Boolean},System.String,System.Boolean)">
             <summary>
             查询卡片列表请求
             </summary>
@@ -2827,34 +2874,34 @@
             <param name="orderBy">排序字段必须是查询条件</param>
             <param name="isAsc">使用升序</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest.UsePersonIds(System.String[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest.UsePersonIds(System.String[])">
             <summary>
             使用人员ID集查询
             </summary>
             <param name="personIds">人员ID集</param>
             <returns></returns>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersResponse">
             <summary>
             查询卡片列表结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetByTimeRangeRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByTimeRangeRequest">
             <summary>
             增量获取卡片数据请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetByTimeRangeRequest.StartTime">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByTimeRangeRequest.StartTime">
             <summary>
             针对更新时间的查询开始日期，IOS8601格式，参考附录B ISO8601时间格式说明
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetByTimeRangeRequest.EndTime">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByTimeRangeRequest.EndTime">
             <summary>
             针对更新时间的查询截止日期，IOS8601格式，参考附录B ISO8601时间格式说明
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetByTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
             <summary>
             增量获取卡片数据请求
             </summary>
@@ -2863,82 +2910,61 @@
             <param name="startTime">针对更新时间的查询开始日期</param>
             <param name="endTime">针对更新时间的查询截止日期</param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetByTimeRangeResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByTimeRangeResponse">
             <summary>
             增量获取卡片数据结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoRequest">
-            <summary>
-            获取单个卡片信息请求
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoRequest.CardNo">
-            <summary>
-            卡片号码，卡片号码和卡片ID两者同时只能传一种参数
-            获取卡片列表接口获取返回参数cardNo
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoRequest.CardId">
-            <summary>
-            卡号ID，卡片号码和卡片ID两者同时只能传一种参数
-            获取卡片列表接口获取返回参数cardId
-            </summary>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoRequest.#ctor(System.String,System.Boolean)">
-            <summary>
-            获取单个卡片信息请求
-            </summary>
-            <param name="content">请求内容</param>
-            <param name="isCardId">是卡片ID还是卡片号码</param>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoRequest.CheckParams">
-            <summary>
-            
-            </summary>
-            <exception cref="T:System.ArgumentNullException"></exception>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoResponse">
-            <summary>
-            获取单个卡片信息结果
-            </summary>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListRequest">
             <summary>
             获取卡片列表请求
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest.#ctor(System.Int32,System.Int32)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListRequest.#ctor(System.Int32,System.Int32)">
             <summary>
             获取卡片列表请求
             </summary>
             <param name="pageNo"></param>
             <param name="pageSize"></param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListResponse">
             <summary>
             获取卡片列表结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.LossRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardRequest">
             <summary>
-            挂失请求
+            获取单个卡片信息请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.LossRequest.CardList">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardRequest.CardNo">
             <summary>
-            人卡关联结合数组(批量挂失数量不能超过200个)
+            卡片号码，卡片号码和卡片ID两者同时只能传一种参数
+            获取卡片列表接口获取返回参数cardNo
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.LossRequest.#ctor(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardNoAndPersonIdItem[])">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardRequest.CardId">
             <summary>
-            挂失请求
+            卡号ID，卡片号码和卡片ID两者同时只能传一种参数
+            获取卡片列表接口获取返回参数cardId
             </summary>
-            <param name="cardList">人卡关联结合数组</param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.LossResponse">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardRequest.#ctor(System.String,System.Boolean)">
             <summary>
-            批量挂失结果
+            获取单个卡片信息请求
+            </summary>
+            <param name="content">请求内容</param>
+            <param name="isCardId">是卡片ID还是卡片号码</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardResponse">
+            <summary>
+            获取单个卡片信息结果
             </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.TimeRangeCardInfo">
@@ -3026,27 +3052,6 @@
             资源状态，小于0则代表资源已被删除，0代表有效资源
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.UnLossRequest">
-            <summary>
-            批量解挂请求
-            </summary>
-        </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.UnLossRequest.CardList">
-            <summary>
-            人卡关联结合数组(批量挂失数量不能超过200个)
-            </summary>
-        </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.UnLossRequest.#ctor(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.CardNoAndPersonIdItem[])">
-            <summary>
-            批量解挂请求
-            </summary>
-            <param name="cardList">人卡关联结合数组</param>
-        </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.UnLossResponse">
-            <summary>
-            批量解挂结果
-            </summary>
-        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager">
             <summary>
             人员卡片管理
@@ -3058,28 +3063,28 @@
             </summary>
             <param name="hikVisionApiManager"></param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListRequest)">
             <summary>
             获取卡片列表
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetByTimeRangeRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByTimeRangeRequest)">
             <summary>
             增量获取卡片数据
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetInfoAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetInfoAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardRequest)">
             <summary>
             获取单个卡片信息
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetAdvanceListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.GetListByParametersAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest)">
             <summary>
             查询卡片列表
             </summary>
@@ -3093,28 +3098,28 @@
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.BindingAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.BindingAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest)">
             <summary>
             批量开卡
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.DeletionAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.DeletionAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionCardRequest)">
             <summary>
             卡片退卡
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.LossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.LossRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.AddLossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.AddCardsLossRequest)">
             <summary>
             批量挂失
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.UnLossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.UnLossRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.HikCardManager.DeleteLossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeleteCardsLossRequest)">
             <summary>
             批量解挂
             </summary>
@@ -3123,10 +3128,10 @@
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager">
             <summary>
-            人员卡片管理
+            人员卡片接口
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListRequest)">
             <summary>
             获取卡片列表
             </summary>
@@ -3134,7 +3139,7 @@
             <returns></returns>
             <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetByTimeRangeRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByTimeRangeRequest)">
             <summary>
             增量获取卡片数据
             </summary>
@@ -3144,7 +3149,7 @@
             根据查询条件查询卡片列表信息，主要根据时间段分页获取卡片信息，包含已删除数据。其中开始日期与结束日期的时间差必须在48小时内。
             </remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetInfoAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetInfoRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetInfoAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardRequest)">
             <summary>
             获取单个卡片信息
             </summary>
@@ -3153,7 +3158,7 @@
             <remarks>获取卡片列表接口可用来全量同步卡片信息，返回结果分页展示，不作权限过滤。
             注：卡号为精确查找</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetAdvanceListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetAdvanceListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.GetListByParametersAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.GetCardListByParametersRequest)">
             <summary>
             查询卡片列表
             </summary>
@@ -3174,7 +3179,7 @@
             <returns></returns>
             <remarks>用于生产卡片二维码，二维码默认有效期为24*60分钟，默认最大开锁次数4次.</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.BindingAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.BindingAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.BindingCardsRequest)">
             <summary>
             批量开卡
             </summary>
@@ -3182,7 +3187,7 @@
             <returns></returns>
             <remarks>该接口主要是应用于对多个人同时开卡的场景，输入卡片开始有效日期、卡片截止有效日期以及对应的人员、卡片关联列表，实现对多个人员同时开卡的功能，开卡成功后，可以到相应子系统开启卡片的权限，例如到门禁子系统开启人员门禁权限。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.DeletionAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.DeletionAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeletionCardRequest)">
             <summary>
             卡片退卡
             </summary>
@@ -3190,7 +3195,7 @@
             <returns></returns>
             <remarks>该接口主要是应用于对人员下卡片进行退卡，输入卡号以及所属人员id，实现卡片退卡的功能。退卡成功后，相应子系统的卡片权限清除，例如所属卡片在门禁子系统的门禁权限全部清除。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.LossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.LossRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.AddLossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.AddCardsLossRequest)">
             <summary>
             批量挂失
             </summary>
@@ -3198,7 +3203,7 @@
             <returns></returns>
             <remarks>用于卡片批量挂失，批量挂失数量不能超过200个。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.UnLossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.UnLossRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Cards.IHikCardManager.DeleteLossAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Cards.Dtos.DeleteCardsLossRequest)">
             <summary>
             批量解挂
             </summary>
@@ -3206,61 +3211,217 @@
             <returns></returns>
             <remarks>用于卡片批量解挂，批量解挂数量不能超过200个</remarks>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.AddFaceRequest">
+            <summary>
+            添加人脸请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.AddFaceRequest.PersonId">
+            <summary>
+            人员Id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.AddFaceRequest.FaceData">
+            <summary>
+            人脸图片base64编码后的字符数据
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.AddFaceRequest.#ctor(System.String,System.String)">
+            <summary>
+            添加人脸请求
+            </summary>
+            <param name="personId">人员Id</param>
+            <param name="faceData">人脸图片base64编码后的字符数据</param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.AddFaceResponse">
+            <summary>
+            添加人脸结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.DeleteFaceRequest">
+            <summary>
+            删除人脸请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.DeleteFaceRequest.FaceId">
+            <summary>
+            人脸图片Id ，        添加人脸 接口返回报文中的faceId字段，或获取人员列表v2 接口返回报文中的personPhotoIndexCode字段
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.DeleteFaceRequest.#ctor(System.String)">
+            <summary>
+            修改人脸结果
+            </summary>
+            <param name="faceId">人脸图片Id ，        添加人脸 接口返回报文中的faceId字段，或获取人员列表v2 接口返回报文中的personPhotoIndexCode字段</param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.DeleteFaceResponse">
+            <summary>
+            删除人脸结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.FaceResponseData">
+            <summary>
+            人脸结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.FaceResponseData.FaceId">
+            <summary>
+             	人脸Id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.FaceResponseData.FaceUrl">
+            <summary>
+            人脸图片Url
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.FaceResponseData.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.UpdateFaceRequest">
+            <summary>
+            修改人脸请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.UpdateFaceRequest.PersonId">
+            <summary>
+            人员Id
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.UpdateFaceRequest.FaceData">
+            <summary>
+            人脸图片base64编码后的字符数据
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.UpdateFaceRequest.#ctor(System.String,System.String)">
+            <summary>
+            修改人脸请求
+            </summary>
+            <param name="personId">人员Id</param>
+            <param name="faceData">人脸图片base64编码后的字符数据</param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.UpdateFaceResponse">
+            <summary>
+            修改人脸结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.HikFaceManager">
+            <summary>
+            人脸管理
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.HikFaceManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionIscApiManager)">
+            <summary>
+            人员及照片管理
+            </summary>
+            <param name="hikVisionApiManager"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.HikFaceManager.AddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.AddFaceRequest)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.HikFaceManager.UpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.UpdateFaceRequest)">
+            <summary>
+            修改人脸
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.HikFaceManager.DeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.DeleteFaceRequest)">
+            <summary>
+            删除人脸
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.IHikFaceManager">
+            <summary>
+            人脸管理
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.IHikFaceManager.AddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.AddFaceRequest)">
+            <summary>
+            添加人脸
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>添加人脸信息。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.IHikFaceManager.UpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.UpdateFaceRequest)">
+            <summary>
+            修改人脸
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>根据人脸Id修改人脸。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Faces.IHikFaceManager.DeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Faces.Dtos.DeleteFaceRequest)">
+            <summary>
+            删除人脸
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>根据人脸Id删除人脸。</remarks>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequest">
             <summary>
             批量添加人员请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequest.Items">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequest.Items">
             <summary>
             批量添加组织信息
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequest.#ctor(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequest.#ctor(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem[])">
             <summary>
             添加添加组织
             </summary>
             <param name="items">组织信息</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequest.ToString">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequest.ToString">
             <summary>
             
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem">
             <summary>
             批量添加人员请求详细
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem.ClientId">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem.ClientId">
             <summary>
             调用方指定标识，接口执行成功后将服务端生成的标识与此标识绑定后返回
             所以建议每次接口调用，clientid保持唯一。1~10个字符，只支持数字。
             注释：ISC不对clientid做校验和存储
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem.OrgIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem.OrgIndexCode">
             <summary>
             组织唯一标志，不允许与其它组织唯一标志重复，包括已删除的组织，值为空或者不传此字段系统自动生成唯一标志
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem.OrgName">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem.OrgName">
             <summary>
             组织名称，1~32个字符；不能包含<![CDATA[ ’ / \ : * ? " < >]]>
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem.ParentIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem.ParentIndexCode">
             <summary>
             父组织唯一标识码
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem.OrgCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem.OrgCode">
             <summary>
             组织编码，当添加小区节点时必填，编码使用01101开头的8位数字编码，当添加楼栋单元时必填，编码使用01101开头的20位数字编码，其它场景下改值无效
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
             <summary>
             批量添加人员请求详细
             </summary>
@@ -3270,177 +3431,177 @@
             <param name="orgCode">组织编码，当添加小区节点时必填，编码使用01101开头的8位数字编码，当添加楼栋单元时必填，编码使用01101开头的20位数字编码</param>
             <param name="clientId">调用方指定标识，接口执行成功后将服务端生成的标识与此标识绑定后返回</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequestItem.SetClientId(System.Int32)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequestItem.SetClientId(System.Int32)">
             <summary>
             设置ClientId
             </summary>
             <param name="clientId"></param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponse">
             <summary>
             批量新增组织结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseData">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseData">
             <summary>
             批量新增组织结果数据
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseData.Successes">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseData.Successes">
             <summary>
             批量添加成功的记录
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseData.Failures">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseData.Failures">
             <summary>
             批量添加失败的记录
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseData.HasFailed">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseData.HasFailed">
             <summary>
             有失败记录
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseFailures">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseFailures">
             <summary>
             批量添加失败的记录
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseFailures.ClientId">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseFailures.ClientId">
             <summary>
             调用方指定人员临时标志
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseFailures.Code">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseFailures.Code">
             <summary>
             错误码
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseFailures.Message">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseFailures.Message">
             <summary>
             错误信息
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseSuccess">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseSuccess">
             <summary>
             批量添加成功的记录
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseSuccess.ClientId">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseSuccess.ClientId">
             <summary>
             调用方指定人员临时标志
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddResponseSuccess.OrgIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsResponseSuccess.OrgIndexCode">
             <summary>
             服务端生成的唯一标识
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsRequest">
             <summary>
             批量删除组织请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteRequest.IndexCodes">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsRequest.IndexCodes">
             <summary>
             待删除的组织indexCode列表，单次提交上限为1000条        
             从获取组织列表 接口获取返回参数orgIndexCode
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteRequest.#ctor(System.String[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsRequest.#ctor(System.String[])">
             <summary>
             批量删除组织
             </summary>
             <param name="indexCodes">待删除的组织indexCode列表</param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsResponse">
             <summary>
             批量删除组织结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteResponseData">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsResponseData">
             <summary>
             批量删除组织结果数据
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteResponseData.OrgIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsResponseData.OrgIndexCode">
             <summary>
             组织标志
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteResponseData.Code">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsResponseData.Code">
             <summary>
             错误码
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteResponseData.Msg">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsResponseData.Msg">
             <summary>
             错误消息
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByIndexCodesRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByIndexCodesRequest">
             <summary>
             根据组织编号获取组织详细信息
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByIndexCodesRequest.OrgIndexCodes">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByIndexCodesRequest.OrgIndexCodes">
             <summary>
             组织编号数组,从获取组织列表接口获取返回参数orgIndexCode，最大1000个
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByIndexCodesRequest.#ctor(System.String[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByIndexCodesRequest.#ctor(System.String[])">
             <summary>
             根据组织编号获取组织详细信息
             </summary>
             <param name="orgIndexCodes">组织编号数组</param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByIndexCodesResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByIndexCodesResponse">
             <summary>
             根据组织编号获取组织详细信息
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request">
             <summary>
             获取组织列表V2请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.OrgName">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.OrgName">
             <summary>
             组织名称，支持模糊查询
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.OrgIndexCodes">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.OrgIndexCodes">
             <summary>
             组织唯一标识码集合        多个值使用英文逗号分隔，不超过1000个，从获取组织列表接口获取返回参数orgIndexCode
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.ParentOrgIndexCodes">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.ParentOrgIndexCodes">
             <summary>
             父组织唯一标识集合，多个时使用英文逗号分隔，总数不超过1000个。指定parentOrgIndexCodes时会返回available值为false的父组织信息
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.IsSubOrg">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.IsSubOrg">
             <summary>
             true时，搜索parentOrgIndexCodes的所有子孙组织；        false时，只搜索直接子组织
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.Expressions">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.Expressions">
             <summary>
             查询表达式
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.OrderBy">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.OrderBy">
             <summary>
             排序字段，注意：排序字段必须是查询条件，否则返回参数错误
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.OrderType">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.OrderType">
             <summary>
             降序：desc
             升序：asc
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.#ctor(System.Int32,System.Int32,System.String,System.Boolean,System.String,System.Nullable{System.Boolean})">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.#ctor(System.Int32,System.Int32,System.String,System.Boolean,System.String,System.Nullable{System.Boolean})">
             <summary>
             获取组织列表V2请求
             </summary>
@@ -3451,48 +3612,48 @@
             <param name="orderBy">排序字段，注意：排序字段必须是查询条件，否则返回参数错误</param>
             <param name="isAsc">升序</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.UseOrgIndexCodes(System.String[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.UseOrgIndexCodes(System.String[])">
             <summary>
             使用组织唯一标识码集合
             </summary>
             <param name="orgIndexCodes">组织唯一标识码集合，多个值使用英文逗号分隔，不超过1000个，从获取组织列表接口获取返回参数orgIndexCode</param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.UseParentOrgIndexCodes(System.String[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.UseParentOrgIndexCodes(System.String[])">
             <summary>
             使用父组织唯一标识集合
             </summary>
             <param name="parentOrgIndexCodes">父组织唯一标识集合，多个时使用英文逗号分隔，总数不超过1000个。指定parentOrgIndexCodes时会返回available值为false的父组织信息</param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request.UseRequestExpression(Xc.HiKVisionSdk.Models.Request.RequestExpression[])">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request.UseRequestExpression(Xc.HiKVisionSdk.Models.Request.RequestExpression[])">
             <summary>
             使用查询表达式
             </summary>
             <param name="expressions">查询表达式</param>
             <returns></returns>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Response">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Response">
             <summary>
             获取组织列表V2结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeRequest">
             <summary>
             增量获取组织数据请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeRequest.StartTime">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeRequest.StartTime">
             <summary>
             针对更新时间的查询开始日期，IOS8601格式
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeRequest.EndTime">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeRequest.EndTime">
             <summary>
             针对更新时间的查询截止日期，IOS8601格式
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
             <summary>
             增量获取组织数据
             </summary>
@@ -3501,55 +3662,55 @@
             <param name="start">针对更新时间的查询开始日期</param>
             <param name="end">针对更新时间的查询截止日期</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeRequest.CheckParams">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeRequest.CheckParams">
             <summary>
             
             </summary>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeResponse">
             <summary>
             增量获取组织数据结果
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListRequest">
             <summary>
             获取组织列表请求
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListRequest.#ctor(System.Int32,System.Int32)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListRequest.#ctor(System.Int32,System.Int32)">
             <summary>
             获取组织列表请求
             </summary>
             <param name="pageNo"></param>
             <param name="pageSize"></param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListResponse">
              <summary>
             获取组织列表结果  
              </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetRootRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetRootOrgRequest">
             <summary>
             获取根组织请求
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetRootResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetRootOrgResponse">
             <summary>
             获取根组织结果  
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubListRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubOrgListRequest">
             <summary>
             根据父组织编号获取下级组织列表请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubListRequest.ParentOrgIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubOrgListRequest.ParentOrgIndexCode">
             <summary>
             父组织编号，        从获取组织列表 接口获取返回参数orgIndexCode
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubListRequest.#ctor(System.Int32,System.Int32,System.String)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubOrgListRequest.#ctor(System.Int32,System.Int32,System.String)">
             <summary>
             根据父组织编号获取下级组织列表请求
             </summary>
@@ -3557,7 +3718,7 @@
             <param name="pageSize"></param>
             <param name="parentOrgIndexCode"></param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubListResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubOrgListResponse">
             <summary>
             根据父组织编号获取下级组织列表结果
             </summary>
@@ -3664,22 +3825,22 @@
             资源状态，小于0则代表资源已被删除，0代表有效资源
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateRequest">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgRequest">
             <summary>
             修改组织请求
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateRequest.OrgIndexCode">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgRequest.OrgIndexCode">
             <summary>
             组织标识，必须保证已存在，        从获取组织列表 接口获取返回参数orgIndexCode。
             </summary>
         </member>
-        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateRequest.OrgName">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgRequest.OrgName">
             <summary>
             组织名称，1~32个字符；不能包含<![CDATA[’ / \ : * ? " < >]]>
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateRequest.#ctor(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgRequest.#ctor(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
             修改组织请求
             </summary>
@@ -3687,13 +3848,13 @@
             <param name="orgName">组织名称，1~32个字符；不能包含<![CDATA[’ / \ : * ? " < >]]></param>
             <param name="parameters">其他扩展属性，键值对的方式</param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateRequest.ToString">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgRequest.ToString">
             <summary>
             
             </summary>
             <returns></returns>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateResponse">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgResponse">
             <summary>
             修改组织结果
             </summary>
@@ -3709,21 +3870,21 @@
             </summary>
             <param name="hikVisionApiManager"></param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.SingleUpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.UpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgRequest)">
             <summary>
             修改组织
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.BatchDeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.BatchDeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsRequest)">
             <summary>
             批量删除组织
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.BatchAddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.BatchAddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequest)">
             <summary>
             批量添加组织
             </summary>
@@ -3736,35 +3897,35 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListRequest)">
             <summary>
             获取组织列表
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListByParametersV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListByParametersV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request)">
             <summary>
             查询组织列表v2
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetSubListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetSubListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubOrgListRequest)">
             <summary>
             根据父组织编号获取下级组织列表
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeRequest)">
             <summary>
             增量获取组织数据
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListByIndexCodesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByIndexCodesRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.HikOrgManager.GetListByIndexCodesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByIndexCodesRequest)">
             <summary>
             根据组织编号获取组织详细信息
             </summary>
@@ -3776,7 +3937,7 @@
             组织管理
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.SingleUpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.SingleUpdateRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.UpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.UpdateOrgRequest)">
             <summary>
             修改组织
             </summary>
@@ -3784,7 +3945,7 @@
             <returns></returns>
             <remarks>根据组织编号修改组织信息。其它扩展属性按照定义以 key：value 上传即可，根据获取资源属性接口查询平台已配置的资源属性</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.BatchDeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.BatchDeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchDeleteOrgsRequest)">
             <summary>
             批量删除组织
             </summary>
@@ -3792,7 +3953,7 @@
             <returns></returns>
             <remarks>仅支持删除无子结点且组织下不存在人员的组织。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.BatchAddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.BatchAddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.BatchAddOrgsRequest)">
             <summary>
             批量添加组织
             </summary>
@@ -3807,7 +3968,7 @@
             <returns></returns>
             <remarks>获取根组织接口用来获取组织的根节点。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListRequest)">
             <summary>
             获取组织列表
             </summary>
@@ -3815,7 +3976,7 @@
             <returns></returns>
             <remarks>根据该接口全量同步组织信息,不作权限过滤，返回结果分页展示。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListByParametersV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByParametersV2Request)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListByParametersV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByParametersV2Request)">
             <summary>
             获取组织列表v2
             </summary>
@@ -3823,7 +3984,7 @@
             <returns></returns>
             <remarks>根据不同的组织属性分页查询组织信息。        查询组织列表接口可以根据组织唯一标识集、组织名称、组织状态等查询条件来进行高级查询。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetSubListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubListRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetSubListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetSubOrgListRequest)">
             <summary>
             根据父组织编号获取下级组织列表
             </summary>
@@ -3831,7 +3992,7 @@
             <returns></returns>
             <remarks>根据父组织编号获取下级组织列表，主要用于逐层获取父组织的下级组织信息，返回结果分页展示</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByTimeRangeRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByTimeRangeRequest)">
             <summary>
             增量获取组织数据
             </summary>
@@ -3839,7 +4000,7 @@
             <returns></returns>
             <remarks>根据查询条件查询组织列表信息，主要根据时间段分页获取组织数据，包含已删除数据。其中开始日期与结束日期的时间差必须在1-48小时内。</remarks>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListByIndexCodesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetListByIndexCodesRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.IHikOrgManager.GetListByIndexCodesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Orgs.Dtos.GetOrgListByIndexCodesRequest)">
             <summary>
             根据组织编号获取组织详细信息
             </summary>
@@ -3918,6 +4079,27 @@
             人脸信息
             </summary>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request.#ctor(System.String,System.String,System.Nullable{Xc.HiKVisionSdk.Enums.Gender},System.String,System.Nullable{System.DateTime},System.String)">
+            <summary>
+            添加人员v2请求
+            </summary>
+            <param name="personName">姓名<![CDATA[1~32个字符；不能包含 ’ / \ : * ? " < >]]></param>
+            <param name="orgIndexCode">所属组织标识，必须是已存在组织，从获取组织列表接口获取返回参数orgIndexCode</param>
+            <param name="gender">性别</param>
+            <param name="personId">人员ID，可以指定人员personId，不允许与其他人员personId重复，包括已删除的人员。 为空时平台自动生成人员ID</param>
+            <param name="birthday">出生日期</param>
+            <param name="email">邮箱</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request.UseCertificate(Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType,System.String)">
+            <summary>
+            使用身份证
+            </summary>
+            <param name="certificateType"></param>
+            <param name="certificateNo"></param>
+            <returns></returns>
+        </member>
         <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request.UsePhone(System.String)">
             <summary>
             使用手机号
@@ -3942,6 +4124,12 @@
             <returns></returns>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Response">
             <summary>
             添加人员v2结果
@@ -3962,6 +4150,258 @@
             成功添加的人脸Id
             </summary>
         </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequest">
+            <summary>
+            批量添加人员请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequest.Items">
+            <summary>
+            批量添加人员信息
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequest.#ctor(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem[])">
+            <summary>
+            
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequest.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem">
+            <summary>
+            批量添加人员请求详细
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.PersonName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.Gender">
+            <summary>
+            性别
+            1：男
+            2：女
+            0：未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.OrgIndexCode">
+            <summary>
+            所属组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.PhoneNo">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.CertificateType">
+            <summary>
+            证件类型
+            111:身份证
+            414:护照
+            113:户口簿
+            335:驾驶证
+            131:工作证
+            133:学生证
+            990:其他
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.CertificateNo">
+            <summary> 
+            证件号码
+            一串数字字符串
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.ClientId">
+            <summary>
+            人员临时标志，
+            当调用方未指定personId时，clientId作为人员标志，在返回值中标志每个人员的添加结果。
+            所以每次接口调用，每个人员的clientid需保持唯一，1~10个字符，只支持数字。
+            注：clientid只对本次调用有效
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.#ctor(System.String,Xc.HiKVisionSdk.Enums.Gender,System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.DateTime},System.String)">
+            <summary>
+            添加人员v2请求
+            </summary>
+            <param name="personName">姓名<![CDATA[1~32个字符；不能包含 ’ / \ : * ? " < >]]></param>
+            <param name="gender">性别</param>
+            <param name="orgIndexCode">所属组织标识，必须是已存在组织，从获取组织列表接口获取返回参数orgIndexCode</param>
+            <param name="clientId">人员临时标志，当调用方未指定personId时，clientId作为人员标志，在返回值中标志每个人员的添加结果。        所以每次接口调用，每个人员的clientid需保持唯一，1~10个字符，只支持数字。注：clientid只对本次调用有效</param>
+            <param name="personId">人员ID，可以指定人员personId，不允许与其他人员personId重复，包括已删除的人员。 为空时平台自动生成人员ID</param>
+            <param name="birthday">出生日期</param>
+            <param name="email">邮箱</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.UseCertificate(Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType,System.String)">
+            <summary>
+            使用身份证
+            </summary>
+            <param name="certificateType"></param>
+            <param name="certificateNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.UsePhone(System.String)">
+            <summary>
+            使用手机号
+            </summary>
+            <param name="phone">手机号</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.UseJobNo(System.String)">
+            <summary>
+            使用工号
+            </summary>
+            <param name="jobNo">工号</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequestItem.Check">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponse">
+            <summary>
+            批量添加人员结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseData">
+            <summary>
+            批量添加人员结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseData.Successes">
+            <summary>
+            批量添加成功的记录
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseData.Failures">
+            <summary>
+            批量添加失败的记录
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseFailures">
+            <summary>
+            失败信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseFailures.ClientId">
+            <summary>
+            调用方指定人员临时标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseFailures.Code">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseFailures.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseSuccess">
+            <summary>
+            成功信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseSuccess.ClientId">
+            <summary>
+            调用方指定人员临时标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsResponseSuccess.PersonId">
+            <summary>
+            服务端生成的唯一标识
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsRequest">
+            <summary>
+            批量删除人员请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsRequest.PersonIds">
+            <summary>
+            人员Id，单次操作上限为1000条。
+            获取人员列表v2 接口获取返回参数personId
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsRequest.#ctor(System.String[])">
+            <summary>
+            批量删除人员请求
+            </summary>
+            <param name="personIds">人员Id，单次操作上限为1000条</param>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsRequest.CheckParams">
+            <summary>
+            
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsResponse">
+            <summary>
+            批量删除人员结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsResponseData">
+            <summary>
+            批量删除人员结果数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsResponseData.PersonId">
+            <summary>
+            人员标志
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsResponseData.Code">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsResponseData.Msg">
+            <summary>
+            错误消息
+            </summary>
+        </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.FaceDataInfo">
             <summary>
             人脸信息
@@ -3978,19 +4418,685 @@
             </summary>
             <param name="faceData">人脸图片base64编码后的字符</param>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonDetailRequest">
             <summary>
-            人员及照片管理
+            根据人员唯一字段获取人员详细信息请求
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.AddPersonV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request)">
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonDetailRequest.ParamName">
             <summary>
-            添加人员v2
+            参数名        certificateNo：证件号码，从获取人员列表v2接口返回报文中的certificateNo字段        personId：人员Id，从获取人员列表v2接口返回报文中的personId字段；phoneNo：手机号码，从获取人员列表v2接口返回报文中的phoneNo字段；jobNo：工号，从获取人员列表v2接口返回报文中的jobNo字段。
             </summary>
-            <param name="request">请求</param>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonDetailRequest.ParamValue">
+            <summary>
+            根据入参传对应的值，最大1000个
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonDetailRequest.#ctor(System.String,System.String[])">
+            <summary>
+            根据人员唯一字段获取人员详细信息请求
+            </summary>
+            <param name="paramName">参数名  certificateNo：证件号码，从获取人员列表v2接口返回报文中的certificateNo字段        personId：人员Id，从获取人员列表v2接口返回报文中的personId字段；phoneNo：手机号码，从获取人员列表v2接口返回报文中的phoneNo字段；jobNo：工号，从获取人员列表v2接口返回报文中的jobNo字段。</param>
+            <param name="paramValue">根据入参传对应的值，最大1000个</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonDetailResponse">
+            <summary>
+            根据人员唯一字段获取人员详细信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByOrgV2Request">
+            <summary>
+            获取组织下人员列表v2请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByOrgV2Request.OrgIndexCode">
+            <summary>
+            组织唯一标识码， 获取组织列表 接口获取
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByOrgV2Request.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取组织下人员列表v2请求
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+            <param name="orgIndexCode">组织唯一标识码， 获取组织列表 接口获取</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByOrgV2Response">
+            <summary>
+            获取组织下人员列表v2结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.PersonIds">
+            <summary>
+            人员ID集合        多个值使用英文逗号分隔，不超过1000个        获取人员列表v2 接口获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.PersonName">
+            <summary>
+            <![CDATA[人员姓名 支持中英文字符，不能包含 ’ / \ : * ? " < >]]>
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.OrgIndexCodes">
+            <summary>
+            所属组织唯一标识码集合        多个值使用英文逗号分隔，不超过1000个
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.CertificateType">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.CertificateNo">
+            <summary>
+            证件号码(最大长度64)
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.IsSubOrg">
+            <summary>
+            是否包含下级组织，true时，搜索orgIndexCodes及其所有子孙组织的人员；        false时，只搜索orgIndexCodes的人员
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.CardNo">
+            <summary>
+            卡号, 获取卡片列表接口可以获取
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.PlateNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.OrderBy">
+            <summary>
+            排序字段，注意：排序字段必须是查询条件，否则返回参数错误
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.OrderType">
+            <summary>
+            降序：desc        升序：asc
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.Expressions">
+            <summary>
+            查询表达式
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.#ctor(System.Int32,System.Int32,System.String,System.Nullable{Xc.HiKVisionSdk.Enums.Gender},System.Nullable{Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType},System.String,System.String,System.String,System.Boolean,System.String,System.Nullable{System.Boolean})">
+            
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.UseOrgIndexCodes(System.String[])">
+            <summary>
+            使用组织唯一标识码集合
+            </summary>
+            <param name="orgIndexCodes">组织唯一标识码集合，多个值使用英文逗号分隔，不超过1000个，从获取组织列表接口获取返回参数orgIndexCode</param>
             <returns></returns>
-            <remarks>添加人员信息接口，注意，在安保基础数据配置的必选字段必须都包括在入参中。        人员添加的时候，可以指定人员personId，不允许与其他人员personId重复，
-            包括已删除的人员。本接口支持人员信息的扩展字段，按照属性定义key:value上传即可， 可通过获取资源属性接口，获取平台已启用的人员属性信息</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.UseParentOrgIndexCodes(System.String[])">
+            <summary>
+            使用人员ID集合
+            </summary>
+            <param name="personIds">人员ID集合        多个值使用英文逗号分隔，不超过1000个        获取人员列表v2 接口获取</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request.UseRequestExpression(Xc.HiKVisionSdk.Models.Request.RequestExpression[])">
+            <summary>
+            使用查询表达式
+            </summary>
+            <param name="expressions">查询表达式</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Response">
+            <summary>
+            查询人员列表v2
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByTimeRangeRequest">
+            <summary>
+            增量获取人员数据请求
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByTimeRangeRequest.StartTime">
+            <summary>
+            针对更新时间的查询开始日期，IOS8601格式
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByTimeRangeRequest.EndTime">
+            <summary>
+            针对更新时间的查询截止日期，IOS8601格式
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByTimeRangeRequest.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime})">
+            <summary>
+            增量获取组织数据
+            </summary>
+            <param name="pageNo">当前页码</param>
+            <param name="pageSize">每页记录总数</param>
+            <param name="start">针对更新时间的查询开始日期</param>
+            <param name="end">针对更新时间的查询截止日期</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByTimeRangeResponse">
+            <summary>
+            增量获取人员数据
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListV2Request">
+            <summary>
+            获取人员列表v2
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListV2Request.#ctor(System.Int32,System.Int32)">
+            <summary>
+            获取人员列表v2
+            </summary>
+            <param name="pageNo"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListV2Response">
+            <summary>
+            获取人员列表v2结果
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPictureRequest">
+            <summary>
+            提取人员图片
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPictureRequest.PicUri">
+            <summary>
+            图片相对URI        通过获取人员列表v2接口返回“picUri”字段
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPictureRequest.ServerIndexCode">
+            <summary>
+            图片服务器唯一标识        通过获取人员列表v2接口返回“serverIndexCode”字段
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPictureRequest.#ctor(System.String,System.String)">
+            <summary>
+            提取人员图片
+            </summary>
+            <param name="picUri"> 图片相对URI        通过获取人员列表v2接口返回“picUri”字段</param>
+            <param name="serverIndexCode">图片服务器唯一标识        通过获取人员列表v2接口返回“serverIndexCode”字段</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPictureResponse">
+            <summary>
+            提取人员图片
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.PersonName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.OrgPath">
+            <summary>
+            所属组织路径
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.OrgPathName">
+            <summary>
+            所属组织名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.OrgIndexCode">
+            <summary>
+             所属组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.CertificateType">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.CertificateNo">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Birthday">
+            <summary>
+            出生日期，例"1990-01-01"
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.PhoneNo">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Address">
+            <summary>
+            联系地址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.PersonPhoto">
+            <summary>
+            人员图片信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Education">
+            <summary>
+            学历
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.LastName">
+            <summary>
+            人员姓氏
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.GivenName">
+            <summary>
+            人员名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Job">
+            <summary>
+            职业
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.StaffProperty">
+            <summary>
+            职工性质
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Company">
+            <summary>
+            工作单位
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.EmployeePost">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.EmployeeNumber">
+            <summary>
+            员工编号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.PostType">
+            <summary>
+            岗位类别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.IdentityType">
+            <summary>
+            身份类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Nationality">
+            <summary>
+            国籍
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Nation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Birthplace">
+            <summary>
+            籍贯
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.CensusRegister">
+            <summary>
+            户籍
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Marriaged">
+            <summary>
+            婚姻状况
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.PoliticalStatus">
+            <summary>
+            政治面貌
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Religion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.RoomNum">
+            <summary>
+            房间号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.HouseHolderRel">
+            <summary>
+            与户主关系
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.StudentId">
+            <summary>
+            学号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.StuStartTime">
+            <summary>
+            学生入学时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.StuEndTime">
+            <summary>
+            学生毕业时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.StuGrade">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.StuClass">
+            <summary>
+            班级
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Academy">
+            <summary>
+            学院
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Profession">
+            <summary>
+            学生专业
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Dormitory">
+            <summary>
+            宿舍楼
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Lodge">
+            <summary>
+            是否住校，1:是；2:否
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.PersonDesc">
+            <summary>
+            人员描述
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.SyncFlag">
+            <summary>
+            同步标志类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Pinyin">
+            <summary>
+            拼音
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.CertIssuer">
+            <summary>
+            发证机构
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.CertAddr">
+            <summary>
+            发证地址
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.CertExpireTime">
+            <summary>
+            证件有效期
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.Status">
+            <summary>
+            状态小于0则代表资源已被删除
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.CreateTime">
+            <summary>
+             	创建时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.UpdateTime">
+            <summary>
+             	更新时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.IsDeleted">
+            <summary>
+            已被删除
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonDetailInfo.IsLodge">
+            <summary>
+            是否住校
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.PersonName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.OrgIndexCode">
+            <summary>
+             	所属组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.PhoneNo">
+            <summary>
+             	联系电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.CertificateType">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.CertificateNo">
+            <summary>
+             	证件号码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.CreateTime">
+            <summary>
+             	创建时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.UpdateTime">
+            <summary>
+             	更新时间
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.OrgPath">
+            <summary>
+            所属组织路径
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.OrgPathName">
+            <summary>
+            所属组织名称
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonInfo.PersonPhoto">
+            <summary>
+            人员图片信息
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonPhoto">
+            <summary>
+            人员图片信息
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonPhoto.PersonPhotoIndexCode">
+            <summary>
+            人脸图片唯一标示
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonPhoto.PicUri">
+            <summary>
+            图片相对url, 通过提取人员图片接口获取图片数据
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonPhoto.ServerIndexCode">
+            <summary>
+            图片服务器唯一标示        提取人员图片接口必要参数
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.PersonPhoto.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest">
+            <summary>
+            修改人员请求
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.#ctor(System.String,System.String,System.String,System.Nullable{Xc.HiKVisionSdk.Enums.Gender},System.String,System.String,System.Nullable{Xc.HiKVisionSdk.Isc.Enums.Resource.CertificateType},System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            修改人员请求
+            </summary>
+            <param name="personId">人员id 获取人员列表v2 接口获取返回参数personId</param>
+            <param name="personName">姓名<![CDATA[1~32个字符；不能包含 ’ / \ : * ? " < >]]></param>
+            <param name="orgIndexCode">所属组织标识，必须是已存在组织，从获取组织列表接口获取返回参数orgIndexCode</param>
+            <param name="gender">性别</param>
+            <param name="phoneNo">手机号</param>
+            <param name="jobNo">工号</param>
+            <param name="certificateType">证件类型</param>
+            <param name="certificateNo">证件号码，1-20位数字字母</param>
+            <param name="email">邮箱</param>
+            <param name="birthday">出生日期</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"></exception>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.PersonId">
+            <summary>
+            人员ID
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.PersonName">
+            <summary>
+            姓名<![CDATA[1~32个字符；不能包含 ’ / \ : * ? " < >]]>
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.Gender">
+            <summary>
+            性别
+            1：男
+            2：女
+            0：未知
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.OrgIndexCode">
+            <summary>
+            所属组织唯一标识码
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.PhoneNo">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.JobNo">
+            <summary>
+            工号
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.CertificateType">
+            <summary>
+            证件类型
+            111:身份证
+            414:护照
+            113:户口簿
+            335:驾驶证
+            131:工作证
+            133:学生证
+            990:其他
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.CertificateNo">
+            <summary> 
+            证件号码
+            一串数字字符串
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest.Birthday">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonResponse">
+            <summary>
+            修改人员结果
+            </summary>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager">
             <summary>
@@ -4003,12 +5109,162 @@
             </summary>
             <param name="hikVisionApiManager"></param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.AddPersonV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.AddV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request)">
             <summary>
             添加人员v2
             </summary>
             <param name="request"></param>
             <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.BatchAddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequest)">
+            <summary>
+            批量添加人员
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.UpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest)">
+            <summary>
+            修改人员
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.BatchDeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsRequest)">
+            <summary>
+            批量删除人员
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.GetListByOrgV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByOrgV2Request)">
+            <summary>
+            获取组织下人员列表v2
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.GetListV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListV2Request)">
+            <summary>
+            获取人员列表v2
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.GetListByParametersV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request)">
+            <summary>
+            查询人员列表v2
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.GetDetailListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonDetailRequest)">
+            <summary>
+            根据人员唯一字段获取人员详细信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByTimeRangeRequest)">
+            <summary>
+            增量获取人员数据
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.HikPersonManager.GetPictureAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPictureRequest)">
+            <summary>
+            提取人员图片
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+            <exception cref="T:System.Net.Http.HttpRequestException"></exception>
+        </member>
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager">
+            <summary>
+            人员及照片管理
+            </summary>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.AddV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.AddPersonV2Request)">
+            <summary>
+            添加人员v2
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>添加人员信息接口，注意，在安保基础数据配置的必选字段必须都包括在入参中。        人员添加的时候，可以指定人员personId，不允许与其他人员personId重复，
+            包括已删除的人员。本接口支持人员信息的扩展字段，按照属性定义key:value上传即可， 可通过获取资源属性接口，获取平台已启用的人员属性信息</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.BatchAddAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchAddPersonsRequest)">
+            <summary>
+            批量添加人员
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>添加人员信息接口，注意，在安保基础数据配置的必选字段必须都包括在入参中。        批量添加仅支持人员基础属性。人员批量添加的时候，可以指定人员personId，不允许与其他人员personId重复，包括已删除的人员。如果用户不想指定personId，那么需要指定clientId，请求内的每一条数据的clientid必须唯一， 返回值会将平台生成的personid与clientid做绑定。若personId和clientId都不指定，则无法准确判断哪部分人员添加成功。本接口支持人员信息的扩展字段，按照属性定义key:value上传即可， 可通过获取资源属性接口，获取平台已启用的人员属性信息。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.UpdateAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.UpdatePersonRequest)">
+            <summary>
+            修改人员
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>根据人员编号修改人员信息。        本接口支持人员信息的扩展字段，按照属性定义key:value上传即可， 可通过获取资源属性接口，获取平台已启用的人员属性信息。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.BatchDeleteAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.BatchDeletePersonsRequest)">
+            <summary>
+            批量删除人员
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>根据编号删除人员，人员删除是软删除，可以在安保基础数据查询已删除人员。支持批量删除人员。删除人员将会同时删除人员关联的指纹和人脸信息。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.GetListByOrgV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByOrgV2Request)">
+            <summary>
+            获取组织下人员列表v2
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>根据组织编号获取组织下的人员信息列表，返回结果分页展示。        本接口支持自定义属性的返回， 通过获取资源属性接口获取平台已支持人员属性的说明。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.GetListV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListV2Request)">
+            <summary>
+            获取人员列表v2
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>获取人员列表接口可用来全量同步人员信息，返回结果分页展示。        本接口支持自定义属性的返回， 通过获取资源属性接口获取平台已支持人员属性的说明。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.GetListByParametersV2Async(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByParametersV2Request)">
+            <summary>
+            查询人员列表v2
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>查询人员列表接口可以根据人员ID集、人员姓名、人员性别、所属组织、证件类型、证件号码、人员状态这些查询条件来进行高级查询；若不指定查询条件，即全量获取所有的人员信息。返回结果分页展示。        注：若指定多个查询条件，表示将这些查询条件进行”与”的组合后进行精确查询。根据”人员名称personName”查询为模糊查询。本接口支持自定义属性的返回，及自定义属性进行查找， 通过获取资源属性接口获取平台已支持人员属性的说明。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.GetDetailListAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonDetailRequest)">
+            <summary>
+            根据人员唯一字段获取人员详细信息
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>获取人员信息接口，可以根据实名标识(证件号码、人员ID、手机号码、工号)来精确查询人员信息，并返回总数量。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.GetListByTimeRangeAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPersonListByTimeRangeRequest)">
+            <summary>
+            增量获取人员数据
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>根据查询条件查询人员列表信息，主要用于根据时间段分页获取人员信息，包含已删除数据。其中开始日期与结束日期的时间差必须在48小时内。返回信息中只有基础数据，没有人员照片信息。</remarks>
+        </member>
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Persons.IHikPersonManager.GetPictureAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Persons.Dtos.GetPictureRequest)">
+            <summary>
+            提取人员图片
+            </summary>
+            <param name="request">请求</param>
+            <returns></returns>
+            <remarks>根据获取人员信息的接口中拿到的图片URI和图片服务器唯一标识，通过该接口得到完整的URL，可以直接从图片服务下载图；        此接口返回重定向请求redirect：picUrl</remarks>
         </member>
         <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.Dtos.GetPropertiesRequest">
             <summary>
@@ -4126,30 +5382,30 @@
             是否唯一
             </summary>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.HikResourcesManager">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.HikResourceManager">
             <summary>
             人员及照片管理
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.HikResourcesManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionIscApiManager)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.HikResourceManager.#ctor(Xc.HiKVisionSdk.Isc.Managers.IHikVisionIscApiManager)">
             <summary>
             人员及照片管理
             </summary>
             <param name="hikVisionApiManager"></param>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.HikResourcesManager.GetPropertiesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Resources.Dtos.GetPropertiesRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.HikResourceManager.GetPropertiesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Resources.Dtos.GetPropertiesRequest)">
             <summary>
             获取资源属性
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.IHikResourcesManager">
+        <member name="T:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.IHikResourceManager">
             <summary>
             人员及照片管理
             </summary>
         </member>
-        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.IHikResourcesManager.GetPropertiesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Resources.Dtos.GetPropertiesRequest)">
+        <member name="M:Xc.HiKVisionSdk.Isc.ManagersV2.Resources.IHikResourceManager.GetPropertiesAsync(Xc.HiKVisionSdk.Isc.ManagersV2.Resources.Dtos.GetPropertiesRequest)">
             <summary>
             获取资源属性
             </summary>

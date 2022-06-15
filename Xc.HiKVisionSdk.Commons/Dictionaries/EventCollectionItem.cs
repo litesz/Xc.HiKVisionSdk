@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Models
+﻿namespace Xc.HiKVisionSdk.Dictionaries
 {
     /// <summary>
     /// 事件类型项

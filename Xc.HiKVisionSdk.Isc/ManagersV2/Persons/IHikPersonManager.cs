@@ -5,6 +5,48 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Persons
 {
     /// <summary>
     /// 人员及照片管理
+    /// <list type="bullet">
+    /// <item>
+    /// <term>AddV2Async</term>
+    /// <description>添加人员v2</description>
+    /// </item>
+    /// <item>
+    /// <term>BatchAddAsync</term>
+    /// <description>批量添加人员</description>
+    /// </item>
+    /// <item>
+    /// <term>UpdateAsync</term>
+    /// <description>修改人员</description>
+    /// </item>
+    /// <item>
+    /// <term>BatchDeleteAsync</term>
+    /// <description>批量删除人员</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByOrgV2Async</term>
+    /// <description>获取组织下人员列表v2</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListV2Async</term>
+    /// <description>获取人员列表v2</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByParametersV2Async</term>
+    /// <description>查询人员列表v2</description>
+    /// </item>
+    /// <item>
+    /// <term>GetDetailListAsync</term>
+    /// <description>根据人员唯一字段获取人员详细信息</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByTimeRangeAsync</term>
+    /// <description>增量获取人员数据</description>
+    /// </item>
+    /// <item>
+    /// <term>GetPictureAsync</term>
+    /// <description>提取人员图片</description>
+    /// </item>
+    /// </list>
     /// </summary>
     public interface IHikPersonManager
     {

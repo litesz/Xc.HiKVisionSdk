@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using Xc.HiKVisionSdk.Isc.Models;
 
-namespace Xc.HiKVisionSdk.Isc.Dictionaries
+namespace Xc.HiKVisionSdk.Dictionaries
 {
     /// <summary>
     /// 事件集合
     /// </summary>
-    public class EventCollection : IEventCollection
+    public  class EventCollection
     {
         /// <summary>
         /// 已同步

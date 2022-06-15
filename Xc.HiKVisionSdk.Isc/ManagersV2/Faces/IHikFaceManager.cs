@@ -5,6 +5,20 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Faces
 {
     /// <summary>
     /// 人脸管理
+    /// <list type="bullet">
+    /// <item>
+    /// <term>AddAsync</term>
+    /// <description>添加人脸</description>
+    /// </item>
+    /// <item>
+    /// <term>UpdateAsync</term>
+    /// <description>修改人脸</description>
+    /// </item>
+    /// <item>
+    /// <term>DeleteAsync</term>
+    /// <description>删除人脸</description>
+    /// </item>
+    /// </list>
     /// </summary>
     public interface IHikFaceManager
     {

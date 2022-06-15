@@ -38,10 +38,10 @@ namespace Xc.HiKVisionSdk.Isc
             services.Configure<HiKVisionOptions>(configuration.GetSection("Hikvision"));
             services.Configure<IscSdkOption>(configuration.GetSection(IscSdkOption.Position));
 
-            services.AddSingleton<IPlanStatusCollection, PlanStatusCollection>();
-            services.AddSingleton<IInstallLocationCollection, InstallLocationCollection>();
-            services.AddSingleton<IEventCollection, EventCollection>();
-            services.AddSingleton<IDoorEventSortCollection, DoorEventSortCollection>();
+            //services.AddSingleton<IPlanStatusCollection, PlanStatusCollection>();
+            //services.AddSingleton<IInstallLocationCollection, InstallLocationCollection>();
+            //services.AddSingleton<IEventCollection, EventCollection>();
+            //services.AddSingleton<IDoorEventSortCollection, DoorEventSortCollection>();
 
 
             services

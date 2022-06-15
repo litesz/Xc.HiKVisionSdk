@@ -8,6 +8,44 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Orgs
 {
     /// <summary>
     /// 组织管理
+    /// <list type="bullet">
+    /// <item>
+    /// <term>UpdateAsync</term>
+    /// <description>修改组织</description>
+    /// </item>
+    /// <item>
+    /// <term>BatchDeleteAsync</term>
+    /// <description>批量删除组织</description>
+    /// </item>
+    /// <item>
+    /// <term>BatchAddAsync</term>
+    /// <description>批量添加组织</description>
+    /// </item>
+    /// <item>
+    /// <term>GetRootAsync</term>
+    /// <description>获取根组织</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListAsync</term>
+    /// <description>获取组织列表</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByParametersV2Async</term>
+    /// <description>查询组织列表v2</description>
+    /// </item>
+    /// <item>
+    /// <term>GetSubListAsync</term>
+    /// <description>根据父组织编号获取下级组织列表</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByTimeRangeAsync</term>
+    /// <description>增量获取组织数据</description>
+    /// </item>
+    /// <item>
+    /// <term>GetListByIndexCodesAsync</term>
+    /// <description>根据组织编号获取组织详细信息</description>
+    /// </item>
+    /// </list>
     /// </summary>
     public interface IHikOrgManager
     {
