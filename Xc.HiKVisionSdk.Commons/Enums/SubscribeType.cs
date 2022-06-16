@@ -1,9 +1,9 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Enums.Events
+﻿namespace Xc.HiKVisionSdk.Enums
 {
     /// <summary>
     /// 订阅类型
     /// </summary>
-    public enum SubType
+    public enum SubscribeType
     {
         /// <summary>
         /// 原始事件

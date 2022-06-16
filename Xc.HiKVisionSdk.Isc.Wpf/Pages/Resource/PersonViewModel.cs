@@ -1,5 +1,6 @@
 ﻿using Stylet;
 using StyletIoC;
+using System.Linq;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -76,6 +77,34 @@ namespace Xc.HiKVisionSdk.Isc.Wpf.Pages.Resource
             {
                 //Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager hikEventServiceApiManager = Container.Get<Xc.HiKVisionSdk.Ia.Managers.EventService.IHikEventServiceApiManager>();
                 //var x = await hikEventServiceApiManager.EventsSearchAsync(new Ia.Managers.EventService.Models.EventsSearchRequest { PageNo = 1, PageSize = 1000 });
+                //IHikAcsApiManager _hikAcsApiManager = Container.Get<IHikAcsApiManager>();
+
+                //var requestDto1 = new Xc.HiKVisionSdk.Isc.Managers.Acs.Models.DoorEventsV2Request
+                //{
+                //    PageSize = 1000,
+                //    PageNo = 1,
+                //    StartTime = $"{new DateTime(2022, 6, 23, 0, 0, 0):yyyy-MM-ddTHH:mm:ss}+08:00",
+                //    EndTime = $"{new DateTime(2022, 6, 23, 23, 0, 0):yyyy-MM-ddTHH:mm:ss}+08:00",
+                //    Order = "asc",
+                //    Sort = "eventTime",
+                //};
+                //var result1 = await _hikAcsApiManager.DoorEventsV2Async(requestDto1);
+
+                //var r = result1.Data.List.Where(u => u.PersonId == "10000001").ToList();
+
+
+                IHikResourceApiManager resourceApiManagerV2 = Container.Get<IHikResourceApiManager>();
+
+
+                var result1 = await resourceApiManagerV2.AdvanceCameraListAsync(new Managers.Resource.Models.Camera.AdvanceCameraListRequest
+                {
+                    PageNo = 1,
+                    PageSize = 100,
+
+                });
+
+
+
 
                 IHikAcsApiManager hikEaasServiceApiManager = Container.Get<IHikAcsApiManager>();
 

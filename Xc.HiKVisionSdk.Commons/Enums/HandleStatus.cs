@@ -1,4 +1,4 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Enums.Events
+﻿namespace Xc.HiKVisionSdk.Enums
 {
     /// <summary>
     /// 事件处理状态

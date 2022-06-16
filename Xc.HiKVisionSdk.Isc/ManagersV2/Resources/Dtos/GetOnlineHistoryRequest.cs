@@ -33,7 +33,7 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Resources.Dtos
         /// <param name="pageNo"></param>
         /// <param name="pageSize"></param>
         /// <param name="indexCode">资源编码，从获取资源列表v2接口获取返回报文中的indexCode字段</param>
-        /// <param name="resourceType">资源类型<see cref="ResourceTypeCollection"/></param>
+        /// <param name="resourceType">资源类型<see cref="Dictionaries.ResourceType"/></param>
         /// <param name="start"> 	开始日期，yyyy-MM-dd格式</param>
         /// <param name="end">结束日期，yyyy-MM-dd格式</param>
         /// <exception cref="ArgumentNullException"></exception>
@@ -46,7 +46,7 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Resources.Dtos
                 throw new ArgumentNullException(indexCode);
             }
             IndexCode = indexCode;
-            ResourceType = ResourceTypeCollection.GetCode(resourceType);
+            ResourceType = Dictionaries.ResourceType.GetCode(resourceType);
             if (start.HasValue)
             {
                 StartDate = DateTimeFormat.ToDate(start.Value);

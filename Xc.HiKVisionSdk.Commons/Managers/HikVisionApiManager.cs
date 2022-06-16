@@ -121,7 +121,7 @@ namespace Xc.HiKVisionSdk.Commons.Managers
         {
             if (string.IsNullOrWhiteSpace(_option.BaseUrl))
             {
-                throw new ArgumentNullException("address");
+                throw new ArgumentNullException("baseUrl");
             }
 
             if (string.IsNullOrWhiteSpace(_option.Ak))

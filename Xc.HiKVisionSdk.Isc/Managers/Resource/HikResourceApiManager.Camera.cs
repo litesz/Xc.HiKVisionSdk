@@ -20,6 +20,17 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         }
 
         /// <summary>
+        /// 查询监控点列表v2
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public Task<CameraSearchV2Response> CamerSearchV2Async(CameraSearchV2Request model)
+        {
+            return _hikVisionApiManager.PostAndGetAsync<CameraSearchV2Request, CameraSearchV2Response>("/api/resource/v2/camera/search", model, VersionConsts.V1_4);
+
+        }
+
+        /// <summary>
         /// 分页获取监控点资源
         /// </summary>
         /// <param name="request"></param>

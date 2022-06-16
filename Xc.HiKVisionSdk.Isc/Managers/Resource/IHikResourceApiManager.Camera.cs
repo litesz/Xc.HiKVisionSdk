@@ -20,6 +20,15 @@ namespace Xc.HiKVisionSdk.Isc.Managers.Resource
         Task<AdvanceCameraListResponse> AdvanceCameraListAsync(AdvanceCameraListRequest model);
 
         /// <summary>
+        /// 查询监控点列表v2
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        /// <remarks>根据条件查询目录下有权限的监控点列表。        当返回字段对应的值为空时，该字段不返回。</remarks>
+        Task<CameraSearchV2Response> CamerSearchV2Async(CameraSearchV2Request model);
+
+
+        /// <summary>
         /// 分页获取监控点资源
         /// </summary>
         /// <param name="model"></param>

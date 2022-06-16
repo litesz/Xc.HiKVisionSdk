@@ -1,5 +1,5 @@
 ﻿using System;
-using Xc.HiKVisionSdk.Isc.Enums.Events;
+using Xc.HiKVisionSdk.Enums;
 using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
@@ -24,7 +24,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
         /// <summary>
         /// 订阅类型，0-订阅原始事件，1-联动事件，2-原始事件和联动事件，不填使用默认值0
         /// </summary>
-        public SubType SubType { get; set; }
+        public SubscribeType SubType { get; set; }
         /// <summary>
         ///  	事件等级，0-未配置，1-低，2-中，3-高
         ///  	此处事件等级是指在事件联动中配置的等级
@@ -58,7 +58,7 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
         /// <param name="eventDest"> 指定事件接收的地址</param>
         /// <param name="subType">订阅类型，0-订阅原始事件，1-联动事件，2-原始事件和联动事件，不填使用默认值0</param>
         /// <param name="eventLvl">事件等级，0-未配置，1-低，2-中，3-高</param>
-        public EventSubscriptionByEventTypesRequest(int[] eventTypes, string eventDest, SubType subType, int[] eventLvl) : this(eventDest, eventTypes)
+        public EventSubscriptionByEventTypesRequest(int[] eventTypes, string eventDest, SubscribeType subType, int[] eventLvl) : this(eventDest, eventTypes)
         {
             SubType = subType;
             EventLvl = eventLvl;

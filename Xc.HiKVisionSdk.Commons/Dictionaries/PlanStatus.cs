@@ -3,12 +3,12 @@
     /// <summary>
     /// 识别计划状态类型
     /// </summary>
-    public static class PlanStatusCollection
+    public static class PlanStatus
     {
 
         public static string Get(string key)
         {
-            switch (key)
+            switch (key.ToUpper())
             {
                 case "RUNNING": return "正在下发";
                 case "SUCCESS": return "下发成功";

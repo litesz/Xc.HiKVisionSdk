@@ -54,14 +54,19 @@
 ##  报警监测
 ##  人脸应用服务
 ##  事件服务
+1. 按事件类型订阅事件 `IHikEventManager.SubscriptionByEventTypesAsync`
+2. 查询事件订阅信息 `IHikEventManager.GetEventSubscriptionViewAsync`
+3. 按事件类型取消订阅 `IHikEventManager.UnSubscriptionByEventTypesAsync`
+4. 获取联动事件列表 `IHikEventManager.GetEventsListAsync`
 ##  测温应用
 
 # 版本历史
 ## 0.3.0
-### ManagersV2
+### [更新]ManagersV2
  * [更新] `IHikResourceManager`
+ * [新增] `IHikEventManager`
  
-### Dictionaries [删除]
+### [删除] Dictionaries 
  * [删除] `DoorEventSortCollection`
  * [删除] `IDoorEventSortCollection`
  * [删除] `EventCollection`
@@ -72,9 +77,14 @@
  * [删除] `PlanStatusCollection`
  * [删除] `IPlanStatusCollection`
 	
+### [更新] Dictionaries 
+ * [删除] `EventLevel`
+ * [删除] `HandleStatus`
+ * [删除] `SubType`
 
 ======================================
 ## 0.2.0.220613
+### [新增] ManagersV2 
  * [新增] `HikCardManager`
  * [新增] `HikFaceManager`
  * [新增] `HikOrgManager`

@@ -1,11 +1,12 @@
-﻿using Xc.HiKVisionSdk.Enums;
+﻿using System;
+using Xc.HiKVisionSdk.Enums;
 
-namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
+namespace Xc.HiKVisionSdk.Isc.ManagersV2.Events.Dtos
 {
     /// <summary>
     /// 获取联动事件列表结果数据
     /// </summary>
-    public class EventsSearchResponseData
+    public class EventInfo
     {
         /// <summary>
         /// 事件id
@@ -22,11 +23,11 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
         /// <summary>
         /// 事件开始时间，ISO8601格式：yyyy-MM-ddTHH:mm:ss.zzz+当前时区，例如北京时间：2018-07-26T15:00:00.000+08:00
         /// </summary>
-        public string StartTime { get; set; }
+        public DateTimeOffset? StartTime { get; set; }
         /// <summary>
         /// 事件结束时间，ISO8601格式：yyyy-MM-ddTHH:mm:ss.zzz+当前时区，例如北京时间：2018-07-26T15:00:00.000+08:00
         /// </summary>
-        public string EndTime { get; set; }
+        public DateTimeOffset EndTime { get; set; }
         /// <summary>
         /// 事件等级,1-低，2-中，3-高
         /// </summary>
@@ -54,7 +55,6 @@ namespace Xc.HiKVisionSdk.Isc.Managers.EventService.Models
         /// <summary>
         /// 事件记录列表
         /// </summary>
-        public EventsSearchResponseDataEventLogSrc[] EventLogSrcList { get; set; }
+        public EventLogSrc[] EventLogSrcList { get; set; }
     }
-
 }

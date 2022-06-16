@@ -5,13 +5,24 @@
 
 # 版本历史
 ## 1.0.4
+### [更新]nuget
+* Microsoft.Extensions.Hosting 3.1.22->6.0.1
+* Microsoft.Extensions.Http 3.1.22->6.0.0
+* Microsoft.Extensions.Options.ConfigurationExtensions 3.1.22->6.0.0
+
 ### [新增] Dictionaries
-* [新增] `DoorEventSortCollection`
+* [新增] `DoorEventSort`
 * [新增] `EventCollection`
 * [新增] `EventCollectionItem`
-* [新增] `InstallLocationCollection`
-* [新增] `PlanStatusCollection`
-* [新增] `ResourceTypeCollection`
+* [新增] `InstallLocation`
+* [新增] `PlanStatus`
+* [新增] `ResourceType`
+
+### [更新] Enums
+* [新增] `EventLevel`
+* [新增] `HandleStatus`
+* [新增] `SubscribeType`
+
 
 ======================================
 ## 1.0.3.220613

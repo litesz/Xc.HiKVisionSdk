@@ -1,10 +1,14 @@
-﻿namespace Xc.HiKVisionSdk.Isc.Enums.Events
+﻿namespace Xc.HiKVisionSdk.Enums
 {
     /// <summary>
     /// 事件级别
     /// </summary>
     public enum EventLevel
     {
+        /// <summary>
+        /// 无
+        /// </summary>
+        None = 0,
         /// <summary>
         /// 低
         /// </summary>

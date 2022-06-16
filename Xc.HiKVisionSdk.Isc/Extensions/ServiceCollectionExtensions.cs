@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http;
-using Xc.HiKVisionSdk.Isc.Dictionaries;
 using Xc.HiKVisionSdk.Isc.Managers;
 using Xc.HiKVisionSdk.Isc.Managers.Acs;
 using Xc.HiKVisionSdk.Isc.Managers.EventService;
@@ -12,6 +11,7 @@ using Xc.HiKVisionSdk.Isc.Managers.Pms;
 using Xc.HiKVisionSdk.Isc.Managers.Resource;
 using Xc.HiKVisionSdk.Isc.Managers.Video;
 using Xc.HiKVisionSdk.Isc.ManagersV2.Cards;
+using Xc.HiKVisionSdk.Isc.ManagersV2.Events;
 using Xc.HiKVisionSdk.Isc.ManagersV2.Faces;
 using Xc.HiKVisionSdk.Isc.ManagersV2.Orgs;
 using Xc.HiKVisionSdk.Isc.ManagersV2.Persons;
@@ -95,11 +95,13 @@ namespace Xc.HiKVisionSdk.Isc
         private static IServiceCollection AddV2Managers(this IServiceCollection services)
         {
 
-            return services.AddScoped<IHikCardManager, HikCardManager>()
+            return services
+                .AddScoped<IHikCardManager, HikCardManager>()
                 .AddScoped<IHikOrgManager, HikOrgManager>()
                 .AddScoped<IHikResourceManager, HikResourceManager>()
                 .AddScoped<IHikPersonManager, HikPersonManager>()
                 .AddScoped<IHikFaceManager, HikFaceManager>()
+                .AddScoped<IHikEventManager, HikEventManager>()
                 ;
             
         }

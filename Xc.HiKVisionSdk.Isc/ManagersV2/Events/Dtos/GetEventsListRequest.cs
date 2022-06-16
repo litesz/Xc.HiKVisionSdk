@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xc.HiKVisionSdk.Isc.Enums.Events;
+using System.Linq;
+using Xc.HiKVisionSdk.Enums;
 using Xc.HiKVisionSdk.Models.Request;
 
 namespace Xc.HiKVisionSdk.Isc.ManagersV2.Events.Dtos
@@ -76,7 +75,7 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Events.Dtos
         /// <param name="remark">处理意见</param>
         /// <param name="handleStatus">处理状态</param>
 
-        public GetEventsListRequest(int pageNo, int pageSize, DateTime startTime, DateTime endTime, string eventRuleId = "", string ability = "", string regionIndexCode = "", string resName = "", string eventType = "", string remark = "", HandleStatus? handleStatus) : base(pageNo, pageSize, startTime, endTime)
+        public GetEventsListRequest(int pageNo, int pageSize, DateTime startTime, DateTime endTime, string eventRuleId = "", string ability = "", string regionIndexCode = "", string resName = "", string eventType = "", string remark = "", HandleStatus? handleStatus = null) : base(pageNo, pageSize, startTime, endTime)
         {
             EventRuleId = eventRuleId;
             Ability = ability;
@@ -87,5 +86,75 @@ namespace Xc.HiKVisionSdk.Isc.ManagersV2.Events.Dtos
             EventType = eventType;
         }
 
+        /// <summary>
+        /// 使用事件等级
+        /// </summary>
+        /// <param name="eventLevels"> 	事件等级，1-低，2-中，3-高</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public GetEventsListRequest UseEventLevels(params EventLevel[] eventLevels)
+        {
+
+            if (eventLevels == null || eventLevels.Length == 0)
+            {
+                throw new ArgumentNullException(nameof(eventLevels));
+            }
+
+
+            EventLevels = eventLevels.Select(u => ((int)u).ToString()).ToArray();
+            return this;
+        }
+
+        /// <summary>
+        /// 使用事件源类型
+        /// </summary>
+        /// <param name="resTypes">事件源类型</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public GetEventsListRequest UseResTypes(params string[] resTypes)
+        {
+
+            if (resTypes == null || resTypes.Length == 0)
+            {
+                throw new ArgumentNullException(nameof(resTypes));
+            }
+
+            ResTypes = resTypes;
+            return this;
+        }
+        /// <summary>
+        /// 使用事件源编号
+        /// </summary>
+        /// <param name="resIndexCodes">事件源编号</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public GetEventsListRequest UseResIndexCodes(params string[] resIndexCodes)
+        {
+
+            if (resIndexCodes == null || resIndexCodes.Length == 0)
+            {
+                throw new ArgumentNullException(nameof(resIndexCodes));
+            }
+
+            ResIndexCodes = resIndexCodes;
+            return this;
+        }
+        /// <summary>
+        /// 使用所属位置
+        /// </summary>
+        /// <param name="locationIndexCodes">所属位置</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public GetEventsListRequest UseLocationIndexCodes(params string[] locationIndexCodes)
+        {
+
+            if (locationIndexCodes == null || locationIndexCodes.Length == 0)
+            {
+                throw new ArgumentNullException(nameof(locationIndexCodes));
+            }
+
+            LocationIndexCodes = locationIndexCodes;
+            return this;
+        }
     }
 }
